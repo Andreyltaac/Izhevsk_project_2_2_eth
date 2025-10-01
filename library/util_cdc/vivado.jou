@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed May 27 10:56:33 2020
+# Process ID: 9776
+# Current directory: /home/nikita/work/hdl-hdl_2019_r1/library/util_cdc
+# Command line: vivado -mode batch -source util_cdc_ip.tcl
+# Log file: /home/nikita/work/hdl-hdl_2019_r1/library/util_cdc/vivado.log
+# Journal file: /home/nikita/work/hdl-hdl_2019_r1/library/util_cdc/vivado.jou
+#-----------------------------------------------------------
+source util_cdc_ip.tcl

@@ -1,0 +1,91 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port reset -pg 1 -lvl 0 -x -200 -y 370 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -200 -y 350 -defaultsOSRD
+preplace port init_clk_in -pg 1 -lvl 0 -x -200 -y 1060 -defaultsOSRD
+preplace port gt_refclk1_n -pg 1 -lvl 0 -x -200 -y 760 -defaultsOSRD
+preplace port gt_refclk1_p -pg 1 -lvl 0 -x -200 -y 780 -defaultsOSRD
+preplace port OP_MODE_MGTX -pg 1 -lvl 0 -x -200 -y 60 -defaultsOSRD
+preplace port gt_reset -pg 1 -lvl 0 -x -200 -y 20 -defaultsOSRD
+preplace port reset1 -pg 1 -lvl 0 -x -200 -y 40 -defaultsOSRD
+preplace port valid -pg 1 -lvl 7 -x 2500 -y 600 -defaultsOSRD
+preplace port s_axis_ready -pg 1 -lvl 7 -x 2500 -y 880 -defaultsOSRD
+preplace port fifo_rd_underflow -pg 1 -lvl 7 -x 2500 -y 730 -defaultsOSRD
+preplace port LED2 -pg 1 -lvl 7 -x 2500 -y 990 -defaultsOSRD
+preplace port full -pg 1 -lvl 7 -x 2500 -y 470 -defaultsOSRD
+preplace portBus txp_1 -pg 1 -lvl 7 -x 2500 -y 920 -defaultsOSRD
+preplace portBus rxp_1 -pg 1 -lvl 0 -x -200 -y 1020 -defaultsOSRD
+preplace portBus txn_1 -pg 1 -lvl 7 -x 2500 -y 900 -defaultsOSRD
+preplace portBus rxn_1 -pg 1 -lvl 0 -x -200 -y 1000 -defaultsOSRD
+preplace portBus AD_Link_i1 -pg 1 -lvl 7 -x 2500 -y 290 -defaultsOSRD
+preplace portBus AD_Link_q1 -pg 1 -lvl 7 -x 2500 -y 310 -defaultsOSRD
+preplace portBus ADC_Out_q -pg 1 -lvl 0 -x -200 -y 260 -defaultsOSRD
+preplace portBus ADC_Out_i -pg 1 -lvl 0 -x -200 -y 240 -defaultsOSRD
+preplace portBus AD_Link_q -pg 1 -lvl 7 -x 2500 -y 80 -defaultsOSRD
+preplace portBus AD_Link_i -pg 1 -lvl 7 -x 2500 -y 60 -defaultsOSRD
+preplace portBus DSP_Out_q -pg 1 -lvl 0 -x -200 -y 100 -defaultsOSRD
+preplace portBus DSP_Out_i -pg 1 -lvl 0 -x -200 -y 80 -defaultsOSRD
+preplace portBus fifo_rd_data_0 -pg 1 -lvl 7 -x 2500 -y 750 -defaultsOSRD
+preplace portBus MGT__i -pg 1 -lvl 7 -x 2500 -y 100 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 1 -x 70 -y 480 -defaultsOSRD
+preplace inst util_cpack2_0 -pg 1 -lvl 2 -x 530 -y 470 -defaultsOSRD
+preplace inst fifo_generator_1 -pg 1 -lvl 3 -x 950 -y 520 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 950 -y 840 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 3 -x 950 -y 940 -defaultsOSRD
+preplace inst aurora_8b10b_1 -pg 1 -lvl 4 -x 1430 -y 990 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 5 -x 1910 -y 880 -defaultsOSRD
+preplace inst util_upack2_1 -pg 1 -lvl 6 -x 2290 -y 740 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 5 -x 1910 -y 650 -defaultsOSRD
+preplace inst DEMUX_2_1_1 -pg 1 -lvl 6 -x 2290 -y 90 -defaultsOSRD
+preplace inst MUX16_2_1_1 -pg 1 -lvl 6 -x 2290 -y 300 -defaultsOSRD
+preplace inst RAshift16_4_0 -pg 1 -lvl 5 -x 1910 -y 310 -defaultsOSRD
+preplace inst RAshift16_4_1 -pg 1 -lvl 5 -x 1910 -y 410 -defaultsOSRD
+preplace netloc reset_1 1 0 6 N 370 160 340 N 340 1170 770 1630 800 2080
+preplace netloc clk_1 1 0 6 NJ 350 150 350 730 370 NJ 370 1660 480 2080
+preplace netloc xlconstant_2_dout 1 1 1 150 450n
+preplace netloc fifo_generator_1_full 1 2 5 760 380 N 380 1640 470 N 470 N
+preplace netloc util_cpack2_0_packed_fifo_wr_data 1 2 1 N 480
+preplace netloc util_cpack2_0_packed_fifo_wr_en 1 2 1 720 460n
+preplace netloc xlconstant_4_dout 1 0 6 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 2100
+preplace netloc init_clk_in_1 1 0 4 NJ 1060 NJ 1060 NJ 1060 1110
+preplace netloc aurora_8b10b_1_txp 1 4 3 NJ 960 2100J 920 NJ
+preplace netloc gt_refclk1_n_1 1 0 4 NJ 760 NJ 760 NJ 760 1180J
+preplace netloc aurora_8b10b_1_user_clk_out 1 2 3 750 710 NJ 710 1650
+preplace netloc aurora_8b10b_1_s_axi_tx_tready 1 2 2 760 690 1200
+preplace netloc fifo_generator_1_dout 1 2 2 740 700 1190
+preplace netloc gt_refclk1_p_1 1 0 4 NJ 780 NJ 780 NJ 780 1160J
+preplace netloc xlconstant_0_dout 1 3 1 1150J 840n
+preplace netloc rxp_1_1 1 0 4 NJ 1020 NJ 1020 NJ 1020 1120J
+preplace netloc aurora_8b10b_1_txn 1 4 3 NJ 940 2080J 900 NJ
+preplace netloc xlconstant_1_dout 1 3 1 1140J 940n
+preplace netloc rxn_1_1 1 0 4 NJ 1000 NJ 1000 NJ 1000 1130J
+preplace netloc fifo_generator_1_valid 1 3 1 1210 520n
+preplace netloc MUX16_2_1_1_AD_Link_i 1 6 1 NJ 290
+preplace netloc MUX16_2_1_1_AD_Link_q 1 6 1 NJ 310
+preplace netloc ADC_Out_q_1 1 0 6 -180J 250 NJ 250 NJ 250 NJ 250 NJ 250 2070J
+preplace netloc ADC_Out_i_1 1 0 6 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 2090J
+preplace netloc xlconstant_3_dout 1 5 1 2100 780n
+preplace netloc util_upack2_1_fifo_rd_data_0 1 4 3 1680 950 NJ 950 2470
+preplace netloc aurora_8b10b_1_m_axi_rx_tdata 1 4 1 1640 610n
+preplace netloc aurora_8b10b_1_m_axi_rx_tvalid 1 4 1 1670 630n
+preplace netloc fifo_generator_0_dout 1 4 2 1710 790 2070J
+preplace netloc util_upack2_1_s_axis_ready 1 4 3 1720 810 2090 890 2480J
+preplace netloc fifo_generator_0_valid 1 5 2 2100 600 NJ
+preplace netloc DEMUX_2_1_1_MGT__q 1 1 6 170 180 NJ 180 NJ 180 NJ 180 NJ 180 2460
+preplace netloc DEMUX_2_1_1_MGT__i 1 1 6 180 190 NJ 190 NJ 190 NJ 190 NJ 190 2480
+preplace netloc DEMUX_2_1_1_AD_Link_q 1 6 1 NJ 80
+preplace netloc DEMUX_2_1_1_AD_Link_i 1 6 1 NJ 60
+preplace netloc DSP_Out_q_1 1 0 6 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc DSP_Out_i_1 1 0 6 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc RAshift16_4_0_output_bus 1 5 1 NJ 310
+preplace netloc util_upack2_1_fifo_rd_data_1 1 4 3 1700 820 2070J 880 2460
+preplace netloc RAshift16_4_1_output_bus 1 5 1 2070J 330n
+preplace netloc util_upack2_1_fifo_rd_underflow 1 6 1 NJ 730
+preplace netloc fifo_generator_0_full 1 4 3 1690 990 NJ 990 NJ
+levelinfo -pg 1 -200 70 530 950 1430 1910 2290 2500
+pagesize -pg 1 -db -bbox -sgen -370 0 2680 1320
+"
+}
+0

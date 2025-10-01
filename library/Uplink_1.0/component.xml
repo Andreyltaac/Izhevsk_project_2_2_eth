@@ -1,0 +1,2217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>Uplink</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">5</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>Uplink_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_c_addsub_12_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>1681fe59</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>Uplink_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_c_addsub_12_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>1681fe59</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>ac4fcb63</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>12f4c5d1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16328387</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk_sample_rate</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_LNK_RX_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_LNK_RX_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_LNK_RX_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_LNK_RX_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_SV_RX_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_SV_RX_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_SV_RX_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_SV_RX_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pilot_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pilot_q</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UL_TX_Link_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DL_TX_Service_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DL_TX_Service_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DL_TX_Service_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DL_TX_Service_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/mixer_16b/mixer_16b.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/LO_16b/LO_16b.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder_18/adder_18.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder_17/adder_17.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder_pilot_2/adder_pilot_2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder/adder.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/Uplink.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/Uplink_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/sum_ch2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/Uplink_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_e54ef4d3</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_c_addsub_12_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="c_addsub" xilinx:version="12.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="cmpy" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dds_compiler" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/mixer_16b/mixer_16b.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/LO_16b/LO_16b.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder_18/adder_18.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder_17/adder_17.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder_pilot_2/adder_pilot_2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/adder/adder.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/Uplink.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/Uplink_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/sum_ch2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/Uplink_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_c_addsub_12_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="c_addsub" xilinx:version="12.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="cmpy" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dds_compiler" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>drivers/Uplink_v1_0/data/Uplink.mdd</spirit:name>
+        <spirit:userFileType>mdd</spirit:userFileType>
+        <spirit:userFileType>driver_mdd</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/Uplink_v1_0/data/Uplink.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>driver_tcl</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/Uplink_v1_0/src/Makefile</spirit:name>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/Uplink_v1_0/src/Uplink.h</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/Uplink_v1_0/src/Uplink.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/Uplink_v1_0/src/Uplink_selftest.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/Uplink_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_12f4c5d1</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>My new AXI IP</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Uplink_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>Uplink_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>53</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-02-04T12:08:10Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@562b804b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32cc1f7e_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@420a69a8_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a220901_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f304a6b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60bd7c0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe73c28_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6accbc7a_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7537b3cc_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@401e0c88_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c0c8be_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a006cbc_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@518538f3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2144d197_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea28875_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a56fb_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbd94c5_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ccce1d6_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b596a49_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@365d1e23_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f590b6_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f93e22_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c1954ab_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c40b5b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf15ef3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ed1c611_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c7e5e30_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aef89d8_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eca1a14_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e43987f_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c0e9add_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f30d4c_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d9f4e2_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4744732_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df0d0ec_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@744bd1d6_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317d2886_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@156a3851_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f00589d_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27edd1fa_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5653b4ba_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@115c0fb0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77d7614b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f22025b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ca6814f_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45fbc516_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4daaf438_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f086b0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26411ff8_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e883256_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d51c3f8_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b7e47c8_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28ed57_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a0b9e6_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@194e7773_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ade323b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2003323_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3165bdc9_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b4016c2_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16d6cff0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cba4f94_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776609d2_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71520a09_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db4c192_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9bafc00_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@418293af_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d203ad0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a4ee5c0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2f9ec5_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cc447ea_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33769fc1_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad89e76_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5848d249_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79651e75_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@548ffde7_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6518f144_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63789059_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c8339cd_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba8a79c_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e282734_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23764a10_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@346df5d0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b638bd_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c535cf_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@486be7f_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50e242aa_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b560d5_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b730981_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b0befac_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5107ad3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28dd4a59_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fecc9b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49fb6f04_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@138f93f9_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d8ddbdb_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11da1494_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e375e5_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62029466_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d89fd78_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e5ea621_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7434235c_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67738093_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@356cfa99_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56865584_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c160d9_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c6f0256_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77f21f88_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691edb2c_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5198e0ba_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c8617bc_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@291a676_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528232e_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f83fc02_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3443aa4d_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f923f89_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67b76927_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62021c37_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34da4266_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@757f58f8_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@501beaef_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4be38647_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c53664_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f4c4f8d_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6ad6ce_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ced8a2_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c513c8d_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aed309d_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19511ef0_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@584f9929_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@730f83b3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c49517c_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76fa5499_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42522927_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cd7a26b_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@711e97a3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a4a64d_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d5defd_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30290743_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a2c7649_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6845d745_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e67bc04_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bbd8dcf_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c12df57_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5532261e_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33513974_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f45a4a6_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@181c5cd9_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2828ede3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9d33ccb_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ea0a66_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c720ea_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bcf8d1e_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f396d65_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781850e3_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65486fbe_ARCHIVE_LOCATION">c:/Vivado_Projects/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a514609_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@625ccfe9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf78adc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc4d0fd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@325cd3ee_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31d7b28e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b485a6b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf1203_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d801aa_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e555a98_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68876909_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a0169bd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11900c2c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58a3f3d0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@431c3915_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57375d5d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29104fcf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10a88bf4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22865ef3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3afb2e6d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@605c9004_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70111664_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d491a53_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d2f27c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2489f006_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7514aab0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@97cc587_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@94ab182_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b3467d5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57e55042_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33214a06_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7642b7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69d3efff_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6100b735_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb1ed1f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7218e205_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e2245c6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528f0eb8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e77a98a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@204b3396_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@993f6db_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e94e07_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11da33b0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@620c34be_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20570f72_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@117aa996_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1434b9b6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6724cb63_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc4f492_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70708632_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff31196_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@560f7f06_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1179ee60_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1f3405_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dc7cf6b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64d9a498_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75fcd3f2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e784bf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bf44f1c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b453774_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61f8ab8a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29d3a5ba_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d0ac560_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d7b483a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34cf0de0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b0ebe79_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c65668_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3841cb13_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e630bab_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13bd9f84_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6501be4f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dfd61a5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b424a9c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d7ea8d4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@235d9974_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc11d1c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17c5d0d6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59c63002_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24ba7816_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58bc048a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62fce062_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b0991e2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52da104e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d517411_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf2aec2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b1fb84_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29ab7e88_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ae5bbe4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72cdaad4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a37d6fc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34d53243_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@247bad2a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@215fac8e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68a06e4b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cc7d86a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e7d43d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19d380a5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd896b4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed5721c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f7cf38f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c09e829_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a46ed73_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eba8bf0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c3ee7c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47b96173_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d6d19dd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@664a4bb0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba8da7d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@698d69c9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ef9f3b7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@648334a6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@88271a1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16bd0fa0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a644ec_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7419171a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140d91f8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e149489_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e71ccf2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f04506c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d9d66_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49e1a1fd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3525f24c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58858541_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b68e0a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31f1b98e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f250983_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23e06742_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@149bb1b2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44beb96c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e09cb2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f396cc2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7777211c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48b8bf84_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff5729f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ae0b1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ef3be5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@311eaf52_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb9a01_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35353ac6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddd913f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33ff556_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c683818_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@462840a5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45c1b106_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@246094d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@145d6232_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a80a74d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61067d86_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6905324b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55726383_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bfb0bfe_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16dda953_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cad7ccd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e3450f1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@187652eb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1615d449_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1769e907_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73eaba3c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f63ad9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5234956e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@175f414f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18330f20_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40397e8d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c5096e1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47ca8622_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@109a6a8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e8bb0a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f2caff_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25c92a65_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@459401d8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a941219_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21fdbfa_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@599c879a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6822ffdc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7864e26d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6676e61d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6850e687_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d88420c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bbf1c8e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ccc21ac_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@755f7f97_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60edf56a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df688c2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ccfef30_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397c6116_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@367db92f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@320f40f4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10697a05_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b88a33e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@246757d8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50271ba0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b6f899_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1405a937_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4413109f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3432ad83_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e5ee68b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d28dee_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e04b011_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a6b2860_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef1a829_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7453a1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bfe72fc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f799e3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6780c718_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ab4932_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e19ceee_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7af58689_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb33da4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6931d86_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f2fdeca_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c3c79d3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fed20b1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11a4b057_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@351f1433_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a8e992a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3154aa6d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@281b7113_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31f7921e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@622e4ac4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b41e7f5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c9f91e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cf967d3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c026910_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a21d149_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7b83f3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf3644f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12943a45_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@515874c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@296df8fc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45fb2ee9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c1d9d22_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc8914d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53e8ad49_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65d56b87_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@517ae4b2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45d9dd4b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e1eedf7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6da92003_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a48d77_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a410493_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e3ed33d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@98a85d1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6087ebbb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14915ca2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79bf7c61_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cb44e32_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60f42c52_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1363ef41_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74815f5a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46897c51_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40e67b65_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@373f210d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48ffc3c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b117d44_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56cd0484_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f2ea072_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea8530b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a3ff0b3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d21625_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b6b848c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6297e535_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4991dccb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7be892d7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68e6740b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eaac780_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203d7c8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361971e3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@428856fc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@336646f4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e505a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747b049d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@724d5889_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f2dd9df_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b79a515_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@230b952a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ee2dd72_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d570035_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5548d85e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b794038_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66e36d73_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14f69a2b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84be07e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48c16c66_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17fd9746_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e688460_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae1d77a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@150c161f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69bee287_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c20cbfd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c52a0a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26fa5548_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18dc1b45_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45720d51_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a186127_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d48e902_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fb3f475_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433a1f95_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1467054e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@313752f3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a249d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba8a8ac_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c01ca2d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2556c882_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5541423_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@673457d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229b91ac_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14cb556_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a58f671_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6538b736_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52def771_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@125d69f7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@448e2899_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba77741_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@581d2152_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4267c842_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14aaa7c7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ef2a3e1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21e0b33a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c90ae3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26ec14cc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6088b312_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@715c880_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d9f7660_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6677b83b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51911047_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e7b4061_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69679a2c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@be3d849_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec59650_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a0a1df5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d413689_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@611201a7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@207408a8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fb2f7f0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ada36af_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e5ce136_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c59be21_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1635bf41_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18474a66_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1292c344_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7ba7d8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50bb3bff_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da3747b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fdecf46_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31400f78_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@210e5dc0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f1b8644_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf0639d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52b37915_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f9c966f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122f22ad_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52532604_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ef2cc0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eb6e886_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f323569_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28d7bff7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b37ff40_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@752ac98c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7642c529_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76d4770a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52084b79_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1ecf3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2550a54e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d9aba02_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48d93d4d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a1546b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@407c7e87_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a5a16b5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f6d9c4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed50b57_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5933d6e3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df4bd2a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3a1d99_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c29dcb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@475718e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f4ee53d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef959cf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c4a88f8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b16c112_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d04c3e8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d929758_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2524da98_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691f6998_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dfb4a4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ae86cb6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fecc190_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35987c1e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fbde306_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42faf310_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@775fcd43_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bdd2e4f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0dd156_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@138f2dd0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a6a0126_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c09b7d5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1681a769_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1502d535_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d0d3ab_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78e94f79_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a9492c8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@111b8926_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f871418_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a016d54_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18e04b38_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a7a1bf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f69a56a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c2674ec_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f0fd3a9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad74761_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b991946_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@602c7a00_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@295504fd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ac0f97f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e79367d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3faf0c48_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c49da5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30eaf542_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5943e812_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cdad6ee_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4232f055_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@186b66fe_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a767ac8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dfc21f7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3964e9b3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c3e0958_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20032643_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7247b7fd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e424500_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e5dbf4e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36c312c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a4ab6d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ce51292_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41204faf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75a85af3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66cf02f4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28db7e26_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f459799_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f6d6e47_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77575fa9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@228b642c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef9748e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11028acc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f167b11_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fabbb7e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e609f16_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77b86a00_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5559b6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f76e817_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c2ae8a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b573e9e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d19b0d2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb180b4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c1d6a3e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534bfe7c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c148296_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@453b8ad6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@146d1957_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@178335d8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@310dfa41_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f3c690f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@82d91ad_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122aa9f2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fbc97c6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a436d55_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b67987e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10179016_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5369f1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55f7c9dd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57376162_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776a30a2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e37b15_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16f2f27c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc84f30_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db1083f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35bdf629_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ca738c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41367cab_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16a004e1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1631aded_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bd8bc59_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50078b6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@174bd358_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5046c8ea_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162d56fe_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c9ce375_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21604edd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@410786b1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9ca5847_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@111c6d6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4be60ebb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d4a19f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d230706_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30b1d577_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10954e97_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dbac57_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62cfd352_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aff181e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b1184a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60640197_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a03877e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30840110_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2700855f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@214af86_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e88173b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6627de66_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158aa01_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eece39b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78490826_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14fa7246_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@164d2047_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d140649_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41ab425_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d860198_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a33d388_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@112e3d02_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361de019_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f90a185_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59314158_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b79885_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e21a24e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d359f5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c503d90_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4be635f6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32a77f1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a27a093_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385d0dd7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@414298e6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ebc0909_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5df4ad47_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33addd59_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d47f5d4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b2fe624_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f65b4f1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4170c5a6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0296c7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14a66a8b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ac0eaf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25a528a8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2834a17b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@752f99d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b2f4c82_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17347b46_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e075bef_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162b8d90_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b43c7aa_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea920ef_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@624f7015_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27258b37_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7baaf68a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ba50b8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d6a108_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c7352ff_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e52d417_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65ab1dca_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5107e4a1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@275d46c9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf5864c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a92ec0c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13c6e6fb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d7e8f20_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@728f086f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc8355c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@402cb89_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2611808b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@329cf566_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@463e7adc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60fb3141_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7188621d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0ffa45_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e64048_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47058bd4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3747ef18_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66abc7f6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77819f4c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cb69b94_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff423fb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3478a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e8c242_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a87f9ec_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c4bce28_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42ec3498_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64572396_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad7660b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1d03c7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c3d0ad_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76654ae8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4de83a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c4c6fce_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5beaa445_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c57e39_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aef25dc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e61a94e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d77d910_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a6266e5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f311f63_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31f3f0ab_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66a9a0d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d9131d5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eb2c602_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512ec92a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@492477c9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6575695e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@155d1cbb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@347b2265_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15be1708_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fac10a9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eea8412_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b31414f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c631e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bad1063_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1901d924_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad1d008_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c6dec1d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69aca71f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7928587e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1df9b99e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c9a5a0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36cd170c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@314adcd3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@583402c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44073a6a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66600ae3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@272f98cc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e549063_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11957f84_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54d3d59_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df9e51_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f6997f4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dbd7c20_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55336fde_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f321991_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d5babad_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e2911e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e9bf93_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d903da4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25abc7bc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b4504a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61effc0e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c2b7124_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b035080_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d1e02b6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d43d98a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73c964b1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cb5fbf6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fab90b7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f9dfd69_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78e4162d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@722432e5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31acab9b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40ad7683_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d12af92_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4752afab_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3352026f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66e1d35_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ab8730_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2558aaac_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c226dd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@556ae2a3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ea1bef7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c6e7690_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c48bcc1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@168bc9d5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12584846_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ceb2182_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@307b2898_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36cf35b0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d22bdb3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6532d938_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@322eefc7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5739fefd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8b1c6a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18045f30_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c78ac60_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20721e7c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3325edb6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79dc375b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25643fdd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19e5a61f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63cf6277_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50eff882_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@136e23bc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77e09a53_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@257ba4a5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5cdf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70ed62ff_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5baab76f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27399f0e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@365aee1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72c7e89f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bbc9792_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62587a76_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14d5ba66_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5905ac8b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19634ff8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f3ef72_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32610bc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@771524e2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d6c1ed2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff56f44_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10798b32_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c4fbdfd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4784beb5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f297027_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fadc1e0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4959a40e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cb4468a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e938a1c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62dfbe11_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e3d619_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7077dda0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@218d58c0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d300081_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b36dc45_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c59e5c1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77dec0c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23631f07_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67ce14e6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b202e2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@464f10a1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d9c5d91_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bbfcc48_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c3b10e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70cfc5ba_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@508b2371_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31d78c1a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eefa76a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b2eac61_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1099b769_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef807e0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d49d30f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff1b0cb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf809d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59cb013f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65fe6072_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a32f6d5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f238c7b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d717c3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@554a7293_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50cc0089_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1979c55a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6898131a_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@166fd7f4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79d85bc6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e56fdd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59320dfc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16f3ff62_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae3c083_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f783a6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c05e93_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@176aa7a8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@328282d5_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d44e409_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@124852ca_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0e1701_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@252f9477_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6010f803_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67dad187_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38551c50_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54c644eb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c580dda_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76edbb80_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52661afe_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a75490d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36e35cc4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78fa4525_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eef3ff2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bde2c1e_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42125a2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3375fd61_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55808cbf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47f1ccdf_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fc7b9bd_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2d04c2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45ea6f46_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4425e739_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fdd7aaa_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c2a78f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@265997a6_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@556897af_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@556878ed_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77825bdc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52e01a48_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@167e7333_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10301237_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b4449ab_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c06e00_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e45c2c4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ac932d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5be8ad16_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@418265b4_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c26de4d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fce2da_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d9d8342_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe9f3_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@465cec61_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32aefae8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24409603_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e399d74_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b6e98f_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2171761b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45d61bad_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12532279_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b8cdae9_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d759d73_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2040eba7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c259789_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@322d740c_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@587853e2_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1af301_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b8a2c2d_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@471689d1_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f16ccc_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1201b480_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d46859_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c84f9b_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cb6c7bb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56318b12_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@167cacc8_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f6273eb_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50ea2bf7_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ea2ad96_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51eb3ea0_ARCHIVE_LOCATION">c:/Vivado_Projects/library/Uplink_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="77e219dd"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0895a18a"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="df8828e9"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e811c89"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ee1b3a8d"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

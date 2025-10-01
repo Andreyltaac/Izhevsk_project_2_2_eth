@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr  4 11:04:02 2022
+# Process ID: 5124
+# Current directory: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7816 F:\kintex_dsp_lite\projects\Kintex_DSP_Lite\Kintex_DSP_Lite.xpr
+# Log file: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/vivado.log
+# Journal file: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1

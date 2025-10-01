@@ -1,0 +1,3 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/Modem_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Modem_tb
+WARNING: [VRFC 10-3824] variable 'rst' must explicitly be declared as automatic or static [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/Modem_tb.v:33]

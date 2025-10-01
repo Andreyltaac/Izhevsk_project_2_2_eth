@@ -1,0 +1,168 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace port S00_AXI1 -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port S00_AXI2 -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace port S00_AXI4 -pg 1 -lvl 0 -x 0 -y 781 -defaultsOSRD
+preplace port S00_AXI3 -pg 1 -lvl 0 -x 0 -y 1490 -defaultsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port S00_AXI5 -pg 1 -lvl 0 -x 0 -y 830 -defaultsOSRD
+preplace port S00_AXI6 -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port s00_axi_aclk -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace port s00_axi_aresetn -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace port clk_30_72 -pg 1 -lvl 0 -x 0 -y 630 -defaultsOSRD
+preplace port clk_240 -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace port ad9361_EN_AGC_1 -pg 1 -lvl 7 -x 3170 -y 1550 -defaultsOSRD
+preplace port ad9361_EN_AGC_2 -pg 1 -lvl 7 -x 3170 -y 1570 -defaultsOSRD
+preplace port ad9361_EN_AGC_3 -pg 1 -lvl 7 -x 3170 -y 1590 -defaultsOSRD
+preplace port ad9364_EN_AGC -pg 1 -lvl 7 -x 3170 -y 1610 -defaultsOSRD
+preplace port rc_ctrl_1_din -pg 1 -lvl 7 -x 3170 -y 1450 -defaultsOSRD
+preplace portBus AD_LNK_RX_1_i -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace portBus AD_LNK_RX_1_q -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
+preplace portBus AD_LNK_RX_2_i -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus AD_LNK_RX_2_q -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus AD_SV_RX_1_i -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace portBus AD_SV_RX_1_q -pg 1 -lvl 0 -x 0 -y 810 -defaultsOSRD
+preplace portBus AD_SV_RX_2_i -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace portBus AD_SV_RX_2_q -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace portBus AD_SV_RX_3_i -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace portBus AD_SV_RX_3_q -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace portBus AD_SV_RX_4_i -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace portBus AD_SV_RX_4_q -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace portBus UL_TX_Link_1_i -pg 1 -lvl 7 -x 3170 -y 1010 -defaultsOSRD
+preplace portBus UL_TX_Link_1_q -pg 1 -lvl 7 -x 3170 -y 1030 -defaultsOSRD
+preplace portBus DL_TX_Service_1_i -pg 1 -lvl 7 -x 3170 -y 850 -defaultsOSRD
+preplace portBus DL_TX_Service_1_q -pg 1 -lvl 7 -x 3170 -y 870 -defaultsOSRD
+preplace portBus DL_TX_Service_2_i -pg 1 -lvl 7 -x 3170 -y 890 -defaultsOSRD
+preplace portBus DL_TX_Service_2_q -pg 1 -lvl 7 -x 3170 -y 910 -defaultsOSRD
+preplace portBus DL_TX_Service_3_i -pg 1 -lvl 7 -x 3170 -y 930 -defaultsOSRD
+preplace portBus DL_TX_Service_3_q -pg 1 -lvl 7 -x 3170 -y 950 -defaultsOSRD
+preplace portBus DL_TX_Service_4_i -pg 1 -lvl 7 -x 3170 -y 970 -defaultsOSRD
+preplace portBus DL_TX_Service_4_q -pg 1 -lvl 7 -x 3170 -y 990 -defaultsOSRD
+preplace portBus U_SV_RX_1_i -pg 1 -lvl 7 -x 3170 -y 660 -defaultsOSRD
+preplace portBus U_SV_RX_1_q -pg 1 -lvl 7 -x 3170 -y 680 -defaultsOSRD
+preplace portBus ad9361_RESET_1 -pg 1 -lvl 7 -x 3170 -y 1470 -defaultsOSRD
+preplace portBus ad9361_RESET_2 -pg 1 -lvl 7 -x 3170 -y 1490 -defaultsOSRD
+preplace portBus ad9361_RESET_3 -pg 1 -lvl 7 -x 3170 -y 1510 -defaultsOSRD
+preplace portBus ad9364_RESET -pg 1 -lvl 7 -x 3170 -y 1530 -defaultsOSRD
+preplace portBus Out_i -pg 1 -lvl 7 -x 3170 -y 440 -defaultsOSRD
+preplace portBus Out_q -pg 1 -lvl 7 -x 3170 -y 420 -defaultsOSRD
+preplace inst UL_TX_Link_q -pg 1 -lvl 5 -x 2490 -y 1410 -defaultsOSRD
+preplace inst UL_TX_Link_i -pg 1 -lvl 5 -x 2490 -y 1290 -defaultsOSRD
+preplace inst DL_TX_Link_2_i -pg 1 -lvl 6 -x 2940 -y 660 -defaultsOSRD
+preplace inst DL_TX_Link_2_q -pg 1 -lvl 6 -x 2940 -y 760 -defaultsOSRD
+preplace inst UL_RX_LINK -pg 1 -lvl 5 -x 2490 -y -210 -defaultsOSRD
+preplace inst UL_RX_SV -pg 1 -lvl 5 -x 2490 -y 1180 -defaultsOSRD
+preplace inst CH_SEL -pg 1 -lvl 5 -x 2490 -y 40 -defaultsOSRD
+preplace inst Service_1_TX -pg 1 -lvl 5 -x 2490 -y -90 -defaultsOSRD
+preplace inst Service_3_TX -pg 1 -lvl 5 -x 2490 -y 330 -defaultsOSRD
+preplace inst Service_2_TX -pg 1 -lvl 5 -x 2490 -y 210 -defaultsOSRD
+preplace inst Service_4_TX -pg 1 -lvl 5 -x 2490 -y 450 -defaultsOSRD
+preplace inst Service_4_RX -pg 1 -lvl 5 -x 2490 -y 1060 -defaultsOSRD
+preplace inst Service_3_RX -pg 1 -lvl 5 -x 2490 -y 740 -defaultsOSRD
+preplace inst Service_2_RX -pg 1 -lvl 5 -x 2490 -y 860 -defaultsOSRD
+preplace inst Service_1_RX -pg 1 -lvl 5 -x 2490 -y 600 -defaultsOSRD
+preplace inst Switch_DATA_16b_0 -pg 1 -lvl 6 -x 2940 -y 430 -defaultsOSRD
+preplace inst Control_from_SOM_0 -pg 1 -lvl 1 -x 220 -y 1510 -defaultsOSRD
+preplace inst UPLINK_LINK_RX_GSM_0 -pg 1 -lvl 2 -x 750 -y 10 -defaultsOSRD
+preplace inst UPLINK_SV_RX_GSM_0 -pg 1 -lvl 2 -x 750 -y 400 -defaultsOSRD
+preplace inst Downlink_LTE_GSM -pg 1 -lvl 3 -x 1310 -y 920 -defaultsOSRD
+preplace inst FSK_Pilot_Uplink -pg 1 -lvl 2 -x 750 -y -200 -defaultsOSRD
+preplace inst FSK_Pilot_Downlink -pg 1 -lvl 2 -x 750 -y 730 -defaultsOSRD
+preplace inst Uplink -pg 1 -lvl 3 -x 1310 -y 420 -defaultsOSRD
+preplace inst MUXes -pg 1 -lvl 4 -x 1900 -y 550 -defaultsOSRD
+preplace netloc s00_axi_aclk_1 1 0 5 40J 620 470 910 1100 160 NJ 160 2160
+preplace netloc s00_axi_aresetn_1 1 0 5 20J 670 450 930 1110 170 NJ 170 2170
+preplace netloc clk_30_72_1 1 0 6 20J 640 410 840 1030 610 1590 380 2240J 530 2660J
+preplace netloc AD_SV_RX_1_i_1 1 0 5 50 650 430J 640 950J 660 1500J 720 2210
+preplace netloc AD_SV_RX_1_q_1 1 0 5 N 810 550J 830 970J 220 NJ 220 2220
+preplace netloc AD_SV_RX_2_i_1 1 0 5 NJ 410 370 860 1120J 1180 NJ 1180 2280
+preplace netloc AD_SV_RX_2_q_1 1 0 5 NJ 430 390 870 1130J 1190 NJ 1190 2290
+preplace netloc AD_SV_RX_3_i_1 1 0 5 NJ 450 490 880 1010J 1200 1490J 1160 2180
+preplace netloc AD_SV_RX_3_q_1 1 0 5 NJ 470 530 900 1000J 1210 1560J 1170 2260
+preplace netloc AD_SV_RX_4_i_1 1 0 5 NJ 490 440 920 990J 1220 NJ 1220 2320
+preplace netloc AD_SV_RX_4_q_1 1 0 5 NJ 510 380 940 980J 1230 NJ 1230 2330
+preplace netloc MUXes_0_DL_TX_Service_2_i 1 4 3 2300J 950 2770J 890 NJ
+preplace netloc MUXes_0_DL_TX_Service_2_q 1 4 3 2230J 960 2780J 910 NJ
+preplace netloc MUXes_0_DL_TX_Service_3_q 1 4 3 2180J 120 NJ 120 3140J
+preplace netloc MUXes_0_DL_TX_Service_4_i 1 4 3 2200J 520 2630J 230 3110J
+preplace netloc MUXes_0_DL_TX_Service_4_q 1 4 3 2160J 670 2640J 240 3100J
+preplace netloc Uplink_UL_TX_Link_1_q 1 5 2 NJ 1410 3140
+preplace netloc Uplink_UL_TX_Link_1_i 1 5 2 NJ 1290 3110
+preplace netloc Downlink_LTE_GSM_0_DL_TX_Link_2_i 1 6 1 N 660
+preplace netloc Downlink_LTE_GSM_0_DL_TX_Link_2_q 1 6 1 3120 680n
+preplace netloc AD_LNK_RX_1_i_1 1 0 5 NJ 530 400 960 970J 1240 NJ 1240 2340
+preplace netloc AD_LNK_RX_1_q_1 1 0 5 NJ 550 420 980 960J 1250 NJ 1250 2350
+preplace netloc clk_240_1 1 0 3 NJ 730 520 850 1070J
+preplace netloc MUXes_0_DL_TX_Service_1_i 1 4 3 2140 -280 NJ -280 3150J
+preplace netloc MUXes_0_DL_TX_Service_1_q 1 4 3 2250 940 2750J 870 NJ
+preplace netloc AD_LNK_RX_2_q_1 1 0 5 NJ 110 550J 170 1020J 140 NJ 140 2130
+preplace netloc AD_LNK_RX_2_i_1 1 0 5 NJ 90 430J 160 970J 130 NJ 130 2120
+preplace netloc Control_from_SOM_0_ul_lnk_lnk_swap_iq 1 1 1 480 50n
+preplace netloc Control_from_SOM_0_op_mode_fsc_fsr 1 1 3 510 890 1020 230 1610J
+preplace netloc Control_from_SOM_0_ul_sv_lnk_swap_iq 1 1 1 540 470n
+preplace netloc Control_from_SOM_0_dl_lnk_sv_swap_iq 1 1 2 530J 1000 NJ
+preplace netloc Control_from_SOM_0_dl_lnk_lnk_swap_iq 1 1 2 550J 1020 NJ
+preplace netloc Control_from_SOM_0_ad9361_1_en_agc 1 1 6 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ
+preplace netloc Control_from_SOM_0_ad9361_2_en_agc 1 1 6 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ
+preplace netloc Control_from_SOM_0_ad9361_3_en_agc 1 1 6 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ
+preplace netloc Control_from_SOM_0_ad9364_en_agc 1 1 6 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ
+preplace netloc UPLINK_LINK_RX_GSM_0_UL_LNK_RX_1 1 2 1 1120 -20n
+preplace netloc UPLINK_LINK_RX_GSM_0_UL_LNK_RX_2 1 2 1 1090 0n
+preplace netloc UPLINK_LINK_RX_GSM_0_UL_LNK_RX_3 1 2 1 1080 20n
+preplace netloc UPLINK_LINK_RX_GSM_0_UL_LNK_RX_4 1 2 1 1060 40n
+preplace netloc UPLINK_SV_RX_GSM_0_UL_SV_RX_1 1 2 1 1040 370n
+preplace netloc UPLINK_SV_RX_GSM_0_UL_SV_RX_2 1 2 1 1010 390n
+preplace netloc UPLINK_SV_RX_GSM_0_UL_SV_RX_3 1 2 1 990 410n
+preplace netloc UPLINK_SV_RX_GSM_0_UL_SV_RX_4 1 2 1 930 430n
+preplace netloc Uplink_DL_TX_Service_1 1 3 1 1600 400n
+preplace netloc Uplink_DL_TX_Service_2 1 3 1 1580 420n
+preplace netloc Uplink_DL_TX_Service_3 1 3 1 1550 440n
+preplace netloc Uplink_DL_TX_Service_4 1 3 1 1500 460n
+preplace netloc Downlink_LTE_GSM_DL_TX_Service_1 1 3 1 1510 460n
+preplace netloc Downlink_LTE_GSM_DL_TX_Service_2 1 3 1 1520 480n
+preplace netloc Downlink_LTE_GSM_DL_TX_Service_3 1 3 1 1540 500n
+preplace netloc Downlink_LTE_GSM_DL_TX_Service_4 1 3 1 1570 520n
+preplace netloc Downlink_LTE_GSM_UL_TX_Link_1 1 4 2 2270 140 2700
+preplace netloc Control_from_SOM_0_fsc_1_link_mode 1 1 6 NJ 1430 NJ 1430 NJ 1430 2240J 1480 2700J 1450 NJ
+preplace netloc Downlink_LTE_GSM_UL_TX_Link_2 1 3 1 1530 640n
+preplace netloc Uplink_UL_TX_Link_1 1 3 1 1560 380n
+preplace netloc Downlink_LTE_GSM_DL_TX_Link_2 1 3 3 1500 1200 2310J 930 2720
+preplace netloc Control_from_SOM_0_ad9361_1_reset 1 1 6 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ
+preplace netloc Control_from_SOM_0_ad9361_2_reset 1 1 6 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ
+preplace netloc Control_from_SOM_0_ad9361_3_reset 1 1 6 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ
+preplace netloc Control_from_SOM_0_ad9364_reset 1 1 6 NJ 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 NJ
+preplace netloc MUXes_0_DL_TX_Service_3_i 1 4 3 2190J 130 NJ 130 3130J
+preplace netloc axi_gpio_0_gpio_io_o 1 5 1 2710 50n
+preplace netloc Service_1_TX_dout 1 5 1 2760 -90n
+preplace netloc Service_2_TX_dout 1 5 1 2720 210n
+preplace netloc Service_3_TX_dout 1 5 1 2690 330n
+preplace netloc Service_4_TX_dout 1 5 1 2660 440n
+preplace netloc Service_1_RX_dout 1 5 1 2650 300n
+preplace netloc Service_4_RX_dout 1 5 1 2740 360n
+preplace netloc Service_2_RX_dout 1 5 1 2670 320n
+preplace netloc Service_3_RX_dout 1 5 1 2680 340n
+preplace netloc DL_RX_LNK_dout 1 5 1 2760 460n
+preplace netloc UL_RX_LINK_dout 1 5 1 2730 -210n
+preplace netloc Switch_DATA_16b_0_Out_i 1 6 1 NJ 440
+preplace netloc Switch_DATA_16b_0_Out_q 1 6 1 NJ 420
+preplace netloc Control_from_SOM_0_reset_FIR_core_26b 1 1 2 460 1040 NJ
+preplace netloc FSK_Pilot_Uplink_pilot_i 1 2 1 1070 -210n
+preplace netloc FSK_Pilot_Uplink_pilot_q 1 2 1 1050 -190n
+preplace netloc FSK_Pilot_Downlink_pilot_i 1 2 1 940 720n
+preplace netloc FSK_Pilot_Downlink_pilot_q 1 2 1 930 740n
+preplace netloc S00_AXI1_1 1 0 2 NJ 70 370
+preplace netloc S00_AXI_1 1 0 2 NJ 270 370
+preplace netloc Conn1 1 0 1 NJ 1490
+preplace netloc Conn3 1 0 2 50J 700 NJ
+preplace netloc S00_AXI2_1 1 0 3 30J 630 NJ 630 980J
+preplace netloc S00_AXI4_1 1 0 3 NJ 781 500J 820 960J
+preplace netloc Conn2 1 0 5 NJ 130 490J 150 NJ 150 NJ 150 2150
+preplace netloc Conn4 1 0 2 40J -230 NJ
+levelinfo -pg 1 0 220 750 1310 1900 2490 2940 3170
+pagesize -pg 1 -db -bbox -sgen -210 -290 3390 1750
+"
+}
+0

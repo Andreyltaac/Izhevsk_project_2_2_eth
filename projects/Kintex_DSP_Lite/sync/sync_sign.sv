@@ -1,0 +1,284 @@
+module sync_sign
+#(
+  parameter int pDAT_W    = 12,
+  parameter int pDAT_Num  = 2048
+)  
+(
+  input  logic                         iclk,
+  input  logic                         ireset,
+  input  logic                         iena,
+  //
+  input  logic          [11:0]         corr_size,
+  input  logic          [11:0]         trh_lvl,
+  //
+  input  logic                         ival_pss,
+  input  logic                         ipss_I,
+  input  logic                         ipss_Q,
+  //
+  input  logic                         idata_I,
+  input  logic                         idata_Q,
+  //
+  output logic                         oena, 
+  //
+  output logic          [pDAT_W-1 : 0] ocorr
+                      
+);
+
+// `include "PSS_mask.svh"
+// `include "PSS_mask1.svh"
+
+////////////////////////////////////////////////////////////////////////////////////////////// localparam
+localparam int cWind = 32;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////// logic
+logic                          ena_corr;
+logic                          shiftreg_I_pss [0:pDAT_Num-1];
+logic                          shiftreg_Q_pss [0:pDAT_Num-1];
+					           
+logic                          shiftreg_I_dta [0:pDAT_Num-1];
+logic                          shiftreg_Q_dta [0:pDAT_Num-1];
+					    
+logic  signed   [1:0]          sign_reg_I 	  [0:pDAT_Num-1];
+logic  signed   [1:0]          sign_reg_Q 	  [0:pDAT_Num-1];
+											  
+logic  signed   [1:0]          mask_reg_I 	  [0:pDAT_Num-1];
+logic  signed   [1:0]          mask_reg_Q 	  [0:pDAT_Num-1];
+
+logic  signed   [pDAT_W-1:0]   sgn_msk_reg_I  [0:pDAT_Num-1];
+logic  signed   [pDAT_W-1:0]   sgn_msk_reg_Q  [0:pDAT_Num-1];
+							   
+logic  signed   [pDAT_W-1:0]   adder_re_odat;			    
+logic  signed   [pDAT_W-1:0]   adder_im_odat;
+				   
+logic	        [pDAT_W-1:0]   abs_re;
+logic	        [pDAT_W-1:0]   abs_im;	
+/* logic           [6:0]          max_cnt;
+logic           [6:0]          max_addr;
+logic	        [pDAT_W-1:0]   max_lvl;
+logic           [1:0]          trh_trig; */
+
+logic           [10:0]         mask_cnt;
+logic           [1:0]          PSS_mask       [0:pDAT_Num-1]; 
+ ////////////////////////////////////////////////////////////////////////////////////////////// assign
+assign ocorr = abs_re + abs_im;
+assign ena_corr = iena && ~ival_pss;
+assign oena = oena_re;
+//assign osop = ~trh_trig[0] && trh_trig[1];
+////////////////////////////////////////////////////////////////////////////////////////////// code
+
+	always_ff @ (posedge iclk or negedge ireset)
+	begin	
+		if (~ireset)
+		mask_cnt <= '0;
+		else if	(~ival_pss) mask_cnt   <= '0; 
+	       else if	(ival_pss) mask_cnt  <=  mask_cnt + 11'd1; 
+    end	
+
+
+	always_ff @ (posedge iclk or negedge ireset)
+	if (~ireset)
+		begin
+		 for	(int shiftreg_number = 0; shiftreg_number < pDAT_Num; shiftreg_number++)					
+		 begin
+		 PSS_mask[shiftreg_number] <= '0;
+		 end	
+		end		
+		else if (ival_pss)
+		begin
+			PSS_mask[mask_cnt] <= (mask_cnt < corr_size)?'1:'0;
+		end
+	
+	always_ff @ (posedge iclk or negedge ireset) begin
+	if (~ireset)
+		begin
+			for	(int shiftreg_number = 0; shiftreg_number < pDAT_Num; shiftreg_number++)					
+			begin
+				shiftreg_I_pss [shiftreg_number] <= '0;
+			    shiftreg_Q_pss [shiftreg_number] <= '0;	
+			end	
+		end		
+		else if (ival_pss)
+		begin		
+			shiftreg_I_pss[0] 	<=	ipss_I;
+		    shiftreg_Q_pss[0] 	<=	ipss_Q;		
+			for	(int shiftreg_number = 0; shiftreg_number < pDAT_Num-1; shiftreg_number++)				
+			begin
+				shiftreg_I_pss[shiftreg_number+1] <= shiftreg_I_pss[shiftreg_number];
+		        shiftreg_Q_pss[shiftreg_number+1] <= shiftreg_Q_pss[shiftreg_number];
+			end	
+    end
+	end
+
+	always_ff @ (posedge iclk or negedge ireset)
+	if (~ireset)
+		begin
+			for	(int shiftreg_number = 0; shiftreg_number < pDAT_Num; shiftreg_number++)					
+			begin
+				shiftreg_I_dta[shiftreg_number] <= '0;
+			    shiftreg_Q_dta[shiftreg_number] <= '0;
+				sign_reg_I	[shiftreg_number] 	<= '0;
+				sign_reg_Q	[shiftreg_number] 	<= '0;
+			end	
+		end		
+		else if (ena_corr)
+		begin		
+			shiftreg_I_dta[0]	<=	idata_I;
+		    shiftreg_Q_dta[0]	<=	idata_Q;
+			
+			for	(int shiftreg_number = 0; shiftreg_number < pDAT_Num-1; shiftreg_number++)				
+			begin
+				shiftreg_I_dta[shiftreg_number+1] <= shiftreg_I_dta[shiftreg_number];
+		        shiftreg_Q_dta[shiftreg_number+1] <= shiftreg_Q_dta[shiftreg_number];
+			end	
+						
+			for	(int shiftreg_number = 0; shiftreg_number < pDAT_Num; shiftreg_number++)
+			begin
+									
+					if	(shiftreg_I_pss[pDAT_Num-shiftreg_number]	==	shiftreg_I_dta[shiftreg_number])	
+						sign_reg_I[shiftreg_number]	<=	2'b01 & PSS_mask[shiftreg_number];
+					else
+						sign_reg_I[shiftreg_number]	<=	2'b11 & PSS_mask[shiftreg_number];
+						
+				    if	(shiftreg_Q_pss[pDAT_Num-shiftreg_number]	==	shiftreg_Q_dta[shiftreg_number])	
+						sign_reg_Q[shiftreg_number]	<=	2'b01 & PSS_mask[shiftreg_number];
+                    else
+					    sign_reg_Q[shiftreg_number]	<=	2'b11 & PSS_mask[shiftreg_number];
+			end		
+		end	
+
+
+  genvar y;
+  generate
+    
+      for (y = 0; y < pDAT_Num; y++) begin : expand
+          always_ff @(posedge iclk) begin
+              sgn_msk_reg_I[y] <={{10{sign_reg_I[y][1]}},sign_reg_I[y][1:0]};
+			  sgn_msk_reg_Q[y] <={{10{sign_reg_Q[y][1]}},sign_reg_Q[y][1:0]};
+           end
+          end // expand
+      endgenerate
+
+	
+  //------------------------------------------------------------------------------------------------------
+  //--ADDER
+  //------------------------------------------------------------------------------------------------------
+
+  adder
+  #(
+    .pDAT_W     ( pDAT_W   ),
+    .pDAT_Num   ( pDAT_Num )
+  )
+  adder_re
+  (
+    .iclk ( iclk          ),
+    .iena ( ena_corr      ),
+    .idat ( sgn_msk_reg_I ),
+    .oena ( oena_re       ),
+    .odat ( adder_re_odat )
+  );
+
+  adder
+  #(
+    .pDAT_W     ( pDAT_W   ),
+    .pDAT_Num   ( pDAT_Num )
+  )
+  adder_im
+  (
+    .iclk ( iclk          ),
+    .iena ( ena_corr      ),
+    .idat ( sgn_msk_reg_Q ),
+    .oena ( oena_im       ),
+    .odat ( adder_im_odat )
+  );
+
+		
+  //------------------------------------------------------------------------------------------------------
+  //--ABS
+  //------------------------------------------------------------------------------------------------------				
+	always_ff @ (posedge iclk or negedge ireset)
+	if (~ireset)
+		abs_re	<=	'0;
+	else
+	if(~adder_re_odat[pDAT_W-1])
+		abs_re	<=	adder_re_odat;
+	else	
+	if(adder_re_odat[pDAT_W-1])
+		abs_re	<= -adder_re_odat;
+	
+	always_ff @ (posedge iclk or negedge ireset)
+	if (~ireset)
+		abs_im	<=	'0;
+	else
+	if(~adder_im_odat[pDAT_W-1])
+		abs_im	<=	adder_im_odat;
+	else	
+	if(adder_im_odat[pDAT_W-1])
+		abs_im	<= -adder_im_odat;
+
+		
+  //------------------------------------------------------------------------------------------------------
+  //--TRESHOLD_DETECT
+  //------------------------------------------------------------------------------------------------------
+	/* always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+			begin
+				trh_trig <= '0;
+			    ocorr_mlvl <= '0;
+				ocorr_max_addr <='0;
+			end	
+				begin
+			    if((ocorr > trh_lvl) && ~trh_trig[0] && ena_corr) 
+				begin
+				trh_trig[0] <= '1;
+            	end
+				   else if	((max_cnt == cWind && trh_trig[0]) || ~ena_corr) 
+				   begin
+				   trh_trig[0] <= '0;
+				   ocorr_mlvl     <= max_lvl;
+			       ocorr_max_addr <= max_addr;
+             	   end
+				trh_trig[1] <= trh_trig[0];		
+				end   
+		end
+		
+				
+    always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+				max_cnt <= '0;
+			    else if	(~trh_trig[0]) max_cnt <= '0;
+			       else if (trh_trig[0]) max_cnt <= max_cnt + 6'd1;							
+		end		
+	
+	always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+			begin
+				max_lvl  <= '0;
+				max_addr <= '0;
+			end
+			    else if	(~trh_trig[0]) max_lvl <= '0;	
+				   else if	(ocorr > max_lvl) 
+				   begin
+				   max_lvl <= ocorr;
+				   max_addr <= max_cnt;
+                   end				   
+		end	 */	
+  //------------------------------------------------------------------------------------------------------
+  //
+  //------------------------------------------------------------------------------------------------------
+
+
+  //------------------------------------------------------------------------------------------------------
+  //
+  //------------------------------------------------------------------------------------------------------
+
+  
+  //------------------------------------------------------------------------------------------------------
+  //
+  //------------------------------------------------------------------------------------------------------
+
+  //------------------------------------------------------------------------------------------------------
+  //
+  //------------------------------------------------------------------------------------------------------
+
+
+endmodule

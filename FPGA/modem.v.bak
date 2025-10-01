@@ -1,0 +1,251 @@
+module modem(
+// System clocks and reset
+	input 						clk_l,           // clk_out1 AD9361_CTRL
+	input						clk_h,           // clk_out1 clk_wiz_0
+	input						clk_hh,          // clk_out2 clk_wiz_0
+	input						rst,             // peripheral_aresetn CLK_AXI
+// Input tx
+	input		[7:0]			s_axis_tdata,   //data_out packet_resampler 4bit
+	input						s_axis_tvalid,  //enable_in packet_resampler 4bit
+	output						s_axis_tready,
+// Output tx	
+    output		[15:0]			tx_i_axis_tdata,//din_data_4
+	output		[15:0]			tx_q_axis_tdata,//din_data_5
+// Input rx	
+	input	    [15:0]		    rx_i_axis_tdata,// dout_data_4
+	input	    [15:0]		    rx_q_axis_tdata,// dout_data_5
+// Output rx	
+	output		[7:0]	        m_axis_tdata,   //data_in packet_resampler 8bit
+	output						m_axis_tvalid,  // enable_in packet_resampler 8bit
+	input					    m_axis_tready,  // 1'
+// Leds_pins
+	output     				    corr_pr_detect, //LED 3
+	output                      DeFec_err_dtct,	//LED 2
+	output                      rx_tx_en,        //LED 1
+	output                      rx_ocorr_dtct,   //PIN_2
+// AXI	
+// Global Clock Signal
+	input wire                  S_AXI_ACLK,
+	// Global Reset Signal. This Signal is Active LOW
+	input wire                  S_AXI_ARESETN,
+	// Write address
+	input wire [C_S_AXI_ADDR_WIDTH-1:0] S_AXI_AWADDR,
+	// Write protection type
+	input wire [2:0]            S_AXI_AWPROT,
+	// Write address valid
+	input wire                  S_AXI_AWVALID,
+	// Write address ready
+	output wire                 S_AXI_AWREADY,
+	// Write data
+	input wire [C_S_AXI_DATA_WIDTH-1:0] S_AXI_WDATA,
+	// Write strobes
+	input wire [3:0]            S_AXI_WSTRB,
+	// Write valid
+	input wire                  S_AXI_WVALID,
+	// Write ready
+	output wire                 S_AXI_WREADY,
+	// Write response
+	output wire [1:0]           S_AXI_BRESP,
+	// Write response valid
+	output wire S_AXI_BVALID,
+	// Response ready
+	input wire S_AXI_BREADY,
+	// Read address
+	input wire [C_S_AXI_ADDR_WIDTH-1:0] S_AXI_ARADDR,
+	// Protection type
+	input wire [2:0] S_AXI_ARPROT,
+	// Read address valid
+	input wire S_AXI_ARVALID,
+	// Read address ready
+	output wire S_AXI_ARREADY,
+	// Read data
+	output wire [C_S_AXI_DATA_WIDTH-1:0] S_AXI_RDATA,
+	// Read response
+	output wire [1:0] S_AXI_RRESP,
+	// Read valid
+	output wire S_AXI_RVALID,
+	// Read ready
+	input wire S_AXI_RREADY
+);
+
+wire [3:0]  ctrl_ss;
+wire [2:0]  ctrl_mod;
+wire [2:0]  ctrl_bw;
+wire [23:0] ctrl_trh_lvl;
+wire [1:0]  ctrl_frsync;
+wire [13:0] ctrl_corr_addrshift;
+wire [23:0] delta_ph;
+wire [17:0] kb_ps;
+wire [23:0] thr_lvl_auto;
+wire [23:0] N_err;
+
+wire [15:0]	oredata_rx;
+wire [15:0]	oimdata_rx;
+
+only_tx modem_tx (
+    // System clocks and reset
+    .clk_l            (clk_l),
+    .clk_h            (clk_h),
+    .rst              (ctrl_tx_rst),
+    
+    // Configuration and control
+    .ss_in            (ctrl_ss),
+    .m_in             (ctrl_mod),
+    .bw_in            (ctrl_bw),
+    .data_off_tx      (ctrl_data_off),
+    .validate_en      (ctrl_validate_on),
+    
+    // Input AXI-Stream
+    .s_axis_aclk      (),
+    .s_axis_tdata     (s_axis_tdata),
+    .s_axis_tvalid    (s_axis_tvalid),
+    .s_axis_tready    (s_axis_tready),
+    .s_axis_tlast     (),
+    .s_axis_tuser     (),
+    
+    // I-channel output
+    .tx_i_axis_aclk   (),
+    .tx_i_axis_tdata  (tx_i_axis_tdata),
+    .tx_i_axis_tvalid (),
+    .tx_i_axis_tready (),
+    
+    // Q-channel output
+    .tx_q_axis_aclk   (),
+    .tx_q_axis_tdata  (tx_q_axis_tdata),
+    .tx_q_axis_tvalid (),
+    .tx_q_axis_tready ()
+);
+
+
+only_rx modem_rx (
+    // System clocks and reset
+    .clk_l            (clk_l),
+    .clk_h            (clk_h),
+    .clk_hh           (clk_hh),
+    .rst              (ctrl_rst_rx),
+
+    // Configuration parameters
+    .ss_in            (ctrl_ss),
+    .m_in             (ctrl_mod),
+    .bw_in            (ctrl_bw),
+    .thr_lvl          (ctrl_trh_lvl),
+    .frsync_ctrl      (ctrl_frsync),
+    .addr_shft        (ctrl_corr_addrshift),
+
+    // I/Q Input interfaces
+    .rx_i_axis_tdata  (oredata_rx),
+    .rx_i_axis_tvalid (),
+    .rx_i_axis_tready (),
+    
+    .rx_q_axis_tdata  (oimdata_rx),
+    .rx_q_axis_tvalid (),
+    .rx_q_axis_tready (),
+
+    // Clock inputs for I/Q interfaces
+    .rx_i_axis_aclk   (),
+    .rx_q_axis_aclk   (),
+
+    // Output data interface
+    .m_axis_tdata     (m_axis_tdata),
+    .m_axis_tvalid    (m_axis_tvalid),
+    .m_axis_tlast     (),
+    .m_axis_tuser     (),
+    .m_axis_tready    (m_axis_tready),
+    .m_axis_aclk      (),
+
+    // Detection and status outputs
+    .corr_pr_detect   (corr_pr_detect),
+    .DeFec_err_dtct   (),
+    .decrc_oerr       (),
+    .decrc_verr       (),
+    .p1_verr          (),
+    .p2_oerr          (),
+    .time_er          (),
+    .rx_ocorr_dtct    (rx_ocorr_dtct),
+    .delta_ph         (delta_ph),
+    .kb_ps            (kb_ps),
+
+    // Statistical outputs
+    .thr_lvl_auto     (thr_lvl_auto),
+    .N_sop_detect     (N_sop_detect),
+    .N_err            (N_err)
+);
+
+
+switch switch_inst (
+    // Input interface
+    .iredata_tx (tx_i_axis_tdata),
+    .iimdata_tx (tx_q_axis_tdata),
+    .iredata_ad (rx_i_axis_tdata),
+    .iimdata_ad (rx_q_axis_tdata),
+    .switch_on  (ctrl_switch_tx_ad),
+			    
+    // Output i nterface
+    .oredata_rx (oredata_rx),
+    .oimdata_rx (oimdata_rx)
+);
+
+
+modem_axi_lite #(
+    .C_S_AXI_DATA_WIDTH(32),
+    .C_S_AXI_ADDR_WIDTH(8)
+) axi_lite_inst (
+    // User ports (control outputs)
+    .rst_rx_out               (ctrl_rst_rx),
+    .rst_rx_out_valid         (),
+    .switchtx_ad_out          (ctrl_switch_tx_ad),
+    .switchtx_ad_out_valid    (),
+    .tx_rst_out               (ctrl_tx_rst),
+    .tx_rst_out_valid         (),
+    .validate_on_out          (ctrl_validate_on),
+    .validate_on_out_valid    (),
+    .data_off_out             (ctrl_data_off),
+    .data_off_out_valid       (),
+    .trh_lvl_out              (ctrl_trh_lvl),
+    .trh_lvl_out_valid        (),
+    .set_bw_out               (ctrl_bw),
+    .set_bw_out_valid         (),
+    .mod_in_out               (ctrl_mod),
+    .mod_in_out_valid         (),
+    .ss_in_out                (ctrl_ss),
+    .ss_in_out_valid          (),
+    .frsync_control_out       (ctrl_frsync),
+    .frsync_control_out_valid (),
+    .corr_addrshift_out       (ctrl_corr_addrshift),
+    .corr_addrshift_out_valid (),
+    .rezerv_out               (ctrl_rezerv),
+    .rezerv_out_valid         (),
+    
+    // User ports (status inputs)
+    .speedtest_in   (kb_ps),
+    .nsop_detect_in (N_sop_detect),
+    .thr_lvlauto_in (thr_lvl_auto),
+    .delta_phi_in   ({8{delta_ph[23]}},delta_ph[23:0]}),
+    .n_err_in       (N_err),
+    .rezerv_in      (),
+    
+    // AXI Lite interface
+    .S_AXI_ACLK     (S_AXI_ACLK),
+    .S_AXI_ARESETN  (rst),
+    .S_AXI_AWADDR   (S_AXI_AWADDR),
+    .S_AXI_AWPROT   (S_AXI_AWPROT),
+    .S_AXI_AWVALID  (S_AXI_AWVALID),
+    .S_AXI_AWREADY  (S_AXI_AWREADY),
+    .S_AXI_WDATA    (S_AXI_WDATA),
+    .S_AXI_WSTRB    (S_AXI_WSTRB),
+    .S_AXI_WVALID   (S_AXI_WVALID),
+    .S_AXI_WREADY   (S_AXI_WREADY),
+    .S_AXI_BRESP    (S_AXI_BRESP),
+    .S_AXI_BVALID   (S_AXI_BVALID),
+    .S_AXI_BREADY   (S_AXI_BREADY),
+    .S_AXI_ARADDR   (S_AXI_ARADDR),
+    .S_AXI_ARPROT   (S_AXI_ARPROT),
+    .S_AXI_ARVALID  (S_AXI_ARVALID),
+    .S_AXI_ARREADY  (S_AXI_ARREADY),
+    .S_AXI_RDATA    (S_AXI_RDATA),
+    .S_AXI_RRESP    (S_AXI_RRESP),
+    .S_AXI_RVALID   (S_AXI_RVALID),
+    .S_AXI_RREADY   (S_AXI_RREADY)
+);
+
+endmodule

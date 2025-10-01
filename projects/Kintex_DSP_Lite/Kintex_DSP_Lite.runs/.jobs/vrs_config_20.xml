@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_util_cpack_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_util_cpack_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_AXI_C2C_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_AXI_C2C_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_AXI_DMA_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_AXI_DMA_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_CLK_COMMON_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_CLK_COMMON_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_AXI_reset_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_AXI_reset_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ibuf_0_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_ibuf_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_FPGA_reset_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_FPGA_reset_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_adc_fifo_ad9364_0_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_adc_fifo_ad9364_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_dac_fifo_ad9364_0_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_dac_fifo_ad9364_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_divclk_64_rst1_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_divclk_64_rst1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_ad9364_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_axi_ad9364_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_adc_fifo_ad9361_1_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_adc_fifo_ad9361_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_dac_fifo_ad9361_1_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_dac_fifo_ad9361_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_1_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_2_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_3_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_0_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_ad9361_1_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_axi_ad9361_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_adc_fifo_ad9361_2_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_adc_fifo_ad9361_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_adc_fifo_ad9361_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_dac_fifo_ad9361_2_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_dac_fifo_ad9361_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_dac_fifo_ad9361_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_RAshift16_4_up_1_1_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_2_1_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_2_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_3_1_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_3_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_0_1_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_ad9361_2_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_axi_ad9361_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_adc_fifo_ad9361_3_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_adc_fifo_ad9361_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_adc_fifo_ad9361_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_dac_fifo_ad9361_3_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_dac_fifo_ad9361_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_dac_fifo_ad9361_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_RAshift16_4_up_0_2_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_1_2_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_2_2_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_2_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_RAshift16_4_up_3_2_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_3_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_ad9361_3_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_axi_ad9361_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_clk_DSP_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_clk_DSP_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_DATA_rst_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_DATA_rst_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_spi_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_axi_spi_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_on_off_f1956_data_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_on_off_f1956_data_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_on_off_f1956_clk_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_on_off_f1956_clk_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_SPI_MUX_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_SPI_MUX_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Control_from_SOM_0_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_Control_from_SOM_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Current_turning_off_0_0_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_Current_turning_off_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_IP_sync_0_3_synth_1" LaunchDir="F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_IP_sync_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/work/Izhevsk_project_2_2-main/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4252167fs"></ZoomEndTime>
+      <Cursor1Time time="2050000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="222"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1" type="array">
+      <obj_property name="ElementShortName">design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_ifft_q_reg_1[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">osub_i[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[11:0]</obj_property>
+      <obj_property name="ObjectShortName">osub_q[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/oval" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/oval</obj_property>
+      <obj_property name="ObjectShortName">oval</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_data_ifft_q_reg_1" type="array">
+      <obj_property name="ElementShortName">u_ila_0_data_ifft_q_reg_1[17:16]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_data_ifft_q_reg_1[17:16]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx" type="array">
+      <obj_property name="ElementShortName">design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[23:0]</obj_property>
+      <obj_property name="ObjectShortName">data_abs_mx[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+   </wvobject>
+</wave_config>

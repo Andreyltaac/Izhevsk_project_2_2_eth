@@ -1,0 +1,119 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr  4 11:04:02 2022
+# Process ID: 5124
+# Current directory: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7816 F:\kintex_dsp_lite\projects\Kintex_DSP_Lite\Kintex_DSP_Lite.xpr
+# Log file: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/vivado.log
+# Journal file: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.xpr
+INFO: [Project 1-313] Project file moved from 'C:/kintex_dsp_lite/projects/Kintex_DSP_Lite' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/kintex_dsp_lite/library'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/kintex_dsp_lite/library/util_clkdiv' will take precedence over the same IP in location f:/kintex_dsp_lite/library/xilinx/util_clkdiv
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 879.359 ; gain = 296.609
+update_compile_order -fileset sources_1
+open_bd_design {F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - Concat
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - GND
+Adding component instance block -- analog.com:user:util_cpack2:1.0 - util_cpack
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - VCC
+Adding component instance block -- xilinx.com:ip:axi_chip2chip:5.0 - AXI_C2C
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - AXI_C2C_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- analog.com:user:axi_dmac:1.0 - AXI_DMA
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - CLK_COMMON
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - AXI_reset
+Adding component instance block -- xilinx.com:module_ref:ibuf:1.0 - ibuf_0
+Adding component instance block -- xilinx.com:module_ref:FPGA_reset:1.0 - FPGA_reset
+WARNING: [BD 41-1731] Type mismatch between connected pins: /CLK_AXI/ibuf_0/out_ref(undef) and /CLK_AXI/CLK_COMMON/clk_in1(clk)
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - LOGIC_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - TDD_SYNC4
+Adding component instance block -- analog.com:user:util_wfifo:1.0 - adc_fifo_ad9364_0
+Adding component instance block -- analog.com:user:util_rfifo:1.0 - dac_fifo_ad9364_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - zero_sample
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - divclk_64_rst1
+Adding component instance block -- analog.com:user:axi_ad9361:1.0 - axi_ad9364
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - LOGIC_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - TDD_SYNC1
+Adding component instance block -- analog.com:user:util_wfifo:1.0 - adc_fifo_ad9361_1
+Adding component instance block -- analog.com:user:util_rfifo:1.0 - dac_fifo_ad9361_1
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_1
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_2
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_3
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_0
+Adding component instance block -- analog.com:user:axi_ad9361:1.0 - axi_ad9361_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - TDD_SYNC2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - LOGIC_1
+Adding component instance block -- analog.com:user:util_wfifo:1.0 - adc_fifo_ad9361_2
+Adding component instance block -- analog.com:user:util_rfifo:1.0 - dac_fifo_ad9361_2
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_1
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_2
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_3
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_0
+Adding component instance block -- analog.com:user:axi_ad9361:1.0 - axi_ad9361_2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - TDD_SYNC3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - LOGIC_1
+Adding component instance block -- analog.com:user:util_wfifo:1.0 - adc_fifo_ad9361_3
+Adding component instance block -- analog.com:user:util_rfifo:1.0 - dac_fifo_ad9361_3
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_0
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_1
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_2
+Adding component instance block -- xilinx.com:module_ref:RAshift16_4_up:1.0 - RAshift16_4_up_3
+Adding component instance block -- analog.com:user:axi_ad9361:1.0 - axi_ad9361_3
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_DSP
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - DATA_rst
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_spi
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - cs_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - cs_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - cs_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - cs_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - cs_4
+Adding component instance block -- xilinx.com:module_ref:on_off_wire:1.0 - on_off_f1956_data
+Adding component instance block -- xilinx.com:module_ref:on_off_wire:1.0 - on_off_f1956_clk
+Adding component instance block -- xilinx.com:module_ref:Decoder_SPI:1.0 - SPI_MUX
+Adding component instance block -- xilinx.com:user:Control_from_SOM:1.0 - Control_from_SOM_0
+Adding component instance block -- xilinx.com:user:Current_turning_off:1.0 - Current_turning_off_0
+Successfully read diagram <design_1> from BD file <F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 967.648 ; gain = 28.621
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Mon Apr  4 13:14:19 2022] Launched synth_1...
+Run output will be captured here: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/runme.log
+[Mon Apr  4 13:14:19 2022] Launched impl_1...
+Run output will be captured here: F:/kintex_dsp_lite/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7k325tffg676-2
+INFO: [Netlist 29-17] Analyzing 1081 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2160.730 ; gain = 16.438
+Restored from archive | CPU: 3.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2160.730 ; gain = 16.438
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2160.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 3 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 2308.223 ; gain = 1299.543
+open_report: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2395.445 ; gain = 84.395
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  4 14:14:45 2022...

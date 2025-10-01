@@ -1,0 +1,61 @@
+	module sync_stat
+#(
+  parameter int pTM_W  = 24,
+  parameter int pST_W  = 8
+)  
+(
+  input  logic                         iclk,
+  input  logic                         ireset,
+  input  logic                         iena,
+  //
+  input  logic                         isop, 
+  input  logic      [pTM_W-1:0]        frame_time,  
+   //
+  output logic      [pST_W-1:0]        ostat,
+  output logic                         oval   
+  
+);	
+			
+	logic           [pTM_W-1:0]        cnt_time;
+    logic           [pST_W-1:0]        cnt_peak;
+    logic                              count_pk_en; 	
+    logic                              time_over;
+	
+	assign time_over = (cnt_time == frame_time);
+	
+	
+	 always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+				count_pk_en <= 1'b0;
+			    else if	(time_over) count_pk_en <= 1'b0;
+			       else if (iena && isop)
+                   begin
+				   count_pk_en <= 1'b1;	
+                   end				   
+		end		
+		
+	 always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+				cnt_time <= 24'd0;
+			    else if	(time_over) cnt_time <= 24'd0;			
+			       else if (count_pk_en) cnt_time <= cnt_time + 24'd1;							
+		end
+		
+	always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+				cnt_peak <= 8'd0;
+			    else if	(time_over) 
+				    begin 
+					ostat    <= cnt_peak;
+				    cnt_peak <= 8'd0;	
+                    end				
+			        else if (count_pk_en && isop) cnt_peak <= cnt_peak + 8'd1;							
+		end
+		
+	always_ff @ (posedge iclk or negedge ireset) begin
+			if	(~ireset)
+				oval <= 1'd0;
+			    else  oval <= time_over;			
+		end
+		
+endmodule

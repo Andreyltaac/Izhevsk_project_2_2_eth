@@ -1,0 +1,66 @@
+`include "../input_data/map_i_band_all.svh"
+module map_i_ram#(
+	parameter depht_ram = 10,
+	parameter fftsize = 1024,
+	//parameter map_path = "",
+	//parameter CFG = "map_i",
+	parameter Num_bw = 1
+)
+(
+	input							clk,
+	input	[depht_ram - 1:0] 		addr,
+	input   [2:0]                   index_bw,
+	output 	logic [1:0]			    odat
+);
+
+/*   generate
+    if (CFG == "map_i") begin : config_a_block
+        `include "../input_data/map_i.svh"
+    end
+    else if (CFG == "map_p") begin : config_b_block
+        `include "../input_data/map_p_25mhz.svh"
+    end
+endgenerate*/
+    logic [11:0] map_data;
+	//logic [1:0] map_data;
+	
+	//logic [2*Num_bw-1:0] rom	[fftsize-1:0];
+
+  //assign map_data = map_data;
+    //assign map_data = map_i[addr]; 
+/*  
+	initial 
+	begin
+		$readmemb("../input_data/map_p_25mhz.txt", rom);
+	end*/
+
+always_comb begin
+begin
+		case (index_bw)
+			3'd0: odat = map_data[1:0];
+			3'd1: odat = map_data[3:2];
+			3'd2: odat = map_data[5:4];
+			3'd3: odat = map_data[7:6];
+			3'd4: odat = map_data[9:8];
+			3'd5: odat = map_data[11:10];
+		endcase
+ end 
+end
+
+always @(posedge clk)
+begin
+if (addr < fftsize) 
+begin
+/*case (index_bw)
+			3'd0: odat <= map_i[addr][1:0];
+			3'd1: odat <= map_i[addr][3:2];
+			3'd2: odat <= map_i[addr][5:4];
+			3'd3: odat <= map_i[addr][7:6];
+			3'd4: odat <= map_i[addr][9:8];
+			3'd5: odat <= map_i[addr][11:10];
+		endcase*/
+map_data <= map_i[addr];
+end
+end
+
+endmodule 

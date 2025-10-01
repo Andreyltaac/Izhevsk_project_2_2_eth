@@ -1,0 +1,272 @@
+`timescale 10ns/10ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 05.09.2022 15:21:39
+// Design Name: 
+// Module Name: mqc_t
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module mqc_t
+  #(
+    pDAT_W       = 32,
+    pDAT_Num     = 200000,
+    pDAT_FFT_Num = 17424//1024
+    ) 
+   (
+    input		               iclk_lte,
+	input		               iclk_dsp,
+    input		               ireset,
+    //
+    input		               isig_tcorr,
+    input wire [11:0]	       idata_re,
+    input wire [11:0]	       idata_im,
+    //           
+    input wire		           isync_cpack,
+	input wire                 iready_corr_wr,
+    //           
+    input wire [pDAT_W-1:0]    Service_1_RX_0,
+    input wire [pDAT_W-1:0]    Service_2_RX_1,
+    input wire [pDAT_W-1:0]    Service_3_RX_2,
+    input wire [pDAT_W-1:0]    Service_4_RX_3,
+    input wire [pDAT_W-1:0]    Service_1_TX_4,
+    input wire [pDAT_W-1:0]    Service_2_TX_5,
+    input wire [pDAT_W-1:0]    Service_3_TX_6,
+    input wire [pDAT_W-1:0]    Service_4_TX_7,
+    input wire [pDAT_W-1:0]    DL_RX_LNK_8,
+    input wire [pDAT_W-1:0]    DL_TX_LNK_9,
+    input wire [pDAT_W-1:0]    UL_RX_LNK_10,
+    input wire [pDAT_W-1:0]    UL_TX_LNK_11,
+    input wire [pDAT_W-1:0]    AD9364_Samples,
+    input wire [pDAT_W-1:0]    Power_meter_1,
+    input wire [pDAT_W-1:0]    Power_meter_2,
+    input wire [pDAT_W-1:0]    Power_meter_3,
+    input wire [pDAT_W-1:0]    Power_meter_4,
+    //
+	output reg [17:0]		   buff_r_addr,
+	input wire [pDAT_W-1:0]	   opack,
+	output reg [17:0]		   datac,
+	output reg [pDAT_W-1:0]	   dt,
+	
+	//
+    output wire [pDAT_W/2-1:0] odata_buff_0,
+    output wire [pDAT_W/2-1:0] odata_buff_1,
+	output wire                oready_buff
+    );
+   
+   //wire [pDAT_W-1:0]	   opack;
+   wire                    rd_buff_lte;
+   wire                    oready_buff_i;
+   wire                    sync_cpack;
+   //reg [17:0]		       datac;
+   
+   reg			           flag_tusur;
+   //reg [pDAT_W-1:0]	       dt;
+   reg [4:0]		       addr;
+   reg [15:0]		       magic_num;
+   reg [pDAT_W-1:0]	       pack;
+   //reg [17:0]		       buff_r_addr;
+   reg			           rd_en;
+   reg                     en_wr;
+   reg                     buff_ready_i;
+   reg                     buff_ready_t;
+   reg [10:0]              datac_i;
+   reg                     rd_end;
+   reg [1:0]               rd_end_rg;
+   reg                     isync_cpack_rg;
+   reg                     sync_cap;
+   
+   assign odata_buff_0 = opack[31:16];
+   assign odata_buff_1 = opack[15:0];
+   assign rd_buff_end  = (buff_ready_t && (buff_r_addr == pDAT_Num))||(buff_ready_i && (buff_r_addr == pDAT_FFT_Num));
+   assign oready_buff  = ~(buff_ready_t); 
+   assign oready_buff_i= ~(buff_ready_i && ~iready_corr_wr); //|| (buff_ready_i && ~iready_corr_wr && ~flag_tusur && ~isig_tcorr));
+   assign rd_buff_lte  = rd_end_rg[0]&&~rd_end_rg[1];
+   assign sync_cpack   = isync_cpack && ~ isync_cpack_rg; 
+
+ initial begin 
+ magic_num = 16'hAFA;
+ end
+ 
+ 
+    always @(posedge iclk_lte or negedge ireset) begin
+			if	(~ireset)
+				rd_end_rg <= 2'd0;
+			    else  
+				begin
+				rd_end_rg[0] <= rd_end;
+                rd_end_rg[1] <= rd_end_rg[0];				
+				end			
+		end	
+ 
+    always @(posedge iclk_dsp or negedge ireset) begin
+			if	(~ireset)
+				isync_cpack_rg <= 1'b0;
+			    else  
+				begin
+				isync_cpack_rg <= isync_cpack;
+         		end			
+		end
+		
+		
+    always @(posedge iclk_dsp or negedge ireset) begin
+			if	(~ireset)
+				sync_cap <= 1'b0;
+			    else  
+				begin if (sync_cpack && buff_ready_t)
+				sync_cap <= 1'b1;
+				else if (rd_buff_end) sync_cap <= 1'b0;
+              			
+				end			
+		end	
+ 
+always @(posedge iclk_lte or negedge ireset) begin //iclk_lte
+ if	(~ireset)
+ begin
+ datac <= 18'd0; 
+ end
+ else if ((isig_tcorr && ~flag_tusur) || (rd_buff_lte) || ((datac == pDAT_FFT_Num)&&~flag_tusur) || ((datac == pDAT_Num)&&flag_tusur))  datac <= 18'd0;
+   else if ((oready_buff&&flag_tusur) || (oready_buff_i &&  ~(buff_ready_t)))  datac <= datac + 18'd1;  
+end
+
+ 
+always @(posedge iclk_lte or negedge ireset) begin //iclk_lte
+ if	(~ireset)
+  begin
+  flag_tusur   <= 1'b0;
+  addr         <= 5'd0;
+  dt           <= 32'd0; 
+  datac_i      <= 11'd0;   
+  end				
+  else if ((oready_buff_i &&  ~(buff_ready_t)) || rd_buff_lte || isig_tcorr) begin
+      if (isig_tcorr || flag_tusur) 
+	  begin
+	     flag_tusur <= 1'b1; 
+		 dt <= {{4{idata_re[11]}},idata_re,{4{idata_im[11]}},idata_im};
+         addr  <= 5'd0;
+         if (datac == pDAT_Num) 
+		 begin
+            dt <= 32'd0;
+            flag_tusur <= 1'b0;
+         end
+      end
+      else if (~iready_corr_wr) 
+	  begin 
+	  
+      if ( addr == 17 ) addr <= 5'd0;
+	  	  
+      if (datac_i == 10'd1023) 
+		 begin
+	        addr <= addr + 1;
+			dt <= {11'd0,addr[4:0], magic_num[15:0]};
+         end
+         else 
+		 begin
+		 case(addr)
+           5'd0:  dt <= Service_1_RX_0;
+           5'd1:  dt <= Service_2_RX_1;
+           5'd2:  dt <= Service_3_RX_2;
+           5'd3:  dt <= Service_4_RX_3;
+           5'd4:  dt <= Service_1_TX_4;
+           5'd5:  dt <= Service_2_TX_5;
+           5'd6:  dt <= Service_3_TX_6;
+           5'd7:  dt <= Service_4_TX_7;
+           5'd8:  dt <= DL_RX_LNK_8;
+           5'd9:  dt <= DL_TX_LNK_9;
+           5'd10: dt <= UL_RX_LNK_10;
+           5'd11: dt <= UL_TX_LNK_11;
+           5'd12: dt <= AD9364_Samples;
+           5'd13: dt <= Power_meter_1;
+           5'd14: dt <= Power_meter_2;
+           5'd15: dt <= Power_meter_3;
+           5'd16: dt <= Power_meter_4;
+	     default : dt <= 32'd0;
+         endcase // case (addr)
+		 end  
+		 if ( (datac_i == 1024) || rd_buff_lte) datac_i <= 11'd0; else datac_i <= datac_i + 11'd1;
+	        
+      end
+   end
+end
+
+
+always @ (posedge iclk_lte or negedge ireset) begin	//iclk_lte
+   if (~ireset) 
+   begin
+    buff_ready_t <= 1'b0;
+	buff_ready_i <= 1'b0; 
+   end
+   else if (rd_buff_lte || (isig_tcorr && ~flag_tusur)) 
+   begin
+     buff_ready_t <= 1'b0;
+	 buff_ready_i <= 1'b0;
+   end 
+     else
+      begin
+      if  (addr == 5'd17 && ~flag_tusur)     buff_ready_i <= 1'b1;
+      if  (datac == pDAT_Num && flag_tusur)  buff_ready_t <= 1'b1;
+      end   
+end   
+   
+    
+  always @ (posedge iclk_dsp or negedge ireset) begin //iclk_dsp	
+   if (~ireset) 
+   begin
+     rd_end <= 1'b0;
+   end 
+   else if (rd_buff_end) rd_end <= 1'b1; 
+      else if (rd_buff_lte) rd_end <= 1'b0;
+end 
+  
+always @ (posedge iclk_dsp or negedge ireset) begin //iclk_dsp	
+   if (~ireset) 
+   begin
+     buff_r_addr <= 1'b0;
+   end 
+   else if (rd_buff_end) buff_r_addr <= 18'd0; 
+      else if ( rd_en ) buff_r_addr <= buff_r_addr + 18'd1;
+end  
+     
+always @ (posedge iclk_dsp or negedge ireset) begin	//iclk_dsp
+   if (~ireset) 
+   begin
+     rd_en <= 1'b0;
+   end
+   else if (rd_buff_end) rd_en <= 1'b0;
+     else if (sync_cpack && (1'b1 || ~buff_ready_t) && (buff_ready_t || buff_ready_i) && ~rd_end) rd_en <= 1'b1;
+end   
+   
+     
+  /*  buffer_ram	
+     #(
+    .DATA_W  ( 32 ),
+    .ADDR_W  ( 18 )
+       )
+   buffer_ram_sub
+     (	
+	.iclk_wr  (iclk_lte),
+	.iclk_rd  (iclk_dsp),
+	.en_wr    (1),
+	//
+	.wr_addr  (datac),
+	.en_rd    (1),
+   	.idata 	  (dt),
+	//
+	.r_addr   (buff_r_addr),
+	.odata 	  (opack)
+	); */
+   
+endmodule

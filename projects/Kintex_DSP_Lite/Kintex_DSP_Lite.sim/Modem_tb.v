@@ -1,0 +1,332 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 19.12.2024 12:16:33
+// Design Name: 
+// Module Name: Modem_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Modem_tb;
+
+  logic iclk ;
+  initial iclk = '1;
+  initial forever iclk = #10ns ~iclk;
+
+  //localparam int pDAT_W   = 18 ;
+  int code ;
+  int fd_re ;
+  int fd_im ;
+  logic signed [11:0] frame_dat_re;
+  logic signed [11:0] frame_dat_im;
+  int cnt_last1 = 0;
+  initial begin
+    code = 0;
+    frame_dat_re = '0;
+    frame_dat_im = '0;
+	
+    //ireset = '1;
+    //repeat (10) @(posedge iclk);
+	//ireset = '0;
+	
+    repeat (10) @(posedge iclk);	
+    fd_re = $fopen( "F:\\work\\IV_BPLA\\matlab\\I_DataBlock1000Hz.txt" , "r") ;//F:\work\IV_BPLA\matlab
+    fd_im = $fopen( "F:\\work\\IV_BPLA\\matlab\\Q_DataBlock1000Hz.txt" , "r") ;
+   
+    while (code != -1) @(posedge iclk) begin
+      code = $fscanf(fd_re, "%d\n", frame_dat_re);
+      code = $fscanf(fd_im, "%d\n", frame_dat_im);
+
+    end
+    
+ 
+    
+	repeat (10) @(posedge iclk);
+    
+	$fclose(fd_im);
+	$fclose(fd_im);
+	
+	repeat (112969) @(posedge iclk);
+	code = 0;
+    frame_dat_re = '0;
+    frame_dat_im = '0;
+	
+    //ireset = '1;
+    //repeat (10) @(posedge iclk);
+	//ireset = '0;
+	
+    repeat (10) @(posedge iclk);	
+    fd_re = $fopen( "F:\\work\\IV_BPLA\\matlab\\I_DataBlock1000Hz.txt" , "r") ;//F:\work\IV_BPLA\matlab
+    fd_im = $fopen( "F:\\work\\IV_BPLA\\matlab\\Q_DataBlock1000Hz.txt" , "r") ;
+   
+    while (code != -1) @(posedge iclk) begin
+      code = $fscanf(fd_re, "%d\n", frame_dat_re);
+      code = $fscanf(fd_im, "%d\n", frame_dat_im);
+
+    end
+    
+ 
+    
+	repeat (10) @(posedge iclk);
+    
+	$fclose(fd_im);
+	$fclose(fd_im);	
+	
+	
+	
+   
+  
+  end
+  
+  int  cnt;
+  int N = 64;
+  int sh = 64*5;
+
+  wire [31:0]M_AXIS_DATA_0_tdata;
+  wire [31:0]m_axis_data_1_tdata;
+  wire M_AXIS_DATA_0_tlast;
+  wire M_AXIS_DATA_0_tready;
+  wire M_AXIS_DATA_0_tvalid;
+  wire [15:0]S_AXIS_CONFIG_0_tdata;
+  wire S_AXIS_CONFIG_0_tready;
+  wire S_AXIS_CONFIG_0_tvalid;
+  wire [31:0]S_AXIS_DATA_0_tdata;
+  wire S_AXIS_DATA_0_tsop;
+  wire S_AXIS_DATA_0_tready;
+  
+  reg  S_AXIS_DATA_0_tvalid;  
+  reg  S_AXIS_DATA_0_tlast;
+  reg  irst;
+  
+  //int data_start = 12+128+1152*1; 
+  int  data_start = 12;
+
+
+
+initial begin
+
+
+int rst = 5;
+int sumbol_length = 1024;
+S_AXIS_DATA_0_tvalid <= 1'b0;
+S_AXIS_DATA_0_tlast  <= 1'b0;
+
+while (1) @(posedge iclk) 
+begin
+
+cnt++;
+if (cnt >= rst) irst <= 1'b1; else irst <= 1'b0; 
+//if (cnt == data_start) S_AXIS_DATA_0_tsop <= 1'b1; else if (cnt == data_start+sumbol_length) S_AXIS_DATA_0_tsop <= 1'b0; 
+
+if (cnt == data_start) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == data_start+sumbol_length) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 118892) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == sumbol_length+118892) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == data_start+sumbol_length) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == data_start+sumbol_length+1) S_AXIS_DATA_0_tlast  <= 1'b0;  
+
+//if (cnt == data_start+sumbol_length) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == data_start+sumbol_length*2) S_AXIS_DATA_0_tvalid <= 1'b0; 
+//if (cnt == data_start+sumbol_length*2) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == data_start+sumbol_length*2+1) S_AXIS_DATA_0_tlast  <= 1'b0;  
+
+/* if (cnt == 11+N) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+N) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+N) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+N) S_AXIS_DATA_0_tlast  <= 1'b0; 
+
+if (cnt == 11+2*N) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+2*N) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+2*N) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+2*N) S_AXIS_DATA_0_tlast  <= 1'b0; 
+
+if (cnt == 11+3*N) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+3*N) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+3*N) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+3*N) S_AXIS_DATA_0_tlast  <= 1'b0; 
+
+
+if (cnt == 11+sh) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+sh) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+sh) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+sh) S_AXIS_DATA_0_tlast  <= 1'b0;  
+
+if (cnt == 11+N+sh) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+N+sh) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+N+sh) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+N+sh) S_AXIS_DATA_0_tlast  <= 1'b0; 
+
+if (cnt == 11+2*N+sh) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+2*N+sh) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+2*N+sh) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+2*N+sh) S_AXIS_DATA_0_tlast  <= 1'b0; 
+
+if (cnt == 11+3*N+sh) S_AXIS_DATA_0_tvalid <= 1'b1; else if (cnt == 75+3*N+sh) S_AXIS_DATA_0_tvalid <= 1'b0; 
+if (cnt == 75+3*N+sh) S_AXIS_DATA_0_tlast  <= 1'b1; else if (cnt == 76+3*N+sh) S_AXIS_DATA_0_tlast  <= 1'b0;  */
+ 
+end
+end
+
+ assign M_AXIS_DATA_0_tready = 1; 
+ assign S_AXIS_DATA_0_tdata = {{4{frame_dat_im[11]}},frame_dat_im,{4{frame_dat_re[11]}},frame_dat_re};
+ //assign S_AXIS_DATA_0_tvalid = 1; 
+ assign S_AXIS_CONFIG_0_tdata = 8'b11000111;
+ assign S_AXIS_CONFIG_0_tvalid = 1;
+  
+  wire ival;
+  wire  [31:0] idata_corr_0;
+  //wire irst;
+  wire signed [31:0] odata;
+  wire oval;
+  
+  assign ival = 1;
+  assign idata_corr_0 = {$signed(1*16'd2684),$signed(16'd20014)}; 
+ // assign irst = 1;
+   
+   wire signed [11:0] a;
+   wire signed [11:0] b;
+   wire signed [21:0] c;
+   wire signed [21:0] d;
+   
+   assign a = 12'b010000000000;
+   assign b = 12'b011111111111;
+  
+  assign c = {a,10'b0};
+  assign d = c >>> 11;
+  
+  // modem_full 
+  // modem_full_i
+       // (
+	    // .iclk_0 (iclk),
+        // .idata_0(idata),
+        // .irst_0 (irst),
+        // .ival_0 (ival),
+        // .odata_0(odata),
+        // .oval_0 (oval)
+		// );
+		wire [1:0] fr_sync_ctrl;
+		wire fr_sync_oval;
+		wire fr_sync_osop;
+		wire fr_sync_olast;
+		wire [31:0] fr_sync_odata;
+
+assign S_AXIS_DATA_0_tsop = (cnt == data_start || cnt == 117228);
+assign fr_sync_ctrl = 3;
+/* fr_sync 
+ fr_sync_0
+ (
+  .iclk           (iclk), 
+  .irst           (irst), 
+  .fr_sync_ctrl   (fr_sync_ctrl),
+  .fr_sync_ival   (S_AXIS_DATA_0_tvalid), 
+  .fr_sync_isop   (S_AXIS_DATA_0_tsop), 
+  .fr_sync_idata  (S_AXIS_DATA_0_tdata),
+  .idata_corr     ({(-24'd694311),(24'd5149050)}),
+  .fr_sync_oval   (fr_sync_oval), 
+  .fr_sync_osop   (fr_sync_osop),
+  .fr_sync_olast  (fr_sync_olast),  
+  .fr_sync_odata  (fr_sync_odata)      
+);  */
+
+
+transmitter transmitter_sub
+ (
+    .iclk         ( iclk  ),
+    .irst         ( irst  ),
+//	 
+    .ien_data     ( 1'b1  ),
+    .osop_IQ      (       ),
+    .odata_I      (       ),
+	.odata_Q      (       ),
+	.a            (       ),
+	 .owrite_en   (       )
+//	 
+//  .ien_dac_b    ( 1'b0        ),
+//	 .osop_dac_b   (             ),
+//	 .odata_dac_b  ( DAC_DB      ),
+//	 .owrite_en_b  ( DAC_WRT_B   ),
+  );	
+
+
+/* int fd_re_out;
+int fd_im_out;
+//int a;
+initial begin
+//a = 0;
+fd_re_out = $fopen( "F:\\work\\IV_BPLA\\matlab\\I_data_root_out.txt" , "w") ;
+fd_im_out= $fopen( "F:\\work\\IV_BPLA\\matlab\\Q_data_root_out.txt" , "w") ;
+   while (1) @(posedge iclk) begin
+	if (fr_sync_oval) 
+	begin
+   //a=1;
+   if (1) begin
+	  $fdisplay(fd_re_out,"%d",$signed(fr_sync_odata[15:0]));
+     $fdisplay(fd_im_out,"%d",$signed(fr_sync_odata[31:16]));
+   end
+	end
+
+	if (fr_sync_olast) 
+	begin
+   cnt_last1 = cnt_last1 + 1;
+	end
+
+      if (cnt_last1 == 2)
+   begin 
+	$fclose(fd_re_out);
+   $fclose(fd_im_out);
+   end
+
+   end
+end  */
+
+
+
+// int a;
+// initial begin
+// a = 0;
+// fd_re_out = $fopen( "F:\\work\\MRSS\\matlab\\I_data_s_out.txt" , "w") ;
+
+//    while (1) @(posedge iclk) begin
+//	if (M_AXIS_DATA_0_tvalid) 
+//	begin
+//    a=1;
+//	  $fdisplay(fd_re_out,"%d",$signed(M_AXIS_DATA_0_tdata[15:0]));
+//	end
+//	if (M_AXIS_DATA_0_tlast) 
+//	begin
+//	repeat (1) @(posedge iclk);
+//	a=2;
+//	$fclose(fd_re_out);
+//	end	
+//    end
+
+
+
+// end 
+
+//  initial begin
+// fd_im_out= $fopen( "F:\\work\\MRSS\\matlab\\Q_data_s_out.txt" , "w") ;
+
+//    while (1) @(posedge iclk) begin
+//	if (M_AXIS_DATA_0_tvalid) 
+//	begin
+//    a=1;
+//	  $fdisplay(fd_im_out,"%d",$signed(M_AXIS_DATA_0_tdata[31:16]));
+//	end
+//	if (M_AXIS_DATA_0_tlast) 
+//	begin
+//	repeat (1) @(posedge iclk);
+//	a=2;
+//	$fclose(fd_im_out);
+//	end	
+//    end
+// end 
+
+/*  
+  initial begin
+ fd_oasc= $fopen( "C:\\FPGA\\Model_sim\\Ocenc_v\\oasc.txt", "w") ;
+ 
+    while (1) @(posedge iclk) begin
+    if (trig) 
+	  $fdisplay(fd_oasc,"%d",oasc);
+    end
+ end  */
+
+
+endmodule

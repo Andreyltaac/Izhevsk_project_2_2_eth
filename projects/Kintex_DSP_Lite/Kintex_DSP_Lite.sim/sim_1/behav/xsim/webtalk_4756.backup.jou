@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 28 10:35:46 2025
+# Process ID: 4756
+# Current directory: F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.sim/sim_1/behav/xsim/xsim.dir/Modem_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.sim/sim_1/behav/xsim/xsim.dir/Modem_tb_behav/webtalk/xsim_webtalk.tcl -notrace

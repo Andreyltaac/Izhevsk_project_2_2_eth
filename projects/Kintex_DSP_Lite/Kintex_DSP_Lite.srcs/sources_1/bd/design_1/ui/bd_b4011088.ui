@@ -1,0 +1,25 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port FPGA_REF_40MHZ -pg 1 -lvl 0 -x -20 -y 220 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace portBus clk_out -pg 1 -lvl 3 -x 630 -y -20 -defaultsOSRD
+preplace portBus peripheral_aresetn -pg 1 -lvl 3 -x 630 -y 140 -defaultsOSRD
+preplace portBus sample_rate_30 -pg 1 -lvl 3 -x 630 -y 20 -defaultsOSRD
+preplace portBus clk_out1 -pg 1 -lvl 3 -x 630 -y 0 -defaultsOSRD
+preplace portBus peripheral_aresetn1 -pg 1 -lvl 3 -x 630 -y 160 -defaultsOSRD
+preplace portBus peripheral_reset -pg 1 -lvl 3 -x 630 -y 120 -defaultsOSRD
+preplace inst clk_DSP -pg 1 -lvl 1 -x 130 -y 220 -defaultsOSRD
+preplace inst DATA_rst -pg 1 -lvl 2 -x 440 -y 120 -defaultsOSRD
+preplace netloc divclk_61_rst_peripheral_aresetn 1 2 1 610 140n
+preplace netloc clk_DSP_data_rate 1 1 2 250 20 610J
+preplace netloc clk_DSP_locked 1 1 1 260 160n
+preplace netloc ext_reset_in_1 1 0 2 NJ 100 NJ
+preplace netloc DATA_rst_peripheral_reset 1 2 1 NJ 120
+preplace netloc FPGA_REF_40MHZ_1 1 0 1 NJ 220
+levelinfo -pg 1 -20 130 440 630
+pagesize -pg 1 -db -bbox -sgen -200 -60 840 300
+"
+}
+0

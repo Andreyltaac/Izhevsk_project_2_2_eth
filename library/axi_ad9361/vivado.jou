@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Feb  9 12:41:25 2022
+# Process ID: 4338
+# Current directory: /home/nikita/work/hdl-hdl_2019_r1_AD9375_exp/library/axi_ad9361
+# Command line: vivado -mode batch -source axi_ad9361_ip.tcl
+# Log file: /home/nikita/work/hdl-hdl_2019_r1_AD9375_exp/library/axi_ad9361/vivado.log
+# Journal file: /home/nikita/work/hdl-hdl_2019_r1_AD9375_exp/library/axi_ad9361/vivado.jou
+#-----------------------------------------------------------
+source axi_ad9361_ip.tcl
