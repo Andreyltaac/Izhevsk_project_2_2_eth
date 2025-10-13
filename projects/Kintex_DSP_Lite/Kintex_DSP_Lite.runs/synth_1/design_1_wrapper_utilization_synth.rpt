@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Sep 22 15:22:24 2025
+| Date         : Thu Oct  9 13:37:22 2025
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 54104 |     0 |    203800 | 26.55 |
-|   LUT as Logic             | 46517 |     0 |    203800 | 22.82 |
+| Slice LUTs*                | 53845 |     0 |    203800 | 26.42 |
+|   LUT as Logic             | 46258 |     0 |    203800 | 22.70 |
 |   LUT as Memory            |  7587 |     0 |     64000 | 11.85 |
 |     LUT as Distributed RAM |  1734 |     0 |           |       |
 |     LUT as Shift Register  |  5853 |     0 |           |       |
-| Slice Registers            | 83056 |    12 |    407600 | 20.38 |
-|   Register as Flip Flop    | 83050 |    12 |    407600 | 20.38 |
+| Slice Registers            | 82279 |    12 |    407600 | 20.19 |
+|   Register as Flip Flop    | 82273 |    12 |    407600 | 20.18 |
 |   Register as Latch        |     6 |     0 |    407600 | <0.01 |
-| F7 Muxes                   |  1121 |     0 |    101900 |  1.10 |
+| F7 Muxes                   |  1107 |     0 |    101900 |  1.09 |
 | F8 Muxes                   |   222 |     0 |     50950 |  0.44 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 140   |          Yes |           - |          Set |
 | 5531  |          Yes |           - |        Reset |
-| 2540  |          Yes |         Set |            - |
-| 74845 |          Yes |       Reset |            - |
+| 2536  |          Yes |         Set |            - |
+| 74072 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -159,19 +159,19 @@ Table of Contents
 +------------+-------+---------------------+
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
-| FDRE       | 74845 |        Flop & Latch |
-| LUT3       | 18805 |                 LUT |
-| LUT2       | 14759 |                 LUT |
-| LUT6       |  9907 |                 LUT |
+| FDRE       | 74072 |        Flop & Latch |
+| LUT3       | 18695 |                 LUT |
+| LUT2       | 14727 |                 LUT |
+| LUT6       |  9732 |                 LUT |
 | SRL16E     |  7861 |  Distributed Memory |
 | CARRY4     |  7275 |          CarryLogic |
 | FDCE       |  5525 |        Flop & Latch |
-| LUT4       |  4933 |                 LUT |
-| LUT5       |  4918 |                 LUT |
-| FDSE       |  2540 |        Flop & Latch |
-| LUT1       |  1933 |                 LUT |
+| LUT4       |  4943 |                 LUT |
+| LUT5       |  4906 |                 LUT |
+| FDSE       |  2536 |        Flop & Latch |
+| LUT1       |  1926 |                 LUT |
 | RAMD64E    |  1520 |  Distributed Memory |
-| MUXF7      |  1121 |               MuxFx |
+| MUXF7      |  1107 |               MuxFx |
 | SRLC32E    |   946 |  Distributed Memory |
 | RAMD32     |   240 |  Distributed Memory |
 | MUXF8      |   222 |               MuxFx |
@@ -202,11 +202,9 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+------------+------+
-|  Ref Name  | Used |
-+------------+------+
-| dbg_hub_CV |    1 |
-+------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 
 9. Instantiated Netlists

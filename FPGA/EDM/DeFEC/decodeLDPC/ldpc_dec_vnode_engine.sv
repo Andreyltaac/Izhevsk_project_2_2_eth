@@ -94,7 +94,7 @@
 //                  vnode update values L(qij)  = L(Pi) + sum(Lrij)|(i ~= j) = L(Qi) - L(rji)|(i == j)
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_vnode_engine
 (

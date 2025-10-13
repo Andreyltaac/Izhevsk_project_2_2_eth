@@ -3,10 +3,11 @@ module modem(
 	input 						clk_l,           // clk_out1 AD9361_CTRL
 	input						clk_h,           // clk_out1 clk_wiz_0
 	input						clk_hh,          // clk_out2 clk_wiz_0
-	input						rst,             // peripheral_aresetn CLK_AXI
+	//input						rst,             // peripheral_aresetn CLK_AXI
 // Input tx
 	input		[7:0]			s_axis_tdata,   //data_out packet_resampler 4bit
 	input						s_axis_tvalid,  //enable_in packet_resampler 4bit
+	input                       s_axis_aclk,   //clk_h
 	output						s_axis_tready,
 // Output tx	
     output		[15:0]			tx_i_axis_tdata,//din_data_4
@@ -18,18 +19,21 @@ module modem(
 	output		[7:0]	        m_axis_tdata,   //data_in packet_resampler 8bit
 	output						m_axis_tvalid,  // enable_in packet_resampler 8bit
 	input					    m_axis_tready,  // 1'
+	input                       m_axis_aclk,    //clk_hh
 // Leds_pins
 	output     				    corr_pr_detect, //LED 3
 	output                      DeFec_err_dtct,	//LED 2
 	output                      rx_tx_en,        //LED 1
 	output                      rx_ocorr_dtct,   //PIN_2
+	output                      finder_osop,     //PIN_1
+	output                      decrc_verr,      //PIN_0
 // AXI	
 // Global Clock Signal
-	input wire                  S_AXI_ACLK,
+	input wire                  S_AXI_ACLK, //clk_wiz_0_axi_periph_clk
 	// Global Reset Signal. This Signal is Active LOW
 	input wire                  S_AXI_ARESETN,
 	// Write address
-	input wire [C_S_AXI_ADDR_WIDTH-1:0] S_AXI_AWADDR,
+	input wire [7:0]            S_AXI_AWADDR,
 	// Write protection type
 	input wire [2:0]            S_AXI_AWPROT,
 	// Write address valid
@@ -37,7 +41,7 @@ module modem(
 	// Write address ready
 	output wire                 S_AXI_AWREADY,
 	// Write data
-	input wire [C_S_AXI_DATA_WIDTH-1:0] S_AXI_WDATA,
+	input wire [31:0]           S_AXI_WDATA,
 	// Write strobes
 	input wire [3:0]            S_AXI_WSTRB,
 	// Write valid
@@ -51,7 +55,7 @@ module modem(
 	// Response ready
 	input wire                  S_AXI_BREADY,
 	// Read address
-	input wire [C_S_AXI_ADDR_WIDTH-1:0] S_AXI_ARADDR,
+	input wire [7:0]            S_AXI_ARADDR,
 	// Protection type
 	input wire [2:0]            S_AXI_ARPROT,
 	// Read address valid
@@ -59,7 +63,7 @@ module modem(
 	// Read address ready
 	output wire                 S_AXI_ARREADY,
 	// Read data
-	output wire [C_S_AXI_DATA_WIDTH-1:0] S_AXI_RDATA,
+	output wire [31:0]          S_AXI_RDATA,
 	// Read response
 	output wire [1:0]           S_AXI_RRESP,
 	// Read valid
@@ -78,11 +82,19 @@ wire [23:0] delta_ph;
 wire [17:0] kb_ps;
 wire [23:0] thr_lvl_auto;
 wire [23:0] N_err;
-
+wire [31:0] corr_sig;
 wire [15:0]	oredata_rx;
 wire [15:0]	oimdata_rx;
+wire ctrl_tx_rst;
+wire ctrl_rst_rx;
+wire ctrl_data_off;
+wire ctrl_validate_on;
+wire ctrl_switch_tx_ad;
+wire [14:0] N_sop_detect;
 
-only_tx modem_tx (
+assign rx_tx_en = (ctrl_tx_rst && ctrl_rst_rx);
+
+only_tx modem_tx(
     // System clocks and reset
     .clk_l            (clk_l),
     .clk_h            (clk_h),
@@ -96,7 +108,7 @@ only_tx modem_tx (
     .validate_en      (ctrl_validate_on),
     
     // Input AXI-Stream
-    .s_axis_aclk      (),
+    .s_axis_aclk      (s_axis_aclk),
     .s_axis_tdata     (s_axis_tdata),
     .s_axis_tvalid    (s_axis_tvalid),
     .s_axis_tready    (s_axis_tready),
@@ -151,19 +163,21 @@ only_rx modem_rx (
     .m_axis_tlast     (),
     .m_axis_tuser     (),
     .m_axis_tready    (m_axis_tready),
-    .m_axis_aclk      (),
+    .m_axis_aclk      (m_axis_aclk),
 
     // Detection and status outputs
     .corr_pr_detect   (corr_pr_detect),
-    .DeFec_err_dtct   (),
+    .DeFec_err_dtct   (DeFec_err_dtct),
     .decrc_oerr       (),
-    .decrc_verr       (),
+    .decrc_verr       (decrc_verr),
+    .finder_osop      (finder_osop),
     .p1_verr          (),
     .p2_oerr          (),
     .time_er          (),
     .rx_ocorr_dtct    (rx_ocorr_dtct),
     .delta_ph         (delta_ph),
     .kb_ps            (kb_ps),
+    .corr_sig         (corr_sig),
 
     // Statistical outputs
     .thr_lvl_auto     (thr_lvl_auto),
@@ -220,13 +234,13 @@ modem_axi_lite #(
     .speedtest_in   (kb_ps),
     .nsop_detect_in (N_sop_detect),
     .thr_lvlauto_in (thr_lvl_auto),
-    .delta_phi_in   ({8{delta_ph[23]}},delta_ph[23:0]}),
+    .delta_phi_in   ({{8{delta_ph[23]}},delta_ph[23:0]}),
     .n_err_in       (N_err),
-    .rezerv_in      (),
+    .rezerv_in      (corr_sig),
     
     // AXI Lite interface
     .S_AXI_ACLK     (S_AXI_ACLK),
-    .S_AXI_ARESETN  (rst),
+    .S_AXI_ARESETN  (S_AXI_ARESETN),
     .S_AXI_AWADDR   (S_AXI_AWADDR),
     .S_AXI_AWPROT   (S_AXI_AWPROT),
     .S_AXI_AWVALID  (S_AXI_AWVALID),

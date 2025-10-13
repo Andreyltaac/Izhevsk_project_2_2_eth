@@ -92,7 +92,7 @@
 // Description   : Special shift ram array for LDPC parallel decoding
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_mem
 (

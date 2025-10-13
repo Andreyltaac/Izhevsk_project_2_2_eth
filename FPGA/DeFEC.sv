@@ -35,14 +35,15 @@ module DeFEC(
     output  logic			[7:0]		odat,
 	output  logic                       err_dtct, 
 	output	logic						decrc_oerr,
-	output  logic                       decrc_verr
+	output  logic                       decrc_verr,
+	output  logic                       finder_osop
     );
 
 //---------------------------------------------------------------------------------
 
 logic           [4:0]   finder_idat;
 logic                   finder_ival;
-logic                   finder_osop;
+//logic                   finder_osop;
 logic                   finder_oval;
 logic           [4:0]   finder_odat;
 

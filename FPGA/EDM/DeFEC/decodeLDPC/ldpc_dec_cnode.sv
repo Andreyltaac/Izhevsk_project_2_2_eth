@@ -88,7 +88,7 @@
 // Description   : LDPC decoder check node arithmetic top module: read vnode and count cnode. Consist of pC*pLLR_BY_CYCLE engines.
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_cnode
 (

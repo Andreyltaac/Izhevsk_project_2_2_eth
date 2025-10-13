@@ -17,6 +17,7 @@ module RX_phy(
 		output                          ocorr_dtct,
 		output			[23:0]			thr_lvl_auto,
 		output			[23:0]			delta_ph,
+		output			[31:0]			corr_sig,
 
 		input			[15:0]			isub_i,
 		input			[15:0]			isub_q);
@@ -32,6 +33,7 @@ localparam pLLR_W			= 5  ;
 //							Блок управления								
 //----------------------------------------------------------------------//
 
+assign corr_sig = {xcorr_peak_i[15:0],xcorr_peak_q[15:0]};
 wire [2:0]		m_control_rx, m_control_tx;
 
 (* mark_debug = "true" *) wire [2:0]      bw_control_rx;
@@ -40,6 +42,7 @@ wire [3:0]		ss_control_rx, ss_control_tx;
 wire			demapper_osof;
 
 wire			del_rst;
+
 
 control
 control_sub(

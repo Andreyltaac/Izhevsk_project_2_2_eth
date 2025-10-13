@@ -1,3 +1,4 @@
+`include "../input_data/pilot.svh"
 module sub_eq#(
 parameter 	fft_depth 		= 12, 
 		level_pilot		= 2000, 
@@ -54,7 +55,7 @@ assign osop	= fifo_sop[step_pilot-1];
 
 assign H_oval	= ~fifo_val[step_pilot] & fifo_val[step_pilot-1];
 
-`include "../input_data/pilot.svh";
+
 
 /*initial begin
 	$readmemb(file_pilot,    pilot_mem);

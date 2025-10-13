@@ -106,7 +106,7 @@
 // Description   : LDPC decoder variable node arithmetic top module: read cnode and count vnode. Consist of pLLR_BY_CYCLE*pNODE_BY_CYCLE engines.
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_vnode
 (

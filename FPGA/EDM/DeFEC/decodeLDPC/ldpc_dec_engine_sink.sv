@@ -97,7 +97,7 @@
 //                  pODAT_W must be multuply of pZF * pT/pNODE_BY_CYCLE
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_engine_sink
 #(

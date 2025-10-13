@@ -52,7 +52,7 @@ module pack_finder(
     output  logic   [4:0]    odat
     );
 
-	`include "plc_bit_preambule.vh"
+	`include "plc_bit_preambule.svh"
 
   	localparam int cPREA_LEN = 128; 
  	localparam int cBORDER   = 80;

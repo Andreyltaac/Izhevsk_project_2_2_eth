@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Sep 22 14:57:36 2025
+//Date        : Thu Oct  9 13:13:47 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4087,7 +4087,7 @@ module ad9361_clk_imp_1I4OLDI
         .sample_rate_30_72(clk_DSP_data_rate));
 endmodule
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=106,numReposBlks=79,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=25,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=100,numReposBlks=73,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=22,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (AXI_RX_CLK_OUT,
     AXI_RX_DATA_OUT,
@@ -4507,6 +4507,7 @@ module design_1
   wire AXI_Peripheral_M14_AXI_WVALID;
   wire AXI_TX_CLK_IN_1;
   wire [16:0]AXI_TX_DATA_IN_1;
+  wire CLK_AXI_axi_periph_clk;
   wire Control_from_SOM_0_ad9361_1_en_agc;
   wire Control_from_SOM_0_ad9361_1_reset;
   wire Control_from_SOM_0_ad9361_2_en_agc;
@@ -4593,26 +4594,21 @@ module design_1
   wire [3:0]axi_ethernetlite_0_phy_tx_data;
   wire axi_ethernetlite_0_phy_tx_en;
   wire clk_axi_reset_n;
-  wire clk_wiz_0_axi_periph_clk;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]dout_data_4;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]dout_data_5;
   wire ibuf_0_out_ref;
-  wire only_rx_0_DeFec_err_dtct;
-  wire [23:0]only_rx_0_N_err;
-  wire [14:0]only_rx_0_N_sop_detect;
-  wire only_rx_0_corr_pr_detect;
-  wire only_rx_0_decrc_verr;
-  wire [23:0]only_rx_0_delta_ph;
-  wire [17:0]only_rx_0_kb_ps;
-  wire [7:0]only_rx_0_m_axis_tdata;
-  wire only_rx_0_m_axis_tvalid;
-  wire only_rx_0_p1_verr;
-  wire only_rx_0_rx_ocorr_dtct;
-  wire [23:0]only_rx_0_thr_lvl_auto;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]only_tx_0_osub_i;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]only_tx_0_osub_q;
+  wire modem_0_DeFec_err_dtct;
+  wire modem_0_corr_pr_detect;
+  wire modem_0_decrc_verr;
+  wire modem_0_finder_osop;
+  wire [7:0]modem_0_m_axis_tdata;
+  wire modem_0_m_axis_tvalid;
+  wire modem_0_rx_ocorr_dtct;
+  wire modem_0_rx_tx_en;
+  (* DEBUG = "true" *) wire [15:0]modem_0_tx_i_axis_tdata;
+  (* DEBUG = "true" *) wire [15:0]modem_0_tx_q_axis_tdata;
   wire [7:0]packet_resampler_4bt_0_data_out;
   wire packet_resampler_4bt_0_enable_out;
   wire [3:0]packet_resampler_8bt_0_data_out;
@@ -4630,40 +4626,25 @@ module design_1
   wire som_en_5v_s_1;
   wire spi_miso_0_1;
   wire spi_miso_1_1;
-  wire [15:0]switch_0_oimdata_rx;
-  wire [15:0]switch_0_oredata_rx;
   wire sys_200m_clk;
   wire [0:0]up_txnrx_1;
   wire util_clkdiv_0_clk_out;
-  wire [13:0]vio_addr_shift;
-  wire [2:0]vio_bw;
-  wire [0:0]vio_data_off;
-  wire [1:0]vio_frsync_ctrl;
-  wire [2:0]vio_m_in;
-  wire [0:0]vio_rst_rx;
-  wire [3:0]vio_ss_in;
-  wire [0:0]vio_switch_tx_ad;
-  wire [23:0]vio_trh_lvl;
-  wire [0:0]vio_tx_rst;
-  wire [0:0]vio_validate_on;
   wire [15:0]xlconstant_0_dout;
   wire [15:0]xlconstant_1_dout;
-  wire [31:0]xlconstant_3_dout;
   wire [0:0]xlconstant_4_dout;
   wire [0:0]xlconstant_5_dout;
-  wire [0:0]xlconstant_6_dout;
 
   assign AXI_RX_CLK_OUT = AXI_Peripheral_AXI_RX_CLK_OUT;
   assign AXI_RX_DATA_OUT[16:0] = AXI_Peripheral_AXI_RX_DATA_OUT;
   assign AXI_TX_CLK_IN_1 = AXI_TX_CLK_IN;
   assign AXI_TX_DATA_IN_1 = AXI_TX_DATA_IN[16:0];
   assign FPGA_REF_40MHZ_1 = FPGA_REF_40MHZ;
-  assign LED1[0] = vio_rst_rx;
-  assign LED2[0] = only_rx_0_DeFec_err_dtct;
-  assign LED3[0] = only_rx_0_corr_pr_detect;
-  assign PIN_0 = only_rx_0_p1_verr;
-  assign PIN_1 = only_rx_0_decrc_verr;
-  assign PIN_2 = only_rx_0_rx_ocorr_dtct;
+  assign LED1[0] = modem_0_rx_tx_en;
+  assign LED2[0] = modem_0_DeFec_err_dtct;
+  assign LED3[0] = modem_0_corr_pr_detect;
+  assign PIN_0 = modem_0_decrc_verr;
+  assign PIN_1 = modem_0_finder_osop;
+  assign PIN_2 = modem_0_rx_ocorr_dtct;
   assign ad9361_1_P0_N[5:0] = DSP_ad9361_1_P0_N;
   assign ad9361_1_P0_P[5:0] = DSP_ad9361_1_P0_P;
   assign ad9361_1_P1_N_1 = ad9361_1_P1_N[5:0];
@@ -4819,8 +4800,8 @@ module design_1
         .din_data_11({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_2({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_3({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .din_data_4(only_tx_0_osub_i),
-        .din_data_5(only_tx_0_osub_q),
+        .din_data_4(modem_0_tx_i_axis_tdata),
+        .din_data_5(modem_0_tx_q_axis_tdata),
         .din_data_6({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_7({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_8({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -4868,7 +4849,7 @@ module design_1
         .s_axi2_wready(AXI_Peripheral_M00_AXI_WREADY),
         .s_axi2_wstrb(AXI_Peripheral_M00_AXI_WSTRB),
         .s_axi2_wvalid(AXI_Peripheral_M00_AXI_WVALID),
-        .s_axi_aclk(clk_wiz_0_axi_periph_clk),
+        .s_axi_aclk(CLK_AXI_axi_periph_clk),
         .s_axi_araddr(AXI_Peripheral_M01_AXI_ARADDR),
         .s_axi_aresetn(rst_sys_ps7_100M_peripheral_aresetn),
         .s_axi_arprot(AXI_Peripheral_M01_AXI_ARPROT),
@@ -4907,7 +4888,7 @@ module design_1
         .delay_clk(sys_200m_clk),
         .dout_clk(AD9361_ctrl_data_rate),
         .ext_reset_in(clk_axi_reset_n),
-        .s_axi_aclk(clk_wiz_0_axi_periph_clk),
+        .s_axi_aclk(CLK_AXI_axi_periph_clk),
         .s_axi_araddr(AXI_Peripheral_M03_AXI_ARADDR),
         .s_axi_aresetn(rst_sys_ps7_100M_peripheral_aresetn),
         .s_axi_arprot(AXI_Peripheral_M03_AXI_ARPROT),
@@ -5159,11 +5140,11 @@ module design_1
         .fifo_wr_data_0(xlconstant_0_dout),
         .fifo_wr_data_1(xlconstant_1_dout),
         .idelay_ref_clk(sys_200m_clk),
-        .m_aclk(clk_wiz_0_axi_periph_clk),
+        .m_aclk(CLK_AXI_axi_periph_clk),
         .reset(reset_1));
   CLK_AXI_imp_ROVM9 CLK_AXI
        (.FPGA_REF_40MHZ(FPGA_REF_40MHZ_1),
-        .axi_periph_clk(clk_wiz_0_axi_periph_clk),
+        .axi_periph_clk(CLK_AXI_axi_periph_clk),
         .delay_clk(sys_200m_clk),
         .out_ref(ibuf_0_out_ref),
         .peripheral_aresetn(rst_sys_ps7_100M_peripheral_aresetn),
@@ -5177,7 +5158,7 @@ module design_1
         .ad9361_3_reset(Control_from_SOM_0_ad9361_3_reset),
         .ad9364_en_agc(Control_from_SOM_0_ad9364_en_agc),
         .ad9364_reset(Control_from_SOM_0_ad9364_reset),
-        .s00_axi_aclk(clk_wiz_0_axi_periph_clk),
+        .s00_axi_aclk(CLK_AXI_axi_periph_clk),
         .s00_axi_araddr(AXI_Peripheral_M04_AXI_ARADDR[3:0]),
         .s00_axi_aresetn(rst_sys_ps7_100M_peripheral_aresetn),
         .s00_axi_arprot(AXI_Peripheral_M04_AXI_ARPROT),
@@ -5206,7 +5187,7 @@ module design_1
         .fpga_en_28v_s3(Current_turning_off_0_fpga_en_28v_s3),
         .fpga_en_28v_s4(Current_turning_off_0_fpga_en_28v_s4),
         .fpga_en_5v_s(Current_turning_off_0_fpga_en_5v_s),
-        .s00_axi_aclk(clk_wiz_0_axi_periph_clk),
+        .s00_axi_aclk(CLK_AXI_axi_periph_clk),
         .s00_axi_araddr(AXI_Peripheral_M14_AXI_ARADDR[5:0]),
         .s00_axi_aresetn(rst_sys_ps7_100M_peripheral_aresetn),
         .s00_axi_arprot(AXI_Peripheral_M14_AXI_ARPROT),
@@ -5271,7 +5252,7 @@ module design_1
         .ad9364_SPI_CS(Decoder_SPI_0_num_cs_3),
         .ad9364_SPI_DO(ad9364_SPI_DO_1),
         .ip2intc_irpt(SPI_MOD_ip2intc_irpt),
-        .s_axi4_aclk(clk_wiz_0_axi_periph_clk),
+        .s_axi4_aclk(CLK_AXI_axi_periph_clk),
         .s_axi4_aresetn(rst_sys_ps7_100M_peripheral_aresetn));
   design_1_axi_ethernetlite_0_0 axi_ethernetlite_0
        (.ip2intc_irpt(axi_ethernetlite_0_ip2intc_irpt),
@@ -5284,7 +5265,7 @@ module design_1
         .phy_tx_clk(util_clkdiv_0_clk_out),
         .phy_tx_data(axi_ethernetlite_0_phy_tx_data),
         .phy_tx_en(axi_ethernetlite_0_phy_tx_en),
-        .s_axi_aclk(clk_wiz_0_axi_periph_clk),
+        .s_axi_aclk(CLK_AXI_axi_periph_clk),
         .s_axi_araddr(AXI_Peripheral_M13_AXI_ARADDR),
         .s_axi_arburst(AXI_Peripheral_M13_AXI_ARBURST),
         .s_axi_arcache(AXI_Peripheral_M13_AXI_ARCACHE),
@@ -5318,8 +5299,9 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .clk_out2(clk_wiz_0_clk_out2),
         .resetn(Net));
-  design_1_modem_axi_lite_0_0 modem_axi_lite_0
-       (.S_AXI_ACLK(clk_wiz_0_axi_periph_clk),
+  design_1_modem_0_0 modem_0
+       (.DeFec_err_dtct(modem_0_DeFec_err_dtct),
+        .S_AXI_ACLK(CLK_AXI_axi_periph_clk),
         .S_AXI_ARADDR(AXI_Peripheral_M05_AXI_ARADDR[7:0]),
         .S_AXI_ARESETN(rst_sys_ps7_100M_peripheral_aresetn),
         .S_AXI_ARPROT(AXI_Peripheral_M05_AXI_ARPROT),
@@ -5340,77 +5322,39 @@ module design_1
         .S_AXI_WREADY(AXI_Peripheral_M05_AXI_WREADY),
         .S_AXI_WSTRB(AXI_Peripheral_M05_AXI_WSTRB),
         .S_AXI_WVALID(AXI_Peripheral_M05_AXI_WVALID),
-        .delta_phi_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .n_err_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,xlconstant_6_dout}),
-        .nsop_detect_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rezerv_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .speedtest_in(xlconstant_3_dout),
-        .thr_lvlauto_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
-  design_1_only_rx_0_0 only_rx_0
-       (.DeFec_err_dtct(only_rx_0_DeFec_err_dtct),
-        .N_err(only_rx_0_N_err),
-        .N_sop_detect(only_rx_0_N_sop_detect),
-        .addr_shft(vio_addr_shift),
-        .bw_in(vio_bw),
         .clk_h(clk_wiz_0_clk_out1),
         .clk_hh(clk_wiz_0_clk_out2),
         .clk_l(AD9361_CTRL_clk_out1),
-        .corr_pr_detect(only_rx_0_corr_pr_detect),
-        .decrc_verr(only_rx_0_decrc_verr),
-        .delta_ph(only_rx_0_delta_ph),
-        .frsync_ctrl(vio_frsync_ctrl),
-        .kb_ps(only_rx_0_kb_ps),
+        .corr_pr_detect(modem_0_corr_pr_detect),
+        .decrc_verr(modem_0_decrc_verr),
+        .finder_osop(modem_0_finder_osop),
         .m_axis_aclk(clk_wiz_0_clk_out2),
-        .m_axis_tdata(only_rx_0_m_axis_tdata),
+        .m_axis_tdata(modem_0_m_axis_tdata),
         .m_axis_tready(xlconstant_5_dout),
-        .m_axis_tvalid(only_rx_0_m_axis_tvalid),
-        .m_in(vio_m_in),
-        .p1_verr(only_rx_0_p1_verr),
-        .rst(vio_rst_rx),
-        .rx_i_axis_aclk(AD9361_CTRL_clk_out1),
-        .rx_i_axis_tdata(switch_0_oredata_rx),
-        .rx_i_axis_tvalid(1'b0),
-        .rx_ocorr_dtct(only_rx_0_rx_ocorr_dtct),
-        .rx_q_axis_aclk(AD9361_CTRL_clk_out1),
-        .rx_q_axis_tdata(switch_0_oimdata_rx),
-        .rx_q_axis_tvalid(1'b0),
-        .ss_in(vio_ss_in),
-        .thr_lvl(vio_trh_lvl),
-        .thr_lvl_auto(only_rx_0_thr_lvl_auto));
-  design_1_only_tx_0_0 only_tx_0
-       (.bw_in(vio_bw),
-        .clk_h(clk_wiz_0_clk_out1),
-        .clk_l(AD9361_CTRL_clk_out1),
-        .data_off_tx(vio_data_off),
-        .m_in(vio_m_in),
-        .rst(vio_tx_rst),
-        .s_axis_aclk(AD9361_CTRL_clk_out1),
+        .m_axis_tvalid(modem_0_m_axis_tvalid),
+        .rx_i_axis_tdata(dout_data_4),
+        .rx_ocorr_dtct(modem_0_rx_ocorr_dtct),
+        .rx_q_axis_tdata(dout_data_5),
+        .rx_tx_en(modem_0_rx_tx_en),
+        .s_axis_aclk(clk_wiz_0_clk_out1),
         .s_axis_tdata(packet_resampler_4bt_0_data_out),
-        .s_axis_tlast(1'b0),
-        .s_axis_tuser(1'b0),
         .s_axis_tvalid(packet_resampler_4bt_0_enable_out),
-        .ss_in(vio_ss_in),
-        .tx_i_axis_aclk(AD9361_CTRL_clk_out1),
-        .tx_i_axis_tdata(only_tx_0_osub_i),
-        .tx_i_axis_tready(1'b1),
-        .tx_q_axis_aclk(AD9361_CTRL_clk_out1),
-        .tx_q_axis_tdata(only_tx_0_osub_q),
-        .tx_q_axis_tready(1'b1),
-        .validate_en(vio_validate_on));
+        .tx_i_axis_tdata(modem_0_tx_i_axis_tdata),
+        .tx_q_axis_tdata(modem_0_tx_q_axis_tdata));
   design_1_packet_resampler_4bt_0_0 packet_resampler_4bt_0
        (.clk_in(util_clkdiv_0_clk_out),
-        .clk_out(AD9361_CTRL_clk_out1),
+        .clk_out(clk_wiz_0_clk_out1),
         .data_in(axi_ethernetlite_0_phy_tx_data),
         .data_out(packet_resampler_4bt_0_data_out),
         .enable_in(axi_ethernetlite_0_phy_tx_en),
         .enable_out(packet_resampler_4bt_0_enable_out),
         .rst_n(rst_sys_ps7_100M_peripheral_aresetn));
   design_1_packet_resampler_8bt_0_0 packet_resampler_8bt_0
-       (.clk_in(AD9361_CTRL_clk_out1),
+       (.clk_in(clk_wiz_0_clk_out2),
         .clk_out(util_clkdiv_0_clk_out),
-        .data_in(only_rx_0_m_axis_tdata),
+        .data_in(modem_0_m_axis_tdata),
         .data_out(packet_resampler_8bt_0_data_out),
-        .enable_in(only_rx_0_m_axis_tvalid),
+        .enable_in(modem_0_m_axis_tvalid),
         .enable_out(packet_resampler_8bt_0_enable_out),
         .rst_n(rst_sys_ps7_100M_peripheral_aresetn));
   design_1_pipeline_0_0 pipeline_0
@@ -5418,54 +5362,24 @@ module design_1
         .data_in(packet_resampler_8bt_0_enable_out),
         .data_out(pipeline_0_data_out));
   design_1_pulse_expander_0_0 pulse_expander_0
-       (.clock(clk_wiz_0_axi_periph_clk),
+       (.clock(CLK_AXI_axi_periph_clk),
         .in_sig(axi_ethernetlite_0_ip2intc_irpt),
         .out_sig(pulse_expander_0_out_sig),
         .reset(rst_sys_ps7_100M_peripheral_aresetn));
-  design_1_switch_0_1 switch_0
-       (.iimdata_ad(dout_data_5),
-        .iimdata_tx(only_tx_0_osub_q),
-        .iredata_ad(dout_data_4),
-        .iredata_tx(only_tx_0_osub_i),
-        .oimdata_rx(switch_0_oimdata_rx),
-        .oredata_rx(switch_0_oredata_rx),
-        .switch_on(vio_switch_tx_ad));
   design_1_util_clkdiv_0_0 util_clkdiv_0
-       (.clk(clk_wiz_0_axi_periph_clk),
+       (.clk(CLK_AXI_axi_periph_clk),
         .clk_out(util_clkdiv_0_clk_out),
         .clk_sel(xlconstant_4_dout));
-  design_1_vio_0_0 vio_0
-       (.clk(clk_wiz_0_clk_out1),
-        .probe_in0(only_rx_0_N_sop_detect),
-        .probe_in1(only_rx_0_N_err),
-        .probe_in2(only_rx_0_thr_lvl_auto),
-        .probe_in3(only_rx_0_delta_ph),
-        .probe_in4(only_rx_0_kb_ps),
-        .probe_out0(vio_ss_in),
-        .probe_out1(vio_m_in),
-        .probe_out10(vio_validate_on),
-        .probe_out2(vio_addr_shift),
-        .probe_out3(vio_trh_lvl),
-        .probe_out4(vio_rst_rx),
-        .probe_out5(vio_switch_tx_ad),
-        .probe_out6(vio_bw),
-        .probe_out7(vio_tx_rst),
-        .probe_out8(vio_frsync_ctrl),
-        .probe_out9(vio_data_off));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   design_1_xlconstant_0_1 xlconstant_1
        (.dout(xlconstant_1_dout));
   design_1_xlconstant_2_0 xlconstant_2
        (.dout(Net));
-  design_1_xlconstant_3_2 xlconstant_3
-       (.dout(xlconstant_3_dout));
   design_1_xlconstant_3_1 xlconstant_4
        (.dout(xlconstant_4_dout));
   design_1_xlconstant_4_0 xlconstant_5
        (.dout(xlconstant_5_dout));
-  design_1_xlconstant_3_3 xlconstant_6
-       (.dout(xlconstant_6_dout));
 endmodule
 
 module design_1_AXI_C2C_axi_periph_0

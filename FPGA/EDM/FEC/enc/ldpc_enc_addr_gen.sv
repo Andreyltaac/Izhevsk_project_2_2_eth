@@ -52,7 +52,7 @@
 // Description   : LDPC encoder address generator. Generate control signal for special memory to do matrix multiplication.
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_enc_addr_gen
 (

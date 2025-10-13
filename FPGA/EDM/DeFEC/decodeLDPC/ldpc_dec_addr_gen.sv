@@ -74,7 +74,7 @@
 // Description   : LDPC decoder shift ram read address generator
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_addr_gen
 (

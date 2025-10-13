@@ -1,6 +1,5 @@
-module only_rx #(
-	parameter Validate_en = 1
-)(
+module only_rx (
+
 
 	input														clk_l, 
 	input														clk_h,
@@ -24,12 +23,14 @@ module only_rx #(
 	output                                                      DeFec_err_dtct,
 	output                                                      decrc_oerr,
 	output                                                      decrc_verr,
+	output                                                      finder_osop,
 	output                                                      p1_verr,
 	output                                                      p2_oerr,
 	output                                                      time_er,
 	output                                                      rx_ocorr_dtct,
 	output			[23:0]										delta_ph,
 	output          [17:0]                                      kb_ps,
+	output			[31:0]			                            corr_sig,
 
 
 	output			[23:0]										thr_lvl_auto,
@@ -70,6 +71,7 @@ RX_phy_sub(
 		.m_ax_obit_soft		(phy_fifo_dat),
 		.m_ax_oval_soft		(phy_fifo_val),
 		.thr_lvl_auto		(thr_lvl_auto),
+		.corr_sig           (corr_sig),
 		.corr_pr_detect		(corr_pr_detect),
 		.ocorr_dtct         (rx_ocorr_dtct),
 		.isub_i				(rx_i_axis_tdata),
@@ -104,7 +106,8 @@ wire				m_axis_tvalid_l;
     	.odat			(m_axis_tdata_l),
 		.err_dtct       (DeFec_err_dtct),
 		.decrc_verr     (decrc_verr),
-		.decrc_oerr		(decrc_oerr));
+		.decrc_oerr		(decrc_oerr),
+		.finder_osop    (finder_osop));
 
 
 

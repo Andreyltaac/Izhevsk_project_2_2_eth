@@ -88,7 +88,7 @@
 //                  L(r_ji) = prod(sign(vn_ij)) * min(abs(vn_ij)) exclude (j ~= 1)
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_cnode_engine
 (

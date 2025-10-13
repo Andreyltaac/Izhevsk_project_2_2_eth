@@ -98,7 +98,7 @@
 //                 The decoded systematic bits output during decoding on fly with error counting. Only systematic bit error is take into acount(!!!). The actual oerr value is valid at oeop tag.
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec
 (

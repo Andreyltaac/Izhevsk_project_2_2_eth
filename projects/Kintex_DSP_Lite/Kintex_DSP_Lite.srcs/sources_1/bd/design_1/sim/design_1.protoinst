@@ -2593,7 +2593,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/modem_axi_lite_0/S_AXI": {
+				"/modem_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "S_AXI_ACLK"},

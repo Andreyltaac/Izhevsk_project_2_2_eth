@@ -113,7 +113,7 @@
 //                 The decoded systematic or parity bits output during decoding on fly with error counting. The actual oerr value is valid at oeop tag.
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_engine
 (

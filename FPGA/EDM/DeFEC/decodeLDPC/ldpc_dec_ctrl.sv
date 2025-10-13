@@ -96,7 +96,7 @@
 // Description   : Main FSM. Generate address generator & vnode/cnode engines control signals
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_dec_ctrl
 (

@@ -362,58 +362,34 @@ set_clock_groups -asynchronous -group [get_clocks -of_objects [get_pins design_1
 
 
 
-create_pblock pblock_IP_sync_0
-resize_pblock [get_pblocks pblock_IP_sync_0] -add {CLOCKREGION_X0Y0:CLOCKREGION_X1Y6}
+#create_pblock pblock_IP_sync_0
+#resize_pblock [get_pblocks pblock_IP_sync_0] -add {CLOCKREGION_X0Y0:CLOCKREGION_X1Y6}
 
+#set_multicycle_path -from [get_pins {design_1_i/vio_0/inst/PROBE_OUT_ALL_INST/G_PROBE_OUT[4].PROBE_OUT0_INST/Probe_out_reg[0]/C}] -to [get_pins {design_1_i/only_rx_0/inst/DeFEC_sub/dec/engine/cnode/engine_inst_c_gen[0].engine_inst_llra_gen[2].engine/obusy_reg/CLR}] 1
 
-
-
-
-
+set_clock_groups -group [get_clocks axi_periph_clk_design_1_CLK_COMMON_0] -group [get_clocks clk_out1_design_1_clk_wiz_0_0] -group [get_clocks clk_out2_design_1_clk_wiz_0_0] -group [get_clocks clk_div_sel_0_s] -asynchronous
 
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/CLK_AXI/CLK_COMMON/inst/mmcm_adv_inst/CLKOUT1]]
-
-
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/CLK_AXI/CLK_COMMON/inst/mmcm_adv_inst/CLKOUT1]] -to [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]]
 
 
+#set_false_path -from [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]]
+#set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]] -to [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]]
-
-set_multicycle_path -from [get_pins {design_1_i/vio_0/inst/PROBE_OUT_ALL_INST/G_PROBE_OUT[4].PROBE_OUT0_INST/Probe_out_reg[0]/C}] -to [get_pins {design_1_i/only_rx_0/inst/DeFEC_sub/dec/engine/cnode/engine_inst_c_gen[0].engine_inst_llra_gen[2].engine/obusy_reg/CLR}] 1
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]]
+#set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
+#set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]]
 
 
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/util_clkdiv_0/inst/clk_divide_sel_0/O]] -to [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]]
-set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]] -to [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]]
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/util_clkdiv_0/inst/clk_divide_sel_0/O]]
 
 
 
-set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
-set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
-set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-connect_debug_port dbg_hub/clk [get_nets clk]
+
+
+
+#set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+#set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+#set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+#connect_debug_port dbg_hub/clk [get_nets clk]

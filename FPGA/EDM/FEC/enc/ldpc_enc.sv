@@ -77,7 +77,7 @@
 //                  Encoder work based upon H matrix decomposition and can be used only for matrix with X = -E*(T^-1)*B+D == EYE matrix
 //
 
-`include "define.vh"
+`include "define.svh"
 
 module ldpc_enc
 (

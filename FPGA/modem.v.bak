@@ -29,7 +29,7 @@ module modem(
 	// Global Reset Signal. This Signal is Active LOW
 	input wire                  S_AXI_ARESETN,
 	// Write address
-	input wire [C_S_AXI_ADDR_WIDTH-1:0] S_AXI_AWADDR,
+	input wire [7:0]            S_AXI_AWADDR,
 	// Write protection type
 	input wire [2:0]            S_AXI_AWPROT,
 	// Write address valid
@@ -37,7 +37,7 @@ module modem(
 	// Write address ready
 	output wire                 S_AXI_AWREADY,
 	// Write data
-	input wire [C_S_AXI_DATA_WIDTH-1:0] S_AXI_WDATA,
+	input wire [31:0]           S_AXI_WDATA,
 	// Write strobes
 	input wire [3:0]            S_AXI_WSTRB,
 	// Write valid
@@ -47,25 +47,25 @@ module modem(
 	// Write response
 	output wire [1:0]           S_AXI_BRESP,
 	// Write response valid
-	output wire S_AXI_BVALID,
+	output wire                 S_AXI_BVALID,
 	// Response ready
-	input wire S_AXI_BREADY,
+	input wire                  S_AXI_BREADY,
 	// Read address
-	input wire [C_S_AXI_ADDR_WIDTH-1:0] S_AXI_ARADDR,
+	input wire [7:0]            S_AXI_ARADDR,
 	// Protection type
-	input wire [2:0] S_AXI_ARPROT,
+	input wire [2:0]            S_AXI_ARPROT,
 	// Read address valid
-	input wire S_AXI_ARVALID,
+	input wire                  S_AXI_ARVALID,
 	// Read address ready
-	output wire S_AXI_ARREADY,
+	output wire                 S_AXI_ARREADY,
 	// Read data
-	output wire [C_S_AXI_DATA_WIDTH-1:0] S_AXI_RDATA,
+	output wire [31:0]          S_AXI_RDATA,
 	// Read response
-	output wire [1:0] S_AXI_RRESP,
+	output wire [1:0]           S_AXI_RRESP,
 	// Read valid
-	output wire S_AXI_RVALID,
+	output wire                 S_AXI_RVALID,
 	// Read ready
-	input wire S_AXI_RREADY
+	input wire                  S_AXI_RREADY
 );
 
 wire [3:0]  ctrl_ss;
@@ -220,7 +220,7 @@ modem_axi_lite #(
     .speedtest_in   (kb_ps),
     .nsop_detect_in (N_sop_detect),
     .thr_lvlauto_in (thr_lvl_auto),
-    .delta_phi_in   ({8{delta_ph[23]}},delta_ph[23:0]}),
+    .delta_phi_in   ({{8{delta_ph[23]}},delta_ph[23:0]}),
     .n_err_in       (N_err),
     .rezerv_in      (),
     
