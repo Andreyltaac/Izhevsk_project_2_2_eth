@@ -67,7 +67,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7k325tffg676-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -96,6 +95,7 @@ set rc [catch {
   read_ip -quiet F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft_corr/axis_data_fifo_ifft_corr.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/fft_corr_1.xci
+  read_ip -quiet F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_0_1/axis_data_fifo_0.xci
   add_files F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   read_xdc F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc

@@ -43,6 +43,7 @@ begin
 			3'd3: odat = map_data[7:6];
 			3'd4: odat = map_data[9:8];
 			3'd5: odat = map_data[11:10];
+	     default: odat = '0;
 		endcase
  end 
 end

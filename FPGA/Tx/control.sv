@@ -61,7 +61,7 @@ always @(posedge clk) begin
 	if(sof_rx) begin
 		local_m_rx  <= index_M;
 		local_ss_rx <= index_SS;
-		local_bw_rx <= index_BW;
+		//local_bw_rx <= index_BW;
 	end
     local_bw_rx <= index_BW;
 end

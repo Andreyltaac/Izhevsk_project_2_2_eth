@@ -39,6 +39,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_
 # IP: ip/fft_corr_1/fft_corr_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_corr_1 || ORIG_REF_NAME==fft_corr_1} -quiet] -quiet
 
+# IP: ip/axis_data_fifo_0_1/axis_data_fifo_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_0 || ORIG_REF_NAME==axis_data_fifo_0} -quiet] -quiet
+
 # Block Designs: bd/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
@@ -237,20 +240,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlcons
 # IP: bd/design_1/ip/design_1_xlconstant_3_1/design_1_xlconstant_3_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_3_1 || ORIG_REF_NAME==design_1_xlconstant_3_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_packet_resampler_4bt_0_0/design_1_packet_resampler_4bt_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_packet_resampler_4bt_0_0 || ORIG_REF_NAME==design_1_packet_resampler_4bt_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_packet_resampler_8bt_0_0/design_1_packet_resampler_8bt_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_packet_resampler_8bt_0_0 || ORIG_REF_NAME==design_1_packet_resampler_8bt_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_ethernetlite_0_0 || ORIG_REF_NAME==design_1_axi_ethernetlite_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_util_clkdiv_0_0/design_1_util_clkdiv_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_util_clkdiv_0_0 || ORIG_REF_NAME==design_1_util_clkdiv_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_pipeline_0_0/design_1_pipeline_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_pipeline_0_0 || ORIG_REF_NAME==design_1_pipeline_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_pulse_expander_0_0/design_1_pulse_expander_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_pulse_expander_0_0 || ORIG_REF_NAME==design_1_pulse_expander_0_0} -quiet] -quiet
@@ -296,6 +290,21 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_modem_
 
 # IP: ip/fft_corr_1/fft_corr_1.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_corr_1 || ORIG_REF_NAME==fft_corr_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_eth_pump_0_0/design_1_eth_pump_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_eth_pump_0_0 || ORIG_REF_NAME==design_1_eth_pump_0_0} -quiet] -quiet
+
+# IP: ip/axis_data_fifo_0_1/axis_data_fifo_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_0 || ORIG_REF_NAME==axis_data_fifo_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0_0 || ORIG_REF_NAME==design_1_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlconstant_3_2/design_1_xlconstant_3_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_3_2 || ORIG_REF_NAME==design_1_xlconstant_3_2} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlconstant_3_3/design_1_xlconstant_3_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_3_3 || ORIG_REF_NAME==design_1_xlconstant_3_3} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet

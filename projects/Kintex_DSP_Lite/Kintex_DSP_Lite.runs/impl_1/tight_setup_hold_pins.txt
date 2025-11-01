@@ -1,5 +1,6 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| clk_out1_design_1_clk_wiz_0_0 |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/modem_0/inst/modem_tx/TX_phy_sub/series2parallel_sub/buffer_reg[0]/D|
+| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                             design_1_i/modem_0/inst/modem_tx/TX_phy_sub/series2parallel_sub/loc_req_reg/D|
+| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                                design_1_i/modem_0/inst/modem_tx/TX_phy_sub/series2parallel_sub/oval_reg/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

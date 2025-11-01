@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Oct  9 13:55:01 2025
+| Date             : Wed Oct 29 14:57:17 2025
 | Host             : TOR00094 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.847        |
+| Total On-Chip Power (W)  | 2.860        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.656        |
-| Device Static (W)        | 0.191        |
+| Dynamic (W)              | 2.666        |
+| Device Static (W)        | 0.194        |
 | Effective TJA (C/W)      | 1.9          |
 | Max Ambient (C)          | 79.6         |
 | Junction Temperature (C) | 30.4         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.245 |       20 |       --- |             --- |
-| Slice Logic              |     0.142 |   159960 |       --- |             --- |
-|   LUT as Logic           |     0.097 |    43848 |    203800 |           21.52 |
-|   LUT as Shift Register  |     0.018 |     5188 |     64000 |            8.11 |
-|   Register               |     0.015 |    76819 |    407600 |           18.85 |
-|   CARRY4                 |     0.011 |     7105 |     50950 |           13.95 |
-|   F7/F8 Muxes            |    <0.001 |     1329 |    203800 |            0.65 |
-|   LUT as Distributed RAM |    <0.001 |     1630 |     64000 |            2.55 |
-|   Others                 |     0.000 |    12162 |       --- |             --- |
-| Signals                  |     0.158 |   100236 |       --- |             --- |
-| Block RAM                |     0.190 |    109.5 |       445 |           24.61 |
+| Clocks                   |     0.247 |       20 |       --- |             --- |
+| Slice Logic              |     0.143 |   161073 |       --- |             --- |
+|   LUT as Logic           |     0.098 |    44342 |    203800 |           21.76 |
+|   LUT as Shift Register  |     0.018 |     5186 |     64000 |            8.10 |
+|   Register               |     0.015 |    77660 |    407600 |           19.05 |
+|   CARRY4                 |     0.011 |     7184 |     50950 |           14.10 |
+|   F7/F8 Muxes            |    <0.001 |     1280 |    203800 |            0.63 |
+|   LUT as Distributed RAM |    <0.001 |     1246 |     64000 |            1.95 |
+|   Others                 |     0.000 |    12219 |       --- |             --- |
+| Signals                  |     0.157 |   101235 |       --- |             --- |
+| Block RAM                |     0.198 |    149.5 |       445 |           33.60 |
 | MMCM                     |     0.341 |        3 |        10 |           30.00 |
 | PLL                      |     0.113 |        1 |        10 |           10.00 |
 | DSPs                     |     0.035 |      122 |       840 |           14.52 |
 | I/O                      |     1.433 |      225 |       400 |           56.25 |
-| Static Power             |     0.191 |          |           |                 |
-| Total                    |     2.847 |          |           |                 |
+| Static Power             |     0.194 |          |           |                 |
+| Total                    |     2.860 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.889 |       0.800 |      0.089 |
+| Vccint    |       1.000 |     0.900 |       0.809 |      0.091 |
 | Vccaux    |       1.800 |     0.401 |       0.372 |      0.029 |
 | Vcco33    |       3.300 |     0.071 |       0.070 |      0.001 |
 | Vcco25    |       2.500 |     0.257 |       0.256 |      0.001 |
@@ -87,7 +87,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.020 |       0.014 |      0.006 |
+| Vccbram   |       1.000 |     0.022 |       0.015 |      0.007 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -162,38 +162,35 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------------+-----------+
-| Name                       | Power (W) |
-+----------------------------+-----------+
-| design_1_wrapper           |     2.656 |
-|   design_1_i               |     2.644 |
-|     AD9361_CTRL            |     0.979 |
-|       AD9361_1             |     0.395 |
-|       AD9361_2             |     0.234 |
-|       AD9361_3             |     0.231 |
-|       ad9361_clk           |     0.119 |
-|     AD9364                 |     0.376 |
-|       axi_ad9364           |     0.375 |
-|     AXI_Peripheral         |     0.447 |
-|       AXI_C2C              |     0.441 |
-|       AXI_C2C_axi_periph   |     0.001 |
-|       AXI_DMA              |     0.005 |
-|     CLK_AXI                |     0.107 |
-|       CLK_COMMON           |     0.106 |
-|     Current_turning_off_0  |     0.020 |
-|       inst                 |     0.020 |
-|     SPI_MOD                |     0.005 |
-|       axi_spi              |     0.005 |
-|     axi_ethernetlite_0     |     0.005 |
-|       U0                   |     0.005 |
-|     clk_wiz_0              |     0.114 |
-|       inst                 |     0.114 |
-|     modem_0                |     0.581 |
-|       inst                 |     0.581 |
-|     packet_resampler_4bt_0 |     0.003 |
-|       inst                 |     0.003 |
-|     packet_resampler_8bt_0 |     0.006 |
-|       inst                 |     0.006 |
-+----------------------------+-----------+
++---------------------------+-----------+
+| Name                      | Power (W) |
++---------------------------+-----------+
+| design_1_wrapper          |     2.666 |
+|   design_1_i              |     2.655 |
+|     AD9361_CTRL           |     0.979 |
+|       AD9361_1            |     0.395 |
+|       AD9361_2            |     0.233 |
+|       AD9361_3            |     0.231 |
+|       ad9361_clk          |     0.119 |
+|     AD9364                |     0.376 |
+|       axi_ad9364          |     0.376 |
+|     AXI_Peripheral        |     0.446 |
+|       AXI_C2C             |     0.440 |
+|       AXI_DMA             |     0.005 |
+|     CLK_AXI               |     0.107 |
+|       CLK_COMMON          |     0.106 |
+|     Current_turning_off_0 |     0.021 |
+|       inst                |     0.021 |
+|     SPI_MOD               |     0.005 |
+|       axi_spi             |     0.005 |
+|     axi_ethernetlite_0    |     0.005 |
+|       U0                  |     0.005 |
+|     clk_wiz_0             |     0.114 |
+|       inst                |     0.114 |
+|     eth_pump_0            |     0.017 |
+|       inst                |     0.017 |
+|     modem_0               |     0.583 |
+|       inst                |     0.583 |
++---------------------------+-----------+
 
 

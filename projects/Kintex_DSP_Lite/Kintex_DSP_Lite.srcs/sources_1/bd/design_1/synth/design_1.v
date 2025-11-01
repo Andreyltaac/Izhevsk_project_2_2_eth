@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Oct  9 13:13:47 2025
+//Date        : Wed Oct 29 14:15:39 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4087,7 +4087,7 @@ module ad9361_clk_imp_1I4OLDI
         .sample_rate_30_72(clk_DSP_data_rate));
 endmodule
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=100,numReposBlks=73,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=22,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=101,numReposBlks=74,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=20,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (AXI_RX_CLK_OUT,
     AXI_RX_DATA_OUT,
@@ -4598,22 +4598,22 @@ module design_1
   wire clk_wiz_0_clk_out2;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]dout_data_4;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]dout_data_5;
+  wire eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
+  wire eth_pump_0_eth_rx_en;
+  wire [7:0]eth_pump_0_eth_rxd;
+  wire [7:0]eth_pump_0_m_axis_tdata_modem;
+  wire eth_pump_0_m_axis_tvalid_modem;
+  wire eth_pump_0_m_status_overflow;
+  wire eth_pump_0_prog_full;
   wire ibuf_0_out_ref;
   wire modem_0_DeFec_err_dtct;
   wire modem_0_corr_pr_detect;
-  wire modem_0_decrc_verr;
-  wire modem_0_finder_osop;
   wire [7:0]modem_0_m_axis_tdata;
   wire modem_0_m_axis_tvalid;
-  wire modem_0_rx_ocorr_dtct;
   wire modem_0_rx_tx_en;
+  wire modem_0_s_axis_tready;
   (* DEBUG = "true" *) wire [15:0]modem_0_tx_i_axis_tdata;
   (* DEBUG = "true" *) wire [15:0]modem_0_tx_q_axis_tdata;
-  wire [7:0]packet_resampler_4bt_0_data_out;
-  wire packet_resampler_4bt_0_enable_out;
-  wire [3:0]packet_resampler_8bt_0_data_out;
-  wire packet_resampler_8bt_0_enable_out;
-  wire [0:0]pipeline_0_data_out;
   wire pulse_expander_0_out_sig;
   wire [0:0]reset_1;
   wire [0:0]rst_sys_ps7_100M_peripheral_aresetn;
@@ -4629,10 +4629,13 @@ module design_1
   wire sys_200m_clk;
   wire [0:0]up_txnrx_1;
   wire util_clkdiv_0_clk_out;
+  wire [7:0]xlconcat_0_dout;
   wire [15:0]xlconstant_0_dout;
   wire [15:0]xlconstant_1_dout;
+  wire [3:0]xlconstant_3_dout;
   wire [0:0]xlconstant_4_dout;
   wire [0:0]xlconstant_5_dout;
+  wire [0:0]xlconstant_6_dout;
 
   assign AXI_RX_CLK_OUT = AXI_Peripheral_AXI_RX_CLK_OUT;
   assign AXI_RX_DATA_OUT[16:0] = AXI_Peripheral_AXI_RX_DATA_OUT;
@@ -4642,9 +4645,9 @@ module design_1
   assign LED1[0] = modem_0_rx_tx_en;
   assign LED2[0] = modem_0_DeFec_err_dtct;
   assign LED3[0] = modem_0_corr_pr_detect;
-  assign PIN_0 = modem_0_decrc_verr;
-  assign PIN_1 = modem_0_finder_osop;
-  assign PIN_2 = modem_0_rx_ocorr_dtct;
+  assign PIN_0 = eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
+  assign PIN_1 = eth_pump_0_m_status_overflow;
+  assign PIN_2 = eth_pump_0_prog_full;
   assign ad9361_1_P0_N[5:0] = DSP_ad9361_1_P0_N;
   assign ad9361_1_P0_P[5:0] = DSP_ad9361_1_P0_P;
   assign ad9361_1_P1_N_1 = ad9361_1_P1_N[5:0];
@@ -5257,10 +5260,10 @@ module design_1
   design_1_axi_ethernetlite_0_0 axi_ethernetlite_0
        (.ip2intc_irpt(axi_ethernetlite_0_ip2intc_irpt),
         .phy_col(xlconstant_4_dout),
-        .phy_crs(pipeline_0_data_out),
-        .phy_dv(packet_resampler_8bt_0_enable_out),
+        .phy_crs(xlconstant_4_dout),
+        .phy_dv(eth_pump_0_eth_rx_en),
         .phy_rx_clk(util_clkdiv_0_clk_out),
-        .phy_rx_data(packet_resampler_8bt_0_data_out),
+        .phy_rx_data(eth_pump_0_eth_rxd[3:0]),
         .phy_rx_er(xlconstant_4_dout),
         .phy_tx_clk(util_clkdiv_0_clk_out),
         .phy_tx_data(axi_ethernetlite_0_phy_tx_data),
@@ -5299,6 +5302,26 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .clk_out2(clk_wiz_0_clk_out2),
         .resetn(Net));
+  design_1_eth_pump_0_0 eth_pump_0
+       (.axis_cobs_decode_0_m_axis_TUSER(eth_pump_0_axis_cobs_decode_0_m_axis_TUSER),
+        .eth_rx_en(eth_pump_0_eth_rx_en),
+        .eth_rxd(eth_pump_0_eth_rxd),
+        .eth_tx_en(axi_ethernetlite_0_phy_tx_en),
+        .eth_tx_er(xlconstant_6_dout),
+        .eth_txd(xlconcat_0_dout),
+        .iclk_eth(util_clkdiv_0_clk_out),
+        .iclk_h(clk_wiz_0_clk_out1),
+        .iclk_hh(clk_wiz_0_clk_out2),
+        .irst_eth(rst_sys_ps7_100M_peripheral_aresetn),
+        .m_axis_tdata_modem(eth_pump_0_m_axis_tdata_modem),
+        .m_axis_tready_modem(modem_0_s_axis_tready),
+        .m_axis_tvalid_modem(eth_pump_0_m_axis_tvalid_modem),
+        .m_status_overflow(eth_pump_0_m_status_overflow),
+        .prog_full(eth_pump_0_prog_full),
+        .s_axis_tdata_modem(modem_0_m_axis_tdata),
+        .s_axis_tlast_modem(xlconstant_6_dout),
+        .s_axis_tuser_modem(xlconstant_6_dout),
+        .s_axis_tvalid_modem(modem_0_m_axis_tvalid));
   design_1_modem_0_0 modem_0
        (.DeFec_err_dtct(modem_0_DeFec_err_dtct),
         .S_AXI_ACLK(CLK_AXI_axi_periph_clk),
@@ -5326,41 +5349,19 @@ module design_1
         .clk_hh(clk_wiz_0_clk_out2),
         .clk_l(AD9361_CTRL_clk_out1),
         .corr_pr_detect(modem_0_corr_pr_detect),
-        .decrc_verr(modem_0_decrc_verr),
-        .finder_osop(modem_0_finder_osop),
         .m_axis_aclk(clk_wiz_0_clk_out2),
         .m_axis_tdata(modem_0_m_axis_tdata),
         .m_axis_tready(xlconstant_5_dout),
         .m_axis_tvalid(modem_0_m_axis_tvalid),
         .rx_i_axis_tdata(dout_data_4),
-        .rx_ocorr_dtct(modem_0_rx_ocorr_dtct),
         .rx_q_axis_tdata(dout_data_5),
         .rx_tx_en(modem_0_rx_tx_en),
         .s_axis_aclk(clk_wiz_0_clk_out1),
-        .s_axis_tdata(packet_resampler_4bt_0_data_out),
-        .s_axis_tvalid(packet_resampler_4bt_0_enable_out),
+        .s_axis_tdata(eth_pump_0_m_axis_tdata_modem),
+        .s_axis_tready(modem_0_s_axis_tready),
+        .s_axis_tvalid(eth_pump_0_m_axis_tvalid_modem),
         .tx_i_axis_tdata(modem_0_tx_i_axis_tdata),
         .tx_q_axis_tdata(modem_0_tx_q_axis_tdata));
-  design_1_packet_resampler_4bt_0_0 packet_resampler_4bt_0
-       (.clk_in(util_clkdiv_0_clk_out),
-        .clk_out(clk_wiz_0_clk_out1),
-        .data_in(axi_ethernetlite_0_phy_tx_data),
-        .data_out(packet_resampler_4bt_0_data_out),
-        .enable_in(axi_ethernetlite_0_phy_tx_en),
-        .enable_out(packet_resampler_4bt_0_enable_out),
-        .rst_n(rst_sys_ps7_100M_peripheral_aresetn));
-  design_1_packet_resampler_8bt_0_0 packet_resampler_8bt_0
-       (.clk_in(clk_wiz_0_clk_out2),
-        .clk_out(util_clkdiv_0_clk_out),
-        .data_in(modem_0_m_axis_tdata),
-        .data_out(packet_resampler_8bt_0_data_out),
-        .enable_in(modem_0_m_axis_tvalid),
-        .enable_out(packet_resampler_8bt_0_enable_out),
-        .rst_n(rst_sys_ps7_100M_peripheral_aresetn));
-  design_1_pipeline_0_0 pipeline_0
-       (.clock(util_clkdiv_0_clk_out),
-        .data_in(packet_resampler_8bt_0_enable_out),
-        .data_out(pipeline_0_data_out));
   design_1_pulse_expander_0_0 pulse_expander_0
        (.clock(CLK_AXI_axi_periph_clk),
         .in_sig(axi_ethernetlite_0_ip2intc_irpt),
@@ -5370,16 +5371,24 @@ module design_1
        (.clk(CLK_AXI_axi_periph_clk),
         .clk_out(util_clkdiv_0_clk_out),
         .clk_sel(xlconstant_4_dout));
+  design_1_xlconcat_0_0 xlconcat_0
+       (.In0(axi_ethernetlite_0_phy_tx_data),
+        .In1(xlconstant_3_dout),
+        .dout(xlconcat_0_dout));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   design_1_xlconstant_0_1 xlconstant_1
        (.dout(xlconstant_1_dout));
   design_1_xlconstant_2_0 xlconstant_2
        (.dout(Net));
+  design_1_xlconstant_3_2 xlconstant_3
+       (.dout(xlconstant_3_dout));
   design_1_xlconstant_3_1 xlconstant_4
        (.dout(xlconstant_4_dout));
   design_1_xlconstant_4_0 xlconstant_5
        (.dout(xlconstant_5_dout));
+  design_1_xlconstant_3_3 xlconstant_6
+       (.dout(xlconstant_6_dout));
 endmodule
 
 module design_1_AXI_C2C_axi_periph_0

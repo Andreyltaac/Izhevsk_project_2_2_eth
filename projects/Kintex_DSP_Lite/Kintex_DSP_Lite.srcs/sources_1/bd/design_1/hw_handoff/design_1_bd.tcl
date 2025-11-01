@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# modem, packet_resampler_4bto8b, packet_resampler_8bto4b, pipeline, pulse_expander, FPGA_reset, ibuf, Decoder_SPI, on_off_wire, on_off_wire, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up
+# eth_pump, modem, pulse_expander, FPGA_reset, ibuf, Decoder_SPI, on_off_wire, on_off_wire, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -2025,6 +2025,17 @@ proc create_root_design { parentCell } {
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
  ] $clk_wiz_0
 
+  # Create instance: eth_pump_0, and set properties
+  set block_name eth_pump
+  set block_cell_name eth_pump_0
+  if { [catch {set eth_pump_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $eth_pump_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: modem_0, and set properties
   set block_name modem
   set block_cell_name modem_0
@@ -2036,43 +2047,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: packet_resampler_4bt_0, and set properties
-  set block_name packet_resampler_4bto8b
-  set block_cell_name packet_resampler_4bt_0
-  if { [catch {set packet_resampler_4bt_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $packet_resampler_4bt_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: packet_resampler_8bt_0, and set properties
-  set block_name packet_resampler_8bto4b
-  set block_cell_name packet_resampler_8bt_0
-  if { [catch {set packet_resampler_8bt_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $packet_resampler_8bt_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: pipeline_0, and set properties
-  set block_name pipeline
-  set block_cell_name pipeline_0
-  if { [catch {set pipeline_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $pipeline_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-    set_property -dict [ list \
-   CONFIG.DATA_WIDTH {1} \
-   CONFIG.PIPE_NUM {1} \
- ] $pipeline_0
-
   # Create instance: pulse_expander_0, and set properties
   set block_name pulse_expander
   set block_cell_name pulse_expander_0
@@ -2090,6 +2064,13 @@ proc create_root_design { parentCell } {
   # Create instance: util_clkdiv_0, and set properties
   set util_clkdiv_0 [ create_bd_cell -type ip -vlnv analog.com:user:util_clkdiv:1.0 util_clkdiv_0 ]
 
+  # Create instance: xlconcat_0, and set properties
+  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+  set_property -dict [ list \
+   CONFIG.IN0_WIDTH {4} \
+   CONFIG.IN1_WIDTH {4} \
+ ] $xlconcat_0
+
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
   set_property -dict [ list \
@@ -2105,6 +2086,13 @@ proc create_root_design { parentCell } {
   # Create instance: xlconstant_2, and set properties
   set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
 
+  # Create instance: xlconstant_3, and set properties
+  set xlconstant_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_3 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {4} \
+ ] $xlconstant_3
+
   # Create instance: xlconstant_4, and set properties
   set xlconstant_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_4 ]
   set_property -dict [ list \
@@ -2118,6 +2106,13 @@ proc create_root_design { parentCell } {
    CONFIG.CONST_VAL {1} \
    CONFIG.CONST_WIDTH {1} \
  ] $xlconstant_5
+
+  # Create instance: xlconstant_6, and set properties
+  set xlconstant_6 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_6 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {1} \
+ ] $xlconstant_6
 
   # Create interface connections
   connect_bd_intf_net -intf_net AXI_Peripheral_M00_AXI [get_bd_intf_pins AD9361_CTRL/s_axi2] [get_bd_intf_pins AXI_Peripheral/M00_AXI]
@@ -2229,34 +2224,34 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ad9364_TX_FRAME_N_1 [get_bd_ports ad9364_RX_FRAME_N] [get_bd_pins AD9364/ad9364_TX_FRAME_N]
   connect_bd_net -net ad9364_TX_FRAME_P_1 [get_bd_ports ad9364_RX_FRAME_P] [get_bd_pins AD9364/ad9364_TX_FRAME_P]
   connect_bd_net -net axi_ethernetlite_0_ip2intc_irpt [get_bd_pins axi_ethernetlite_0/ip2intc_irpt] [get_bd_pins pulse_expander_0/in_sig]
-  connect_bd_net -net axi_ethernetlite_0_phy_tx_data [get_bd_pins axi_ethernetlite_0/phy_tx_data] [get_bd_pins packet_resampler_4bt_0/data_in]
-  connect_bd_net -net axi_ethernetlite_0_phy_tx_en [get_bd_pins axi_ethernetlite_0/phy_tx_en] [get_bd_pins packet_resampler_4bt_0/enable_in]
+  connect_bd_net -net axi_ethernetlite_0_phy_tx_data [get_bd_pins axi_ethernetlite_0/phy_tx_data] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net axi_ethernetlite_0_phy_tx_en [get_bd_pins axi_ethernetlite_0/phy_tx_en] [get_bd_pins eth_pump_0/eth_tx_en]
   connect_bd_net -net clk_axi_reset_n [get_bd_pins AD9361_CTRL/ext_reset_in] [get_bd_pins AD9364/ext_reset_in] [get_bd_pins CLK_AXI/reset_n]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins modem_0/clk_h] [get_bd_pins modem_0/s_axis_aclk] [get_bd_pins packet_resampler_4bt_0/clk_out]
-  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk] [get_bd_pins packet_resampler_8bt_0/clk_in]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins eth_pump_0/iclk_h] [get_bd_pins modem_0/clk_h] [get_bd_pins modem_0/s_axis_aclk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins eth_pump_0/iclk_hh] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk]
   connect_bd_net -net dout_data_4 [get_bd_pins AD9361_CTRL/dout_data_4] [get_bd_pins modem_0/rx_i_axis_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets dout_data_4]
   connect_bd_net -net dout_data_5 [get_bd_pins AD9361_CTRL/dout_data_5] [get_bd_pins modem_0/rx_q_axis_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets dout_data_5]
+  connect_bd_net -net eth_pump_0_axis_cobs_decode_0_m_axis_TUSER [get_bd_ports PIN_0] [get_bd_pins eth_pump_0/axis_cobs_decode_0_m_axis_TUSER]
+  connect_bd_net -net eth_pump_0_eth_rx_en [get_bd_pins axi_ethernetlite_0/phy_dv] [get_bd_pins eth_pump_0/eth_rx_en]
+  connect_bd_net -net eth_pump_0_eth_rxd [get_bd_pins axi_ethernetlite_0/phy_rx_data] [get_bd_pins eth_pump_0/eth_rxd]
+  connect_bd_net -net eth_pump_0_m_axis_tdata_modem [get_bd_pins eth_pump_0/m_axis_tdata_modem] [get_bd_pins modem_0/s_axis_tdata]
+  connect_bd_net -net eth_pump_0_m_axis_tvalid_modem [get_bd_pins eth_pump_0/m_axis_tvalid_modem] [get_bd_pins modem_0/s_axis_tvalid]
+  connect_bd_net -net eth_pump_0_m_status_overflow [get_bd_ports PIN_1] [get_bd_pins eth_pump_0/m_status_overflow]
+  connect_bd_net -net eth_pump_0_prog_full [get_bd_ports PIN_2] [get_bd_pins eth_pump_0/prog_full]
   connect_bd_net -net ibuf_0_out_ref [get_bd_pins AD9361_CTRL/FPGA_REF_40MHZ] [get_bd_pins CLK_AXI/out_ref]
   connect_bd_net -net modem_0_DeFec_err_dtct [get_bd_ports LED2] [get_bd_pins modem_0/DeFec_err_dtct]
   connect_bd_net -net modem_0_corr_pr_detect [get_bd_ports LED3] [get_bd_pins modem_0/corr_pr_detect]
-  connect_bd_net -net modem_0_decrc_verr [get_bd_ports PIN_0] [get_bd_pins modem_0/decrc_verr]
-  connect_bd_net -net modem_0_finder_osop [get_bd_ports PIN_1] [get_bd_pins modem_0/finder_osop]
-  connect_bd_net -net modem_0_m_axis_tdata [get_bd_pins modem_0/m_axis_tdata] [get_bd_pins packet_resampler_8bt_0/data_in]
-  connect_bd_net -net modem_0_m_axis_tvalid [get_bd_pins modem_0/m_axis_tvalid] [get_bd_pins packet_resampler_8bt_0/enable_in]
-  connect_bd_net -net modem_0_rx_ocorr_dtct [get_bd_ports PIN_2] [get_bd_pins modem_0/rx_ocorr_dtct]
+  connect_bd_net -net modem_0_m_axis_tdata [get_bd_pins eth_pump_0/s_axis_tdata_modem] [get_bd_pins modem_0/m_axis_tdata]
+  connect_bd_net -net modem_0_m_axis_tvalid [get_bd_pins eth_pump_0/s_axis_tvalid_modem] [get_bd_pins modem_0/m_axis_tvalid]
   connect_bd_net -net modem_0_rx_tx_en [get_bd_ports LED1] [get_bd_pins modem_0/rx_tx_en]
+  connect_bd_net -net modem_0_s_axis_tready [get_bd_pins eth_pump_0/m_axis_tready_modem] [get_bd_pins modem_0/s_axis_tready]
   connect_bd_net -net modem_0_tx_i_axis_tdata [get_bd_pins AD9361_CTRL/din_data_4] [get_bd_pins modem_0/tx_i_axis_tdata]
   connect_bd_net -net modem_0_tx_q_axis_tdata [get_bd_pins AD9361_CTRL/din_data_5] [get_bd_pins modem_0/tx_q_axis_tdata]
-  connect_bd_net -net packet_resampler_4bt_0_data_out [get_bd_pins modem_0/s_axis_tdata] [get_bd_pins packet_resampler_4bt_0/data_out]
-  connect_bd_net -net packet_resampler_4bt_0_enable_out [get_bd_pins modem_0/s_axis_tvalid] [get_bd_pins packet_resampler_4bt_0/enable_out]
-  connect_bd_net -net packet_resampler_8bt_0_data_out [get_bd_pins axi_ethernetlite_0/phy_rx_data] [get_bd_pins packet_resampler_8bt_0/data_out]
-  connect_bd_net -net packet_resampler_8bt_0_enable_out [get_bd_pins axi_ethernetlite_0/phy_dv] [get_bd_pins packet_resampler_8bt_0/enable_out] [get_bd_pins pipeline_0/data_in]
-  connect_bd_net -net pipeline_0_data_out [get_bd_pins axi_ethernetlite_0/phy_crs] [get_bd_pins pipeline_0/data_out]
   connect_bd_net -net pulse_expander_0_out_sig [get_bd_pins AXI_Peripheral/In2] [get_bd_pins pulse_expander_0/out_sig]
   connect_bd_net -net reset_1 [get_bd_pins AD9361_CTRL/peripheral_reset] [get_bd_pins AXI_Peripheral/reset]
-  connect_bd_net -net rst_sys_ps7_100M_peripheral_aresetn [get_bd_pins AD9361_CTRL/s_axi_aresetn] [get_bd_pins AD9364/s_axi_aresetn] [get_bd_pins AXI_Peripheral/S00_ARESETN] [get_bd_pins CLK_AXI/peripheral_aresetn] [get_bd_pins Control_from_SOM_0/s00_axi_aresetn] [get_bd_pins Current_turning_off_0/s00_axi_aresetn] [get_bd_pins SPI_MOD/s_axi4_aresetn] [get_bd_pins axi_ethernetlite_0/s_axi_aresetn] [get_bd_pins modem_0/S_AXI_ARESETN] [get_bd_pins packet_resampler_4bt_0/rst_n] [get_bd_pins packet_resampler_8bt_0/rst_n] [get_bd_pins pulse_expander_0/reset]
+  connect_bd_net -net rst_sys_ps7_100M_peripheral_aresetn [get_bd_pins AD9361_CTRL/s_axi_aresetn] [get_bd_pins AD9364/s_axi_aresetn] [get_bd_pins AXI_Peripheral/S00_ARESETN] [get_bd_pins CLK_AXI/peripheral_aresetn] [get_bd_pins Control_from_SOM_0/s00_axi_aresetn] [get_bd_pins Current_turning_off_0/s00_axi_aresetn] [get_bd_pins SPI_MOD/s_axi4_aresetn] [get_bd_pins axi_ethernetlite_0/s_axi_aresetn] [get_bd_pins eth_pump_0/irst_eth] [get_bd_pins modem_0/S_AXI_ARESETN] [get_bd_pins pulse_expander_0/reset]
   connect_bd_net -net som_en_28v_l1_1 [get_bd_ports som_28v_en_link1] [get_bd_pins Current_turning_off_0/som_en_28v_l1]
   connect_bd_net -net som_en_28v_l2_1 [get_bd_ports som_28v_en_link2] [get_bd_pins Current_turning_off_0/som_en_28v_l2]
   connect_bd_net -net som_en_28v_s1_1 [get_bd_ports som_28v_en_service1] [get_bd_pins Current_turning_off_0/som_en_28v_s1]
@@ -2268,11 +2263,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net spi_miso_1_1 [get_bd_ports spi_miso_1] [get_bd_pins Current_turning_off_0/spi_miso_1]
   connect_bd_net -net sys_200m_clk [get_bd_pins AD9361_CTRL/delay_clk] [get_bd_pins AD9364/delay_clk] [get_bd_pins AXI_Peripheral/idelay_ref_clk] [get_bd_pins CLK_AXI/delay_clk]
   connect_bd_net -net up_txnrx_1 [get_bd_pins AD9361_CTRL/dout] [get_bd_pins AD9364/up_enable] [get_bd_pins AD9364/up_txnrx]
-  connect_bd_net -net util_clkdiv_0_clk_out [get_bd_pins axi_ethernetlite_0/phy_rx_clk] [get_bd_pins axi_ethernetlite_0/phy_tx_clk] [get_bd_pins packet_resampler_4bt_0/clk_in] [get_bd_pins packet_resampler_8bt_0/clk_out] [get_bd_pins pipeline_0/clock] [get_bd_pins util_clkdiv_0/clk_out]
+  connect_bd_net -net util_clkdiv_0_clk_out [get_bd_pins axi_ethernetlite_0/phy_rx_clk] [get_bd_pins axi_ethernetlite_0/phy_tx_clk] [get_bd_pins eth_pump_0/iclk_eth] [get_bd_pins util_clkdiv_0/clk_out]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins eth_pump_0/eth_txd] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_0] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_1] [get_bd_pins xlconstant_1/dout]
-  connect_bd_net -net xlconstant_4_dout [get_bd_pins axi_ethernetlite_0/phy_col] [get_bd_pins axi_ethernetlite_0/phy_rx_er] [get_bd_pins util_clkdiv_0/clk_sel] [get_bd_pins xlconstant_4/dout]
+  connect_bd_net -net xlconstant_3_dout [get_bd_pins xlconcat_0/In1] [get_bd_pins xlconstant_3/dout]
+  connect_bd_net -net xlconstant_4_dout [get_bd_pins axi_ethernetlite_0/phy_col] [get_bd_pins axi_ethernetlite_0/phy_crs] [get_bd_pins axi_ethernetlite_0/phy_rx_er] [get_bd_pins util_clkdiv_0/clk_sel] [get_bd_pins xlconstant_4/dout]
   connect_bd_net -net xlconstant_5_dout [get_bd_pins modem_0/m_axis_tready] [get_bd_pins xlconstant_5/dout]
+  connect_bd_net -net xlconstant_6_dout [get_bd_pins eth_pump_0/eth_tx_er] [get_bd_pins eth_pump_0/s_axis_tlast_modem] [get_bd_pins eth_pump_0/s_axis_tuser_modem] [get_bd_pins xlconstant_6/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x83CB0000 [get_bd_addr_spaces AXI_Peripheral/AXI_C2C/MAXI-Lite] [get_bd_addr_segs AXI_Peripheral/AXI_DMA/s_axi/axi_lite] SEG_AXI_DMA_axi_lite
