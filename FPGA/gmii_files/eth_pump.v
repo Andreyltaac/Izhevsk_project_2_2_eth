@@ -190,7 +190,7 @@ axis_async_fifo axis_async_fifo_0 (
     .m_pause_req(1'b0),
     .s_pause_req(1'b0),
     
-    .m_status_overflow(m_status_overflow)
+    .m_status_overflow()
 );
 
 // COBS энкодер (упаковка данных)
@@ -236,7 +236,7 @@ axis_data_fifo_0 axis_data_fifo_0_0 (
     .m_axis_tuser(axis_data_fifo_0_M_AXIS_TUSER),
     .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
     .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-    .prog_full (prog_full)
+    .prog_full ()
 );
 
 ///////////////////////////////////////////////////////////////////////////// RX PATH
@@ -262,7 +262,8 @@ axis_data_fifo_0 axis_data_fifo_0_1 (
     //.m_axis_tlast(axis_data_fifo_1_M_AXIS_TLAST),
     .m_axis_tuser(axis_data_fifo_1_M_AXIS_TUSER),
     .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
-    .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY)
+    .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
+    .prog_full (prog_full)
 );
 
 // COBS декодер (распаковка данных)
@@ -312,7 +313,9 @@ axis_async_fifo axis_async_fifo_1 (
     .s_axis_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
     .s_axis_tkeep(1'b1),
     .m_pause_req(1'b0),
-    .s_pause_req(1'b0)
+    .s_pause_req(1'b0),
+    
+    .m_status_overflow(m_status_overflow)
 );
 
 // AXI-Stream -> GMII TX преобразователь

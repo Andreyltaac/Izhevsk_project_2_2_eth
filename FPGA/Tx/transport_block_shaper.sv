@@ -1,6 +1,6 @@
 module  transport_block_shaper #(
 	parameter size_tblck = 480, 	// байт
-	parameter time_to_wait = 5 		// тактов 
+	parameter time_to_wait = 16 		// тактов 
 )(
 	input 				clk,
 	input 				rst,

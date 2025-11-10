@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Oct 29 14:56:31 2025
+| Date         : Wed Nov  5 13:37:57 2025
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -117,12 +117,12 @@ Related violations: <none>
 
 LUTAR-1#14 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/eth_pump_0/inst/axis_async_fifo_0/m_axis_tvalid_pipe_reg[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/eth_pump_0/inst/axis_async_fifo_1/s_rst_sync1_reg_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell design_1_i/eth_pump_0/inst/axis_async_fifo_1/m_axis_tvalid_pipe_reg[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/eth_pump_0/inst/axis_async_fifo_1/s_rst_sync1_reg_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#15 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/modem_0/inst/axi_lite_inst/ss_in_out[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/modem_0/inst/modem_rx/DeFEC_sub/err_dtct_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/oval_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[3]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[4]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[5]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[6]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[7]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub_decoder_CRC/crc_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub_decoder_CRC/crc_reg[10]/CLR (the first 15 of 1363 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell design_1_i/modem_0/inst/axi_lite_inst/ss_in_out[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/modem_0/inst/modem_rx/DeFEC_sub/err_dtct_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/oval_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[3]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[4]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[5]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[6]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[7]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub_decoder_CRC/crc_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub_decoder_CRC/crc_reg[10]/CLR (the first 15 of 1365 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#16 Warning
@@ -142,7 +142,7 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_control_src/cdc_sync_stage2_reg[0] in site SLICE_X17Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_status_src/cdc_sync_stage1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_control_src/cdc_sync_stage2_reg[0] in site SLICE_X15Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_status_src/cdc_sync_stage1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning

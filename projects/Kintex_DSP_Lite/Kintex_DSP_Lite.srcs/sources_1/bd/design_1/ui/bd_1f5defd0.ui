@@ -137,8 +137,8 @@ preplace inst xlconstant_5 -pg 1 -lvl 9 -x 6062 -y 2070 -defaultsOSRD -orient R1
 preplace inst xlconcat_0 -pg 1 -lvl 3 -x 1400 -y 2830 -defaultsOSRD
 preplace inst xlconstant_3 -pg 1 -lvl 3 -x 1400 -y 2940 -defaultsOSRD -orient R180
 preplace inst xlconstant_6 -pg 1 -lvl 4 -x 1580 -y 2920 -defaultsOSRD
-preplace inst modem_0 -pg 1 -lvl 8 -x 5720 -y 2110 -defaultsOSRD
 preplace inst eth_pump_0 -pg 1 -lvl 5 -x 1980 -y 2720 -defaultsOSRD
+preplace inst modem_0 -pg 1 -lvl 8 -x 5720 -y 2110 -defaultsOSRD
 preplace netloc AXI_Peripheral_AXI_RX_CLK_OUT 1 7 6 3800J 100 NJ 100 NJ 100 NJ 100 NJ 100 9970J
 preplace netloc AXI_Peripheral_AXI_RX_DATA_OUT 1 7 6 3810J 130 NJ 130 NJ 130 NJ 130 NJ 130 9900J
 preplace netloc AXI_TX_CLK_IN_1 1 0 7 -110J 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 2620
@@ -211,7 +211,7 @@ preplace netloc DSP_ad9361_TXNRX_1 1 12 1 9700 1140n
 preplace netloc DSP_ad9361_TXNRX_2 1 12 1 9690 1160n
 preplace netloc ad9361_1_P1_P_1 1 0 12 NJ 1230 NJ 1230 NJ 1230 NJ 1230 NJ 1230 NJ 1230 2660J 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 8940
 preplace netloc ad9361_1_P1_N_1 1 0 12 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 8820
-preplace netloc ibuf_0_out_ref 1 1 11 790J 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 5910 1320 6280 1280 NJ 1280 8980J
+preplace netloc ibuf_0_out_ref 1 1 11 790J 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 5900 1320 6280 1280 NJ 1280 8980J
 preplace netloc AD9361_ctrl_data_rate 1 6 7 2690 1870 3810J 1860 NJ 1860 6250 1860 NJ 1860 NJ 1860 9670
 preplace netloc up_txnrx_1 1 9 4 6360 3060 NJ 3060 NJ 3060 9630
 preplace netloc clk_axi_reset_n 1 1 11 NJ 1810 NJ 1810 NJ 1810 NJ 1810 NJ 1810 NJ 1810 NJ 1810 NJ 1810 6280 1490 NJ 1490 NJ
@@ -261,10 +261,10 @@ preplace netloc pulse_expander_0_out_sig 1 6 6 2680 120 NJ 120 NJ 120 NJ 120 NJ 
 preplace netloc rst_sys_ps7_100M_peripheral_aresetn 1 1 11 780J 1860 NJ 1860 NJ 1860 1680 1860 NJ 1860 2640 1860 3710J 2610 NJ 2610 6300 2610 8220 1700 8900
 preplace netloc modem_0_rx_tx_en 1 7 6 3840 3000 NJ 3000 NJ 3000 NJ 3000 8850J 2990 NJ
 preplace netloc CLK_AXI_axi_periph_clk 1 1 11 800J 2290 1260J 2290 NJ 2290 NJ 2290 NJ 2290 2670 2290 3820J 2600 NJ 2600 6340 2600 8270 1780 8880
-preplace netloc modem_0_tx_i_axis_tdata 1 8 4 5930 1330 NJ 1330 NJ 1330 NJ
-preplace netloc modem_0_tx_q_axis_tdata 1 8 4 5940 1350 NJ 1350 NJ 1350 NJ
-preplace netloc modem_0_corr_pr_detect 1 8 5 5940 2160 NJ 2160 NJ 2160 NJ 2160 9700J
-preplace netloc modem_0_DeFec_err_dtct 1 8 5 5930 2190 NJ 2190 NJ 2190 NJ 2190 9790J
+preplace netloc modem_0_tx_i_axis_tdata 1 8 4 5920 1330 NJ 1330 NJ 1330 NJ
+preplace netloc modem_0_tx_q_axis_tdata 1 8 4 5930 1350 NJ 1350 NJ 1350 NJ
+preplace netloc modem_0_corr_pr_detect 1 8 5 5930 2160 NJ 2160 NJ 2160 NJ 2160 9700J
+preplace netloc modem_0_DeFec_err_dtct 1 8 5 5920 2190 NJ 2190 NJ 2190 NJ 2190 9790J
 preplace netloc xlconstant_5_dout 1 8 1 N 2070
 preplace netloc clk_wiz_0_clk_out1 1 4 4 1700 2480 NJ 2480 2640 2400 3720
 preplace netloc xlconstant_3_dout 1 2 1 1290 2840n
@@ -277,20 +277,20 @@ preplace netloc eth_pump_0_eth_rxd 1 2 4 1240J 2500 NJ 2500 NJ 2500 2230
 preplace netloc eth_pump_0_m_axis_tdata_modem 1 5 3 2240 2030 NJ 2030 3800J
 preplace netloc eth_pump_0_m_axis_tvalid_modem 1 5 3 2250 2040 NJ 2040 NJ
 preplace netloc modem_0_s_axis_tready 1 5 3 2270 2060 NJ 2060 NJ
-preplace netloc modem_0_m_axis_tdata 1 4 5 1730 2390 NJ 2390 NJ 2390 NJ 2390 5920
-preplace netloc modem_0_m_axis_tvalid 1 4 5 1690 2360 NJ 2360 NJ 2360 NJ 2360 5910
+preplace netloc modem_0_m_axis_tdata 1 4 5 1730 2390 NJ 2390 NJ 2390 NJ 2390 5910
+preplace netloc modem_0_m_axis_tvalid 1 4 5 1690 2360 NJ 2360 NJ 2360 NJ 2360 5900
 preplace netloc eth_pump_0_axis_cobs_decode_0_m_axis_TUSER 1 5 8 2290 2590 NJ 2590 NJ 2590 NJ 2590 NJ 2590 8170J 2840 NJ 2840 9640J
 preplace netloc eth_pump_0_m_status_overflow 1 4 9 1720 3130 NJ 3130 2700J 3050 NJ 3050 NJ 3050 NJ 3050 NJ 3050 NJ 3050 NJ
 preplace netloc eth_pump_0_prog_full 1 5 8 2280 2580 NJ 2580 NJ 2580 NJ 2580 NJ 2580 8210J 2830 NJ 2830 9650J
-preplace netloc AXI_Peripheral_M04_AXI 1 7 5 NJ 270 NJ 270 NJ 270 NJ 270 8920
-preplace netloc AXI_Peripheral_M13_AXI 1 1 7 830 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 N 1140 3710
-preplace netloc AXI_Peripheral_M03_AXI 1 7 3 NJ 250 NJ 250 6330
-preplace netloc AXI_Peripheral_M05_AXI 1 7 1 3820J 330n
 preplace netloc AXI_Peripheral_M06_AXI 1 7 5 NJ 290 NJ 290 NJ 290 NJ 290 8870
 preplace netloc AXI_Peripheral_M00_AXI 1 7 5 NJ 190 NJ 190 NJ 190 NJ 190 8930
-preplace netloc AXI_Peripheral_M02_AXI 1 7 5 NJ 230 NJ 230 NJ 230 NJ 230 8910
 preplace netloc AXI_Peripheral_M14_AXI 1 7 3 NJ 310 NJ 310 6360
+preplace netloc AXI_Peripheral_M03_AXI 1 7 3 NJ 250 NJ 250 6330
+preplace netloc AXI_Peripheral_M13_AXI 1 1 7 830 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 N 1140 3710
 preplace netloc AXI_Peripheral_M01_AXI 1 7 5 NJ 210 NJ 210 NJ 210 NJ 210 8940
+preplace netloc AXI_Peripheral_M02_AXI 1 7 5 NJ 230 NJ 230 NJ 230 NJ 230 8910
+preplace netloc AXI_Peripheral_M04_AXI 1 7 5 NJ 270 NJ 270 NJ 270 NJ 270 8920
+preplace netloc AXI_Peripheral_M05_AXI 1 7 1 3820J 330n
 levelinfo -pg 1 -130 580 1074 1400 1580 1980 2530 3470 5720 6062 7907 8607 9447 9990
 pagesize -pg 1 -db -bbox -sgen -340 -4680 10210 10560
 "
