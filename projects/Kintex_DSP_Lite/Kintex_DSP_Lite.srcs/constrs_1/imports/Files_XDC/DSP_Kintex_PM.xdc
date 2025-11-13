@@ -370,13 +370,9 @@ set_clock_groups -asynchronous -group [get_clocks -of_objects [get_pins design_1
 # set_clock_groups -group [get_clocks axi_periph_clk_design_1_CLK_COMMON_0] -group [get_clocks clk_out1_design_1_clk_wiz_0_0] -group [get_clocks clk_out2_design_1_clk_wiz_0_0] -group [get_clocks clk_div_sel_0_s] -asynchronous
 
 # Сначала создаем группу для синхронных тактов
-set sync_clocks [get_clocks {clk_out1_design_1_clk_wiz_0_0 clk_out2_design_1_clk_wiz_0_0}]
 
 # Затем устанавливаем асинхронные отношения с другими группами
-set_clock_groups -group [get_clocks axi_periph_clk_design_1_CLK_COMMON_0] \
-                 -group [get_clocks clk_div_sel_0_s] \
-                 -group $sync_clocks \
-                 -asynchronous
+set_clock_groups -asynchronous -group [get_clocks axi_periph_clk_design_1_CLK_COMMON_0] -group [get_clocks clk_div_sel_0_s] -group [get_clocks {clk_out1_design_1_clk_wiz_0_0 clk_out2_design_1_clk_wiz_0_0}]
 
 
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/mmcm_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/CLK_AXI/CLK_COMMON/inst/mmcm_adv_inst/CLKOUT1]]
@@ -403,3 +399,42 @@ set_false_path -from [get_clocks -of_objects [get_pins design_1_i/AD9361_CTRL/ad
 #set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 #set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
 #connect_debug_port dbg_hub/clk [get_nets clk]
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 7 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[0]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[1]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[2]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[3]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[4]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[5]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 15 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[0]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[1]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[2]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[3]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[4]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[5]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[6]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[7]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[8]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[9]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[10]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[11]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[12]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[13]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/n_sps[14]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[0]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[1]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[2]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[3]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[4]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[5]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[6]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[7]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[8]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[9]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[10]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[11]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[12]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[13]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[14]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[15]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[16]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[17]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[18]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[19]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[20]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[21]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[22]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[23]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[24]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[25]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[26]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[27]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[28]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[29]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[30]} {design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/dT[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/found_sync]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/isop]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/osop]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_sample_rate_30_72]

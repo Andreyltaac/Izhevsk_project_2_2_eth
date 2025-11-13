@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Nov  5 13:20:46 2025
+| Date         : Thu Nov 13 12:56:15 2025
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 54029 |     0 |    203800 | 26.51 |
-|   LUT as Logic             | 46826 |     0 |    203800 | 22.98 |
-|   LUT as Memory            |  7203 |     0 |     64000 | 11.25 |
-|     LUT as Distributed RAM |  1350 |     0 |           |       |
-|     LUT as Shift Register  |  5853 |     0 |           |       |
-| Slice Registers            | 83419 |    12 |    407600 | 20.47 |
-|   Register as Flip Flop    | 83419 |    12 |    407600 | 20.47 |
+| Slice LUTs*                | 44668 |     0 |    203800 | 21.92 |
+|   LUT as Logic             | 40868 |     0 |    203800 | 20.05 |
+|   LUT as Memory            |  3800 |     0 |     64000 |  5.94 |
+|     LUT as Distributed RAM |  1286 |     0 |           |       |
+|     LUT as Shift Register  |  2514 |     0 |           |       |
+| Slice Registers            | 66762 |    12 |    407600 | 16.38 |
+|   Register as Flip Flop    | 66762 |    12 |    407600 | 16.38 |
 |   Register as Latch        |     0 |     0 |    407600 |  0.00 |
-| F7 Muxes                   |  1068 |     0 |    101900 |  1.05 |
-| F8 Muxes                   |   212 |     0 |     50950 |  0.42 |
+| F7 Muxes                   |   882 |     0 |    101900 |  0.87 |
+| F8 Muxes                   |   100 |     0 |     50950 |  0.20 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 141   |          Yes |           - |          Set |
-| 5358  |          Yes |           - |        Reset |
-| 2620  |          Yes |         Set |            - |
-| 75300 |          Yes |       Reset |            - |
+| 5366  |          Yes |           - |        Reset |
+| 2584  |          Yes |         Set |            - |
+| 58671 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,11 +69,11 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  155 |     0 |       445 | 34.83 |
-|   RAMB36/FIFO*    |   93 |     0 |       445 | 20.90 |
-|     RAMB36E1 only |   93 |       |           |       |
-|   RAMB18          |  124 |     0 |       890 | 13.93 |
-|     RAMB18E1 only |  124 |       |           |       |
+| Block RAM Tile    |  139 |     0 |       445 | 31.24 |
+|   RAMB36/FIFO*    |   98 |     0 |       445 | 22.02 |
+|     RAMB36E1 only |   98 |       |           |       |
+|   RAMB18          |   82 |     0 |       890 |  9.21 |
+|     RAMB18E1 only |   82 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -84,8 +84,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |  182 |     0 |       840 | 21.67 |
-|   DSP48E1 only |  182 |       |           |       |
+| DSPs           |  125 |     0 |       840 | 14.88 |
+|   DSP48E1 only |  125 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -159,30 +159,30 @@ Table of Contents
 +------------+-------+---------------------+
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
-| FDRE       | 75300 |        Flop & Latch |
-| LUT3       | 18775 |                 LUT |
-| LUT2       | 14912 |                 LUT |
-| LUT6       |  9904 |                 LUT |
-| SRL16E     |  7861 |  Distributed Memory |
-| CARRY4     |  7372 |          CarryLogic |
-| FDCE       |  5358 |        Flop & Latch |
-| LUT5       |  5081 |                 LUT |
-| LUT4       |  4992 |                 LUT |
-| FDSE       |  2620 |        Flop & Latch |
-| LUT1       |  1943 |                 LUT |
+| FDRE       | 58671 |        Flop & Latch |
+| LUT3       | 14361 |                 LUT |
+| LUT2       | 12625 |                 LUT |
+| LUT6       |  9710 |                 LUT |
+| CARRY4     |  5844 |          CarryLogic |
+| FDCE       |  5366 |        Flop & Latch |
+| LUT5       |  5089 |                 LUT |
+| LUT4       |  4077 |                 LUT |
+| SRL16E     |  2972 |  Distributed Memory |
+| FDSE       |  2584 |        Flop & Latch |
+| LUT1       |  1823 |                 LUT |
 | RAMD64E    |  1136 |  Distributed Memory |
-| MUXF7      |  1068 |               MuxFx |
-| SRLC32E    |   946 |  Distributed Memory |
-| RAMD32     |   240 |  Distributed Memory |
-| MUXF8      |   212 |               MuxFx |
-| DSP48E1    |   182 |    Block Arithmetic |
+| MUXF7      |   882 |               MuxFx |
+| SRLC32E    |   556 |  Distributed Memory |
+| RAMD32     |   144 |  Distributed Memory |
 | FDPE       |   141 |        Flop & Latch |
-| RAMB18E1   |   124 |        Block Memory |
-| RAMB36E1   |    93 |        Block Memory |
-| RAMS32     |    82 |  Distributed Memory |
+| DSP48E1    |   125 |    Block Arithmetic |
+| MUXF8      |   100 |               MuxFx |
+| RAMB36E1   |    98 |        Block Memory |
+| RAMB18E1   |    82 |        Block Memory |
 | OBUF       |    65 |                  IO |
 | OBUFDS     |    64 |                  IO |
 | ODDR       |    58 |                  IO |
+| RAMS32     |    50 |  Distributed Memory |
 | RAMS64E    |    48 |  Distributed Memory |
 | IDELAYE2   |    45 |                  IO |
 | IDDR       |    45 |                  IO |

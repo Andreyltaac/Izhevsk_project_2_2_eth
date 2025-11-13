@@ -60,6 +60,7 @@ RX_phy
 RX_phy_sub(
 		.clk_low_data		(clk_l),
 		.clk_h				(clk_h),
+		.clk_corr_h         (clk_hh),
 		.rst				(rst),
 		.ss_in				(ss_in),
 		.m_in				(m_in),

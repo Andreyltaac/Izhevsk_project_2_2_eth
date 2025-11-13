@@ -2,6 +2,7 @@
 module RX_phy(
 		input							clk_low_data,
 		input							clk_h,
+		input                           clk_corr_h,
 		input							rst,
 		input 			[3:0]			ss_in,
 		input 			[2:0]			m_in,
@@ -100,7 +101,7 @@ wire [17:0]				xcorr_peak_i,xcorr_peak_q;
 wire [47:0]				xcorr_peaks;
 wire [31:0]				freq_idata, freq_odata;
 
-xcorr_main #(file_cor_pream)
+/* xcorr_main #(file_cor_pream)
 xcorr_main_sub(
 	.clk		(clk_low_data),
 	.rst		(~del_rst),
@@ -117,9 +118,27 @@ xcorr_main_sub(
 	.osop		(corr_sop),
 	.oval		(),
 	.corr_dtct	(ocorr_dtct)
+); */
+
+xcorr_main_lite #(file_cor_pream)
+xcorr_main_lite_sub(
+	.clk		(clk_corr_h),
+	.clk_l		(clk_low_data),
+	.rst		(~del_rst),
+	.data_i		(fftshft_subc_i),
+	.data_q		(fftshft_subc_q),
+	.index_bw	(bw_control_rx),
+	.ival		(1'd1),
+	.thr_lvl	(thr_lvl),// 40
+	.addr_shft	(addr_shft), // 8502 + wnd_size 14'd8517 // 3428 // 3410 // 3510
+	.odata_i	(corr_subc_i),
+	.odata_q	(corr_subc_q),
+	.peak_i		(xcorr_peak_i),
+	.peak_q		(xcorr_peak_q),
+	.osop		(corr_sop),
+	.oval		(),
+	.corr_dtct	(ocorr_dtct)
 );
-
-
 
 count_sop_dtct
 count_sop_dtct_sub(
@@ -131,7 +150,7 @@ count_sop_dtct_sub(
 	.thr_lvl_auto	(thr_lvl_auto)
 );
 
-filter_sop#(50, 1024, 32)
+/* filter_sop#(50, 1024, 32)
 filter_sop_sub(
 	.clk		(clk_low_data),
 	.rst		(~del_rst),
@@ -141,7 +160,46 @@ filter_sop_sub(
 	.delay_sop	(delay_sop),
 	.found_sync	(corr_pr_detect),
 	.sop_frame	(filt_wind_sop)
-);
+); */
+
+
+/* filter_sop_new#(
+	.sz_frame		(((1024+32)*50)),
+	.N_sop			(20),
+	.Halw_win_sop	(4),
+	.N_lock			(5),
+	.N_unlock		(10)
+)
+filter_sop_new_sub(
+	.clk		(clk_low_data),
+	.rst		(~del_rst),
+	.isop		(corr_sop),
+	.n_sps		(n_sps),
+	.osop		(filt_osop),
+	.found_sync	(corr_pr_detect)
+); */
+
+
+filter_sop_new #(
+  .COUNTER_BITS (32),
+    .SZ_FRAME(((1024+32)*50)),
+    .N_SOP(20),
+    .SOP_COUNT_HALF_WINDOW(5),
+    .N_LOCK(5),
+    .N_UNLOCK(5),
+    .PHASE_WINDOW_TICKS(4),
+    .GUARD_TICKS(2500)
+) 
+  filter_sop_new_sub (
+    .clk(clk_low_data),
+    .rst(~del_rst),
+    .isop(corr_sop),
+    .n_sps(n_sps),
+    .found_sync(corr_pr_detect),
+    .osop(filt_osop)
+  );
+
+
 
 wire fr_sync_osop;
 wire [fft_depth-1:0]	fr_corr_i, fr_corr_q;
@@ -159,7 +217,7 @@ fr_sync_sub
 	.rst				(~del_rst),	
 	.fr_sync_ctrl		(fr_sync_ctrl),
 	.index_bw           (bw_control_rx),
-	.fr_sync_isop		(corr_sop && filt_wind_sop ),
+	.fr_sync_isop		(filt_osop), //corr_sop && filt_wind_sop
 	.idata_i			(corr_subc_i),
 	.idata_q			(corr_subc_q),
 	.idata_corr_i		(xcorr_peak_i),

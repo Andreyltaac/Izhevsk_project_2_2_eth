@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Wed Nov  5 12:55:11 2025
+//Date        : Thu Nov 13 12:38:39 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4604,12 +4604,12 @@ module design_1
   wire [7:0]eth_pump_0_m_axis_tdata_modem;
   wire eth_pump_0_m_axis_tvalid_modem;
   wire eth_pump_0_m_status_overflow;
-  wire eth_pump_0_prog_full;
   wire ibuf_0_out_ref;
   wire modem_0_DeFec_err_dtct;
   wire modem_0_corr_pr_detect;
   wire [7:0]modem_0_m_axis_tdata;
   wire modem_0_m_axis_tvalid;
+  wire modem_0_rx_ocorr_dtct;
   wire modem_0_rx_tx_en;
   wire modem_0_s_axis_tready;
   (* DEBUG = "true" *) wire [15:0]modem_0_tx_i_axis_tdata;
@@ -4647,7 +4647,7 @@ module design_1
   assign LED3[0] = modem_0_corr_pr_detect;
   assign PIN_0 = eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
   assign PIN_1 = eth_pump_0_m_status_overflow;
-  assign PIN_2 = eth_pump_0_prog_full;
+  assign PIN_2 = modem_0_rx_ocorr_dtct;
   assign ad9361_1_P0_N[5:0] = DSP_ad9361_1_P0_N;
   assign ad9361_1_P0_P[5:0] = DSP_ad9361_1_P0_P;
   assign ad9361_1_P1_N_1 = ad9361_1_P1_N[5:0];
@@ -5317,7 +5317,6 @@ module design_1
         .m_axis_tready_modem(modem_0_s_axis_tready),
         .m_axis_tvalid_modem(eth_pump_0_m_axis_tvalid_modem),
         .m_status_overflow(eth_pump_0_m_status_overflow),
-        .prog_full(eth_pump_0_prog_full),
         .s_axis_tdata_modem(modem_0_m_axis_tdata),
         .s_axis_tlast_modem(xlconstant_6_dout),
         .s_axis_tuser_modem(xlconstant_6_dout),
@@ -5354,6 +5353,7 @@ module design_1
         .m_axis_tready(xlconstant_5_dout),
         .m_axis_tvalid(modem_0_m_axis_tvalid),
         .rx_i_axis_tdata(dout_data_4),
+        .rx_ocorr_dtct(modem_0_rx_ocorr_dtct),
         .rx_q_axis_tdata(dout_data_5),
         .rx_tx_en(modem_0_rx_tx_en),
         .s_axis_aclk(clk_wiz_0_clk_out1),

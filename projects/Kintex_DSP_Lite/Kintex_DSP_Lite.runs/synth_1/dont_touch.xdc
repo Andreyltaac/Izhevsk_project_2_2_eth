@@ -30,6 +30,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==div_gen_fr_corr
 # IP: ip/cordic_2/cordic_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_2 || ORIG_REF_NAME==cordic_2} -quiet] -quiet
 
+# IP: ip/axis_fifo_downsamp/axis_fifo_downsamp.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_fifo_downsamp || ORIG_REF_NAME==axis_fifo_downsamp} -quiet] -quiet
+
 # IP: ip/ifft_corr_1_1/ifft_corr_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ifft_corr_1 || ORIG_REF_NAME==ifft_corr_1} -quiet] -quiet
 
@@ -281,6 +284,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_modem_
 
 # IP: ip/cordic_2/cordic_2.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_2 || ORIG_REF_NAME==cordic_2} -quiet] -quiet
+
+# IP: ip/axis_fifo_downsamp/axis_fifo_downsamp.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_fifo_downsamp || ORIG_REF_NAME==axis_fifo_downsamp} -quiet] -quiet
 
 # IP: ip/ifft_corr_1_1/ifft_corr_1.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ifft_corr_1 || ORIG_REF_NAME==ifft_corr_1} -quiet] -quiet
