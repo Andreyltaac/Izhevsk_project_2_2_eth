@@ -436,7 +436,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../FPGA/Rx/xcorr/filter_sop_new.sv">
+      <File Path="$PPRDIR/../../xcorr/filter_sop.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -982,7 +982,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../xcorr/xcorr_main.sv">
+      <File Path="$PPRDIR/../../FPGA/Rx/xcorr/filter_sop_new.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -990,7 +990,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../xcorr/filter_sop.sv">
+      <File Path="$PPRDIR/../../xcorr/xcorr_main.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

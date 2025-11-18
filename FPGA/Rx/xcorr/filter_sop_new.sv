@@ -106,10 +106,11 @@ module filter_sop_new #(
     endfunction
 
     // ----------------- FSM -----------------
-    typedef enum logic [1:0] { S_IDLE, S_ARM, S_ACQUIRE, S_LOCK } state_t;
+    (* mark_debug = "true" *) typedef enum logic [1:0] { S_IDLE, S_ARM, S_ACQUIRE, S_LOCK } state_t;
     state_t state, state_n;
+	
 
-    logic [7:0] lock_cnt, unlock_cnt;
+    (* mark_debug = "true" *) logic [7:0] lock_cnt, unlock_cnt;
     logic       osop_pulse;
 
     assign osop       = osop_pulse;

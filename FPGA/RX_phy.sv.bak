@@ -150,7 +150,7 @@ count_sop_dtct_sub(
 	.thr_lvl_auto	(thr_lvl_auto)
 );
 
-/* filter_sop#(50, 1024, 32)
+filter_sop#(50, 1024, 32)
 filter_sop_sub(
 	.clk		(clk_low_data),
 	.rst		(~del_rst),
@@ -160,10 +160,10 @@ filter_sop_sub(
 	.delay_sop	(delay_sop),
 	.found_sync	(corr_pr_detect),
 	.sop_frame	(filt_wind_sop)
-); */
+);
 
 
-filter_sop_new#(
+/* filter_sop_new#(
 	.sz_frame		(((1024+32)*50)),
 	.N_sop			(20),
 	.Halw_win_sop	(4),
@@ -177,7 +177,27 @@ filter_sop_new_sub(
 	.n_sps		(n_sps),
 	.osop		(filt_osop),
 	.found_sync	(corr_pr_detect)
-);
+); */
+
+
+/* filter_sop_new #(
+  .COUNTER_BITS (32),
+    .SZ_FRAME(((1024+32)*50)),
+    .N_SOP(20),
+    .SOP_COUNT_HALF_WINDOW(5),
+    .N_LOCK(5),
+    .N_UNLOCK(5),
+    .PHASE_WINDOW_TICKS(4),
+    .GUARD_TICKS(2500)
+) 
+  filter_sop_new_sub (
+    .clk(clk_low_data),
+    .rst(~del_rst),
+    .isop(corr_sop),
+    .n_sps(n_sps),
+    .found_sync(corr_pr_detect),
+    .osop(filt_osop)
+  ); */
 
 
 
@@ -197,7 +217,7 @@ fr_sync_sub
 	.rst				(~del_rst),	
 	.fr_sync_ctrl		(fr_sync_ctrl),
 	.index_bw           (bw_control_rx),
-	.fr_sync_isop		(filt_osop), //corr_sop && filt_wind_sop
+	.fr_sync_isop		(corr_sop && filt_wind_sop), //corr_sop && filt_wind_sop // filt_osop
 	.idata_i			(corr_subc_i),
 	.idata_q			(corr_subc_q),
 	.idata_corr_i		(xcorr_peak_i),

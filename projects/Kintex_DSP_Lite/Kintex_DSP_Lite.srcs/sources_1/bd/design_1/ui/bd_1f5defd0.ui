@@ -3,7 +3,7 @@
    "PinnedBlocks":"/AXI_Peripheral|/CLK_AXI|/AD9364|/AD9361_CTRL|/SPI_MOD|/Control_from_SOM_0|/Current_turning_off_0|",
    "PinnedPorts":"AXI_RX_CLK_OUT|AXI_RX_DATA_OUT|AXI_TX_CLK_IN|AXI_TX_DATA_IN|FPGA_REF_40MHZ|ad9361_EN_1|ad9361_EN_2|ad9361_EN_3|ad9361_TXNRX_1|ad9361_TXNRX_2|ad9361_TXNRX_3|ad9364_EN|ad9364_TXNRX|ad9361_RESET_1|ad9361_RESET_2|ad9361_RESET_3|ad9364_RESET|ad9361_SPI_CS_3|ad9361_SPI_CLK_3|ad9361_SPI_DI_3|ad9361_SPI_CLK_1|ad9361_SPI_CS_1|ad9361_SPI_DI_1|ad9361_SPI_CLK_2|ad9361_SPI_CS_2|ad9361_SPI_DI_2|ad9364_SPI_CLK|ad9364_SPI_CS|ad9364_SPI_DI|ad9361_DCLK_1_P|ad9361_DCLK_1_N|ad9361_DCLK_2_N|ad9361_DCLK_2_P|ad9361_DCLK_3_N|ad9364_DCLK_P|ad9364_DCLK_N|ad9361_RX_FRAME1_P|ad9361_RX_FRAME1_N|ad9361_RX_FRAME2_P|ad9361_RX_FRAME2_N|ad9361_RX_FRAME3_P|ad9364_RX_FRAME_P|ad9361_RX_FRAME3_N|ad9364_RX_FRAME_N|ad9361_1_P1_P|ad9361_1_P1_N|ad9361_2_P1_N|ad9361_2_P1_P|ad9361_3_P1_N|ad9361_3_P1_P|ad9364_P1_N|ad9364_P1_P|ad9361_DCLK_3_P|ad9364_SPI_DO|ad9361_SPI_DO_3|ad9361_SPI_DO_1|ad9361_SPI_DO_2|ad9361_FB_CLK_1_P|ad9361_FB_CLK_1_N|ad9361_TX_FRAME1_N|ad9361_TX_FRAME1_P|ad9361_FB_CLK_2_N|ad9361_FB_CLK_2_P|ad9361_FB_CLK_3_N|ad9361_FB_CLK_3_P|ad9364_FB_CLK_N|ad9364_FB_CLK_P|ad9361_TX_FRAME2_N|ad9361_TX_FRAME2_P|ad9361_TX_FRAME3_N|ad9364_TX_FRAME_N|ad9361_TX_FRAME3_P|ad9364_TX_FRAME_P|ad9361_1_P0_N|ad9361_1_P0_P|ad9361_2_P0_N|ad9361_2_P0_P|ad9361_3_P0_N|ad9361_3_P0_P|ad9364_P0_N|ad9364_P0_P|ad9361_EN_AGC_2|ad9361_EN_AGC_3|ad9361_EN_AGC_1|ad9364_EN_AGC|PIN_1|PIN_2|LED3|LED2|LED1|fpga_28v_en_link1|fpga_28v_en_link2|fpga_28v_en_service1|fpga_28v_en_service2|fpga_28v_en_service3|fpga_28v_en_service4|fpga_5v_en_link|spi_cs_n_0|spi_sclk_0|spi_mosi_0|spi_cs_n_1|spi_sclk_1|spi_mosi_1|som_28v_en_link1|som_28v_en_link2|som_28v_en_service1|som_28v_en_service2|som_28v_en_service3|som_28v_en_service4|som_5v_en_link|spi_miso_0|spi_miso_1|PIN_0|",
    "commentid":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port AXI_RX_CLK_OUT -pg 1 -lvl 13 -x 10000 -y 800 -defaultsOSRD
 preplace port AXI_TX_CLK_IN -pg 1 -lvl 0 -x -130 -y 1280 -defaultsOSRD
@@ -282,15 +282,15 @@ preplace netloc modem_0_m_axis_tvalid 1 4 5 1690 2360 NJ 2360 NJ 2360 NJ 2360 59
 preplace netloc eth_pump_0_axis_cobs_decode_0_m_axis_TUSER 1 5 8 2280 2610 NJ 2610 NJ 2610 NJ 2610 NJ 2610 8180J 2840 NJ 2840 9640J
 preplace netloc eth_pump_0_m_status_overflow 1 4 9 1720 3130 NJ 3130 2700J 3050 NJ 3050 NJ 3050 NJ 3050 NJ 3050 NJ 3050 NJ
 preplace netloc modem_0_rx_ocorr_dtct 1 8 5 5920 2310 NJ 2310 NJ 2310 NJ 2310 9650J
+preplace netloc AXI_Peripheral_M02_AXI 1 7 5 NJ 230 NJ 230 NJ 230 NJ 230 8910
 preplace netloc AXI_Peripheral_M03_AXI 1 7 3 NJ 250 NJ 250 6340
 preplace netloc AXI_Peripheral_M01_AXI 1 7 5 NJ 210 NJ 210 NJ 210 NJ 210 8940
 preplace netloc AXI_Peripheral_M14_AXI 1 7 3 NJ 310 NJ 310 6360
-preplace netloc AXI_Peripheral_M02_AXI 1 7 5 NJ 230 NJ 230 NJ 230 NJ 230 8910
 preplace netloc AXI_Peripheral_M00_AXI 1 7 5 NJ 190 NJ 190 NJ 190 NJ 190 8930
+preplace netloc AXI_Peripheral_M05_AXI 1 7 1 3820J 330n
 preplace netloc AXI_Peripheral_M04_AXI 1 7 5 NJ 270 NJ 270 NJ 270 NJ 270 8920
 preplace netloc AXI_Peripheral_M06_AXI 1 7 5 NJ 290 NJ 290 NJ 290 NJ 290 8870
 preplace netloc AXI_Peripheral_M13_AXI 1 1 7 830 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 N 1140 3710
-preplace netloc AXI_Peripheral_M05_AXI 1 7 1 3820J 330n
 levelinfo -pg 1 -130 580 1074 1400 1580 1980 2530 3470 5720 6062 7907 8607 9447 10000
 pagesize -pg 1 -db -bbox -sgen -340 -4680 10220 10560
 "

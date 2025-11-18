@@ -1,24 +1,5 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                                design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[5]/D|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[7]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[2]_rep/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                        design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[4]_rep__1/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[4]_rep/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[5]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[1]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[2]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[8]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                              design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[11]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[3]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[9]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                              design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[10]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                              design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[12]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[6]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                        design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[2]_rep__0/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                        design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[2]_rep__1/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[4]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                        design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[4]_rep__0/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[0]/CE|
+| clk_out1_design_1_clk_wiz_0_0 |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/modem_0/inst/modem_tx/TX_phy_sub/series2parallel_sub/buffer_reg[0]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

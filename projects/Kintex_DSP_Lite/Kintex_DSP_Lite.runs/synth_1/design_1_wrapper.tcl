@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7k325tffg676-2
@@ -105,7 +104,7 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/DeFEC/descrambler.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/fftshift.sv
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/filter_sop.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/find_max.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv

@@ -22,7 +22,7 @@ parameter premb_addr = "D:\\FPGA\\xcorr\\sig_pr.txt"
 	output logic					corr_dtct
 );
 
-localparam wind_mean_sz = 128;
+localparam wind_mean_sz = 256;
 
 // `include "../../input_data/preamb_corr.svh";
 

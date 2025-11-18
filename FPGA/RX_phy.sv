@@ -150,7 +150,7 @@ count_sop_dtct_sub(
 	.thr_lvl_auto	(thr_lvl_auto)
 );
 
-/* filter_sop#(50, 1024, 32)
+filter_sop#(50, 1024, 32)
 filter_sop_sub(
 	.clk		(clk_low_data),
 	.rst		(~del_rst),
@@ -160,7 +160,7 @@ filter_sop_sub(
 	.delay_sop	(delay_sop),
 	.found_sync	(corr_pr_detect),
 	.sop_frame	(filt_wind_sop)
-); */
+);
 
 
 /* filter_sop_new#(
@@ -180,7 +180,7 @@ filter_sop_new_sub(
 ); */
 
 
-filter_sop_new #(
+/* filter_sop_new #(
   .COUNTER_BITS (32),
     .SZ_FRAME(((1024+32)*50)),
     .N_SOP(20),
@@ -197,7 +197,7 @@ filter_sop_new #(
     .n_sps(n_sps),
     .found_sync(corr_pr_detect),
     .osop(filt_osop)
-  );
+  ); */
 
 
 
@@ -217,7 +217,7 @@ fr_sync_sub
 	.rst				(~del_rst),	
 	.fr_sync_ctrl		(fr_sync_ctrl),
 	.index_bw           (bw_control_rx),
-	.fr_sync_isop		(filt_osop), //corr_sop && filt_wind_sop
+	.fr_sync_isop		(corr_sop && filt_wind_sop), //corr_sop && filt_wind_sop // filt_osop
 	.idata_i			(corr_subc_i),
 	.idata_q			(corr_subc_q),
 	.idata_corr_i		(xcorr_peak_i),
@@ -277,9 +277,9 @@ control_index_symb_sub(
 wire [fft_depth-1:0]    fft_subc_i;
 wire [fft_depth-1:0]    fft_subc_q;
 wire [4:0]    			fft_oexp;
-wire                    fft_subc_oval;
+(* mark_debug = "true" *) wire                    fft_subc_oval;
 wire                    fft_subc_oeop;
-wire                    fft_subc_osop;
+(* mark_debug = "true" *) wire                    fft_subc_osop;
 
 ifft
 fft_sub(

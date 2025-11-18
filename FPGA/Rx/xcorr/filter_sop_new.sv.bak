@@ -31,16 +31,16 @@ module filter_sop_new #(
     input  logic                        rst,
 
     // Вход: одиночный однотактный SOP
-    input  logic                        isop,
+    (* mark_debug = "true" *) input  logic                        isop,
 
     // Вход: «сколько SOP за окно наблюдения»
-    input  logic       [14:0]           n_sps,
+    (* mark_debug = "true" *) input  logic       [14:0]           n_sps,
 
     // Выход: состояние «захвачено»
-    output logic                        found_sync,
+    (* mark_debug = "true" *) output logic                        found_sync,
 
     // Выход: нормализованный единичный импульс SOP (1 такт)
-    output logic                        osop
+    (* mark_debug = "true" *) output logic                        osop
 );
 
     // ----------------- Ширины/константы -----------------
@@ -109,13 +109,13 @@ module filter_sop_new #(
     typedef enum logic [1:0] { S_IDLE, S_ARM, S_ACQUIRE, S_LOCK } state_t;
     state_t state, state_n;
 
-    logic [7:0] lock_cnt, unlock_cnt;
+    (* mark_debug = "true" *) logic [7:0] lock_cnt, unlock_cnt;
     logic       osop_pulse;
 
     assign osop       = osop_pulse;
     assign found_sync = (state == S_LOCK);
     logic signed [W:0] d_lock;
-    logic signed [W:0] dT;
+    (* mark_debug = "true" *) logic signed [W:0] dT;
     logic signed [W:0] d_acq;
     // ----------------- Основной процесс -----------------
     always_ff @(posedge clk) begin

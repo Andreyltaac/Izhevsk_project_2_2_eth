@@ -396,7 +396,7 @@ calculate_mean_sub
 	.Calc_mean	(thr_lvl_mean)
 );
 
-find_max#(32, 24)
+find_max#(128, 24)
 find_max_sub(
 	.clk		(clk_l),
 	.rst		(rst),
