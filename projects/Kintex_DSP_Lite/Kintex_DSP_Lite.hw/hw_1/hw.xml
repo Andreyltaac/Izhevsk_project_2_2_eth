@@ -27,8 +27,8 @@
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
     <Object name="xc7k325t_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bin"/>
       <Properties Property="PROGRAM.HW_CFGMEM_PART" value="mt25ql256-spi-x1_x2_x4"/>
       <Properties Property="SLR.COUNT" value="1"/>
@@ -104,9 +104,9 @@
     <Object name="design_1_i/ad9361_spi_ss1_1" gui_info="Trigger Setup=2"/>
     <Object name="design_1_i/ad9361_spi_ss2_1" gui_info="Trigger Setup=3"/>
     <Object name="design_1_i/clk_axi_reset_n" gui_info=""/>
-    <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6:0]" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/isop" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_i[11:0]" gui_info=""/>
+    <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_i[11:0]" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/modem_axi_lite_0_rst_rx_out[31:0]" gui_info="hw_vios/hw_vio_1=16"/>
     <Object name="design_1_i/modem_axi_lite_0_trh_lvl_out[31:0]" gui_info="hw_vios/hw_vio_1=17"/>
     <Object name="design_1_i/mqc_t_0/inst/buff_r_addr_reg[15:0]" gui_info=""/>
@@ -8159,7 +8159,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq7&apos;hXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq7&apos;u2"/>
+        <Option Id="COMPARE_VALUE.0" value="eq7&apos;hXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
@@ -8170,7 +8170,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq7&apos;u2"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq7&apos;hXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -8501,7 +8501,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="lt12&apos;b0011_1110_1000"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="SIGNED"/>
@@ -8512,7 +8512,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="lt12&apos;b0011_1110_1000"/>
         <Option Id="WAVEFORM_STYLE" value="Analog"/>
       </probeOptions>
       <nets>

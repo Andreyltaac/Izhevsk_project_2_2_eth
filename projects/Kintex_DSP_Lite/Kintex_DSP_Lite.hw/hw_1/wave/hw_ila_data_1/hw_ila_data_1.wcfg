@@ -9,9 +9,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="660000fs"></ZoomStartTime>
-      <ZoomEndTime time="4540001fs"></ZoomEndTime>
-      <Cursor1Time time="1320000fs"></Cursor1Time>
+      <ZoomStartTime time="764000fs"></ZoomStartTime>
+      <ZoomEndTime time="2316001fs"></ZoomEndTime>
+      <Cursor1Time time="1062000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="372"></NameColumnWidth>
@@ -49,6 +49,8 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeMin">347.862</obj_property>
+      <obj_property name="AnalogYRRangeMax">1383.11</obj_property>
    </wvobject>
    <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_q" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -58,6 +60,8 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeMin">-9994.3</obj_property>
+      <obj_property name="AnalogYRRangeMax">6612.7</obj_property>
    </wvobject>
    <wvobject fp_name="user_probe_I" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
