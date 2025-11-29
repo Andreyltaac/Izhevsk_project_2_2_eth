@@ -412,3 +412,51 @@ connect_debug_port u_ila_0/probe7 [get_nets [list design_1_i/modem_0/inst/modem_
 
 
 
+
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 32768 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/clk_wiz_0/inst/clk_out2]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/tvalid_fir_gen_0_odata_q[0]} {design_1_i/tvalid_fir_gen_0_odata_q[1]} {design_1_i/tvalid_fir_gen_0_odata_q[2]} {design_1_i/tvalid_fir_gen_0_odata_q[3]} {design_1_i/tvalid_fir_gen_0_odata_q[4]} {design_1_i/tvalid_fir_gen_0_odata_q[5]} {design_1_i/tvalid_fir_gen_0_odata_q[6]} {design_1_i/tvalid_fir_gen_0_odata_q[7]} {design_1_i/tvalid_fir_gen_0_odata_q[8]} {design_1_i/tvalid_fir_gen_0_odata_q[9]} {design_1_i/tvalid_fir_gen_0_odata_q[10]} {design_1_i/tvalid_fir_gen_0_odata_q[11]} {design_1_i/tvalid_fir_gen_0_odata_q[12]} {design_1_i/tvalid_fir_gen_0_odata_q[13]} {design_1_i/tvalid_fir_gen_0_odata_q[14]} {design_1_i/tvalid_fir_gen_0_odata_q[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/tvalid_fir_gen_0_odata_i[0]} {design_1_i/tvalid_fir_gen_0_odata_i[1]} {design_1_i/tvalid_fir_gen_0_odata_i[2]} {design_1_i/tvalid_fir_gen_0_odata_i[3]} {design_1_i/tvalid_fir_gen_0_odata_i[4]} {design_1_i/tvalid_fir_gen_0_odata_i[5]} {design_1_i/tvalid_fir_gen_0_odata_i[6]} {design_1_i/tvalid_fir_gen_0_odata_i[7]} {design_1_i/tvalid_fir_gen_0_odata_i[8]} {design_1_i/tvalid_fir_gen_0_odata_i[9]} {design_1_i/tvalid_fir_gen_0_odata_i[10]} {design_1_i/tvalid_fir_gen_0_odata_i[11]} {design_1_i/tvalid_fir_gen_0_odata_i[12]} {design_1_i/tvalid_fir_gen_0_odata_i[13]} {design_1_i/tvalid_fir_gen_0_odata_i[14]} {design_1_i/tvalid_fir_gen_0_odata_i[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 16 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/fir_compiler_2_m_axis_data_tdata[0]} {design_1_i/fir_compiler_2_m_axis_data_tdata[1]} {design_1_i/fir_compiler_2_m_axis_data_tdata[2]} {design_1_i/fir_compiler_2_m_axis_data_tdata[3]} {design_1_i/fir_compiler_2_m_axis_data_tdata[4]} {design_1_i/fir_compiler_2_m_axis_data_tdata[5]} {design_1_i/fir_compiler_2_m_axis_data_tdata[6]} {design_1_i/fir_compiler_2_m_axis_data_tdata[7]} {design_1_i/fir_compiler_2_m_axis_data_tdata[8]} {design_1_i/fir_compiler_2_m_axis_data_tdata[9]} {design_1_i/fir_compiler_2_m_axis_data_tdata[10]} {design_1_i/fir_compiler_2_m_axis_data_tdata[11]} {design_1_i/fir_compiler_2_m_axis_data_tdata[12]} {design_1_i/fir_compiler_2_m_axis_data_tdata[13]} {design_1_i/fir_compiler_2_m_axis_data_tdata[14]} {design_1_i/fir_compiler_2_m_axis_data_tdata[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 16 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/fir_compiler_1_m_axis_data_tdata[0]} {design_1_i/fir_compiler_1_m_axis_data_tdata[1]} {design_1_i/fir_compiler_1_m_axis_data_tdata[2]} {design_1_i/fir_compiler_1_m_axis_data_tdata[3]} {design_1_i/fir_compiler_1_m_axis_data_tdata[4]} {design_1_i/fir_compiler_1_m_axis_data_tdata[5]} {design_1_i/fir_compiler_1_m_axis_data_tdata[6]} {design_1_i/fir_compiler_1_m_axis_data_tdata[7]} {design_1_i/fir_compiler_1_m_axis_data_tdata[8]} {design_1_i/fir_compiler_1_m_axis_data_tdata[9]} {design_1_i/fir_compiler_1_m_axis_data_tdata[10]} {design_1_i/fir_compiler_1_m_axis_data_tdata[11]} {design_1_i/fir_compiler_1_m_axis_data_tdata[12]} {design_1_i/fir_compiler_1_m_axis_data_tdata[13]} {design_1_i/fir_compiler_1_m_axis_data_tdata[14]} {design_1_i/fir_compiler_1_m_axis_data_tdata[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 16 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/fir_compiler_0_m_axis_data_tdata[0]} {design_1_i/fir_compiler_0_m_axis_data_tdata[1]} {design_1_i/fir_compiler_0_m_axis_data_tdata[2]} {design_1_i/fir_compiler_0_m_axis_data_tdata[3]} {design_1_i/fir_compiler_0_m_axis_data_tdata[4]} {design_1_i/fir_compiler_0_m_axis_data_tdata[5]} {design_1_i/fir_compiler_0_m_axis_data_tdata[6]} {design_1_i/fir_compiler_0_m_axis_data_tdata[7]} {design_1_i/fir_compiler_0_m_axis_data_tdata[8]} {design_1_i/fir_compiler_0_m_axis_data_tdata[9]} {design_1_i/fir_compiler_0_m_axis_data_tdata[10]} {design_1_i/fir_compiler_0_m_axis_data_tdata[11]} {design_1_i/fir_compiler_0_m_axis_data_tdata[12]} {design_1_i/fir_compiler_0_m_axis_data_tdata[13]} {design_1_i/fir_compiler_0_m_axis_data_tdata[14]} {design_1_i/fir_compiler_0_m_axis_data_tdata[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+set_property port_width 16 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {design_1_i/fir_compiler_3_m_axis_data_tdata[0]} {design_1_i/fir_compiler_3_m_axis_data_tdata[1]} {design_1_i/fir_compiler_3_m_axis_data_tdata[2]} {design_1_i/fir_compiler_3_m_axis_data_tdata[3]} {design_1_i/fir_compiler_3_m_axis_data_tdata[4]} {design_1_i/fir_compiler_3_m_axis_data_tdata[5]} {design_1_i/fir_compiler_3_m_axis_data_tdata[6]} {design_1_i/fir_compiler_3_m_axis_data_tdata[7]} {design_1_i/fir_compiler_3_m_axis_data_tdata[8]} {design_1_i/fir_compiler_3_m_axis_data_tdata[9]} {design_1_i/fir_compiler_3_m_axis_data_tdata[10]} {design_1_i/fir_compiler_3_m_axis_data_tdata[11]} {design_1_i/fir_compiler_3_m_axis_data_tdata[12]} {design_1_i/fir_compiler_3_m_axis_data_tdata[13]} {design_1_i/fir_compiler_3_m_axis_data_tdata[14]} {design_1_i/fir_compiler_3_m_axis_data_tdata[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list design_1_i/tvalid_fir_gen_0_tvalid]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list design_1_i/tvalid_fir_gen_1_tvalid]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_clk_out2]

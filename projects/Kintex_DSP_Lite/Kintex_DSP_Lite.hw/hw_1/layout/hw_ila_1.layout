@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><LayoutPersistence>
-    <DockingManager activeFrame="ILA_WAVE_1" frameState="0" version="7">
+    <DockingManager activeFrame="ILA_WAVE_1" frameState="6" version="7">
         <Bounds height="1056" width="1936" x="0" y="10"/>
         <DockContext autohideHeight="200" autohideWidth="200" available="1" canMode="15" currentDockSide="4" currentMode="4" dockId="33420" dockedHeight="166" dockedWidth="798" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="VIO_PROBES_9">
             <UndockedBounds height="707" width="13" x="464" y="185"/>
@@ -217,7 +217,7 @@
                 </DockParentState>
             </DockPreviousState>
         </DockContext>
-        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="38289" dockedHeight="213" dockedWidth="814" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_TRIGGER_1">
+        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="38289" dockedHeight="118" dockedWidth="814" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_TRIGGER_1">
             <DockPreviousState dockId="38289" fcId="24295" index="0" mode="4" rootId="2" side="8" type="close">
                 <Bounds height="685" width="1267" x="0" y="0"/>
                 <DockChild dockId="38289"/>
@@ -400,7 +400,7 @@
                 </DockParentState>
             </DockPreviousState>
         </DockContext>
-        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="37078" dockedHeight="213" dockedWidth="428" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_STATUS_1">
+        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="37078" dockedHeight="118" dockedWidth="428" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_STATUS_1">
             <DockPreviousState dockId="37078" fcId="1687" index="0" mode="4" rootId="2" side="8" type="close">
                 <Bounds height="685" width="1267" x="0" y="0"/>
                 <DockChild dockId="34543"/>
@@ -2392,7 +2392,7 @@
                 </DockParentState>
             </DockPreviousState>
         </DockContext>
-        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="34543" dockedHeight="213" dockedWidth="428" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_SETTINGS_1">
+        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="34543" dockedHeight="118" dockedWidth="428" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_SETTINGS_1">
             <DockPreviousState dockId="34543" fcId="1687" index="0" mode="4" rootId="2" side="8" type="close">
                 <Bounds height="685" width="1267" x="0" y="0"/>
                 <DockChild dockId="34543"/>
@@ -3416,7 +3416,7 @@
                 </DockParentState>
             </DockPreviousState>
         </DockContext>
-        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="43622" dockedHeight="213" dockedWidth="814" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_CAPTURE_1">
+        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="8" currentMode="4" dockId="43622" dockedHeight="118" dockedWidth="814" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_CAPTURE_1">
             <DockPreviousState dockId="43622" fcId="24295" index="0" mode="4" rootId="2" side="8" type="close">
                 <Bounds height="685" width="1267" x="0" y="0"/>
                 <DockChild dockId="38289"/>
@@ -3997,7 +3997,7 @@
                 </DockParentState>
             </DockPreviousState>
         </DockContext>
-        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="1" currentMode="4" dockId="46897" dockedHeight="391" dockedWidth="314" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_WAVE_1">
+        <DockContext autohideHeight="0" autohideWidth="0" available="1" canMode="15" currentDockSide="1" currentMode="4" dockId="46897" dockedHeight="486" dockedWidth="314" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="ILA_WAVE_1">
             <DockPreviousState dockId="46897" fcId="60115" index="0" mode="4" rootId="2" side="1" type="close">
                 <Bounds height="685" width="1267" x="0" y="0"/>
                 <DockChild dockId="7981"/>
@@ -4666,7 +4666,7 @@
             </DockPreviousState>
         </DockContext>
         <ContainerContainer dockId="38445" initiallyEven="0" orientation="0" proportionLayout="0">
-            <FrameContainer dockId="60115" preferredHeight="425" preferredWidth="320" selectedIndex="9">
+            <FrameContainer dockId="60115" preferredHeight="453" preferredWidth="320" selectedIndex="9">
                 <DockableFrame key="ILA_WAVE_10"/>
                 <DockableFrame key="ILA_WAVE_5"/>
                 <DockableFrame key="ILA_WAVE_6"/>
@@ -4678,7 +4678,7 @@
                 <DockableFrame key="ILA_WAVE_4"/>
                 <DockableFrame key="ILA_WAVE_1"/>
             </FrameContainer>
-            <ContainerContainer dockId="7593" initiallyEven="0" orientation="1" preferredHeight="247" preferredWidth="1606" proportionLayout="0">
+            <ContainerContainer dockId="7593" initiallyEven="0" orientation="1" preferredHeight="132" preferredWidth="1606" proportionLayout="0">
                 <FrameContainer dockId="1687" preferredHeight="223" preferredWidth="434" selectedIndex="0">
                     <DockableFrame key="ILA_SETTINGS_1"/>
                     <DockableFrame key="ILA_SETTINGS_2"/>

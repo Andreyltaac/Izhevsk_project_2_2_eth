@@ -9,96 +9,96 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="764000fs"></ZoomStartTime>
-      <ZoomEndTime time="2316001fs"></ZoomEndTime>
-      <Cursor1Time time="1062000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="32768001fs"></ZoomEndTime>
+      <Cursor1Time time="922000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="372"></NameColumnWidth>
-      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+      <NameColumnWidth column_width="319"></NameColumnWidth>
+      <ValueColumnWidth column_width="69"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/equalizer_sub/oval" type="logic">
+   <wvobject fp_name="design_1_i/fir_compiler_0_m_axis_data_tdata" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/equalizer_sub/oval</obj_property>
-      <obj_property name="ObjectShortName">oval</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_subc_osop" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_subc_osop</obj_property>
-      <obj_property name="ObjectShortName">fft_subc_osop</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="u_ila_0_fft_subc_oval" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_0_fft_subc_oval</obj_property>
-      <obj_property name="ObjectShortName">u_ila_0_fft_subc_oval</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_i" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_i[11:0]</obj_property>
-      <obj_property name="ObjectShortName">odata_i[11:0]</obj_property>
+      <obj_property name="ElementShortName">design_1_i/fir_compiler_0_m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fir_compiler_0_m_axis_data_tdata[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeMin">347.862</obj_property>
-      <obj_property name="AnalogYRRangeMax">1383.11</obj_property>
    </wvobject>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_q" type="array">
+   <wvobject fp_name="design_1_i/fir_compiler_2_m_axis_data_tdata" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_q[11:0]</obj_property>
-      <obj_property name="ObjectShortName">odata_q[11:0]</obj_property>
+      <obj_property name="ElementShortName">design_1_i/fir_compiler_2_m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fir_compiler_2_m_axis_data_tdata[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeMin">-9994.3</obj_property>
-      <obj_property name="AnalogYRRangeMax">6612.7</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/fir_compiler_1_m_axis_data_tdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/fir_compiler_1_m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fir_compiler_1_m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeMin">3899</obj_property>
+      <obj_property name="AnalogYRRangeMax">30515</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/fir_compiler_3_m_axis_data_tdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/fir_compiler_3_m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fir_compiler_3_m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tvalid_fir_gen_0_odata_i" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_0_odata_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tvalid_fir_gen_0_odata_i[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tvalid_fir_gen_0_odata_q" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_0_odata_q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tvalid_fir_gen_0_odata_q[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tvalid_fir_gen_0_tvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">tvalid_fir_gen_0_tvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tvalid_fir_gen_1_tvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_1_tvalid</obj_property>
+      <obj_property name="ObjectShortName">tvalid_fir_gen_1_tvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="user_probe_I" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">user_probe_I[15:0]</obj_property>
       <obj_property name="ObjectShortName">user_probe_I[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
-      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
-      <obj_property name="AnalogYRRangeMax">32000.000000</obj_property>
-      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
-      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
-      <obj_property name="AnalogHorizLine">0.000000</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_sub/count_check" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_sub/count_check[4:0]</obj_property>
-      <obj_property name="ObjectShortName">count_check[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_sub/count_delay" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_sub/count_delay[16:0]</obj_property>
-      <obj_property name="ObjectShortName">count_delay[16:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count" type="array">
-      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6:0]</obj_property>
-      <obj_property name="ObjectShortName">fft_frame_count[6:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="AnalogYRangeMin">34200</obj_property>
+      <obj_property name="AnalogYRRangeMax">35477</obj_property>
    </wvobject>
 </wave_config>

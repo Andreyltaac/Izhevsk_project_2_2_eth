@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Nov 17 12:00:38 2025
+//Date        : Thu Nov 27 10:49:21 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4087,7 +4087,7 @@ module ad9361_clk_imp_1I4OLDI
         .sample_rate_30_72(clk_DSP_data_rate));
 endmodule
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=101,numReposBlks=74,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=20,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=108,numReposBlks=81,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=22,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (AXI_RX_CLK_OUT,
     AXI_RX_DATA_OUT,
@@ -4596,14 +4596,17 @@ module design_1
   wire clk_axi_reset_n;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]dout_data_4;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]dout_data_5;
   wire eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
   wire eth_pump_0_eth_rx_en;
   wire [7:0]eth_pump_0_eth_rxd;
   wire [7:0]eth_pump_0_m_axis_tdata_modem;
   wire eth_pump_0_m_axis_tvalid_modem;
   wire eth_pump_0_m_status_overflow;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_0_m_axis_data_tdata;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_1_m_axis_data_tdata;
+  wire fir_compiler_1_m_axis_data_tvalid;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_2_m_axis_data_tdata;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_3_m_axis_data_tdata;
   wire ibuf_0_out_ref;
   wire modem_0_DeFec_err_dtct;
   wire modem_0_corr_pr_detect;
@@ -4627,6 +4630,10 @@ module design_1
   wire spi_miso_0_1;
   wire spi_miso_1_1;
   wire sys_200m_clk;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]tvalid_fir_gen_0_odata_i;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]tvalid_fir_gen_0_odata_q;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire tvalid_fir_gen_0_tvalid;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire tvalid_fir_gen_1_tvalid;
   wire [0:0]up_txnrx_1;
   wire util_clkdiv_0_clk_out;
   wire [7:0]xlconcat_0_dout;
@@ -4636,6 +4643,7 @@ module design_1
   wire [0:0]xlconstant_4_dout;
   wire [0:0]xlconstant_5_dout;
   wire [0:0]xlconstant_6_dout;
+  wire [0:0]xlconstant_7_dout;
 
   assign AXI_RX_CLK_OUT = AXI_Peripheral_AXI_RX_CLK_OUT;
   assign AXI_RX_DATA_OUT[16:0] = AXI_Peripheral_AXI_RX_DATA_OUT;
@@ -4803,15 +4811,13 @@ module design_1
         .din_data_11({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_2({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_3({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .din_data_4(modem_0_tx_i_axis_tdata),
-        .din_data_5(modem_0_tx_q_axis_tdata),
+        .din_data_4({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .din_data_5({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_6({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_7({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_8({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_9({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .dout(up_txnrx_1),
-        .dout_data_4(dout_data_4),
-        .dout_data_5(dout_data_5),
         .ext_reset_in(clk_axi_reset_n),
         .peripheral_reset(reset_1),
         .s_axi1_araddr(AXI_Peripheral_M02_AXI_ARADDR),
@@ -5321,6 +5327,28 @@ module design_1
         .s_axis_tlast_modem(xlconstant_6_dout),
         .s_axis_tuser_modem(xlconstant_6_dout),
         .s_axis_tvalid_modem(modem_0_m_axis_tvalid));
+  design_1_fir_compiler_0_0 fir_compiler_0
+       (.aclk(clk_wiz_0_clk_out2),
+        .m_axis_data_tdata(fir_compiler_0_m_axis_data_tdata),
+        .m_axis_data_tvalid(tvalid_fir_gen_1_tvalid),
+        .s_axis_data_tdata(tvalid_fir_gen_0_odata_i),
+        .s_axis_data_tvalid(tvalid_fir_gen_0_tvalid));
+  design_1_fir_compiler_0_1 fir_compiler_1
+       (.aclk(clk_wiz_0_clk_out2),
+        .m_axis_data_tdata(fir_compiler_1_m_axis_data_tdata),
+        .m_axis_data_tvalid(fir_compiler_1_m_axis_data_tvalid),
+        .s_axis_data_tdata(tvalid_fir_gen_0_odata_q),
+        .s_axis_data_tvalid(tvalid_fir_gen_0_tvalid));
+  design_1_fir_compiler_0_2 fir_compiler_2
+       (.aclk(clk_wiz_0_clk_out2),
+        .m_axis_data_tdata(fir_compiler_2_m_axis_data_tdata),
+        .s_axis_data_tdata(fir_compiler_0_m_axis_data_tdata),
+        .s_axis_data_tvalid(tvalid_fir_gen_1_tvalid));
+  design_1_fir_compiler_2_0 fir_compiler_3
+       (.aclk(clk_wiz_0_clk_out2),
+        .m_axis_data_tdata(fir_compiler_3_m_axis_data_tdata),
+        .s_axis_data_tdata(fir_compiler_1_m_axis_data_tdata),
+        .s_axis_data_tvalid(fir_compiler_1_m_axis_data_tvalid));
   design_1_modem_0_0 modem_0
        (.DeFec_err_dtct(modem_0_DeFec_err_dtct),
         .S_AXI_ACLK(CLK_AXI_axi_periph_clk),
@@ -5352,9 +5380,9 @@ module design_1
         .m_axis_tdata(modem_0_m_axis_tdata),
         .m_axis_tready(xlconstant_5_dout),
         .m_axis_tvalid(modem_0_m_axis_tvalid),
-        .rx_i_axis_tdata(dout_data_4),
+        .rx_i_axis_tdata(fir_compiler_2_m_axis_data_tdata),
         .rx_ocorr_dtct(modem_0_rx_ocorr_dtct),
-        .rx_q_axis_tdata(dout_data_5),
+        .rx_q_axis_tdata(fir_compiler_3_m_axis_data_tdata),
         .rx_tx_en(modem_0_rx_tx_en),
         .s_axis_aclk(clk_wiz_0_clk_out1),
         .s_axis_tdata(eth_pump_0_m_axis_tdata_modem),
@@ -5367,6 +5395,19 @@ module design_1
         .in_sig(axi_ethernetlite_0_ip2intc_irpt),
         .out_sig(pulse_expander_0_out_sig),
         .reset(rst_sys_ps7_100M_peripheral_aresetn));
+  design_1_tvalid_fir_gen_0_0 tvalid_fir_gen_0
+       (.iclk(clk_wiz_0_clk_out2),
+        .idata_i(modem_0_tx_i_axis_tdata),
+        .idata_q(modem_0_tx_q_axis_tdata),
+        .irstn(xlconstant_7_dout),
+        .odata_i(tvalid_fir_gen_0_odata_i),
+        .odata_q(tvalid_fir_gen_0_odata_q),
+        .tvalid(tvalid_fir_gen_0_tvalid));
+  design_1_tvalid_fir_gen_0_1 tvalid_fir_gen_1
+       (.iclk(clk_wiz_0_clk_out2),
+        .idata_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .idata_q({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .irstn(xlconstant_7_dout));
   design_1_util_clkdiv_0_0 util_clkdiv_0
        (.clk(CLK_AXI_axi_periph_clk),
         .clk_out(util_clkdiv_0_clk_out),
@@ -5389,6 +5430,8 @@ module design_1
        (.dout(xlconstant_5_dout));
   design_1_xlconstant_3_3 xlconstant_6
        (.dout(xlconstant_6_dout));
+  design_1_xlconstant_5_0 xlconstant_7
+       (.dout(xlconstant_7_dout));
 endmodule
 
 module design_1_AXI_C2C_axi_periph_0

@@ -99,14 +99,18 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/ip_repo/IP_sync_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library'.
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/xilinx/util_clkdiv
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 392.828 ; gain = 4.676
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/ip_repo/IP_sync_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/xilinx/util_clkdiv
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 395.926 ; gain = 7.535
 Command: synth_design -top design_1_wrapper -part xc7k325tffg676-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Device 21-403] Loading part xc7k325tffg676-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8384 
+INFO: Helper process launched with PID 1228 
 WARNING: [Synth 8-6901] identifier 'par2ser_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/DeFEC.sv:261]
 WARNING: [Synth 8-992] pack_sop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:334]
 WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:71]
@@ -138,7 +142,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo with fo
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_gmii_tx with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:93]
 WARNING: [Synth 8-2507] parameter declaration becomes local in lfsr with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/lfsr.v:355]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 920.285 ; gain = 201.148
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 923.348 ; gain = 201.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4091]
@@ -1284,7 +1288,7 @@ WARNING: [Synth 8-7023] instance 'DATA_rst' of module 'design_1_DATA_rst_0' has 
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-WARNING: [Synth 8-7023] instance 'AD9361_CTRL' of module 'AD9361_CTRL_imp_9MHREM' has 135 connections declared, but only 122 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4753]
+WARNING: [Synth 8-7023] instance 'AD9361_CTRL' of module 'AD9361_CTRL_imp_9MHREM' has 135 connections declared, but only 120 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4761]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2022]
 	Parameter NUM_OF_CHANNELS bound to: 2 - type: integer 
 	Parameter DIN_DATA_WIDTH bound to: 16 - type: integer 
@@ -1575,7 +1579,7 @@ WARNING: [Synth 8-7023] instance 'divclk_64_rst1' of module 'design_1_divclk_64_
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 16 - type: integer 
 WARNING: [Synth 8-3848] Net dout in module/entity AD9364_imp_16ETD7A does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1891]
-WARNING: [Synth 8-7023] instance 'AD9364' of module 'AD9364_imp_16ETD7A' has 41 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4876]
+WARNING: [Synth 8-7023] instance 'AD9364' of module 'AD9364_imp_16ETD7A' has 41 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4882]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter FIFO_MEMORY_TYPE bound to: 2 - type: integer 
@@ -2399,7 +2403,7 @@ WARNING: [Synth 8-7023] instance 'AXI_C2C' of module 'design_1_AXI_C2C_0' has 62
 	Parameter P_SLVERR bound to: 2'b10 
 	Parameter P_PROTECTION bound to: 1 - type: integer 
 	Parameter P_CONVERSION bound to: 2 - type: integer 
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 56 connections declared, but only 48 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:9973]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 56 connections declared, but only 48 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:10016]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 16 - type: integer 
@@ -2970,7 +2974,7 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 WARNING: [Synth 8-3848] Net packed_fifo_wr_sync in module/entity AXI_Peripheral_imp_1PLQHVD does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2698]
-WARNING: [Synth 8-7023] instance 'AXI_Peripheral' of module 'AXI_Peripheral_imp_1PLQHVD' has 287 connections declared, but only 230 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4917]
+WARNING: [Synth 8-7023] instance 'AXI_Peripheral' of module 'AXI_Peripheral_imp_1PLQHVD' has 287 connections declared, but only 230 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4923]
 INFO: [Synth 8-638] synthesizing module 'design_1_AXI_reset_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_reset_0/synth/design_1_AXI_reset_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 16 - type: integer 
@@ -3048,7 +3052,7 @@ INFO: [Synth 8-226] default block is never used [f:/work/Izhevsk_project_2_2_eth
 INFO: [Synth 8-226] default block is never used [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/07fa/hdl/Control_from_SOM_v1_0_S00_AXI.v:402]
 WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/07fa/hdl/Control_from_SOM_v1_0_S00_AXI.v:254]
 	Parameter C_PERIOD_MS bound to: 500 - type: integer 
-WARNING: [Synth 8-7023] instance 'Control_from_SOM_0' of module 'design_1_Control_from_SOM_0_0' has 42 connections declared, but only 29 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5155]
+WARNING: [Synth 8-7023] instance 'Control_from_SOM_0' of module 'design_1_Control_from_SOM_0_0' has 42 connections declared, but only 29 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5161]
 	Parameter CLKS_PER_HALF_BIT bound to: 32 - type: integer 
 	Parameter C_DELAY_MS bound to: 2 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -4157,7 +4161,7 @@ WARNING: [Synth 8-7023] instance 'axi_spi' of module 'design_1_axi_spi_0' has 33
 	Parameter DIN_TO bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-7023] instance 'SPI_MOD' of module 'SPI_MOD_imp_NH4T3P' has 33 connections declared, but only 30 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5229]
+WARNING: [Synth 8-7023] instance 'SPI_MOD' of module 'SPI_MOD_imp_NH4T3P' has 33 connections declared, but only 30 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5235]
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_ethernetlite_0_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/synth/design_1_axi_ethernetlite_0_0.vhd:104]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -4874,7 +4878,7 @@ INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-256] done synthesizing module 'design_1_axi_ethernetlite_0_0' (273#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/synth/design_1_axi_ethernetlite_0_0.vhd:104]
-WARNING: [Synth 8-7023] instance 'axi_ethernetlite_0' of module 'design_1_axi_ethernetlite_0_0' has 40 connections declared, but only 39 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5260]
+WARNING: [Synth 8-7023] instance 'axi_ethernetlite_0' of module 'design_1_axi_ethernetlite_0_0' has 40 connections declared, but only 39 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5266]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT bound to: 36 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -4906,7 +4910,7 @@ WARNING: [Synth 8-7023] instance 'axi_ethernetlite_0' of module 'design_1_axi_et
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 5 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5300]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 5 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5306]
 	Parameter MII_EN bound to: 1 - type: integer 
 	Parameter xlconstant_0_dout bound to: 1 - type: integer 
 	Parameter xlconstant_1_dout bound to: 96 - type: integer 
@@ -5420,7 +5424,303 @@ WARNING: [Synth 8-7023] instance 'axis_async_fifo_1' of module 'axis_async_fifo'
 INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:367]
 INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:241]
 WARNING: [Synth 8-7023] instance 'axis_gmii_tx_0' of module 'axis_gmii_tx' has 20 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/eth_pump.v:322]
-WARNING: [Synth 8-7023] instance 'eth_pump_0' of module 'design_1_eth_pump_0_0' has 23 connections declared, but only 18 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5305]
+WARNING: [Synth 8-7023] instance 'eth_pump_0' of module 'design_1_eth_pump_0_0' has 23 connections declared, but only 18 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5311]
+INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: design_1_fir_compiler_0_0 - type: string 
+	Parameter C_COEF_FILE bound to: design_1_fir_compiler_0_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 6 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 8 - type: integer 
+	Parameter C_INTERP_RATE bound to: 2 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 19 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 31 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 31 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 6 - type: integer 
+	Parameter C_INPUT_RATE bound to: 9 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 4 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 17 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_0' (305#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_0' of module 'design_1_fir_compiler_0_0' has 6 connections declared, but only 5 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5330]
+INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/synth/design_1_fir_compiler_0_1.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: design_1_fir_compiler_0_1 - type: string 
+	Parameter C_COEF_FILE bound to: design_1_fir_compiler_0_1.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 6 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 8 - type: integer 
+	Parameter C_INTERP_RATE bound to: 2 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 19 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 31 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 31 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 6 - type: integer 
+	Parameter C_INPUT_RATE bound to: 9 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 4 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 17 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_1' (306#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/synth/design_1_fir_compiler_0_1.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_1' of module 'design_1_fir_compiler_0_1' has 6 connections declared, but only 5 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5336]
+INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_2' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/synth/design_1_fir_compiler_0_2.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: design_1_fir_compiler_0_2 - type: string 
+	Parameter C_COEF_FILE bound to: design_1_fir_compiler_0_2.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 6 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 7 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 2 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 19 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 32 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 32 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 6 - type: integer 
+	Parameter C_INPUT_RATE bound to: 4 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 8 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 18 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_2' (308#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/synth/design_1_fir_compiler_0_2.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_2' of module 'design_1_fir_compiler_0_2' has 6 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5342]
+INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_2_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/synth/design_1_fir_compiler_2_0.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: design_1_fir_compiler_2_0 - type: string 
+	Parameter C_COEF_FILE bound to: design_1_fir_compiler_2_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 6 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 7 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 2 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 19 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 32 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 32 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 6 - type: integer 
+	Parameter C_INPUT_RATE bound to: 4 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 8 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 18 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_2_0' (309#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/synth/design_1_fir_compiler_2_0.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_3' of module 'design_1_fir_compiler_2_0' has 6 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5347]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_tx.v:38]
 	Parameter pDAT_W bound to: 32'sb00000000000000000000000000001000 
 	Parameter pMSB_FIRST bound to: 1'b0 
@@ -5888,7 +6188,7 @@ INFO: [Synth 8-638] synthesizing module 'xfft_time_freq' [f:/work/Izhevsk_projec
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xfft_time_freq' (371#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'xfft_time_freq' (389#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
 WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'xfft_time_freq' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:68]
 WARNING: [Synth 8-7023] instance 'xilinx_ifft_sub' of module 'xfft_time_freq' has 19 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:55]
 WARNING: [Synth 8-7023] instance 'ifft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/TX_phy.sv:187]
@@ -5960,7 +6260,7 @@ INFO: [Synth 8-638] synthesizing module 'fft_corr_1' [f:/work/Izhevsk_project_2_
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fft_corr_1' (408#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/synth/fft_corr_1.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'fft_corr_1' (426#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/synth/fft_corr_1.vhd:83]
 WARNING: [Synth 8-7023] instance 'fft_corr_1_1' of module 'fft_corr_1' has 19 connections declared, but only 13 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_fft_sub.sv:27]
 	Parameter depht_ram bound to: 14 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/prb_tsync_ram.sv:15]
@@ -6223,7 +6523,7 @@ INFO: [Synth 8-638] synthesizing module 'ifft_corr_1' [f:/work/Izhevsk_project_2
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ifft_corr_1' (412#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/synth/ifft_corr_1.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'ifft_corr_1' (430#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/synth/ifft_corr_1.vhd:83]
 WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'ifft_corr_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_ifft_sub.sv:51]
 WARNING: [Synth 8-7023] instance 'ifft_corr_1_1' of module 'ifft_corr_1' has 19 connections declared, but only 13 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_ifft_sub.sv:40]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -6630,7 +6930,7 @@ INFO: [Synth 8-638] synthesizing module 'cordic_2' [f:/work/Izhevsk_project_2_2_
 	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 24 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'cordic_2' (437#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'cordic_2' (455#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:70]
 INFO: [Synth 8-638] synthesizing module 'div_gen_fr_corr' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/synth/div_gen_fr_corr.vhd:73]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_HAS_ARESETN bound to: 1 - type: integer 
@@ -6656,7 +6956,7 @@ INFO: [Synth 8-638] synthesizing module 'div_gen_fr_corr' [f:/work/Izhevsk_proje
 	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'div_gen_fr_corr' (448#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/synth/div_gen_fr_corr.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_fr_corr' (466#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/synth/div_gen_fr_corr.vhd:73]
 WARNING: [Synth 8-7023] instance 'div_gen_1152' of module 'div_gen_fr_corr' has 9 connections declared, but only 8 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:182]
 	Parameter DATA_W bound to: 12 - type: integer 
 	Parameter ADDR_W bound to: 6 - type: integer 
@@ -6691,7 +6991,7 @@ INFO: [Synth 8-638] synthesizing module 'cordic_0' [f:/work/Izhevsk_project_2_2_
 	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'cordic_0' (450#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'cordic_0' (468#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:72]
 WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:223]
 WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:224]
 	Parameter fft_depth bound to: 12 - type: integer 
@@ -6751,7 +7051,7 @@ INFO: [Synth 8-638] synthesizing module 'div_gen_0' [f:/work/Izhevsk_project_2_2
 	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (456#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (474#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:71]
 WARNING: [Synth 8-689] width (81) of port connection 'm_axis_dout_tdata' does not match port width (64) of module 'div_gen_0' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:90]
 WARNING: [Synth 8-689] width (81) of port connection 'm_axis_dout_tdata' does not match port width (64) of module 'div_gen_0' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:100]
 INFO: [Synth 8-638] synthesizing module 'mult_gen_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:68]
@@ -6778,7 +7078,7 @@ WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [f:/wor
 	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
 	Parameter C_ROUND_PT bound to: 0 - type: integer 
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (459#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (477#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:68]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter pBMAX bound to: 12 - type: integer 
 	Parameter pDAT_W bound to: 12 - type: integer 
@@ -7739,8 +8039,26 @@ WARNING: [Synth 8-689] width (4) of port connection 'ss_in_out' does not match p
 WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:226]
 WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:228]
 WARNING: [Synth 8-689] width (1) of port connection 'rezerv_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:230]
-WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5324]
+WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
 	Parameter EXPAND bound to: 64 - type: integer 
+	Parameter CLK_RATE bound to: 276480000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 30720000 - type: integer 
+	Parameter DATA_W bound to: 16 - type: integer 
+	Parameter CLK_RATE bound to: 276480000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 30720000 - type: integer 
+	Parameter DATA_W bound to: 16 - type: integer 
+	Parameter RATIO bound to: 32'sb00000000000000000000000000001001 
+	Parameter CNT_W bound to: 32'sb00000000000000000000000000000100 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5406]
+	Parameter CLK_RATE bound to: 276480000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 61440000 - type: integer 
+	Parameter DATA_W bound to: 16 - type: integer 
+	Parameter CLK_RATE bound to: 276480000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 61440000 - type: integer 
+	Parameter DATA_W bound to: 16 - type: integer 
+	Parameter RATIO bound to: 32'sb00000000000000000000000000000100 
+	Parameter CNT_W bound to: 32'sb00000000000000000000000000000010 
+WARNING: [Synth 8-7023] instance 'tvalid_fir_gen_1' of module 'design_1_tvalid_fir_gen_0_1' has 7 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5406]
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter SEL_0_DIV bound to: 4 - type: string 
 	Parameter SEL_1_DIV bound to: 2 - type: string 
@@ -7786,8 +8104,12 @@ WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42
 	Parameter CONST_WIDTH bound to: 16 - type: integer 
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9361_CTRL'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4753]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'modem_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5324]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5330]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_2'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5342]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_1'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5336]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_3'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5347]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'modem_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tvalid_fir_gen_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5398]
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
@@ -7906,7 +8228,7 @@ WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][5][0
 WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][6][0][pre_sign]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:06:15 ; elapsed = 00:06:23 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished RTL Elaboration : Time (s): cpu = 00:06:23 ; elapsed = 00:06:34 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -7919,14 +8241,14 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:22 ; elapsed = 00:06:31 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:30 ; elapsed = 00:06:41 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:22 ; elapsed = 00:06:31 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:30 ; elapsed = 00:06:41 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 26123 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 26127 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -8028,6 +8350,14 @@ Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projec
 Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_board.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
 Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
 Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_0/U0'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_0/U0'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_1/U0'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_1/U0'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_2/U0'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_2/U0'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_3/U0'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_3/U0'
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc]
 WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which potentially conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc:350]
@@ -8493,7 +8823,7 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 3155.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 3278.898 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1497 instances were transformed.
   BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instances
@@ -8511,9 +8841,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB18 => RAMB18E1: 6 instances
   SRL16 => SRL16E: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3155.645 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3278.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:07:58 ; elapsed = 00:08:07 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Constraint Validation : Time (s): cpu = 00:08:08 ; elapsed = 00:08:17 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -8642,6 +8972,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_re
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_cobs_decode.v:100]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'axis_cobs_decode'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'axis_gmii_tx'
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ldpc_enc'
 WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
@@ -9410,7 +9741,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized12'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:00 ; elapsed = 00:09:11 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:10 ; elapsed = 00:09:23 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
@@ -9469,7 +9800,8 @@ Report RTL Partitions:
 |44    |only_rx__GC0                            |           1|      3124|
 |45    |modem__GC0                              |           1|      1297|
 |46    |design_1__GCB0                          |           1|     29805|
-|47    |design_1__GCB1                          |           1|      9655|
+|47    |design_1__GCB1                          |           1|      9732|
+|48    |design_1__GCB2                          |           1|      2319|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -9518,6 +9850,14 @@ WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM
 WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register symb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register symb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5583] The signal i_mem/m_ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -9604,14 +9944,14 @@ INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xff
 INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_2i/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
 INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_3r/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
 INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_3i/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3886] merging instance 'design_1_i/AD9361_CTRL/i_2049_0/ad9361_clk/DATA_rst/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/AD9361_CTRL/i_2049_0/ad9361_clk/DATA_rst/U0/SEQ/bsr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AD9361_CTRL/i_2049_0/ad9361_clk/DATA_rst/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/AD9361_CTRL/i_2049_0/ad9361_clk/DATA_rst/U0/SEQ/core_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__1.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset__1.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__1.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset__1.
-INFO: [Synth 8-3886] merging instance 'design_1_i/AD9364i_2049_2/divclk_64_rst1/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/AD9364i_2049_2/divclk_64_rst1/U0/SEQ/bsr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AD9364i_2049_2/divclk_64_rst1/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/AD9364i_2049_2/divclk_64_rst1/U0/SEQ/core_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AD9364i_2049_7/divclk_64_rst1/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/AD9364i_2049_7/divclk_64_rst1/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AD9364i_2049_7/divclk_64_rst1/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/AD9364i_2049_7/divclk_64_rst1/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__parameterized1.
@@ -9651,47 +9991,47 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_
 INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripheral/AXI_C2C/inst/i_2049_0/axi_lite_slave_gen.axi_chip2chip_lite_slave_inst/axi_chip2chip_lite_tx_tdm_inst/state_reg[5]' (FDRE) to 'design_1_i/AXI_Peripheral/AXI_C2C/inst/i_2049_0/axi_lite_slave_gen.axi_chip2chip_lite_slave_inst/axi_chip2chip_lite_tx_tdm_inst/tx_data_reg[19]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripheral/AXI_C2C/inst/i_2049_0/axi_lite_slave_gen.axi_chip2chip_lite_slave_inst/axi_chip2chip_lite_tx_tdm_inst/state_reg[4]' (FDRE) to 'design_1_i/AXI_Peripheral/AXI_C2C/inst/i_2049_0/axi_lite_slave_gen.axi_chip2chip_lite_slave_inst/axi_chip2chip_lite_tx_tdm_inst/tx_data_reg[19]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/\AXI_Peripheral/AXI_C2C /inst/i_2049_0/\axi_lite_slave_gen.axi_chip2chip_lite_slave_inst/axi_chip2chip_lite_tx_tdm_inst/tx_data_reg[19] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[7]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[8]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[8]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[9]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[9]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[10]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[10]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[12]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[12]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_C2C_axi_periph/xbar/\inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[15] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[0]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[1]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[2]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[3]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[3]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[3]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[3]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[2]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[1]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[0]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[3]' (FDE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[2]' (FDE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[1]' (FDE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]' (FDE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[0]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_transfer/i_request_arb/src_throttler_enabled_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_transfer/i_request_arb/i_req_gen/rew_req_xlast_reg )
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[3]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[3]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[2]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[1]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[0]' (FDR) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[0]' (FDE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_transfer/i_request_arb/i_src_req_fifo/cdc_sync_fifo_ram_reg[1] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[3]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[3]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[2]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[1]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[0]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_regmap/i_regmap_request/up_dma_cyclic_reg )
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[0]' (FDSE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[1]' (FDSE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[2]' (FDSE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[3] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[5]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[6]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[6]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/\i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[7] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/CLK_AXIi_2049_4/AXI_reset/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/CLK_AXIi_2049_4/AXI_reset/U0/SEQ/bsr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/CLK_AXIi_2049_4/AXI_reset/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/CLK_AXIi_2049_4/AXI_reset/U0/SEQ/core_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[7]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[8]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[8]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[9]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[9]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[10]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[10]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[12]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[12]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_C2C_axi_periph/xbar/\inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[15] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[0]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[1]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[2]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[3]__0' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[3]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[2]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[1]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg_rep[0]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_response_handler/id_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[3]' (FDE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[2]' (FDE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[1]' (FDE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_id_reg[0]' (FDE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_transfer/i_request_arb/src_throttler_enabled_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_transfer/i_request_arb/i_req_gen/rew_req_xlast_reg )
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[3]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[2]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[1]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg_rep[0]' (FDR) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dma_fifo/i_data_mover/id_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[0]' (FDE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_transfer/i_request_arb/i_req_gen/rew_transfer_id_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_transfer/i_request_arb/i_src_req_fifo/cdc_sync_fifo_ram_reg[1] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[3]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[2]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[1]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg_rep[0]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/id_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_regmap/i_regmap_request/up_dma_cyclic_reg )
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[0]' (FDSE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[1]' (FDSE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[2]' (FDSE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_transfer/i_request_arb/i_store_and_forward/dest_mem_data_strb_reg[3] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[5]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[6]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[6]' (FDRE) to 'design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/\i_transfer/i_request_arb/i_dest_dma_mm/i_addr_gen/length_reg[7] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/CLK_AXIi_2049_9/AXI_reset/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/CLK_AXIi_2049_9/AXI_reset/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/CLK_AXIi_2049_9/AXI_reset/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/CLK_AXIi_2049_9/AXI_reset/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
@@ -9764,6 +10104,20 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_3/U0/i_synth/\g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_3/U0/i_synth/\g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_3/U0/i_synth/\g_halfband_decimation.i_halfband_decimation/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_2/U0/i_synth/\g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_2/U0/i_synth/\g_halfband_decimation.i_halfband_decimation/g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_2/U0/i_synth/\g_halfband_decimation.i_halfband_decimation/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_1/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_1/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/i_2049_2/fir_compiler_1/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.rfd_cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_1/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_0/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_0/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/i_2049_2/fir_compiler_0/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.rfd_cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_2/fir_compiler_0/U0/i_synth/\g_halfband_interpolation.i_halfband_interpolation/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/modem_0/modem_txi_2049_0/FEC_sub/\tail_counter_reg[6]_LDC )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/modem_0/modem_txi_2049_0/FEC_sub/\tail_counter_reg[3]_LDC )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/modem_0/modem_txi_2049_0/FEC_sub/\tail_counter_reg[2]_LDC )
@@ -9817,41 +10171,26 @@ WARNING: [Synth 8-3917] design axi_ad9361__parameterized2__GC0 has port s_axi_br
 WARNING: [Synth 8-3917] design axi_ad9361__parameterized2__GC0 has port s_axi_bresp[0] driven by constant 0
 WARNING: [Synth 8-3917] design axi_ad9361__parameterized2__GC0 has port s_axi_rresp[1] driven by constant 0
 WARNING: [Synth 8-3917] design axi_ad9361__parameterized2__GC0 has port s_axi_rresp[0] driven by constant 0
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_iqcor_enb_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_iqcor_enb_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_1/i_up_dac_channel/up_dac_dds_scale_1_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_tx/\i_tx_channel_0/i_up_dac_channel/up_dac_dds_scale_1_reg[11] )
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\COSINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\lut_rom.q1_read_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\SINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\lut_rom.q1_read_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\SINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.use_bfp.blk_exp_d_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\axi_wrapper/new_config_with_nfft_change_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\SINE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\axi_wrapper/current_state_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][1] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
-INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
-INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
-INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
-INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-3936] Found unconnected internal register 'sin_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
 INFO: [Synth 8-3936] Found unconnected internal register 'cos_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
 INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
@@ -9973,14 +10312,17 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_2) is unused and will be removed from module axi_quad_spi.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:12:55 ; elapsed = 00:13:10 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:13:31 ; elapsed = 00:13:46 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9364i_2049_2/adc_fifo_ad9364_0/inst/i_2049_0/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/AXI_Peripherali_2049_3/AXI_DMA/inst/i_2049_0/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9361_1i_2049_3/adc_fifo_ad9361_1/inst/i_2049_0/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9361_2i_2049_4/adc_fifo_ad9361_2/inst/i_2049_0/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9361_3i_2049_5/adc_fifo_ad9361_3/inst/i_2049_0/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9364i_2049_7/adc_fifo_ad9364_0/inst/i_2049_0/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/AXI_Peripherali_2049_8/AXI_DMA/inst/i_2049_0/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance xfft_time_freq:/U0/i_synth/pe_gen[0].natural_order_input.PEi_2049_16/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw0.twgen0/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance xfft_time_freq:/U0/i_synth/pe_gen[0].natural_order_input.PEi_2049_17/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw0.twgen0/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_tx/TX_phy_sub/i_2049_0/mapper_sub/i_2049_0/map_i_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -10103,7 +10445,8 @@ Report RTL Partitions:
 |44    |only_rx__GC0                            |           1|      1110|
 |45    |modem__GC0                              |           1|      1237|
 |46    |design_1__GCB0                          |           1|     13245|
-|47    |design_1__GCB1                          |           1|      4980|
+|47    |design_1__GCB1                          |           1|      5023|
+|48    |design_1__GCB2                          |           1|      2095|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -10111,7 +10454,7 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:69]
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:74]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:13:29 ; elapsed = 00:13:44 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:14:06 ; elapsed = 00:14:21 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -10125,7 +10468,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:13:47 ; elapsed = 00:14:03 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Timing Optimization : Time (s): cpu = 00:14:24 ; elapsed = 00:14:40 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10178,13 +10521,15 @@ Report RTL Partitions:
 |44    |only_rx__GC0                            |           1|      1110|
 |45    |modem__GC0                              |           1|      1237|
 |46    |design_1__GCB0                          |           1|     13245|
-|47    |design_1__GCB1                          |           1|      4980|
+|47    |design_1__GCB1                          |           1|      5023|
+|48    |design_1__GCB2                          |           1|      2095|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9361_CTRL/AD9361_1/adc_fifo_ad9361_1/inst/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9361_CTRL/AD9361_2/adc_fifo_ad9361_2/inst/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9361_CTRL/AD9361_3/adc_fifo_ad9361_3/inst/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/AD9364/adc_fifo_ad9364_0/inst/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_inst/axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -10207,13 +10552,9 @@ INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_r
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub1/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub1/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub2/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub2/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:14:48 ; elapsed = 00:15:07 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Technology Mapping : Time (s): cpu = 00:15:26 ; elapsed = 00:15:44 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10248,7 +10589,7 @@ WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:index_data_off to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/descramb_subcarier_sub:ieop to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:14:55 ; elapsed = 00:15:14 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished IO Insertion : Time (s): cpu = 00:15:33 ; elapsed = 00:15:51 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -10261,7 +10602,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:14:56 ; elapsed = 00:15:15 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Renaming Generated Instances : Time (s): cpu = 00:15:34 ; elapsed = 00:15:52 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10273,25 +10614,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:17 ; elapsed = 00:15:36 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:56 ; elapsed = 00:16:14 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:15:17 ; elapsed = 00:15:37 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Renaming Generated Ports : Time (s): cpu = 00:15:57 ; elapsed = 00:16:15 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:15:20 ; elapsed = 00:15:40 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:16:00 ; elapsed = 00:16:18 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:15:21 ; elapsed = 00:15:41 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Renaming Generated Nets : Time (s): cpu = 00:16:01 ; elapsed = 00:16:19 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -10377,117 +10718,118 @@ Report Cell Usage:
 |67    |DSP48E1_1    |    10|
 |68    |DSP48E1_10   |     2|
 |69    |DSP48E1_11   |     4|
-|70    |DSP48E1_2    |     4|
-|71    |DSP48E1_3    |     5|
-|72    |DSP48E1_5    |     4|
-|73    |DSP48E1_6    |     3|
-|74    |DSP48E1_7    |     3|
-|75    |DSP48E1_9    |     2|
-|76    |IDDR         |    28|
-|77    |IDDR_1       |    17|
-|78    |IDELAYCTRL   |     5|
-|79    |IDELAYE2     |    28|
-|80    |IDELAYE2_1   |    17|
-|81    |LUT1         |  1802|
-|82    |LUT2         | 12384|
-|83    |LUT3         | 14312|
-|84    |LUT4         |  4063|
-|85    |LUT5         |  4837|
-|86    |LUT6         |  9685|
-|87    |MMCME2_ADV   |     3|
-|88    |MULT_AND     |    17|
-|89    |MUXCY        | 11564|
-|90    |MUXF7        |   626|
-|91    |MUXF8        |   100|
-|92    |ODDR         |    18|
-|93    |ODDR_1       |    40|
-|94    |PLLE2_ADV    |     1|
-|95    |RAM128X1D    |   128|
-|96    |RAM16X1D     |     3|
-|97    |RAM16X1S     |     4|
-|98    |RAM32M       |    23|
-|99    |RAM64M       |   152|
-|100   |RAM64X1D     |     8|
-|101   |RAM64X1S     |    48|
-|102   |RAMB18       |     6|
-|103   |RAMB18E1     |     2|
-|104   |RAMB18E1_1   |     6|
-|105   |RAMB18E1_12  |     1|
-|106   |RAMB18E1_14  |     4|
-|107   |RAMB18E1_15  |     1|
-|108   |RAMB18E1_16  |     2|
-|109   |RAMB18E1_17  |     3|
-|110   |RAMB18E1_18  |     3|
-|111   |RAMB18E1_19  |    35|
-|112   |RAMB18E1_20  |     1|
-|113   |RAMB18E1_21  |     2|
-|114   |RAMB18E1_3   |     2|
-|115   |RAMB18E1_4   |     2|
-|116   |RAMB18E1_5   |     2|
-|117   |RAMB18E1_6   |     2|
-|118   |RAMB18E1_8   |     8|
-|119   |RAMB36E1     |     2|
-|120   |RAMB36E1_1   |     1|
-|121   |RAMB36E1_10  |     1|
-|122   |RAMB36E1_11  |     1|
-|123   |RAMB36E1_12  |     1|
-|124   |RAMB36E1_13  |     1|
-|125   |RAMB36E1_14  |     1|
-|126   |RAMB36E1_15  |     1|
-|127   |RAMB36E1_16  |     1|
-|128   |RAMB36E1_17  |     1|
-|129   |RAMB36E1_18  |     1|
-|130   |RAMB36E1_19  |     1|
-|131   |RAMB36E1_20  |     1|
-|132   |RAMB36E1_21  |     1|
-|133   |RAMB36E1_22  |     1|
-|134   |RAMB36E1_23  |     1|
-|135   |RAMB36E1_24  |     1|
-|136   |RAMB36E1_25  |     1|
-|137   |RAMB36E1_26  |     1|
-|138   |RAMB36E1_28  |    20|
-|139   |RAMB36E1_3   |     2|
-|140   |RAMB36E1_31  |     4|
-|141   |RAMB36E1_32  |     3|
-|142   |RAMB36E1_33  |     3|
-|143   |RAMB36E1_34  |     2|
-|144   |RAMB36E1_35  |     1|
-|145   |RAMB36E1_36  |     2|
-|146   |RAMB36E1_37  |    20|
-|147   |RAMB36E1_4   |     2|
-|148   |RAMB36E1_5   |     2|
-|149   |RAMB36E1_6   |     2|
-|150   |RAMB36E1_8   |    14|
-|151   |RAMB36E1_9   |     1|
-|152   |SRL16        |     3|
-|153   |SRL16E       |  2969|
-|154   |SRLC32E      |   700|
-|155   |XORCY        | 11250|
-|156   |FD           |    18|
-|157   |FDCE         |  5366|
-|158   |FDE          |   952|
-|159   |FDPE         |   141|
-|160   |FDR          |   232|
-|161   |FDRE         | 57367|
-|162   |FDS          |     2|
-|163   |FDSE         |  2582|
-|164   |IBUF         |    31|
-|165   |IBUFDS       |    28|
-|166   |IBUFG        |     1|
-|167   |IBUFGDS      |     4|
-|168   |OBUF         |    65|
-|169   |OBUFDS       |    32|
+|70    |DSP48E1_12   |     4|
+|71    |DSP48E1_2    |     4|
+|72    |DSP48E1_3    |     5|
+|73    |DSP48E1_5    |     4|
+|74    |DSP48E1_6    |     3|
+|75    |DSP48E1_7    |     3|
+|76    |DSP48E1_9    |     2|
+|77    |IDDR         |    28|
+|78    |IDDR_1       |    17|
+|79    |IDELAYCTRL   |     5|
+|80    |IDELAYE2     |    28|
+|81    |IDELAYE2_1   |    17|
+|82    |LUT1         |  1817|
+|83    |LUT2         | 12433|
+|84    |LUT3         | 14459|
+|85    |LUT4         |  4126|
+|86    |LUT5         |  4845|
+|87    |LUT6         |  9707|
+|88    |MMCME2_ADV   |     3|
+|89    |MULT_AND     |    17|
+|90    |MUXCY        | 11564|
+|91    |MUXF7        |   626|
+|92    |MUXF8        |   100|
+|93    |ODDR         |    18|
+|94    |ODDR_1       |    40|
+|95    |PLLE2_ADV    |     1|
+|96    |RAM128X1D    |   128|
+|97    |RAM16X1D     |    99|
+|98    |RAM16X1S     |     4|
+|99    |RAM32M       |    23|
+|100   |RAM64M       |   152|
+|101   |RAM64X1D     |     8|
+|102   |RAM64X1S     |    48|
+|103   |RAMB18       |     6|
+|104   |RAMB18E1     |     2|
+|105   |RAMB18E1_1   |     6|
+|106   |RAMB18E1_12  |     1|
+|107   |RAMB18E1_14  |     4|
+|108   |RAMB18E1_15  |     1|
+|109   |RAMB18E1_16  |     2|
+|110   |RAMB18E1_17  |     3|
+|111   |RAMB18E1_18  |     3|
+|112   |RAMB18E1_19  |    35|
+|113   |RAMB18E1_20  |     1|
+|114   |RAMB18E1_21  |     2|
+|115   |RAMB18E1_3   |     2|
+|116   |RAMB18E1_4   |     2|
+|117   |RAMB18E1_5   |     2|
+|118   |RAMB18E1_6   |     2|
+|119   |RAMB18E1_8   |     8|
+|120   |RAMB36E1     |     3|
+|121   |RAMB36E1_1   |     1|
+|122   |RAMB36E1_10  |     1|
+|123   |RAMB36E1_11  |     1|
+|124   |RAMB36E1_12  |     1|
+|125   |RAMB36E1_13  |     1|
+|126   |RAMB36E1_14  |     1|
+|127   |RAMB36E1_15  |     1|
+|128   |RAMB36E1_16  |     1|
+|129   |RAMB36E1_17  |     1|
+|130   |RAMB36E1_18  |     1|
+|131   |RAMB36E1_19  |     1|
+|132   |RAMB36E1_20  |     1|
+|133   |RAMB36E1_21  |     1|
+|134   |RAMB36E1_22  |     1|
+|135   |RAMB36E1_23  |     1|
+|136   |RAMB36E1_24  |     1|
+|137   |RAMB36E1_25  |     1|
+|138   |RAMB36E1_26  |     1|
+|139   |RAMB36E1_28  |    20|
+|140   |RAMB36E1_3   |     2|
+|141   |RAMB36E1_31  |     3|
+|142   |RAMB36E1_32  |     3|
+|143   |RAMB36E1_33  |     3|
+|144   |RAMB36E1_34  |     2|
+|145   |RAMB36E1_35  |     1|
+|146   |RAMB36E1_36  |     2|
+|147   |RAMB36E1_37  |    20|
+|148   |RAMB36E1_4   |     2|
+|149   |RAMB36E1_5   |     2|
+|150   |RAMB36E1_6   |     2|
+|151   |RAMB36E1_8   |    14|
+|152   |RAMB36E1_9   |     1|
+|153   |SRL16        |     3|
+|154   |SRL16E       |  3199|
+|155   |SRLC32E      |   700|
+|156   |XORCY        | 11250|
+|157   |FD           |    18|
+|158   |FDCE         |  5438|
+|159   |FDE          |   952|
+|160   |FDPE         |   141|
+|161   |FDR          |   232|
+|162   |FDRE         | 58301|
+|163   |FDS          |     2|
+|164   |FDSE         |  2586|
+|165   |IBUF         |    31|
+|166   |IBUFDS       |    28|
+|167   |IBUFG        |     1|
+|168   |IBUFGDS      |     4|
+|169   |OBUF         |    65|
+|170   |OBUFDS       |    32|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:15:21 ; elapsed = 00:15:41 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Finished Writing Synthesis Report : Time (s): cpu = 00:16:01 ; elapsed = 00:16:19 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4836 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:07:30 ; elapsed = 00:14:14 . Memory (MB): peak = 3155.645 ; gain = 2436.508
-Synthesis Optimization Complete : Time (s): cpu = 00:15:22 ; elapsed = 00:15:43 . Memory (MB): peak = 3155.645 ; gain = 2436.508
+Synthesis finished with 0 errors, 0 critical warnings and 4740 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:08:00 ; elapsed = 00:14:53 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Synthesis Optimization Complete : Time (s): cpu = 00:16:01 ; elapsed = 00:16:22 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 28031 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 28131 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
@@ -10498,9 +10840,9 @@ WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_Q
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 3155.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 3278.898 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 5042 instances were transformed.
+  A total of 5138 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3348 instances
   BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instances
   DSP48E => DSP48E1: 60 instances
@@ -10513,7 +10855,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MULT_AND => LUT2: 17 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 32 instances
   RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 128 instances
-  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 3 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 99 instances
   RAM16X1S => RAM32X1S (RAMS32): 4 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 23 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 152 instances
@@ -10523,14 +10865,14 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1733 Infos, 674 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1756 Infos, 685 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:16:25 ; elapsed = 00:16:49 . Memory (MB): peak = 3155.645 ; gain = 2762.816
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.092 . Memory (MB): peak = 3155.645 ; gain = 0.000
+synth_design: Time (s): cpu = 00:17:06 ; elapsed = 00:17:30 . Memory (MB): peak = 3278.898 ; gain = 2882.973
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 3278.898 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:41 ; elapsed = 00:00:26 . Memory (MB): peak = 3155.645 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 3278.898 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3155.645 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 17 12:19:18 2025...
+report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3278.898 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 27 11:08:35 2025...
