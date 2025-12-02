@@ -14,8 +14,8 @@ module switch(
 
   
     );
-	assign oredata_rx = (switch_on)? iredata_tx:iredata_ad;
-	assign oimdata_rx = (switch_on)? iimdata_tx:iimdata_ad;
+	assign oredata_rx = (~switch_on)? iredata_tx:iredata_ad;
+	assign oimdata_rx = (~switch_on)? iimdata_tx:iimdata_ad;
 	
 	endmodule
 	

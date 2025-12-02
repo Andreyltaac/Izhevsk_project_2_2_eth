@@ -30,8 +30,8 @@ module only_rx (
 	output                                                      rx_ocorr_dtct,
 	output			[23:0]										delta_ph,
 	output          [17:0]                                      kb_ps,
-	output			[31:0]			                            corr_sig,
-
+	output			[31:0]			                            corr_sig_i,
+    output			[31:0]			                            corr_sig_q,
 
 	output			[23:0]										thr_lvl_auto,
 	output			[14:0]										N_sop_detect,
@@ -72,7 +72,8 @@ RX_phy_sub(
 		.m_ax_obit_soft		(phy_fifo_dat),
 		.m_ax_oval_soft		(phy_fifo_val),
 		.thr_lvl_auto		(thr_lvl_auto),
-		.corr_sig           (corr_sig),
+		.corr_sig_i         (corr_sig_i),
+		.corr_sig_q         (corr_sig_q),
 		.corr_pr_detect		(corr_pr_detect),
 		.ocorr_dtct         (rx_ocorr_dtct),
 		.isub_i				(rx_i_axis_tdata),

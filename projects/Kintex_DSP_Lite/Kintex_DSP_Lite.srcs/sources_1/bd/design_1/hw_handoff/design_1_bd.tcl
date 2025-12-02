@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# eth_pump, modem, pulse_expander, tvalid_fir_gen, tvalid_fir_gen, FPGA_reset, ibuf, Decoder_SPI, on_off_wire, on_off_wire, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up
+# eth_pump, modem, pulse_expander, tvalid_fir_gen, FPGA_reset, ibuf, Decoder_SPI, on_off_wire, on_off_wire, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -2191,21 +2191,6 @@ proc create_root_design { parentCell } {
    CONFIG.CLK_RATE {276480000} \
  ] $tvalid_fir_gen_0
 
-  # Create instance: tvalid_fir_gen_1, and set properties
-  set block_name tvalid_fir_gen
-  set block_cell_name tvalid_fir_gen_1
-  if { [catch {set tvalid_fir_gen_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $tvalid_fir_gen_1 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-    set_property -dict [ list \
-   CONFIG.CLK_RATE {276480000} \
-   CONFIG.SAMPLE_RATE {61440000} \
- ] $tvalid_fir_gen_1
-
   # Create instance: util_clkdiv_0, and set properties
   set util_clkdiv_0 [ create_bd_cell -type ip -vlnv analog.com:user:util_clkdiv:1.0 util_clkdiv_0 ]
 
@@ -2380,7 +2365,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_ethernetlite_0_phy_tx_en [get_bd_pins axi_ethernetlite_0/phy_tx_en] [get_bd_pins eth_pump_0/eth_tx_en]
   connect_bd_net -net clk_axi_reset_n [get_bd_pins AD9361_CTRL/ext_reset_in] [get_bd_pins AD9364/ext_reset_in] [get_bd_pins CLK_AXI/reset_n]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins eth_pump_0/iclk_h] [get_bd_pins modem_0/clk_h] [get_bd_pins modem_0/s_axis_aclk]
-  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins eth_pump_0/iclk_hh] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk] [get_bd_pins tvalid_fir_gen_0/iclk] [get_bd_pins tvalid_fir_gen_1/iclk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins eth_pump_0/iclk_hh] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk] [get_bd_pins tvalid_fir_gen_0/iclk]
   connect_bd_net -net eth_pump_0_axis_cobs_decode_0_m_axis_TUSER [get_bd_ports PIN_0] [get_bd_pins eth_pump_0/axis_cobs_decode_0_m_axis_TUSER]
   connect_bd_net -net eth_pump_0_eth_rx_en [get_bd_pins axi_ethernetlite_0/phy_dv] [get_bd_pins eth_pump_0/eth_rx_en]
   connect_bd_net -net eth_pump_0_eth_rxd [get_bd_pins axi_ethernetlite_0/phy_rx_data] [get_bd_pins eth_pump_0/eth_rxd]
@@ -2436,7 +2421,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net xlconstant_4_dout [get_bd_pins axi_ethernetlite_0/phy_col] [get_bd_pins axi_ethernetlite_0/phy_crs] [get_bd_pins axi_ethernetlite_0/phy_rx_er] [get_bd_pins util_clkdiv_0/clk_sel] [get_bd_pins xlconstant_4/dout]
   connect_bd_net -net xlconstant_5_dout [get_bd_pins modem_0/m_axis_tready] [get_bd_pins xlconstant_5/dout]
   connect_bd_net -net xlconstant_6_dout [get_bd_pins eth_pump_0/eth_tx_er] [get_bd_pins eth_pump_0/s_axis_tlast_modem] [get_bd_pins eth_pump_0/s_axis_tuser_modem] [get_bd_pins xlconstant_6/dout]
-  connect_bd_net -net xlconstant_7_dout [get_bd_pins tvalid_fir_gen_0/irstn] [get_bd_pins tvalid_fir_gen_1/irstn] [get_bd_pins xlconstant_7/dout]
+  connect_bd_net -net xlconstant_7_dout [get_bd_pins tvalid_fir_gen_0/irstn] [get_bd_pins xlconstant_7/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x83CB0000 [get_bd_addr_spaces AXI_Peripheral/AXI_C2C/MAXI-Lite] [get_bd_addr_segs AXI_Peripheral/AXI_DMA/s_axi/axi_lite] SEG_AXI_DMA_axi_lite

@@ -18,8 +18,9 @@ module RX_phy(
 		output                          ocorr_dtct,
 		output			[23:0]			thr_lvl_auto,
 		output			[23:0]			delta_ph,
-		output			[31:0]			corr_sig,
-
+		output			[31:0]			corr_sig_i,
+		output			[31:0]			corr_sig_q,
+		
 		input			[15:0]			isub_i,
 		input			[15:0]			isub_q);
 
@@ -33,8 +34,8 @@ localparam pLLR_W			= 5  ;
 //----------------------------------------------------------------------//
 //							Блок управления								
 //----------------------------------------------------------------------//
+wire [17:0]		xcorr_peak_i, xcorr_peak_q;
 
-assign corr_sig = {xcorr_peak_i[15:0],xcorr_peak_q[15:0]};
 wire [2:0]		m_control_rx, m_control_tx;
 
 (* mark_debug = "true" *) wire [2:0]      bw_control_rx;
@@ -44,6 +45,8 @@ wire			demapper_osof;
 
 wire			del_rst;
 
+assign corr_sig_i = {{14{xcorr_peak_i[17]}},xcorr_peak_i};
+assign corr_sig_q = {{14{xcorr_peak_q[17]}},xcorr_peak_q};
 
 control
 control_sub(
@@ -97,7 +100,7 @@ wire signed [5:0]		delay_sop;
 wire [fft_depth-1:0]	corr_subc_i;
 wire [fft_depth-1:0]	corr_subc_q;
 
-wire [17:0]				xcorr_peak_i,xcorr_peak_q;
+
 wire [47:0]				xcorr_peaks;
 wire [31:0]				freq_idata, freq_odata;
 

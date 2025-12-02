@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7k325tffg676-2
 
@@ -163,7 +164,7 @@ read_verilog -library xil_defaultlib {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/imports/Single_mod/on_off_wire.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/imports/Single_mod/Decoder_SPI_2.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/imports/modules/pulse_expander.v
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem_axi_lite.v
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem_axi_lite_1.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_rx.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_tx.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/speed_test.v

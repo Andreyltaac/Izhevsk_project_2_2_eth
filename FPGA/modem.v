@@ -82,7 +82,8 @@ wire [23:0] delta_ph;
 wire [17:0] kb_ps;
 wire [23:0] thr_lvl_auto;
 wire [23:0] N_err;
-wire [31:0] corr_sig;
+wire [31:0] corr_sig_i;
+wire [31:0] corr_sig_q;
 wire [15:0]	oredata_rx;
 wire [15:0]	oimdata_rx;
 wire ctrl_tx_rst;
@@ -177,8 +178,8 @@ only_rx modem_rx (
     .rx_ocorr_dtct    (rx_ocorr_dtct),
     .delta_ph         (delta_ph),
     .kb_ps            (kb_ps),
-    .corr_sig         (corr_sig),
-
+	.corr_sig_i       (corr_sig_i),
+	.corr_sig_q       (corr_sig_q),
     // Statistical outputs
     .thr_lvl_auto     (thr_lvl_auto),
     .N_sop_detect     (N_sop_detect),
@@ -200,10 +201,10 @@ switch switch_inst (
 );
 
 
-modem_axi_lite #(
+modem_axi_lite_1 #(
     .C_S_AXI_DATA_WIDTH(32),
-    .C_S_AXI_ADDR_WIDTH(8)
-) axi_lite_inst (
+    .C_S_AXI_ADDR_WIDTH(9)
+) axi_lite_1_inst (
     // User ports (control outputs)
     .rst_rx_out               (ctrl_rst_rx),
     .rst_rx_out_valid         (),
@@ -219,16 +220,16 @@ modem_axi_lite #(
     .trh_lvl_out_valid        (),
     .set_bw_out               (ctrl_bw),
     .set_bw_out_valid         (),
-    .mod_in_out               (ctrl_mod),
-    .mod_in_out_valid         (),
-    .ss_in_out                (ctrl_ss),
-    .ss_in_out_valid          (),
+    .modulation_out           (ctrl_mod),
+    .modulation_out_valid     (),
+    .spread_spectrum_out      (ctrl_ss),
+    .spread_spectrum_out_valid (),
     .frsync_control_out       (ctrl_frsync),
     .frsync_control_out_valid (),
     .corr_addrshift_out       (ctrl_corr_addrshift),
     .corr_addrshift_out_valid (),
-    .rezerv_out               (ctrl_rezerv),
-    .rezerv_out_valid         (),
+    .rezerv_w_out             (),
+    .rezerv_w_out_valid       (),
     
     // User ports (status inputs)
     .speedtest_in   (kb_ps),
@@ -236,7 +237,9 @@ modem_axi_lite #(
     .thr_lvlauto_in (thr_lvl_auto),
     .delta_phi_in   ({{8{delta_ph[23]}},delta_ph[23:0]}),
     .n_err_in       (N_err),
-    .rezerv_in      (corr_sig),
+    .rezerv_r_in    ({{30{0}},ctrl_switch_tx_ad,ctrl_validate_on}),
+    .r_reg1_in      (corr_sig_i),
+    .r_reg2_in      (corr_sig_q),
     
     // AXI Lite interface
     .S_AXI_ACLK     (S_AXI_ACLK),

@@ -206,7 +206,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../FPGA/modem_axi_lite.v">
+      <File Path="$PPRDIR/../../FPGA/modem_axi_lite_1.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -991,6 +991,14 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../DSP_Artix_v2_19.1/DSP_Artix_v2_19.1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v"/>
           <Attr Name="ImportTime" Val="1583132989"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/modem_axi_lite.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Nov 27 10:49:52 2025
-# Process ID: 4552
+# Start of session at: Tue Dec  2 10:41:42 2025
+# Process ID: 11396
 # Current directory: F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/design_1_wrapper.vds
@@ -104,22 +104,20 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/ip_repo/IP_sync_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library'.
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/xilinx/util_clkdiv
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 395.926 ; gain = 7.535
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 395.586 ; gain = 6.977
 Command: synth_design -top design_1_wrapper -part xc7k325tffg676-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Device 21-403] Loading part xc7k325tffg676-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1228 
+INFO: Helper process launched with PID 10096 
 WARNING: [Synth 8-6901] identifier 'par2ser_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/DeFEC.sv:261]
 WARNING: [Synth 8-992] pack_sop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:334]
 WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:71]
 WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:290]
 WARNING: [Synth 8-6901] identifier 'GAP_trig' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:331]
-WARNING: [Synth 8-992] fft_subc_osop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:282]
-WARNING: [Synth 8-6901] identifier 'xcorr_peak_i' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:37]
-WARNING: [Synth 8-6901] identifier 'xcorr_peak_q' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:37]
+WARNING: [Synth 8-992] fft_subc_osop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:285]
 WARNING: [Synth 8-992] now_read is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/data_upsampler.sv:99]
 WARNING: [Synth 8-992] buff_count_r is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/data_upsampler.sv:100]
 WARNING: [Synth 8-6901] identifier 'index_M_latency' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:187]
@@ -143,7 +141,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo with fo
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_gmii_tx with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:93]
 WARNING: [Synth 8-2507] parameter declaration becomes local in lfsr with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/lfsr.v:355]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 923.348 ; gain = 201.254
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 922.375 ; gain = 199.594
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4091]
@@ -2404,7 +2402,7 @@ WARNING: [Synth 8-7023] instance 'AXI_C2C' of module 'design_1_AXI_C2C_0' has 62
 	Parameter P_SLVERR bound to: 2'b10 
 	Parameter P_PROTECTION bound to: 1 - type: integer 
 	Parameter P_CONVERSION bound to: 2 - type: integer 
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 56 connections declared, but only 48 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:10016]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 56 connections declared, but only 48 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:10011]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 16 - type: integer 
@@ -6206,15 +6204,15 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 	Parameter pBMAX bound to: 12 - type: integer 
 	Parameter pDAT_W bound to: 12 - type: integer 
 	Parameter pLLR_W bound to: 5 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:40]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:239]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:241]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:280]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:282]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:305]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:306]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:307]
-WARNING: [Synth 8-7023] instance 'control_sub' of module 'control' has 16 connections declared, but only 14 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:49]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:41]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:242]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:244]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:283]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:285]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:308]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:309]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:310]
+WARNING: [Synth 8-7023] instance 'control_sub' of module 'control' has 16 connections declared, but only 14 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:52]
 	Parameter premb_addr bound to: F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/preamb_corr_25mhz.txt - type: string 
 	Parameter wind_mean_sz bound to: 256 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:14]
@@ -6993,8 +6991,8 @@ INFO: [Synth 8-638] synthesizing module 'cordic_0' [f:/work/Izhevsk_project_2_2_
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'cordic_0' (468#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:72]
-WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:223]
-WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:224]
+WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:226]
+WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:227]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter fftsize bound to: 1024 - type: integer 
 	Parameter cpsize bound to: 32 - type: integer 
@@ -7004,7 +7002,7 @@ WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not mat
 	Parameter fft_depth bound to: 12 - type: integer 
 WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'xfft_time_freq' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:68]
 WARNING: [Synth 8-7023] instance 'xilinx_ifft_sub' of module 'xfft_time_freq' has 19 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:55]
-WARNING: [Synth 8-7023] instance 'fft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:285]
+WARNING: [Synth 8-7023] instance 'fft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:288]
 	Parameter maxWordOut bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter pream_size bound to: 390 - type: integer 
@@ -7014,7 +7012,7 @@ WARNING: [Synth 8-7023] instance 'fft_sub' of module 'ifft' has 13 connections d
 	Parameter cpsize bound to: 32 - type: integer 
 	Parameter size_sumb bound to: 1056 - type: integer 
 	Parameter sz_count bound to: 11 - type: integer 
-WARNING: [Synth 8-7023] instance 'descramb_subcarier_sub' of module 'scramb_subcarier' has 18 connections declared, but only 16 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:352]
+WARNING: [Synth 8-7023] instance 'descramb_subcarier_sub' of module 'scramb_subcarier' has 18 connections declared, but only 16 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:355]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter level_pilot bound to: 2000 - type: integer 
 	Parameter eq_precision bound to: 10 - type: integer 
@@ -7100,13 +7098,13 @@ INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhev
 	Parameter count_depth bound to: 3 - type: integer 
 	Parameter e_count bound to: 4'b0000 
 	Parameter s_count bound to: 5 - type: integer 
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:49]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'demapper'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:315]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fr_sync_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:214]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'interlayer_rmcp_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:248]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_index_symb_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:264]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fft_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:285]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'descramb_subcarier_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:352]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:52]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'demapper'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:318]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fr_sync_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:217]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'interlayer_rmcp_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:251]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_index_symb_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:267]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fft_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:288]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'descramb_subcarier_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:355]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
@@ -8024,22 +8022,23 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhev
 	Parameter B1 bound to: 1920 - type: integer 
 	Parameter TIMER_MAX bound to: 16'b0111011111111111 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
-	Parameter OPT_MEM_ADDR_BITS bound to: 5 - type: integer 
-	Parameter NUM_REG bound to: 18 - type: integer 
-WARNING: [Synth 8-689] width (1) of port connection 'rst_rx_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:208]
-WARNING: [Synth 8-689] width (1) of port connection 'switchtx_ad_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:210]
-WARNING: [Synth 8-689] width (1) of port connection 'tx_rst_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:212]
-WARNING: [Synth 8-689] width (1) of port connection 'validate_on_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:214]
-WARNING: [Synth 8-689] width (1) of port connection 'data_off_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:216]
-WARNING: [Synth 8-689] width (24) of port connection 'trh_lvl_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:218]
-WARNING: [Synth 8-689] width (3) of port connection 'set_bw_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:220]
-WARNING: [Synth 8-689] width (3) of port connection 'mod_in_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:222]
-WARNING: [Synth 8-689] width (4) of port connection 'ss_in_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:224]
-WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:226]
-WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:228]
-WARNING: [Synth 8-689] width (1) of port connection 'rezerv_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:230]
+	Parameter OPT_MEM_ADDR_BITS bound to: 6 - type: integer 
+	Parameter NUM_REG bound to: 38 - type: integer 
+WARNING: [Synth 8-689] width (1) of port connection 'rst_rx_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:209]
+WARNING: [Synth 8-689] width (1) of port connection 'switchtx_ad_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:211]
+WARNING: [Synth 8-689] width (1) of port connection 'tx_rst_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:213]
+WARNING: [Synth 8-689] width (1) of port connection 'validate_on_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:215]
+WARNING: [Synth 8-689] width (1) of port connection 'data_off_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:217]
+WARNING: [Synth 8-689] width (24) of port connection 'trh_lvl_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:219]
+WARNING: [Synth 8-689] width (3) of port connection 'set_bw_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:221]
+WARNING: [Synth 8-689] width (3) of port connection 'modulation_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:223]
+WARNING: [Synth 8-689] width (4) of port connection 'spread_spectrum_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:225]
+WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:227]
+WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:229]
+WARNING: [Synth 8-689] width (962) of port connection 'rezerv_r_in' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:240]
+WARNING: [Synth 8-7023] instance 'axi_lite_1_inst' of module 'modem_axi_lite_1' has 81 connections declared, but only 53 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:207]
 WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
 	Parameter EXPAND bound to: 64 - type: integer 
 	Parameter CLK_RATE bound to: 276480000 - type: integer 
@@ -8050,16 +8049,6 @@ WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42
 	Parameter DATA_W bound to: 16 - type: integer 
 	Parameter RATIO bound to: 32'sb00000000000000000000000000001001 
 	Parameter CNT_W bound to: 32'sb00000000000000000000000000000100 
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5406]
-	Parameter CLK_RATE bound to: 276480000 - type: integer 
-	Parameter SAMPLE_RATE bound to: 61440000 - type: integer 
-	Parameter DATA_W bound to: 16 - type: integer 
-	Parameter CLK_RATE bound to: 276480000 - type: integer 
-	Parameter SAMPLE_RATE bound to: 61440000 - type: integer 
-	Parameter DATA_W bound to: 16 - type: integer 
-	Parameter RATIO bound to: 32'sb00000000000000000000000000000100 
-	Parameter CNT_W bound to: 32'sb00000000000000000000000000000010 
-WARNING: [Synth 8-7023] instance 'tvalid_fir_gen_1' of module 'design_1_tvalid_fir_gen_0_1' has 7 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5406]
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter SEL_0_DIV bound to: 4 - type: string 
 	Parameter SEL_1_DIV bound to: 2 - type: string 
@@ -8157,16 +8146,16 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat__parameterized1 has unco
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat__parameterized1 has unconnected port In29[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat__parameterized1 has unconnected port In30[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat__parameterized1 has unconnected port In31[0]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design modem_axi_lite has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design modem_axi_lite_1 has unconnected port S_AXI_ARPROT[0]
 WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port ACLK
 WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port ARESETN
 WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port S_ACLKEN
@@ -8229,7 +8218,7 @@ WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][5][0
 WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][6][0][pre_sign]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:06:23 ; elapsed = 00:06:34 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished RTL Elaboration : Time (s): cpu = 00:06:21 ; elapsed = 00:06:28 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8242,14 +8231,14 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:30 ; elapsed = 00:06:41 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:28 ; elapsed = 00:06:35 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:30 ; elapsed = 00:06:41 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:28 ; elapsed = 00:06:35 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 26127 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -8824,7 +8813,7 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 3278.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.115 . Memory (MB): peak = 3278.027 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1497 instances were transformed.
   BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instances
@@ -8842,9 +8831,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB18 => RAMB18E1: 6 instances
   SRL16 => SRL16E: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3278.898 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3278.027 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:08:08 ; elapsed = 00:08:17 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Constraint Validation : Time (s): cpu = 00:08:05 ; elapsed = 00:08:11 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -8852,7 +8841,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:08:08 ; elapsed = 00:08:17 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Loading Part and Timing Information : Time (s): cpu = 00:08:05 ; elapsed = 00:08:11 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -9652,33 +9641,33 @@ Applied set_property IOB = TRUE for design_1_i/axi_ethernetlite_0/U0/\IOFFS_GEN[
 Applied set_property IOB = TRUE for design_1_i/axi_ethernetlite_0/U0/\IOFFS_GEN2.DVD_FF . (constraint file  f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc, line 58).
 Applied set_property IOB = TRUE for design_1_i/axi_ethernetlite_0/U0/\IOFFS_GEN2.RER_FF . (constraint file  f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc, line 59).
 Applied set_property IOB = TRUE for design_1_i/axi_ethernetlite_0/U0/\IOFFS_GEN2.TEN_FF . (constraint file  f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc, line 60).
-Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_C2C/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 340).
-Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_DMA/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 346).
-Applied set_property DONT_TOUCH = true for design_1_i/CLK_AXI/CLK_COMMON/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 349).
-Applied set_property DONT_TOUCH = true for design_1_i/CLK_AXI/AXI_reset/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 360).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9364/adc_fifo_ad9364_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 366).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9364/dac_fifo_ad9364_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 369).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9364/divclk_64_rst1/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 372).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9364/axi_ad9364/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 378).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_1/adc_fifo_ad9361_1/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 396).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 399).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 402).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_2/adc_fifo_ad9361_2/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 420).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_2/dac_fifo_ad9361_2/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 423).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_2/axi_ad9361_2/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 426).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_3/adc_fifo_ad9361_3/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 444).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_3/dac_fifo_ad9361_3/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 447).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_3/axi_ad9361_3/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 450).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 468).
-Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/ad9361_clk/DATA_rst/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 479).
-Applied set_property DONT_TOUCH = true for design_1_i/SPI_MOD/axi_spi/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 485).
-Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 496).
-Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 504).
-Applied set_property DONT_TOUCH = true for design_1_i/util_clkdiv_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 515).
-Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_0/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 520).
-Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_1/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 525).
-Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_2/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 530).
-Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_3/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 535).
+Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_C2C/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 337).
+Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_DMA/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 343).
+Applied set_property DONT_TOUCH = true for design_1_i/CLK_AXI/CLK_COMMON/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 346).
+Applied set_property DONT_TOUCH = true for design_1_i/CLK_AXI/AXI_reset/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 357).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9364/adc_fifo_ad9364_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 363).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9364/dac_fifo_ad9364_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 366).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9364/divclk_64_rst1/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 369).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9364/axi_ad9364/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 375).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_1/adc_fifo_ad9361_1/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 393).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 396).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 399).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_2/adc_fifo_ad9361_2/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 417).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_2/dac_fifo_ad9361_2/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 420).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_2/axi_ad9361_2/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 423).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_3/adc_fifo_ad9361_3/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 441).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_3/dac_fifo_ad9361_3/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 444).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/AD9361_3/axi_ad9361_3/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 447).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 465).
+Applied set_property DONT_TOUCH = true for design_1_i/AD9361_CTRL/ad9361_clk/DATA_rst/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 476).
+Applied set_property DONT_TOUCH = true for design_1_i/SPI_MOD/axi_spi/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 482).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 493).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 501).
+Applied set_property DONT_TOUCH = true for design_1_i/util_clkdiv_0/inst. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 512).
+Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_0/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 517).
+Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_1/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 522).
+Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_2/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 527).
+Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_3/U0. (constraint file  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/dont_touch.xdc, line 532).
 Applied set_property ASYNC_REG = true for design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_req_fifo/i_raddr_sync/\cdc_sync_stage1_reg[0] . (constraint file  f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc, line 6).
 Applied set_property ASYNC_REG = true for design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_request_arb/i_dest_req_fifo/i_waddr_sync/\cdc_sync_stage1_reg[0] . (constraint file  f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc, line 6).
 Applied set_property ASYNC_REG = true for design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_request_arb/i_src_dest_bl_fifo/i_raddr_sync/\cdc_sync_stage1_reg[0] . (constraint file  f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc, line 6).
@@ -9862,7 +9851,6 @@ Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_1. (constrain
 Applied set_property DONT_TOUCH = true for design_1_i/xlconstant_7. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/fir_compiler_3. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/tvalid_fir_gen_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_C2C_axi_periph/m13_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_C2C/inst/\master_fpga_gen.axi_chip2chip_master_inst /axi_chip2chip_aw_fifo_inst/axi_chip2chip_async_fifo_inst/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/AXI_Peripheral/AXI_C2C/inst/\master_fpga_gen.axi_chip2chip_master_inst /axi_chip2chip_ar_fifo_inst/axi_chip2chip_async_fifo_inst/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint, line ).
@@ -9986,7 +9974,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0/XEMA
 Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/\xpm_mem_gen.xpm_memory_inst_2 . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/\xpm_mem_gen.xpm_memory_inst_2 . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:08:11 ; elapsed = 00:08:21 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:08:08 ; elapsed = 00:08:14 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'up_dac_dds_scale_tc_2_reg[15:0]' into 'up_dac_dds_scale_tc_1_reg[15:0]' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/common/up_dac_channel.v:367]
@@ -10170,11 +10158,21 @@ INFO: [Synth 8-5546] ROM "validate_on_out" won't be mapped to RAM because it is 
 INFO: [Synth 8-5546] ROM "data_off_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "trh_lvl_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "set_bw_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "mod_in_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "ss_in_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "modulation_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "spread_spectrum_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "frsync_control_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "corr_addrshift_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "rezerv_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rezerv_w_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg1_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg2_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg3_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg4_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg5_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg6_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg7_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg8_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg9_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_reg10_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5583] The signal m_ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------------------------
@@ -10879,7 +10877,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized12'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:10 ; elapsed = 00:09:23 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:07 ; elapsed = 00:09:16 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
@@ -10936,9 +10934,9 @@ Report RTL Partitions:
 |42    |DeFEC__GB1                              |           1|      1386|
 |43    |DeFEC__GB2                              |           1|      7310|
 |44    |only_rx__GC0                            |           1|      3124|
-|45    |modem__GC0                              |           1|      1297|
+|45    |modem__GC0                              |           1|      2353|
 |46    |design_1__GCB0                          |           1|     29805|
-|47    |design_1__GCB1                          |           1|      9732|
+|47    |design_1__GCB1                          |           1|      9655|
 |48    |design_1__GCB2                          |           1|      2319|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -11237,6 +11235,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_6/\axi_lite_1_inst/axi_awaddr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_6/\axi_lite_1_inst/axi_araddr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_6/\axi_lite_1_inst/wr_addr_reg[8] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_async_fifo_1/mark_frame_reg_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[5] )
@@ -11325,9 +11326,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synt
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.use_bfp.blk_exp_d_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\axi_wrapper/new_config_with_nfft_change_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\SINE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\axi_wrapper/current_state_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][1] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3936] Found unconnected internal register 'sin_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
 INFO: [Synth 8-3936] Found unconnected internal register 'cos_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
@@ -11450,7 +11448,7 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_2) is unused and will be removed from module axi_quad_spi.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:13:31 ; elapsed = 00:13:46 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:12:52 ; elapsed = 00:13:04 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -11581,9 +11579,9 @@ Report RTL Partitions:
 |42    |DeFEC__GB1                              |           1|       673|
 |43    |DeFEC__GB2                              |           1|      3612|
 |44    |only_rx__GC0                            |           1|      1110|
-|45    |modem__GC0                              |           1|      1237|
+|45    |modem__GC0                              |           1|      2187|
 |46    |design_1__GCB0                          |           1|     13245|
-|47    |design_1__GCB1                          |           1|      5023|
+|47    |design_1__GCB1                          |           1|      4980|
 |48    |design_1__GCB2                          |           1|      2095|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -11592,7 +11590,7 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:69]
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:74]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:14:06 ; elapsed = 00:14:21 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:13:26 ; elapsed = 00:13:38 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -11606,7 +11604,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:14:24 ; elapsed = 00:14:40 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Timing Optimization : Time (s): cpu = 00:13:45 ; elapsed = 00:13:57 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11657,9 +11655,9 @@ Report RTL Partitions:
 |42    |DeFEC__GB1                              |           1|       673|
 |43    |DeFEC__GB2                              |           1|      3612|
 |44    |only_rx__GC0                            |           1|      1110|
-|45    |modem__GC0                              |           1|      1237|
+|45    |modem__GC0                              |           1|      2187|
 |46    |design_1__GCB0                          |           1|     13245|
-|47    |design_1__GCB1                          |           1|      5023|
+|47    |design_1__GCB1                          |           1|      4980|
 |48    |design_1__GCB2                          |           1|      2095|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -11692,7 +11690,7 @@ INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_r
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:15:26 ; elapsed = 00:15:44 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Technology Mapping : Time (s): cpu = 00:14:46 ; elapsed = 00:15:02 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11727,7 +11725,7 @@ WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:index_data_off to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/descramb_subcarier_sub:ieop to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:15:33 ; elapsed = 00:15:51 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished IO Insertion : Time (s): cpu = 00:14:53 ; elapsed = 00:15:09 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -11740,7 +11738,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:15:34 ; elapsed = 00:15:52 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Renaming Generated Instances : Time (s): cpu = 00:14:54 ; elapsed = 00:15:10 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11752,25 +11750,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:56 ; elapsed = 00:16:14 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:16 ; elapsed = 00:15:32 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:15:57 ; elapsed = 00:16:15 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Renaming Generated Ports : Time (s): cpu = 00:15:16 ; elapsed = 00:15:32 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:16:00 ; elapsed = 00:16:18 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Handling Custom Attributes : Time (s): cpu = 00:15:19 ; elapsed = 00:15:35 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:16:01 ; elapsed = 00:16:19 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Renaming Generated Nets : Time (s): cpu = 00:15:20 ; elapsed = 00:15:36 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -11868,17 +11866,17 @@ Report Cell Usage:
 |79    |IDELAYCTRL   |     5|
 |80    |IDELAYE2     |    28|
 |81    |IDELAYE2_1   |    17|
-|82    |LUT1         |  1817|
-|83    |LUT2         | 12433|
+|82    |LUT1         |  1815|
+|83    |LUT2         | 12431|
 |84    |LUT3         | 14459|
-|85    |LUT4         |  4126|
-|86    |LUT5         |  4845|
-|87    |LUT6         |  9707|
+|85    |LUT4         |  4196|
+|86    |LUT5         |  4859|
+|87    |LUT6         |  9722|
 |88    |MMCME2_ADV   |     3|
 |89    |MULT_AND     |    17|
 |90    |MUXCY        | 11564|
-|91    |MUXF7        |   626|
-|92    |MUXF8        |   100|
+|91    |MUXF7        |   688|
+|92    |MUXF8        |   156|
 |93    |ODDR         |    18|
 |94    |ODDR_1       |    40|
 |95    |PLLE2_ADV    |     1|
@@ -11944,11 +11942,11 @@ Report Cell Usage:
 |155   |SRLC32E      |   700|
 |156   |XORCY        | 11250|
 |157   |FD           |    18|
-|158   |FDCE         |  5438|
+|158   |FDCE         |  5403|
 |159   |FDE          |   952|
 |160   |FDPE         |   141|
 |161   |FDR          |   232|
-|162   |FDRE         | 58301|
+|162   |FDRE         | 58623|
 |163   |FDS          |     2|
 |164   |FDSE         |  2586|
 |165   |IBUF         |    31|
@@ -11959,15 +11957,15 @@ Report Cell Usage:
 |170   |OBUFDS       |    32|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:16:01 ; elapsed = 00:16:19 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Finished Writing Synthesis Report : Time (s): cpu = 00:15:20 ; elapsed = 00:15:36 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4740 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:08:00 ; elapsed = 00:14:53 . Memory (MB): peak = 3278.898 ; gain = 2556.805
-Synthesis Optimization Complete : Time (s): cpu = 00:16:01 ; elapsed = 00:16:22 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:22 ; elapsed = 00:14:08 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Synthesis Optimization Complete : Time (s): cpu = 00:15:20 ; elapsed = 00:15:37 . Memory (MB): peak = 3278.027 ; gain = 2555.246
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 28131 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 28249 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
@@ -11978,7 +11976,7 @@ WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_Q
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 3278.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 3278.027 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5138 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3348 instances
@@ -12003,14 +12001,14 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1756 Infos, 685 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1766 Infos, 682 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:17:06 ; elapsed = 00:17:30 . Memory (MB): peak = 3278.898 ; gain = 2882.973
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 3278.898 ; gain = 0.000
+synth_design: Time (s): cpu = 00:16:25 ; elapsed = 00:16:43 . Memory (MB): peak = 3278.027 ; gain = 2882.441
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 3278.027 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 3278.898 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 3278.027 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3278.898 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 27 11:08:35 2025...
+report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3278.027 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  2 10:59:33 2025...

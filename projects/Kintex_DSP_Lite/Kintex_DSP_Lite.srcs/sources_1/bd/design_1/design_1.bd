@@ -120,14 +120,13 @@
       "xlconstant_3": "",
       "xlconstant_6": "",
       "eth_pump_0": "",
-      "modem_0": "",
       "fir_compiler_0": "",
       "fir_compiler_1": "",
       "xlconstant_7": "",
       "fir_compiler_2": "",
       "fir_compiler_3": "",
       "tvalid_fir_gen_0": "",
-      "tvalid_fir_gen_1": ""
+      "modem_0": ""
     },
     "ports": {
       "AXI_RX_CLK_OUT": {
@@ -1946,16 +1945,16 @@
                   }
                 },
                 "interface_nets": {
-                  "auto_pc_to_m13_couplers": {
-                    "interface_ports": [
-                      "M_AXI",
-                      "auto_pc/M_AXI"
-                    ]
-                  },
                   "m13_couplers_to_auto_pc": {
                     "interface_ports": [
                       "S_AXI",
                       "auto_pc/S_AXI"
+                    ]
+                  },
+                  "auto_pc_to_m13_couplers": {
+                    "interface_ports": [
+                      "M_AXI",
+                      "auto_pc/M_AXI"
                     ]
                   }
                 },
@@ -2084,66 +2083,6 @@
               }
             },
             "interface_nets": {
-              "xbar_to_m13_couplers": {
-                "interface_ports": [
-                  "xbar/M13_AXI",
-                  "m13_couplers/S_AXI"
-                ]
-              },
-              "m14_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M14_AXI",
-                  "m14_couplers/M_AXI"
-                ]
-              },
-              "xbar_to_m14_couplers": {
-                "interface_ports": [
-                  "xbar/M14_AXI",
-                  "m14_couplers/S_AXI"
-                ]
-              },
-              "m15_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M15_AXI",
-                  "m15_couplers/M_AXI"
-                ]
-              },
-              "xbar_to_m15_couplers": {
-                "interface_ports": [
-                  "xbar/M15_AXI",
-                  "m15_couplers/S_AXI"
-                ]
-              },
-              "m00_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M00_AXI",
-                  "m00_couplers/M_AXI"
-                ]
-              },
-              "m01_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M01_AXI",
-                  "m01_couplers/M_AXI"
-                ]
-              },
-              "xbar_to_m00_couplers": {
-                "interface_ports": [
-                  "xbar/M00_AXI",
-                  "m00_couplers/S_AXI"
-                ]
-              },
-              "xbar_to_m01_couplers": {
-                "interface_ports": [
-                  "xbar/M01_AXI",
-                  "m01_couplers/S_AXI"
-                ]
-              },
-              "m11_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M11_AXI",
-                  "m11_couplers/M_AXI"
-                ]
-              },
               "m12_couplers_to_AXI_C2C_axi_periph": {
                 "interface_ports": [
                   "M12_AXI",
@@ -2156,16 +2095,76 @@
                   "m11_couplers/S_AXI"
                 ]
               },
-              "xbar_to_m12_couplers": {
+              "xbar_to_m15_couplers": {
                 "interface_ports": [
-                  "xbar/M12_AXI",
-                  "m12_couplers/S_AXI"
+                  "xbar/M15_AXI",
+                  "m15_couplers/S_AXI"
+                ]
+              },
+              "xbar_to_m13_couplers": {
+                "interface_ports": [
+                  "xbar/M13_AXI",
+                  "m13_couplers/S_AXI"
+                ]
+              },
+              "m14_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M14_AXI",
+                  "m14_couplers/M_AXI"
+                ]
+              },
+              "m15_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M15_AXI",
+                  "m15_couplers/M_AXI"
+                ]
+              },
+              "xbar_to_m14_couplers": {
+                "interface_ports": [
+                  "xbar/M14_AXI",
+                  "m14_couplers/S_AXI"
                 ]
               },
               "m13_couplers_to_AXI_C2C_axi_periph": {
                 "interface_ports": [
                   "M13_AXI",
                   "m13_couplers/M_AXI"
+                ]
+              },
+              "xbar_to_m12_couplers": {
+                "interface_ports": [
+                  "xbar/M12_AXI",
+                  "m12_couplers/S_AXI"
+                ]
+              },
+              "AXI_C2C_axi_periph_to_s00_couplers": {
+                "interface_ports": [
+                  "S00_AXI",
+                  "s00_couplers/S_AXI"
+                ]
+              },
+              "s00_couplers_to_xbar": {
+                "interface_ports": [
+                  "s00_couplers/M_AXI",
+                  "xbar/S00_AXI"
+                ]
+              },
+              "m00_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M00_AXI",
+                  "m00_couplers/M_AXI"
+                ]
+              },
+              "xbar_to_m05_couplers": {
+                "interface_ports": [
+                  "xbar/M05_AXI",
+                  "m05_couplers/S_AXI"
+                ]
+              },
+              "m06_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M06_AXI",
+                  "m06_couplers/M_AXI"
                 ]
               },
               "xbar_to_m06_couplers": {
@@ -2192,40 +2191,22 @@
                   "m08_couplers/M_AXI"
                 ]
               },
-              "xbar_to_m08_couplers": {
+              "xbar_to_m00_couplers": {
                 "interface_ports": [
-                  "xbar/M08_AXI",
-                  "m08_couplers/S_AXI"
+                  "xbar/M00_AXI",
+                  "m00_couplers/S_AXI"
                 ]
               },
-              "m04_couplers_to_AXI_C2C_axi_periph": {
+              "m01_couplers_to_AXI_C2C_axi_periph": {
                 "interface_ports": [
-                  "M04_AXI",
-                  "m04_couplers/M_AXI"
+                  "M01_AXI",
+                  "m01_couplers/M_AXI"
                 ]
               },
-              "xbar_to_m04_couplers": {
+              "xbar_to_m01_couplers": {
                 "interface_ports": [
-                  "xbar/M04_AXI",
-                  "m04_couplers/S_AXI"
-                ]
-              },
-              "m05_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M05_AXI",
-                  "m05_couplers/M_AXI"
-                ]
-              },
-              "xbar_to_m05_couplers": {
-                "interface_ports": [
-                  "xbar/M05_AXI",
-                  "m05_couplers/S_AXI"
-                ]
-              },
-              "m06_couplers_to_AXI_C2C_axi_periph": {
-                "interface_ports": [
-                  "M06_AXI",
-                  "m06_couplers/M_AXI"
+                  "xbar/M01_AXI",
+                  "m01_couplers/S_AXI"
                 ]
               },
               "m02_couplers_to_AXI_C2C_axi_periph": {
@@ -2252,22 +2233,34 @@
                   "m03_couplers/S_AXI"
                 ]
               },
+              "m04_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M04_AXI",
+                  "m04_couplers/M_AXI"
+                ]
+              },
+              "m05_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M05_AXI",
+                  "m05_couplers/M_AXI"
+                ]
+              },
+              "xbar_to_m04_couplers": {
+                "interface_ports": [
+                  "xbar/M04_AXI",
+                  "m04_couplers/S_AXI"
+                ]
+              },
+              "m11_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M11_AXI",
+                  "m11_couplers/M_AXI"
+                ]
+              },
               "xbar_to_m10_couplers": {
                 "interface_ports": [
                   "xbar/M10_AXI",
                   "m10_couplers/S_AXI"
-                ]
-              },
-              "AXI_C2C_axi_periph_to_s00_couplers": {
-                "interface_ports": [
-                  "S00_AXI",
-                  "s00_couplers/S_AXI"
-                ]
-              },
-              "s00_couplers_to_xbar": {
-                "interface_ports": [
-                  "s00_couplers/M_AXI",
-                  "xbar/S00_AXI"
                 ]
               },
               "m09_couplers_to_AXI_C2C_axi_periph": {
@@ -2276,16 +2269,22 @@
                   "m09_couplers/M_AXI"
                 ]
               },
-              "m10_couplers_to_AXI_C2C_axi_periph": {
+              "xbar_to_m08_couplers": {
                 "interface_ports": [
-                  "M10_AXI",
-                  "m10_couplers/M_AXI"
+                  "xbar/M08_AXI",
+                  "m08_couplers/S_AXI"
                 ]
               },
               "xbar_to_m09_couplers": {
                 "interface_ports": [
                   "xbar/M09_AXI",
                   "m09_couplers/S_AXI"
+                ]
+              },
+              "m10_couplers_to_AXI_C2C_axi_periph": {
+                "interface_ports": [
+                  "M10_AXI",
+                  "m10_couplers/M_AXI"
                 ]
               }
             },
@@ -2416,6 +2415,12 @@
               "AXI_C2C_axi_periph/M02_AXI"
             ]
           },
+          "Conn6": {
+            "interface_ports": [
+              "M10_AXI",
+              "AXI_C2C_axi_periph/M10_AXI"
+            ]
+          },
           "Conn7": {
             "interface_ports": [
               "M12_AXI",
@@ -2428,28 +2433,22 @@
               "AXI_C2C/m_axi_lite"
             ]
           },
-          "Conn6": {
-            "interface_ports": [
-              "M10_AXI",
-              "AXI_C2C_axi_periph/M10_AXI"
-            ]
-          },
           "AXI_DMA_m_dest_axi": {
             "interface_ports": [
               "AXI_DMA/m_dest_axi",
               "AXI_C2C/s_axi"
             ]
           },
-          "Conn1": {
-            "interface_ports": [
-              "M05_AXI",
-              "AXI_C2C_axi_periph/M05_AXI"
-            ]
-          },
           "AXI_C2C_axi_periph_M11_AXI": {
             "interface_ports": [
               "M06_AXI",
               "AXI_C2C_axi_periph/M11_AXI"
+            ]
+          },
+          "Conn1": {
+            "interface_ports": [
+              "M05_AXI",
+              "AXI_C2C_axi_periph/M05_AXI"
             ]
           },
           "Conn2": {
@@ -2464,16 +2463,16 @@
               "AXI_C2C_axi_periph/M00_AXI"
             ]
           },
-          "AXI_C2C_axi_periph_M04_AXI": {
-            "interface_ports": [
-              "AXI_C2C_axi_periph/M04_AXI",
-              "AXI_DMA/s_axi"
-            ]
-          },
           "Conn8": {
             "interface_ports": [
               "M13_AXI",
               "AXI_C2C_axi_periph/M13_AXI"
+            ]
+          },
+          "AXI_C2C_axi_periph_M04_AXI": {
+            "interface_ports": [
+              "AXI_C2C_axi_periph/M04_AXI",
+              "AXI_DMA/s_axi"
             ]
           },
           "Conn3": {
@@ -2488,16 +2487,16 @@
               "AXI_C2C_axi_periph/M03_AXI"
             ]
           },
+          "Conn4": {
+            "interface_ports": [
+              "M08_AXI",
+              "AXI_C2C_axi_periph/M08_AXI"
+            ]
+          },
           "AXI_C2C_axi_periph_M06_AXI": {
             "interface_ports": [
               "M04_AXI",
               "AXI_C2C_axi_periph/M06_AXI"
-            ]
-          },
-          "AXI_C2C_axi_periph_M01_AXI": {
-            "interface_ports": [
-              "M00_AXI",
-              "AXI_C2C_axi_periph/M01_AXI"
             ]
           },
           "Conn5": {
@@ -2506,10 +2505,10 @@
               "AXI_C2C_axi_periph/M09_AXI"
             ]
           },
-          "Conn4": {
+          "AXI_C2C_axi_periph_M01_AXI": {
             "interface_ports": [
-              "M08_AXI",
-              "AXI_C2C_axi_periph/M08_AXI"
+              "M00_AXI",
+              "AXI_C2C_axi_periph/M01_AXI"
             ]
           }
         },
@@ -6157,16 +6156,16 @@
           }
         },
         "interface_nets": {
-          "Conn3": {
-            "interface_ports": [
-              "s_axi2",
-              "AD9361_2/s_axi"
-            ]
-          },
           "Conn1": {
             "interface_ports": [
               "s_axi",
               "AD9361_3/s_axi"
+            ]
+          },
+          "Conn3": {
+            "interface_ports": [
+              "s_axi2",
+              "AD9361_2/s_axi"
             ]
           },
           "Conn2": {
@@ -7617,6 +7616,389 @@
           }
         }
       },
+      "fir_compiler_0": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "design_1_fir_compiler_0_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "276.48"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../FPGA/hbFilt.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Half_Band"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "1"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "Decimation_Rate": {
+            "value": "1"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Interpolation"
+          },
+          "Interpolation_Rate": {
+            "value": "2"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Symmetric_Rounding_to_Infinity"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "S_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Sample_Frequency": {
+            "value": "30.72"
+          },
+          "Select_Pattern": {
+            "value": "All"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "fir_compiler_1": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "design_1_fir_compiler_0_1",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "276.48"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../FPGA/hbFilt.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Half_Band"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "1"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "Decimation_Rate": {
+            "value": "1"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Interpolation"
+          },
+          "Interpolation_Rate": {
+            "value": "2"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Symmetric_Rounding_to_Infinity"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "S_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Sample_Frequency": {
+            "value": "30.72"
+          },
+          "Select_Pattern": {
+            "value": "All"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "xlconstant_7": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_5_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1"
+          },
+          "CONST_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "fir_compiler_2": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "design_1_fir_compiler_0_2",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "276.48"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../FPGA/hbFilt.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Half_Band"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "1"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "Decimation_Rate": {
+            "value": "2"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Interpolation_Rate": {
+            "value": "1"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Symmetric_Rounding_to_Infinity"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "S_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Sample_Frequency": {
+            "value": "61.44"
+          },
+          "Select_Pattern": {
+            "value": "All"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "fir_compiler_3": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "design_1_fir_compiler_2_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "276.48"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../FPGA/hbFilt.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Half_Band"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "1"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "Decimation_Rate": {
+            "value": "2"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Interpolation_Rate": {
+            "value": "1"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Symmetric_Rounding_to_Infinity"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "S_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Sample_Frequency": {
+            "value": "61.44"
+          },
+          "Select_Pattern": {
+            "value": "All"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "tvalid_fir_gen_0": {
+        "vlnv": "xilinx.com:module_ref:tvalid_fir_gen:1.0",
+        "xci_name": "design_1_tvalid_fir_gen_0_0",
+        "parameters": {
+          "CLK_RATE": {
+            "value": "276480000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tvalid_fir_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iclk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "276480000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "irstn": {
+            "direction": "I"
+          },
+          "idata_i": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "idata_q": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "odata_i": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "odata_q": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "tvalid": {
+            "direction": "O"
+          }
+        }
+      },
       "modem_0": {
         "vlnv": "xilinx.com:module_ref:modem:1.0",
         "xci_name": "design_1_modem_0_0",
@@ -8144,470 +8526,25 @@
             "direction": "O"
           }
         }
-      },
-      "fir_compiler_0": {
-        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
-        "xci_name": "design_1_fir_compiler_0_0",
-        "parameters": {
-          "Clock_Frequency": {
-            "value": "276.48"
-          },
-          "CoefficientSource": {
-            "value": "COE_File"
-          },
-          "Coefficient_File": {
-            "value": "../../../../../../../../FPGA/hbFilt.coe"
-          },
-          "Coefficient_Fractional_Bits": {
-            "value": "0"
-          },
-          "Coefficient_Sets": {
-            "value": "1"
-          },
-          "Coefficient_Sign": {
-            "value": "Signed"
-          },
-          "Coefficient_Structure": {
-            "value": "Half_Band"
-          },
-          "Coefficient_Width": {
-            "value": "16"
-          },
-          "ColumnConfig": {
-            "value": "1"
-          },
-          "DATA_Has_TLAST": {
-            "value": "Not_Required"
-          },
-          "Decimation_Rate": {
-            "value": "1"
-          },
-          "Filter_Architecture": {
-            "value": "Systolic_Multiply_Accumulate"
-          },
-          "Filter_Type": {
-            "value": "Interpolation"
-          },
-          "Interpolation_Rate": {
-            "value": "2"
-          },
-          "M_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Number_Channels": {
-            "value": "1"
-          },
-          "Output_Rounding_Mode": {
-            "value": "Symmetric_Rounding_to_Infinity"
-          },
-          "Output_Width": {
-            "value": "16"
-          },
-          "Quantization": {
-            "value": "Integer_Coefficients"
-          },
-          "RateSpecification": {
-            "value": "Frequency_Specification"
-          },
-          "S_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Sample_Frequency": {
-            "value": "30.72"
-          },
-          "Select_Pattern": {
-            "value": "All"
-          },
-          "Zero_Pack_Factor": {
-            "value": "1"
-          }
-        }
-      },
-      "fir_compiler_1": {
-        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
-        "xci_name": "design_1_fir_compiler_0_1",
-        "parameters": {
-          "Clock_Frequency": {
-            "value": "276.48"
-          },
-          "CoefficientSource": {
-            "value": "COE_File"
-          },
-          "Coefficient_File": {
-            "value": "../../../../../../../../FPGA/hbFilt.coe"
-          },
-          "Coefficient_Fractional_Bits": {
-            "value": "0"
-          },
-          "Coefficient_Sets": {
-            "value": "1"
-          },
-          "Coefficient_Sign": {
-            "value": "Signed"
-          },
-          "Coefficient_Structure": {
-            "value": "Half_Band"
-          },
-          "Coefficient_Width": {
-            "value": "16"
-          },
-          "ColumnConfig": {
-            "value": "1"
-          },
-          "DATA_Has_TLAST": {
-            "value": "Not_Required"
-          },
-          "Decimation_Rate": {
-            "value": "1"
-          },
-          "Filter_Architecture": {
-            "value": "Systolic_Multiply_Accumulate"
-          },
-          "Filter_Type": {
-            "value": "Interpolation"
-          },
-          "Interpolation_Rate": {
-            "value": "2"
-          },
-          "M_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Number_Channels": {
-            "value": "1"
-          },
-          "Output_Rounding_Mode": {
-            "value": "Symmetric_Rounding_to_Infinity"
-          },
-          "Output_Width": {
-            "value": "16"
-          },
-          "Quantization": {
-            "value": "Integer_Coefficients"
-          },
-          "RateSpecification": {
-            "value": "Frequency_Specification"
-          },
-          "S_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Sample_Frequency": {
-            "value": "30.72"
-          },
-          "Select_Pattern": {
-            "value": "All"
-          },
-          "Zero_Pack_Factor": {
-            "value": "1"
-          }
-        }
-      },
-      "xlconstant_7": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_5_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "1"
-          },
-          "CONST_WIDTH": {
-            "value": "1"
-          }
-        }
-      },
-      "fir_compiler_2": {
-        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
-        "xci_name": "design_1_fir_compiler_0_2",
-        "parameters": {
-          "Clock_Frequency": {
-            "value": "276.48"
-          },
-          "CoefficientSource": {
-            "value": "COE_File"
-          },
-          "Coefficient_File": {
-            "value": "../../../../../../../../FPGA/hbFilt.coe"
-          },
-          "Coefficient_Fractional_Bits": {
-            "value": "0"
-          },
-          "Coefficient_Sets": {
-            "value": "1"
-          },
-          "Coefficient_Sign": {
-            "value": "Signed"
-          },
-          "Coefficient_Structure": {
-            "value": "Half_Band"
-          },
-          "Coefficient_Width": {
-            "value": "16"
-          },
-          "ColumnConfig": {
-            "value": "1"
-          },
-          "DATA_Has_TLAST": {
-            "value": "Not_Required"
-          },
-          "Decimation_Rate": {
-            "value": "2"
-          },
-          "Filter_Architecture": {
-            "value": "Systolic_Multiply_Accumulate"
-          },
-          "Filter_Type": {
-            "value": "Decimation"
-          },
-          "Interpolation_Rate": {
-            "value": "1"
-          },
-          "M_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Number_Channels": {
-            "value": "1"
-          },
-          "Output_Rounding_Mode": {
-            "value": "Symmetric_Rounding_to_Infinity"
-          },
-          "Output_Width": {
-            "value": "16"
-          },
-          "Quantization": {
-            "value": "Integer_Coefficients"
-          },
-          "RateSpecification": {
-            "value": "Frequency_Specification"
-          },
-          "S_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Sample_Frequency": {
-            "value": "61.44"
-          },
-          "Select_Pattern": {
-            "value": "All"
-          },
-          "Zero_Pack_Factor": {
-            "value": "1"
-          }
-        }
-      },
-      "fir_compiler_3": {
-        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
-        "xci_name": "design_1_fir_compiler_2_0",
-        "parameters": {
-          "Clock_Frequency": {
-            "value": "276.48"
-          },
-          "CoefficientSource": {
-            "value": "COE_File"
-          },
-          "Coefficient_File": {
-            "value": "../../../../../../../../FPGA/hbFilt.coe"
-          },
-          "Coefficient_Fractional_Bits": {
-            "value": "0"
-          },
-          "Coefficient_Sets": {
-            "value": "1"
-          },
-          "Coefficient_Sign": {
-            "value": "Signed"
-          },
-          "Coefficient_Structure": {
-            "value": "Half_Band"
-          },
-          "Coefficient_Width": {
-            "value": "16"
-          },
-          "ColumnConfig": {
-            "value": "1"
-          },
-          "DATA_Has_TLAST": {
-            "value": "Not_Required"
-          },
-          "Decimation_Rate": {
-            "value": "2"
-          },
-          "Filter_Architecture": {
-            "value": "Systolic_Multiply_Accumulate"
-          },
-          "Filter_Type": {
-            "value": "Decimation"
-          },
-          "Interpolation_Rate": {
-            "value": "1"
-          },
-          "M_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Number_Channels": {
-            "value": "1"
-          },
-          "Output_Rounding_Mode": {
-            "value": "Symmetric_Rounding_to_Infinity"
-          },
-          "Output_Width": {
-            "value": "16"
-          },
-          "Quantization": {
-            "value": "Integer_Coefficients"
-          },
-          "RateSpecification": {
-            "value": "Frequency_Specification"
-          },
-          "S_DATA_Has_TUSER": {
-            "value": "Not_Required"
-          },
-          "Sample_Frequency": {
-            "value": "61.44"
-          },
-          "Select_Pattern": {
-            "value": "All"
-          },
-          "Zero_Pack_Factor": {
-            "value": "1"
-          }
-        }
-      },
-      "tvalid_fir_gen_0": {
-        "vlnv": "xilinx.com:module_ref:tvalid_fir_gen:1.0",
-        "xci_name": "design_1_tvalid_fir_gen_0_0",
-        "parameters": {
-          "CLK_RATE": {
-            "value": "276480000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "tvalid_fir_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "iclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "276480000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "irstn": {
-            "direction": "I"
-          },
-          "idata_i": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "idata_q": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "odata_i": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "odata_q": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "tvalid": {
-            "direction": "O"
-          }
-        }
-      },
-      "tvalid_fir_gen_1": {
-        "vlnv": "xilinx.com:module_ref:tvalid_fir_gen:1.0",
-        "xci_name": "design_1_tvalid_fir_gen_0_1",
-        "parameters": {
-          "CLK_RATE": {
-            "value": "276480000"
-          },
-          "SAMPLE_RATE": {
-            "value": "61440000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "tvalid_fir_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "iclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "276480000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "irstn": {
-            "direction": "I"
-          },
-          "idata_i": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "idata_q": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "odata_i": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "odata_q": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "tvalid": {
-            "direction": "O"
-          }
-        }
       }
     },
     "interface_nets": {
+      "AXI_Peripheral_M03_AXI": {
+        "interface_ports": [
+          "AXI_Peripheral/M03_AXI",
+          "AD9364/s_axi"
+        ]
+      },
       "AXI_Peripheral_M14_AXI": {
         "interface_ports": [
           "Current_turning_off_0/S00_AXI",
           "AXI_Peripheral/M14_AXI"
         ]
       },
-      "AXI_Peripheral_M01_AXI": {
+      "AXI_Peripheral_M02_AXI": {
         "interface_ports": [
-          "AXI_Peripheral/M01_AXI",
-          "AD9361_CTRL/s_axi"
-        ]
-      },
-      "AXI_Peripheral_M04_AXI": {
-        "interface_ports": [
-          "AXI_Peripheral/M04_AXI",
-          "Control_from_SOM_0/S00_AXI"
+          "AXI_Peripheral/M02_AXI",
+          "AD9361_CTRL/s_axi1"
         ]
       },
       "AXI_Peripheral_M13_AXI": {
@@ -8622,16 +8559,16 @@
           "AXI_Peripheral/M05_AXI"
         ]
       },
-      "AXI_Peripheral_M03_AXI": {
+      "AXI_Peripheral_M01_AXI": {
         "interface_ports": [
-          "AXI_Peripheral/M03_AXI",
-          "AD9364/s_axi"
+          "AXI_Peripheral/M01_AXI",
+          "AD9361_CTRL/s_axi"
         ]
       },
-      "AXI_Peripheral_M02_AXI": {
+      "AXI_Peripheral_M00_AXI": {
         "interface_ports": [
-          "AXI_Peripheral/M02_AXI",
-          "AD9361_CTRL/s_axi1"
+          "AXI_Peripheral/M00_AXI",
+          "AD9361_CTRL/s_axi2"
         ]
       },
       "AXI_Peripheral_M06_AXI": {
@@ -8640,10 +8577,10 @@
           "SPI_MOD/AXI_LITE"
         ]
       },
-      "AXI_Peripheral_M00_AXI": {
+      "AXI_Peripheral_M04_AXI": {
         "interface_ports": [
-          "AXI_Peripheral/M00_AXI",
-          "AD9361_CTRL/s_axi2"
+          "AXI_Peripheral/M04_AXI",
+          "Control_from_SOM_0/S00_AXI"
         ]
       }
     },
@@ -9336,14 +9273,13 @@
         "ports": [
           "clk_wiz_0/clk_out2",
           "eth_pump_0/iclk_hh",
-          "modem_0/clk_hh",
-          "modem_0/m_axis_aclk",
           "fir_compiler_0/aclk",
           "fir_compiler_1/aclk",
           "fir_compiler_2/aclk",
           "fir_compiler_3/aclk",
           "tvalid_fir_gen_0/iclk",
-          "tvalid_fir_gen_1/iclk"
+          "modem_0/clk_hh",
+          "modem_0/m_axis_aclk"
         ]
       },
       "xlconstant_4_dout": {
@@ -9597,8 +9533,7 @@
       "xlconstant_7_dout": {
         "ports": [
           "xlconstant_7/dout",
-          "tvalid_fir_gen_0/irstn",
-          "tvalid_fir_gen_1/irstn"
+          "tvalid_fir_gen_0/irstn"
         ]
       },
       "tvalid_fir_gen_1_tvalid": {

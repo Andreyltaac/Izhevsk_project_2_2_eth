@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Nov 27 11:26:49 2025
+| Date         : Tue Dec  2 11:16:33 2025
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
 | Design       : design_1_wrapper
@@ -46,9 +46,8 @@ Table of Contents
 30. Clock Region Cell Placement per Global Clock: Region X0Y3
 31. Clock Region Cell Placement per Global Clock: Region X1Y3
 32. Clock Region Cell Placement per Global Clock: Region X0Y4
-33. Clock Region Cell Placement per Global Clock: Region X1Y4
-34. Clock Region Cell Placement per Global Clock: Region X0Y5
-35. Clock Region Cell Placement per Global Clock: Region X0Y6
+33. Clock Region Cell Placement per Global Clock: Region X0Y5
+34. Clock Region Cell Placement per Global Clock: Region X0Y6
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -72,17 +71,17 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                                                                                                                                 | Net                                                                                                                                                                       |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 9 |       27016 |               0 |       32.552 | sample_rate_30_72_design_1_clk_DSP_0                                                       | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkout1_buf/O                                                                                                               | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72                                                                                                          |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                10 |       20104 |               0 |        3.617 | clk_out2_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkout2_buf/O                                                                                                                                    | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                                                        |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 8 |       13029 |               2 |       10.000 | axi_periph_clk_design_1_CLK_COMMON_0                                                       | design_1_i/CLK_AXI/CLK_COMMON/inst/clkout2_buf/O                                                                                                                           | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                                                                                                                         |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 9 |       27060 |               0 |       32.552 | sample_rate_30_72_design_1_clk_DSP_0                                                       | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkout1_buf/O                                                                                                               | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72                                                                                                          |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 9 |       20043 |               0 |        3.617 | clk_out2_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkout2_buf/O                                                                                                                                    | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                                                        |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 7 |       13351 |               2 |       10.000 | axi_periph_clk_design_1_CLK_COMMON_0                                                       | design_1_i/CLK_AXI/CLK_COMMON/inst/clkout2_buf/O                                                                                                                           | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                                                                                                                         |
 | g3        | src3      | BUFG/O          | PBlock     | BUFGCTRL_X0Y2  | n/a          |                 2 |        1579 |               0 |        4.000 | prm_clk_ad1                                                                                | design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst/i_dev_if/i_clk/i_clk_gbuf/O                                                                                              | design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst/i_dev_if/i_clk/clk                                                                                                      |
 | g4        | src4      | BUFG/O          | PBlock     | BUFGCTRL_X0Y3  | n/a          |                 2 |        1579 |               0 |        4.000 | prm_clk_ad2                                                                                | design_1_i/AD9361_CTRL/AD9361_2/axi_ad9361_2/inst/i_dev_if/i_clk/i_clk_gbuf/O                                                                                              | design_1_i/AD9361_CTRL/AD9361_2/axi_ad9361_2/inst/i_dev_if/i_clk/clk                                                                                                      |
 | g5        | src5      | BUFG/O          | PBlock     | BUFGCTRL_X0Y4  | n/a          |                 2 |        1579 |               0 |        4.000 | prm_clk_ad3                                                                                | design_1_i/AD9361_CTRL/AD9361_3/axi_ad9361_3/inst/i_dev_if/i_clk/i_clk_gbuf/O                                                                                              | design_1_i/AD9361_CTRL/AD9361_3/axi_ad9361_3/inst/i_dev_if/i_clk/clk                                                                                                      |
-| g6        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 4 |        1287 |               0 |        5.425 | clk_out1_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkout1_buf/O                                                                                                                                    | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                                                        |
-| g7        | src6      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y20 | n/a          |                 6 |        1073 |               1 |       40.000 | clk_div_sel_0_s                                                                            | design_1_i/util_clkdiv_0/inst/i_div_clk_gbuf/O                                                                                                                             | design_1_i/util_clkdiv_0/inst/clk_out                                                                                                                                     |
+| g6        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 3 |        1287 |               0 |        5.425 | clk_out1_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkout1_buf/O                                                                                                                                    | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                                                        |
+| g7        | src6      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y20 | n/a          |                 4 |        1073 |               1 |       40.000 | clk_div_sel_0_s                                                                            | design_1_i/util_clkdiv_0/inst/i_div_clk_gbuf/O                                                                                                                             | design_1_i/util_clkdiv_0/inst/clk_out                                                                                                                                     |
 | g8        | src7      | BUFG/O          | PBlock     | BUFGCTRL_X0Y16 | n/a          |                 2 |         922 |               0 |        4.000 | prm_clk_ad4                                                                                | design_1_i/AD9364/axi_ad9364/inst/i_dev_if/i_clk/i_clk_gbuf/O                                                                                                              | design_1_i/AD9364/axi_ad9364/inst/i_dev_if/i_clk/clk                                                                                                                      |
 | g9        | src8      | BUFG/O          | PBlock     | BUFGCTRL_X0Y17 | n/a          |                 1 |         826 |               0 |       10.000 | clk_out                                                                                    | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/bufg_inst/O    | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/CLK           |
-| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 3 |         461 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                                                                                                       | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                                                                                                    |
+| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 2 |         461 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                                                                                                       | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                                                                                                    |
 | g11       | src2      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 5 |          27 |               0 |        5.000 | delay_clk_design_1_CLK_COMMON_0                                                            | design_1_i/CLK_AXI/CLK_COMMON/inst/clkout1_buf/O                                                                                                                           | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk                                                                                                                              |
 | g12       | src0      | BUFG/O          | None       | BUFGCTRL_X0Y7  | n/a          |                 1 |           1 |               0 |       25.000 | clkfbout_design_1_clk_DSP_0                                                                | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkf_buf/O                                                                                                                  | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkfbout_buf_design_1_clk_DSP_0                                                                                            |
 | g13       | src8      | BUFG/O          | PBlock     | BUFGCTRL_X0Y21 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout                                                                                   | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/fb_bufg_inst/O | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/clkfbout_bufg |
@@ -117,7 +116,7 @@ Table of Contents
 | src8      | g9        | MMCME2_ADV/CLKOUT0  | PBlock      | MMCME2_ADV_X0Y5 | X0Y5         |           1 |               0 |              10.000 | clk_out                                                                                    | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/gen_mmcme2.mmcm_adv_inst/CLKOUT0  | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/clk_out  |
 | src8      | g13       | MMCME2_ADV/CLKFBOUT | PBlock      | MMCME2_ADV_X0Y5 | X0Y5         |           1 |               0 |              10.000 | clkfbout                                                                                   | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/gen_mmcme2.mmcm_adv_inst/CLKFBOUT | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/clkfbout |
 | src9      | g10       | BSCANE2/TCK         | None        | BSCAN_X0Y0      | X0Y2         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                                                                    | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs                                                                                                 |
-| src10     | g16, g17  | BUFG/O              | None        | BUFGCTRL_X0Y1   | n/a          |       13116 |               0 |              10.000 | axi_periph_clk_design_1_CLK_COMMON_0                                                       | design_1_i/CLK_AXI/CLK_COMMON/inst/clkout2_buf/O                                                                                                                                              | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                                                                                                                    |
+| src10     | g16, g17  | BUFG/O              | None        | BUFGCTRL_X0Y1   | n/a          |       13438 |               0 |              10.000 | axi_periph_clk_design_1_CLK_COMMON_0                                                       | design_1_i/CLK_AXI/CLK_COMMON/inst/clkout2_buf/O                                                                                                                                              | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                                                                                                                    |
 +-----------+-----------+---------------------+-------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -132,16 +131,16 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+-------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used  | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+-------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  1494 |  4000 |  462 |  1150 |    0 |    60 |   27 |    30 |    0 |    60 |
-| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   637 |  3700 |  274 |  1200 |    0 |    80 |   34 |    40 |    1 |    60 |
-| X0Y1              |   11 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |   12 |    50 |  6150 |  4000 | 3234 |  1150 |    2 |    60 |   22 |    30 |    7 |    60 |
-| X1Y1              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 |  8169 |  3700 | 3670 |  1200 |    2 |    80 |   27 |    40 |   25 |    60 |
-| X0Y2              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   17 |    50 |   18 |    50 | 10095 |  3400 | 3680 |  1150 |    4 |    60 |   24 |    30 |    7 |    60 |
-| X1Y2              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 | 11470 |  3700 | 4540 |  1200 |    3 |    80 |   15 |    40 |    9 |    60 |
-| X0Y3              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 | 10276 |  3400 | 3630 |  1150 |    4 |    60 |   20 |    30 |    8 |    60 |
-| X1Y3              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  6129 |  3150 | 3021 |  1050 |    2 |    50 |    2 |    25 |    9 |    60 |
-| X0Y4              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 |  7840 |  4000 | 2432 |  1150 |    8 |    60 |    9 |    30 |    0 |    60 |
-| X1Y4              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |  1983 |  3300 |  599 |  1100 |    3 |    60 |    0 |    30 |    0 |    60 |
+| X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  3905 |  4000 | 2159 |  1150 |    0 |    60 |   29 |    30 |    9 |    60 |
+| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   716 |  3700 |  213 |  1200 |    0 |    80 |   39 |    40 |    0 |    60 |
+| X0Y1              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |   12 |    50 | 10125 |  4000 | 4156 |  1150 |    4 |    60 |   24 |    30 |   10 |    60 |
+| X1Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 | 10268 |  3700 | 4700 |  1200 |    6 |    80 |   23 |    40 |   28 |    60 |
+| X0Y2              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   17 |    50 |   18 |    50 |  9258 |  3400 | 3130 |  1150 |    4 |    60 |   15 |    30 |    4 |    60 |
+| X1Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 | 12485 |  3700 | 5011 |  1200 |    3 |    80 |   11 |    40 |   15 |    60 |
+| X0Y3              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 | 10046 |  3400 | 3502 |  1150 |    8 |    60 |   12 |    30 |    0 |    60 |
+| X1Y3              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  4384 |  3150 | 1497 |  1050 |    6 |    50 |    2 |    25 |    0 |    60 |
+| X0Y4              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    7 |    50 |    8 |    50 |  3345 |  4000 | 1173 |  1150 |    0 |    60 |   25 |    30 |    0 |    60 |
+| X1Y4              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |     0 |  3300 |    0 |  1100 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X0Y5              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |     0 |  4000 |    0 |  1150 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X1Y5              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |     0 |  3300 |    0 |  1100 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X0Y6              |    3 |    12 |    2 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |     0 |  4000 |    0 |  1150 |    0 |    60 |    0 |    30 |    0 |    60 |
@@ -159,10 +158,10 @@ All Modules
 +----+----+----+
 | Y6 |  3 |  0 |
 | Y5 |  1 |  0 |
-| Y4 |  6 |  2 |
+| Y4 |  6 |  0 |
 | Y3 |  7 |  3 |
-| Y2 |  8 |  7 |
-| Y1 | 11 |  6 |
+| Y2 |  8 |  5 |
+| Y1 | 10 |  5 |
 | Y0 |  3 |  1 |
 +----+----+----+
 
@@ -173,7 +172,7 @@ All Modules
 +-----------+-----------------+-------------------+--------------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                                | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                              |
 +-----------+-----------------+-------------------+--------------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | sample_rate_30_72_design_1_clk_DSP_0 |      32.552 | {0.000 16.276} |       26800 |        0 |              1 |        0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
+| g0        | BUFG/O          | n/a               | sample_rate_30_72_design_1_clk_DSP_0 |      32.552 | {0.000 16.276} |       26844 |        0 |              1 |        0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
 +-----------+-----------------+-------------------+--------------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -186,11 +185,11 @@ All Modules
 +----+-------+-------+
 | Y6 |     1 |     0 |
 | Y5 |     0 |     0 |
-| Y4 |    46 |    26 |
-| Y3 |  3148 |  6831 |
-| Y2 |  4078 |  8009 |
-| Y1 |  4593 |    69 |
-| Y0 |     0 |     0 |
+| Y4 |   104 |     0 |
+| Y3 |    12 |    21 |
+| Y2 |  4039 |  9302 |
+| Y1 |  9060 |  2478 |
+| Y0 |  1828 |     0 |
 +----+-------+-------+
 
 
@@ -200,7 +199,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                         | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                |
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
-| g1        | BUFG/O          | n/a               | clk_out2_design_1_clk_wiz_0_0 |       3.617 | {0.000 1.808} |       19774 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out2 |
+| g1        | BUFG/O          | n/a               | clk_out2_design_1_clk_wiz_0_0 |       3.617 | {0.000 1.808} |       19713 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out2 |
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -213,11 +212,11 @@ All Modules
 +----+-------+-------+
 | Y6 |     0 |     0 |
 | Y5 |     0 |     0 |
-| Y4 |  5768 |  1963 |
-| Y3 |  1876 |    47 |
-| Y2 |   127 |  1046 |
-| Y1 |   795 |  5869 |
-| Y0 |  1528 |   755 |
+| Y4 |     6 |     0 |
+| Y3 |  3514 |  4375 |
+| Y2 |   899 |  1044 |
+| Y1 |   772 |  5943 |
+| Y0 |  2365 |   795 |
 +----+-------+-------+
 
 
@@ -227,7 +226,7 @@ All Modules
 +-----------+-----------------+-------------------+--------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                                | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                               |
 +-----------+-----------------+-------------------+--------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
-| g2        | BUFG/O          | n/a               | axi_periph_clk_design_1_CLK_COMMON_0 |      10.000 | {0.000 5.000} |       13003 |        0 |              2 |        0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk |
+| g2        | BUFG/O          | n/a               | axi_periph_clk_design_1_CLK_COMMON_0 |      10.000 | {0.000 5.000} |       13325 |        0 |              2 |        0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk |
 +-----------+-----------------+-------------------+--------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -240,10 +239,10 @@ All Modules
 +----+-------+-------+
 | Y6 |     2 |     0 |
 | Y5 |     0 |     0 |
-| Y4 |  1148 |     0 |
-| Y3 |  3775 |    72 |
-| Y2 |  4167 |  1622 |
-| Y1 |   720 |  1499 |
+| Y4 |  1756 |     0 |
+| Y3 |  4757 |     0 |
+| Y2 |  2365 |  1499 |
+| Y1 |  1449 |  1499 |
 | Y0 |     0 |     0 |
 +----+-------+-------+
 
@@ -343,17 +342,17 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-----+
-|    | X0    | X1  |
-+----+-------+-----+
-| Y6 |     0 |   0 |
-| Y5 |     0 |   0 |
-| Y4 |     0 |   0 |
-| Y3 |    87 |   0 |
-| Y2 |  1011 |  52 |
-| Y1 |     8 |   0 |
-| Y0 |     0 |   0 |
-+----+-------+-----+
++----+-------+----+
+|    | X0    | X1 |
++----+-------+----+
+| Y6 |     0 |  0 |
+| Y5 |     0 |  0 |
+| Y4 |     0 |  0 |
+| Y3 |     6 |  0 |
+| Y2 |  1124 |  0 |
+| Y1 |    28 |  0 |
+| Y0 |     0 |  0 |
++----+-------+----+
 
 
 13. Device Cell Placement Summary for Global Clock g7
@@ -375,11 +374,11 @@ All Modules
 +----+------+----+
 | Y6 |    0 |  0 |
 | Y5 |    0 |  0 |
-| Y4 |    8 |  0 |
-| Y3 |    8 |  0 |
-| Y2 |  235 |  4 |
-| Y1 |  776 |  0 |
-| Y0 |    2 |  0 |
+| Y4 |  606 |  0 |
+| Y3 |  229 |  2 |
+| Y2 |  196 |  0 |
+| Y1 |    0 |  0 |
+| Y0 |    0 |  0 |
 +----+------+----+
 
 
@@ -459,8 +458,8 @@ All Modules
 | Y4 |    0 |  0 |
 | Y3 |    0 |  0 |
 | Y2 |    0 |  0 |
-| Y1 |  374 |  6 |
-| Y0 |   78 |  0 |
+| Y1 |   36 |  0 |
+| Y0 |  422 |  0 |
 +----+------+----+
 
 
@@ -656,13 +655,13 @@ All Modules
 24. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |        1528 |               0 | 1416 |     87 |   25 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2     |
-| g7        | n/a   | BUFGCTRL/O      | None       |           2 |               0 |    0 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out  |
-| g10       | n/a   | BUFG/O          | None       |          78 |               0 |   78 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        1828 |               0 | 1416 |    406 |    0 |   6 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
+| g1        | n/a   | BUFG/O          | None       |        2365 |               0 | 2067 |    266 |   29 |   3 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
+| g10       | n/a   | BUFG/O          | None       |         422 |               0 |  422 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -674,7 +673,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |         755 |               0 | 637 |     83 |   34 |   1 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2 |
+| g1        | n/a   | BUFG/O          | None       |         795 |               0 | 716 |     40 |   39 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -687,16 +686,15 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4593 |               0 | 3596 |    987 |    1 |   6 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72      |
-| g1        | n/a   | BUFG/O          | None       |         795 |               0 |  684 |     92 |   18 |   1 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                    |
-| g2        | n/a   | BUFG/O          | None       |         720 |               0 |  718 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                     |
+| g0        | n/a   | BUFG/O          | None       |        9060 |               0 | 7917 |   1113 |   17 |   9 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72      |
+| g1        | n/a   | BUFG/O          | None       |         772 |               0 |  697 |     61 |   12 |   1 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                    |
+| g2        | n/a   | BUFG/O          | None       |        1449 |               0 | 1447 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                     |
 | g3        | n/a   | BUFG/O          | PBlock     |           2 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst/i_dev_if/i_clk/clk  |
 | g4        | n/a   | BUFG/O          | PBlock     |           2 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/AD9361_2/axi_ad9361_2/inst/i_dev_if/i_clk/clk  |
 | g5        | n/a   | BUFG/O          | PBlock     |           2 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/AD9361_3/axi_ad9361_3/inst/i_dev_if/i_clk/clk  |
-| g6        | n/a   | BUFG/O          | None       |           8 |               0 |    8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                    |
-| g7        | n/a   | BUFGCTRL/O      | None       |         776 |               0 |  770 |      0 |    6 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                                 |
+| g6        | n/a   | BUFG/O          | None       |          28 |               0 |   28 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                    |
 | g8        | n/a   | BUFG/O          | PBlock     |           2 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9364/axi_ad9364/inst/i_dev_if/i_clk/clk                  |
-| g10       | n/a   | BUFG/O          | None       |         374 |               0 |  374 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                |
+| g10       | n/a   | BUFG/O          | None       |          36 |               0 |   36 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                |
 | g14       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/clkfbout_buf_design_1_CLK_COMMON_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -710,11 +708,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          69 |               0 |   68 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72     |
-| g1        | n/a   | BUFG/O          | None       |        5869 |               0 | 5037 |    774 |   28 |  25 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                   |
+| g0        | n/a   | BUFG/O          | None       |        2478 |               0 | 2088 |    385 |    2 |   2 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72     |
+| g1        | n/a   | BUFG/O          | None       |        5943 |               0 | 5122 |    759 |   27 |  26 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                   |
 | g2        | n/a   | BUFG/O          | None       |        1499 |               0 | 1492 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                    |
 | g4        | n/a   | BUFG/O          | PBlock     |        1577 |               0 | 1561 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/AD9361_2/axi_ad9361_2/inst/i_dev_if/i_clk/clk |
-| g10       | n/a   | BUFG/O          | None       |           6 |               0 |    6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                               |
 | g11       | n/a   | BUFG/O          | None       |           6 |               0 |    5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -728,11 +725,11 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                             |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4078 |               0 | 3811 |    249 |    8 |   7 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72                                                                                                |
-| g1        | n/a   | BUFG/O          | None       |         127 |               0 |  125 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                                              |
-| g2        | n/a   | BUFG/O          | None       |        4167 |               0 | 4145 |      0 |    3 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                                                                                                               |
-| g6        | n/a   | BUFG/O          | None       |        1011 |               0 | 1006 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                                              |
-| g7        | n/a   | BUFGCTRL/O      | None       |         234 |               1 |  221 |      0 |   13 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                                                                                                                           |
+| g0        | n/a   | BUFG/O          | None       |        4039 |               0 | 3925 |    100 |    7 |   4 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72                                                                                                |
+| g1        | n/a   | BUFG/O          | None       |         899 |               0 |  892 |      2 |    3 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                                              |
+| g2        | n/a   | BUFG/O          | None       |        2365 |               0 | 2340 |      0 |    5 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                                                                                                               |
+| g6        | n/a   | BUFG/O          | None       |        1124 |               0 | 1119 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                                              |
+| g7        | n/a   | BUFGCTRL/O      | None       |         196 |               0 |  194 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                                                                                                                           |
 | g9        | n/a   | BUFG/O          | PBlock     |         822 |               0 |  786 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/CLK |
 | g11       | n/a   | BUFG/O          | None       |           3 |               0 |    2 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk                                                                                                                    |
 | g12       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkfbout_buf_design_1_clk_DSP_0                                                                                  |
@@ -748,12 +745,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        8009 |               0 | 7296 |    692 |   10 |   6 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72     |
-| g1        | n/a   | BUFG/O          | None       |        1046 |               0 |  941 |     92 |    6 |   3 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                   |
-| g2        | n/a   | BUFG/O          | None       |        1622 |               0 | 1615 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                    |
+| g0        | n/a   | BUFG/O          | None       |        9302 |               0 | 8398 |    880 |    3 |  15 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72     |
+| g1        | n/a   | BUFG/O          | None       |        1044 |               0 | 1029 |      0 |   11 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                   |
+| g2        | n/a   | BUFG/O          | None       |        1499 |               0 | 1492 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                    |
 | g5        | n/a   | BUFG/O          | PBlock     |        1577 |               0 | 1561 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/AD9361_3/axi_ad9361_3/inst/i_dev_if/i_clk/clk |
-| g6        | n/a   | BUFG/O          | None       |          52 |               0 |   52 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                   |
-| g7        | n/a   | BUFGCTRL/O      | None       |           4 |               0 |    0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                                |
 | g11       | n/a   | BUFG/O          | None       |           6 |               0 |    5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -767,12 +762,12 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        3148 |               0 | 2996 |    137 |    7 |   8 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72     |
-| g1        | n/a   | BUFG/O          | None       |        1876 |               0 | 1864 |      0 |    7 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                   |
-| g2        | n/a   | BUFG/O          | None       |        3775 |               0 | 3763 |      1 |    2 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                    |
+| g0        | n/a   | BUFG/O          | None       |          12 |               0 |   11 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72     |
+| g1        | n/a   | BUFG/O          | None       |        3514 |               0 | 3499 |      0 |    7 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                   |
+| g2        | n/a   | BUFG/O          | None       |        4757 |               0 | 4749 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                    |
 | g3        | n/a   | BUFG/O          | PBlock     |        1577 |               0 | 1561 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst/i_dev_if/i_clk/clk |
-| g6        | n/a   | BUFG/O          | None       |          87 |               0 |   87 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                   |
-| g7        | n/a   | BUFGCTRL/O      | None       |           8 |               0 |    0 |      0 |    8 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                                |
+| g6        | n/a   | BUFG/O          | None       |           6 |               0 |    6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                   |
+| g7        | n/a   | BUFGCTRL/O      | None       |         228 |               1 |  216 |      0 |   12 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                                |
 | g11       | n/a   | BUFG/O          | None       |           6 |               0 |    5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -786,9 +781,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        6831 |               0 | 6012 |    804 |    3 |   9 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
-| g1        | n/a   | BUFG/O          | None       |          47 |               0 |   45 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
-| g2        | n/a   | BUFG/O          | None       |          72 |               0 |   72 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                |
+| g0        | n/a   | BUFG/O          | None       |          21 |               0 |   21 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
+| g1        | n/a   | BUFG/O          | None       |        4375 |               0 | 4363 |      0 |    6 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
+| g7        | n/a   | BUFGCTRL/O      | None       |           2 |               0 |    0 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -801,10 +796,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          46 |               0 |   44 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
-| g1        | n/a   | BUFG/O          | None       |        5768 |               0 | 5746 |      0 |    9 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
-| g2        | n/a   | BUFG/O          | None       |        1148 |               0 | 1141 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                |
-| g7        | n/a   | BUFGCTRL/O      | None       |           8 |               0 |    0 |      0 |    8 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                            |
+| g0        | n/a   | BUFG/O          | None       |         104 |               0 |  101 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
+| g1        | n/a   | BUFG/O          | None       |           6 |               0 |    6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
+| g2        | n/a   | BUFG/O          | None       |        1756 |               0 | 1748 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk                |
+| g7        | n/a   | BUFGCTRL/O      | None       |         606 |               0 |  581 |      0 |   25 |   0 |  0 |    0 |   0 |       0 | design_1_i/util_clkdiv_0/inst/clk_out                            |
 | g8        | n/a   | BUFG/O          | PBlock     |         920 |               0 |  904 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9364/axi_ad9364/inst/i_dev_if/i_clk/clk             |
 | g11       | n/a   | BUFG/O          | None       |           6 |               0 |    5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
@@ -813,21 +808,7 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-33. Clock Region Cell Placement per Global Clock: Region X1Y4
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          26 |               0 |   26 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72 |
-| g1        | n/a   | BUFG/O          | None       |        1963 |               0 | 1957 |      0 |    3 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-34. Clock Region Cell Placement per Global Clock: Region X0Y5
+33. Clock Region Cell Placement per Global Clock: Region X0Y5
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -840,7 +821,7 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-35. Clock Region Cell Placement per Global Clock: Region X0Y6
+34. Clock Region Cell Placement per Global Clock: Region X0Y6
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
