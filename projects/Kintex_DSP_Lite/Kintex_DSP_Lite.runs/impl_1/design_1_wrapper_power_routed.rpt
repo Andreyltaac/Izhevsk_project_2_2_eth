@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Dec  2 11:16:19 2025
+| Date             : Sat Dec  6 18:15:23 2025
 | Host             : TOR00094 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.230        |
+| Total On-Chip Power (W)  | 3.160        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.029        |
-| Device Static (W)        | 0.201        |
+| Dynamic (W)              | 2.965        |
+| Device Static (W)        | 0.195        |
 | Effective TJA (C/W)      | 1.9          |
-| Max Ambient (C)          | 78.9         |
-| Junction Temperature (C) | 31.1         |
+| Max Ambient (C)          | 79.0         |
+| Junction Temperature (C) | 31.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.362 |       21 |       --- |             --- |
-| Slice Logic              |     0.169 |   131934 |       --- |             --- |
-|   LUT as Logic           |     0.122 |    39653 |    203800 |           19.46 |
-|   Register               |     0.018 |    64528 |    407600 |           15.83 |
-|   LUT as Shift Register  |     0.014 |     2648 |     64000 |            4.14 |
-|   CARRY4                 |     0.013 |     5606 |     50950 |           11.00 |
+| Clocks                   |     0.342 |       21 |       --- |             --- |
+| Slice Logic              |     0.168 |   131683 |       --- |             --- |
+|   LUT as Logic           |     0.122 |    39763 |    203800 |           19.51 |
+|   Register               |     0.018 |    64480 |    407600 |           15.82 |
+|   LUT as Shift Register  |     0.014 |     2437 |     64000 |            3.81 |
+|   CARRY4                 |     0.013 |     5698 |     50950 |           11.18 |
 |   LUT as Distributed RAM |     0.002 |     1318 |     64000 |            2.06 |
-|   F7/F8 Muxes            |    <0.001 |     1201 |    203800 |            0.59 |
-|   Others                 |     0.000 |     8841 |       --- |             --- |
-| Signals                  |     0.209 |    84907 |       --- |             --- |
-| Block RAM                |     0.321 |    220.5 |       445 |           49.55 |
+|   F7/F8 Muxes            |    <0.001 |     1126 |    203800 |            0.55 |
+|   Others                 |     0.000 |     8590 |       --- |             --- |
+| Signals                  |     0.200 |    84447 |       --- |             --- |
+| Block RAM                |     0.288 |    134.5 |       445 |           30.22 |
 | MMCM                     |     0.341 |        3 |        10 |           30.00 |
 | PLL                      |     0.113 |        1 |        10 |           10.00 |
 | DSPs                     |     0.081 |       69 |       840 |            8.21 |
 | I/O                      |     1.433 |      225 |       400 |           56.25 |
-| Static Power             |     0.201 |          |           |                 |
-| Total                    |     3.230 |          |           |                 |
+| Static Power             |     0.195 |          |           |                 |
+| Total                    |     3.160 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.258 |       1.163 |      0.095 |
+| Vccint    |       1.000 |     1.194 |       1.102 |      0.092 |
 | Vccaux    |       1.800 |     0.401 |       0.372 |      0.029 |
 | Vcco33    |       3.300 |     0.071 |       0.070 |      0.001 |
 | Vcco25    |       2.500 |     0.257 |       0.256 |      0.001 |
@@ -87,7 +87,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.033 |       0.023 |      0.010 |
+| Vccbram   |       1.000 |     0.028 |       0.021 |      0.007 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -166,13 +166,13 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| design_1_wrapper          |     3.029 |
-|   dbg_hub                 |     0.006 |
-|     inst                  |     0.006 |
-|       BSCANID.u_xsdbm_id  |     0.006 |
-|   design_1_i              |     2.935 |
-|     AD9361_CTRL           |     0.980 |
-|       AD9361_1            |     0.395 |
+| design_1_wrapper          |     2.965 |
+|   dbg_hub                 |     0.002 |
+|     inst                  |     0.002 |
+|       BSCANID.u_xsdbm_id  |     0.002 |
+|   design_1_i              |     2.948 |
+|     AD9361_CTRL           |     0.982 |
+|       AD9361_1            |     0.396 |
 |       AD9361_2            |     0.233 |
 |       AD9361_3            |     0.233 |
 |       ad9361_clk          |     0.119 |
@@ -202,11 +202,11 @@ Table of Contents
 |       U0                  |     0.009 |
 |     fir_compiler_3        |     0.009 |
 |       U0                  |     0.009 |
-|     modem_0               |     0.823 |
-|       inst                |     0.823 |
-|   u_ila_0                 |     0.076 |
-|     inst                  |     0.076 |
-|       ila_core_inst       |     0.076 |
+|     modem_0               |     0.833 |
+|       inst                |     0.833 |
+|   u_ila_0                 |     0.003 |
+|     inst                  |     0.003 |
+|       ila_core_inst       |     0.003 |
 +---------------------------+-----------+
 
 

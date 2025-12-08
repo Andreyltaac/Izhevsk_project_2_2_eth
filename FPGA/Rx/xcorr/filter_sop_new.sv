@@ -1,263 +1,270 @@
-// Устойчивый фильтр SOP с поддержкой wrap-around для счётчика любой битности.
-// Одно событие -> один osop: либо реальный hit в окне, либо предсказанный импульс,
-// если входной isop пропал.
-//
-// Условия корректности (железобетонно рекомендуются):
-//   SZ_FRAME + PHASE_WINDOW_TICKS < 2^(COUNTER_BITS-1)
-//   GUARD_TICKS                   < 2^(COUNTER_BITS-1)
-//
-// Всё на фиксированных векторах, без integer.
-
 module filter_sop_new #(
-    // Разрядность счётчика времени (модуль 2^COUNTER_BITS)
-    parameter int COUNTER_BITS                 = 15,
 
-    // Ожидаемый период SOP в тактах счётчика
-    parameter int unsigned SZ_FRAME            = 1000,
+	parameter W_COUNT					= 10,
+    parameter SZ_FRAME            		= 1000,
+	parameter PHASE_WINDOW_TICKS  		= 4,
 
-    // Гейт по числу SOP в окне наблюдения
-    parameter int unsigned N_SOP               = 20,
-    parameter int unsigned SOP_COUNT_HALF_WINDOW = 5,
+    parameter N_SOP               		= 20,
+    parameter SOP_COUNT_HALF_WINDOW 	= 5,
 
-    // Критерии входа/выхода из lock
-    parameter int unsigned N_LOCK              = 10,
-    parameter int unsigned N_UNLOCK            = 10,
+   
+    parameter N_LOCK              		= 10,
+    parameter N_UNLOCK            		= 10
 
-    // Фазовые параметры (в тактах счётчика)
-    parameter int unsigned PHASE_WINDOW_TICKS  = 64,    // половина окна попадания
-    parameter int unsigned GUARD_TICKS         = 250   // защита в ARM от слишком близких событий
-)(
-    input  logic                        clk,
-    input  logic                        rst,
+    
 
-    // Вход: одиночный однотактный SOP
-    (* mark_debug = "true" *) input  logic                        isop,
+)
+(
+	input 			clk,
+	input 			rst,
 
-    // Вход: «сколько SOP за окно наблюдения»
-    (* mark_debug = "true" *) input  logic       [14:0]           n_sps,
-
-    // Выход: состояние «захвачено»
-    (* mark_debug = "true" *) output logic                        found_sync,
-
-    // Выход: нормализованный единичный импульс SOP (1 такт)
-    (* mark_debug = "true" *) output logic                        osop
+	input [14:0] 	n_sop,
+(* mark_debug = "true" *)	input 			isop,
+(* mark_debug = "true" *)	output	wire	osop,
+(* mark_debug = "true" *)	output	wire	corr_found
 );
 
-    // ----------------- Ширины/константы -----------------
-    localparam int W = COUNTER_BITS-1;
+localparam 	GUARD_TICKS	= SZ_FRAME / 2; 
+localparam	LOWER_GUARD = SZ_FRAME - PHASE_WINDOW_TICKS;
+localparam	UPPER_GUARD = SZ_FRAME + PHASE_WINDOW_TICKS;
+localparam  DATA_SHIFT  = 2**10;
 
-    // Константы ширины W+1 для удобного сравнения как signed
-    localparam logic [W:0] ONE  = {{W{1'b0}}, 1'b1};
-    localparam logic [W:0] MOD  = ONE << W;         // 2^W
-    localparam logic [W:0] HALF = ONE << (W-1);     // 2^(W-1)
+reg	[W_COUNT - 1 : 0]	dT;	
+reg [W_COUNT - 1 : 0]	counter, previos_sop, now_sop, next_sop, guard_count, sop_count_lower_gb, sop_count_upper_gb, sop_count_end;
 
-    // Signed версия половины окна
-    localparam logic signed [W:0] PHASE_WIN_S = $signed(PHASE_WINDOW_TICKS[W:0]);
+(* mark_debug = "true" *) reg [9:0]	count_lock, count_unlock;
 
-    // ----------------- Временные и фазовые сигналы -----------------
-    logic [W-1:0] counter;
-    logic [W-1:0] last_sop_time;
-    logic [W-1:0] prev_sop_time;
-    logic [W-1:0] next_valid_time;
-    logic [W-1:0] guard_until;
+reg	local_val, sop_insert, after_gb;
+wire secong_logic;
 
-    // Свободный счётчик по модулю 2^W
-    always_ff @(posedge clk) begin
-        if (rst) counter <= '0;
-        else     counter <= counter + {{(W-1){1'b0}}, 1'b1}; // +1, автоматический wrap
-    end
+typedef enum logic [2:0] {
+        STATE_WAIT		= 3'd0,
+		STATE_ARM		= 3'd1,
+        STATE_VALIDATE	= 3'd2,
+        STATE_LOCKED	= 3'd3,
+		STATE_UNCLOCK	= 3'd4
+    } state_t;
 
-    // ----------------- Круговая разность и окно -----------------
-    // Кратчайшая дуга a - b в диапазоне (-HALF .. +HALF) с фиксированной шириной
-    function automatic logic signed [W:0] circ_delta_fx
-    (
-        input logic [W-1:0] a,
-        input logic [W-1:0] b
-    );
-        logic signed [W:0] da, db, d;
-        begin
-            da = $signed({1'b0, a});   // zero-extend до W+1, затем signed
-            db = $signed({1'b0, b});
-            d  = da - db;              // диапазон примерно [-MOD .. +MOD]
-            if (d >  $signed(MOD))  d = d - $signed(MOD); // формально избыточно
-            if (d < -$signed(MOD))  d = d + $signed(MOD); // формально избыточно
-            if (d >  $signed(HALF)) d = d - $signed(MOD); // сворачиваем в (-HALF..+HALF)
-            else if (d < -$signed(HALF)) d = d + $signed(MOD);
-            circ_delta_fx = d;
-        end
-    endfunction
+(* mark_debug = "true" *)    state_t state;
 
-    function automatic bit in_window_wrap_fx
-    (
-        input logic [W-1:0] a,
-        input logic [W-1:0] b,
-        input logic signed [W:0] halfw_s
-    );
-        logic signed [W:0] d;
-        begin
-            d = circ_delta_fx(a, b);
-            in_window_wrap_fx = (d >= -halfw_s) && (d <= halfw_s);
-        end
-    endfunction
 
-    // Сатурация u8
-    function automatic logic [7:0] sat_inc(input logic [7:0] x);
-        sat_inc = (x == 8'hFF) ? 8'hFF : x + 8'd1;
-    endfunction
 
-    // ----------------- FSM -----------------
-    (* mark_debug = "true" *) typedef enum logic [1:0] { S_IDLE, S_ARM, S_ACQUIRE, S_LOCK } state_t;
-    state_t state, state_n;
-	
+assign corr_found = state == STATE_LOCKED;
+assign osop = corr_found && counter == sop_count_end;
 
-    (* mark_debug = "true" *) logic [7:0] lock_cnt, unlock_cnt;
-    logic       osop_pulse;
 
-    assign osop       = osop_pulse;
-    assign found_sync = (state == S_LOCK);
-    logic signed [W:0] d_lock;
-    (* mark_debug = "true" *) logic signed [W:0] dT;
-    logic signed [W:0] d_acq;
-    // ----------------- Основной процесс -----------------
-    always_ff @(posedge clk) begin
-        if (rst) begin
-            state           <= S_IDLE;
-            last_sop_time   <= '0;
-            prev_sop_time   <= '0;
-            next_valid_time <= '0;
-            guard_until     <= '0;
-            lock_cnt        <= '0;
-            unlock_cnt      <= '0;
-            osop_pulse      <= 1'b0;
-        end else begin
-            osop_pulse <= 1'b0;  // дефолт: импульс низкий
-            state      <= state_n;
 
-            unique case (state)
+reg [31:0]		dt_2;
+reg [31:0] 		dt_3;
 
-                // ---------- IDLE ----------
-                S_IDLE: begin
-                    lock_cnt   <= 8'd0;
-                    unlock_cnt <= 8'd0;
+always @(posedge clk) begin
+	if(rst) begin
+		dt_3 <= 32'd0;
+		dt_2 <= 32'd0;
+	end
+	else if(osop) begin
+		dt_2 <= dt_3;
+		dt_3 <= 32'd0;
+	end
+	else
+		dt_3 <= dt_3 + 1'd1;
+end
 
-                    // Ждём гейт по n_sps и первый isop
-                    if ((n_sps >= N_SOP - SOP_COUNT_HALF_WINDOW) &&
-                        (n_sps <= N_SOP + SOP_COUNT_HALF_WINDOW)) begin
-                        if (isop) begin
-                            prev_sop_time <= last_sop_time;
-                            last_sop_time <= counter;
-                            guard_until   <= counter + GUARD_TICKS[W-1:0];
-                            state_n       <= S_ARM;
-                        end else begin
-                            state_n <= S_IDLE;
-                        end
-                    end else begin
-                        state_n <= S_IDLE;
-                    end
-                end
 
-                // ---------- ARM ----------
-                // Ловим второй SOP после guard и проверяем период ≈ SZ_FRAME
-                S_ARM: begin
-                    state_n <= S_ARM;
+always @(posedge clk) begin
+	if(rst) begin
+		state <= STATE_WAIT;
+	end
+	else begin
+		case (state)
+			STATE_WAIT		: begin
+								if(n_sop > N_SOP - SOP_COUNT_HALF_WINDOW && n_sop < N_SOP + SOP_COUNT_HALF_WINDOW) state <= STATE_ARM;
+								else state <= STATE_WAIT;
+			end
+			STATE_ARM		: begin	
+								if(n_sop < N_SOP - SOP_COUNT_HALF_WINDOW || n_sop > N_SOP + SOP_COUNT_HALF_WINDOW) state <= STATE_WAIT;
+								else if(dT > LOWER_GUARD && dT < UPPER_GUARD) state <= STATE_VALIDATE;
+								else state <= STATE_ARM;
+			end
+			STATE_VALIDATE	: begin
+								if(n_sop < N_SOP - SOP_COUNT_HALF_WINDOW || n_sop > N_SOP + SOP_COUNT_HALF_WINDOW) state <= STATE_WAIT;
+								else if(count_unlock >= N_UNLOCK) 		state <= STATE_UNCLOCK;
+								else if(count_lock >= N_LOCK) 			state <= STATE_LOCKED;
+								else state <= STATE_VALIDATE;
+			end
+			STATE_LOCKED	: begin
+								if(n_sop < N_SOP - SOP_COUNT_HALF_WINDOW || n_sop > N_SOP + SOP_COUNT_HALF_WINDOW) state <= STATE_WAIT;
+								else if(count_unlock >= N_UNLOCK) 		state <= STATE_UNCLOCK;
+								else 									state <= STATE_LOCKED;
+			end
+			STATE_UNCLOCK	: begin
+								state <= STATE_ARM;
+			end
+			default: begin
+				state <= STATE_WAIT;
+			end
+		endcase
+	end
+end
 
-                    // Проверка "время прошло мимо guard_until" через круговую разность
-                    if (isop && (circ_delta_fx(counter, guard_until) >= 0)) begin
-                        prev_sop_time <= last_sop_time;
-                        last_sop_time <= counter;
+always @(posedge clk) begin
+	if(rst)
+		counter <= '0;
+	else
+		counter <= counter + 1'd1;
+end
 
-                        // Период между двумя первыми ударами
-                        
-                        dT = circ_delta_fx(last_sop_time, prev_sop_time);
 
-                        if ((dT >= $signed(SZ_FRAME[W:0]) - PHASE_WIN_S) &&
-                            (dT <= $signed(SZ_FRAME[W:0]) + PHASE_WIN_S)) begin
-                            next_valid_time <= last_sop_time + SZ_FRAME[W-1:0];
-                            lock_cnt        <= 8'd1;
-                            unlock_cnt      <= 8'd0;
-                            osop_pulse      <= 1'b1; // второй валидный удар
-                            state_n         <= S_ACQUIRE;
-                        end else begin
-                            // Период не сошёлся - подождём следующей пары
-                            guard_until <= counter + GUARD_TICKS[W-1:0];
-                        end
-                    end
+assign secong_logic = sop_count_lower_gb > sop_count_upper_gb;
 
-                    // Окно по n_sps уехало - сброс
-                    if ((n_sps <  N_SOP - SOP_COUNT_HALF_WINDOW) ||
-                        (n_sps >  N_SOP + SOP_COUNT_HALF_WINDOW)) begin
-                        state_n <= S_IDLE;
-                    end
-                end
+always @(posedge clk) begin
+	if(rst) begin
+		dT 				<= '0;
+		previos_sop		<= '0; 
+		now_sop			<= '0;
+		next_sop		<= '0;
+		count_lock  	<= '0;
+		count_unlock 	<= '0;
+		after_gb		<= 1'd0;
+		sop_count_lower_gb	<= '0;
+		sop_count_upper_gb	<= '0;
+		sop_count_end	<= '0;
+		sop_insert		<= '0;
+		guard_count		<= '0;
+	end
+	else if(state == STATE_WAIT) begin
+		dT 				<= '0;
+		previos_sop		<= '0; 
+		now_sop			<= '0;
+		next_sop		<= '0;
+		count_lock  	<= '0;
+		count_unlock 	<= '0;
+		after_gb		<= 1'd0;
+		sop_count_lower_gb	<= '0;
+		sop_count_upper_gb	<= '0;
+		sop_count_end	<= '0;
+		sop_insert		<= '0;
+		guard_count		<= '0;
+	end
+	else if(state == STATE_ARM) begin
+		count_lock 			<= '0;
+		count_unlock 			<= '0;
+		after_gb				<= 1'd0;
 
-                // ---------- ACQUIRE ----------
-                // Добираем уверенность попаданиями в фазовое окно
-                S_ACQUIRE: begin
-                    state_n <= S_ACQUIRE;
+		if(isop) begin
+			previos_sop 		<= now_sop;
+			now_sop				<= counter;
+			next_sop			<= counter + SZ_FRAME;
+			guard_count 		<= counter + GUARD_TICKS;
+			sop_count_lower_gb 	<= counter + LOWER_GUARD;
+			sop_count_upper_gb 	<= counter + UPPER_GUARD;
+		end
 
-                    // 1) Реальный SOP в окне
-                    if (isop && in_window_wrap_fx(counter, next_valid_time, PHASE_WIN_S)) begin
-                        osop_pulse      <= 1'b1;
-                        last_sop_time   <= counter;
-                        next_valid_time <= counter + SZ_FRAME[W-1:0];  // мягкая подстройка
-                        lock_cnt        <= sat_inc(lock_cnt);
-                        unlock_cnt      <= 8'd0;
-                    end
-
-                    // 2) Окно прошло без удара - предсказанный osop
-                    
-                    d_acq = circ_delta_fx(counter, next_valid_time);
-                    if (!in_window_wrap_fx(counter, next_valid_time, PHASE_WIN_S) &&
-                         (d_acq > PHASE_WIN_S)) begin
-                        osop_pulse      <= 1'b1;
-                        next_valid_time <= next_valid_time + SZ_FRAME[W-1:0];
-                        unlock_cnt      <= sat_inc(unlock_cnt);
-                    end
-
-                    // Переходы
-                    if (lock_cnt   >= N_LOCK[7:0])        state_n <= S_LOCK;
-                    else if (unlock_cnt >= N_UNLOCK[7:0]) state_n <= S_IDLE;
-
-                    // Гейт по n_sps - сброс
-                    if ((n_sps <  N_SOP - SOP_COUNT_HALF_WINDOW) ||
-                        (n_sps >  N_SOP + SOP_COUNT_HALF_WINDOW)) begin
-                        state_n <= S_IDLE;
-                    end
-                end
-
-                // ---------- LOCK ----------
-                S_LOCK: begin
-                    state_n <= S_LOCK;
-
-                    // hit внутри окна - выдаём osop и обновляем фазу
-                    if (isop && in_window_wrap_fx(counter, next_valid_time, PHASE_WIN_S)) begin
-                        osop_pulse      <= 1'b1;
-                        last_sop_time   <= counter;
-                        next_valid_time <= counter + SZ_FRAME[W-1:0];
-                        unlock_cnt      <= 8'd0;
-                    end
-
-                    // miss - предсказанный osop и продвижение фазы
-                    
-                    d_lock = circ_delta_fx(counter, next_valid_time);
-                    if (!in_window_wrap_fx(counter, next_valid_time, PHASE_WIN_S) &&
-                         (d_lock > PHASE_WIN_S)) begin
-                        osop_pulse      <= 1'b1;
-                        next_valid_time <= next_valid_time + SZ_FRAME[W-1:0];
-                        unlock_cnt      <= sat_inc(unlock_cnt);
-                    end
-
-                    // Потеря захвата или уход по n_sps - сброс
-                    if ((unlock_cnt >= N_UNLOCK[7:0]) ||
-                        (n_sps <  N_SOP - SOP_COUNT_HALF_WINDOW) ||
-                        (n_sps >  N_SOP + SOP_COUNT_HALF_WINDOW)) begin
-                        state_n <= S_IDLE;
-                    end
-                end
-
-                default: state_n <= S_IDLE;
-            endcase
-        end
-    end
+		if(previos_sop > now_sop)	
+			dT	<= now_sop + DATA_SHIFT - previos_sop ;
+		else
+			dT	<= now_sop  - previos_sop ;
+	end
+	else if(state == STATE_VALIDATE) begin
+		dT <= '0;
+		if(after_gb) begin
+			if(isop) begin
+				if(counter > sop_count_lower_gb && counter < sop_count_upper_gb && ~secong_logic) begin
+					next_sop				<= counter + SZ_FRAME;
+					guard_count 			<= counter + GUARD_TICKS;
+					sop_count_lower_gb 		<= counter + LOWER_GUARD;
+					sop_count_upper_gb 		<= counter + UPPER_GUARD;
+					sop_count_end 			<= sop_count_upper_gb;
+					count_lock 				<= count_lock + 1'd1;
+					count_unlock 			<= '0;
+					sop_insert				<= 1'd1;
+					after_gb				<= 1'd0;
+				end 
+				else if((counter < sop_count_lower_gb || counter > sop_count_upper_gb) && secong_logic) begin
+					next_sop				<= counter + SZ_FRAME;
+					guard_count 			<= counter + GUARD_TICKS;
+					sop_count_lower_gb 		<= counter + LOWER_GUARD;
+					sop_count_upper_gb 		<= counter + UPPER_GUARD;
+					sop_count_end 			<= sop_count_upper_gb;
+					count_lock 				<= count_lock + 1'd1;
+					count_unlock 			<= '0;
+					sop_insert 				<= 1'd1;
+					after_gb				<= 1'd0;
+				end
+			end
+			if(counter == sop_count_upper_gb && ~sop_insert) begin
+					next_sop			<= next_sop + SZ_FRAME;
+					guard_count 		<= next_sop + GUARD_TICKS;
+					sop_count_lower_gb 	<= next_sop + LOWER_GUARD;
+					sop_count_upper_gb 	<= next_sop + UPPER_GUARD;
+					sop_count_end 		<= next_sop + UPPER_GUARD;
+					count_lock 			<= '0;
+					count_unlock 		<= count_unlock + 1'd1;
+					sop_insert 			<= 1'd0;
+					after_gb			<= 1'd0;
+			end
+		end
+		if(counter == guard_count) begin
+			sop_insert 			<= 1'd0;
+			after_gb			<= 1'd1;
+		end
+	end
+	else if(state == STATE_LOCKED) begin
+		dT <= '0;
+		if(after_gb) begin
+			if(isop) begin
+				if(counter > sop_count_lower_gb && counter < sop_count_upper_gb && ~secong_logic) begin
+					next_sop				<= counter + SZ_FRAME;
+					guard_count 			<= counter + GUARD_TICKS;
+					sop_count_lower_gb 		<= counter + LOWER_GUARD;
+					sop_count_upper_gb 		<= counter + UPPER_GUARD;
+					sop_count_end 			<= sop_count_upper_gb;
+					count_unlock 			<= '0;
+					sop_insert				<= 1'd1;
+					after_gb				<= 1'd0;
+				end 
+				else if((counter < sop_count_lower_gb || counter > sop_count_upper_gb) && secong_logic) begin
+					next_sop				<= counter + SZ_FRAME;
+					guard_count 			<= counter + GUARD_TICKS;
+					sop_count_lower_gb 		<= counter + LOWER_GUARD;
+					sop_count_upper_gb 		<= counter + UPPER_GUARD;
+					sop_count_end 			<= sop_count_upper_gb;
+					count_unlock 			<= '0;
+					sop_insert 				<= 1'd1;
+					after_gb				<= 1'd0;
+				end
+			end
+			if(counter == sop_count_upper_gb && ~sop_insert) begin
+					next_sop			<= next_sop + SZ_FRAME;
+					guard_count 		<= next_sop + GUARD_TICKS;
+					sop_count_lower_gb 	<= next_sop + LOWER_GUARD;
+					sop_count_upper_gb 	<= next_sop + UPPER_GUARD;
+					sop_count_end 		<= next_sop + UPPER_GUARD;
+					count_unlock 		<= count_unlock + 1'd1;
+					count_lock 			<= '0;
+					sop_insert 			<= 1'd0;
+					after_gb			<= 1'd0;
+			end
+		end
+		if(counter == guard_count) begin
+			sop_insert 			<= 1'd0;
+			after_gb			<= 1'd1;
+		end
+	end
+	else if(state == STATE_UNCLOCK) begin
+		dT 					<= '0;
+		previos_sop			<= '0; 
+		now_sop				<= '0;
+		next_sop			<= '0;
+		count_lock  		<= '0;
+		count_unlock 		<= '0;
+		after_gb			<= 1'd0;
+		sop_count_lower_gb	<= '0;
+		sop_count_upper_gb	<= '0;
+		sop_count_end		<= '0;
+		sop_insert			<= '0;
+		guard_count			<= '0;
+	end
+end
 
 endmodule

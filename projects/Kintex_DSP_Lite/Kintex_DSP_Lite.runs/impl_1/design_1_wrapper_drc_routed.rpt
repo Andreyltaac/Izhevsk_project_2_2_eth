@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Dec  2 11:15:07 2025
+| Date         : Sat Dec  6 18:14:04 2025
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 143
+             Violations found: 145
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 2          |
-| DPIP-1    | Warning  | Input pipelining                                    | 34         |
+| DPIP-1    | Warning  | Input pipelining                                    | 35         |
 | DPOP-1    | Warning  | PREG Output pipelining                              | 10         |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 12         |
 | DPREG-4   | Warning  | DSP48E1_PregDynOpmodeZmuxP:                         | 4          |
@@ -40,7 +40,7 @@ Table of Contents
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
 | RTSTAT-10 | Warning  | No routable loads                                   | 1          |
-| REQP-24   | Advisory | enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND     | 3          |
+| REQP-24   | Advisory | enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND     | 4          |
 | REQP-31   | Advisory | enum_PREG_0_connects_CEP_GND                        | 4          |
 | REQP-165  | Advisory | writefirst                                          | 6          |
 | REQP-181  | Advisory | writefirst                                          | 3          |
@@ -237,6 +237,11 @@ DSP design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_i_02
 Related violations: <none>
 
 DPIP-1#34 Warning
+Input pipelining  
+DSP design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_q_02 input design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_q_02/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#35 Warning
 Input pipelining  
 DSP design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_q_02__0 input design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_q_02__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
@@ -519,7 +524,7 @@ Related violations: <none>
 
 REQP-1839#6 Warning
 RAMB36 async control check  
-The RAMB36E1 design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst/i_mem/m_ram_reg has an input control pin design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst/i_mem/m_ram_reg/ENARDEN (net: design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst/i_mem/m_ram_reg_ENARDEN_cooolgate_en_sig_254) which is driven by a register (design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst/i_rx/i_up_adc_common/i_core_rst_reg/rst_sync_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst/i_mem/m_ram_reg has an input control pin design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst/i_mem/m_ram_reg/ENARDEN (net: design_1_i/AD9361_CTRL/AD9361_1/dac_fifo_ad9361_1/inst/i_mem/m_ram_reg_ENARDEN_cooolgate_en_sig_160) which is driven by a register (design_1_i/AD9361_CTRL/AD9361_1/axi_ad9361_1/inst/i_rx/i_up_adc_common/i_core_rst_reg/rst_sync_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#7 Warning
@@ -619,7 +624,7 @@ Related violations: <none>
 
 REQP-1840#6 Warning
 RAMB18 async control check  
-The RAMB18E1 design_1_i/AD9364/dac_fifo_ad9364_0/inst/i_mem/m_ram_reg has an input control pin design_1_i/AD9364/dac_fifo_ad9364_0/inst/i_mem/m_ram_reg/ENARDEN (net: design_1_i/AD9364/dac_fifo_ad9364_0/inst/i_mem/m_ram_reg_ENARDEN_cooolgate_en_sig_253) which is driven by a register (design_1_i/AD9364/axi_ad9364/inst/i_rx/i_up_adc_common/i_core_rst_reg/rst_sync_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 design_1_i/AD9364/dac_fifo_ad9364_0/inst/i_mem/m_ram_reg has an input control pin design_1_i/AD9364/dac_fifo_ad9364_0/inst/i_mem/m_ram_reg/ENARDEN (net: design_1_i/AD9364/dac_fifo_ad9364_0/inst/i_mem/m_ram_reg_ENARDEN_cooolgate_en_sig_159) which is driven by a register (design_1_i/AD9364/axi_ad9364/inst/i_rx/i_up_adc_common/i_core_rst_reg/rst_sync_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#7 Warning
@@ -708,6 +713,11 @@ design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_i_02__0:
 Related violations: <none>
 
 REQP-24#3 Advisory
+enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND  
+design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_q_02: When DSP48E1 attribute BREG is set to 0, the CEB1 and CEB2 pins should be tied to GND to save power.
+Related violations: <none>
+
+REQP-24#4 Advisory
 enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND  
 design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_mx_q_02__0: When DSP48E1 attribute BREG is set to 0, the CEB1 and CEB2 pins should be tied to GND to save power.
 Related violations: <none>

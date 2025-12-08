@@ -10,95 +10,48 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="32768000fs"></ZoomEndTime>
-      <Cursor1Time time="922000fs"></Cursor1Time>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="786000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="319"></NameColumnWidth>
-      <ValueColumnWidth column_width="65"></ValueColumnWidth>
+      <NameColumnWidth column_width="314"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="4" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="design_1_i/fir_compiler_0_m_axis_data_tdata" type="array">
+   <wvobject fp_name="u_ila_0_thr_mode" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/fir_compiler_0_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="ObjectShortName">fir_compiler_0_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/fir_compiler_2_m_axis_data_tdata" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/fir_compiler_2_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="ObjectShortName">fir_compiler_2_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/fir_compiler_1_m_axis_data_tdata" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/fir_compiler_1_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="ObjectShortName">fir_compiler_1_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeMin">3899</obj_property>
-      <obj_property name="AnalogYRRangeMax">30515</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/fir_compiler_3_m_axis_data_tdata" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/fir_compiler_3_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="ObjectShortName">fir_compiler_3_m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/tvalid_fir_gen_0_odata_i" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_0_odata_i[15:0]</obj_property>
-      <obj_property name="ObjectShortName">tvalid_fir_gen_0_odata_i[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/tvalid_fir_gen_0_odata_q" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_0_odata_q[15:0]</obj_property>
-      <obj_property name="ObjectShortName">tvalid_fir_gen_0_odata_q[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/tvalid_fir_gen_0_tvalid" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_0_tvalid</obj_property>
-      <obj_property name="ObjectShortName">tvalid_fir_gen_0_tvalid</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_thr_mode</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_thr_mode</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_1_i/tvalid_fir_gen_1_tvalid" type="logic">
+   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/tvalid_fir_gen_1_tvalid</obj_property>
-      <obj_property name="ObjectShortName">tvalid_fir_gen_1_tvalid</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="user_probe_I" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">user_probe_I[15:0]</obj_property>
-      <obj_property name="ObjectShortName">user_probe_I[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[23:0]</obj_property>
+      <obj_property name="ObjectShortName">local_mean[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeMin">34200</obj_property>
-      <obj_property name="AnalogYRRangeMax">35477</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[17:0]</obj_property>
+      <obj_property name="ObjectShortName">rslos_reg[0][23]_0[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[17:0]</obj_property>
+      <obj_property name="ObjectShortName">data_abs_mx[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
    </wvobject>
 </wave_config>

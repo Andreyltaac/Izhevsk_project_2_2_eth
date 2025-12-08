@@ -9,7 +9,7 @@ module only_rx (
 	input 			[3:0]										ss_in,
 	input 			[2:0]										m_in,
 	input           [2:0]                                       bw_in,
-	input			[23:0]										thr_lvl,
+	input			[31:0]										t_sync_ctrl,
 	input			[1:0]										frsync_ctrl,
 
 	input			[15:0]										rx_i_axis_tdata,
@@ -33,7 +33,7 @@ module only_rx (
 	output			[31:0]			                            corr_sig_i,
     output			[31:0]			                            corr_sig_q,
 
-	output			[23:0]										thr_lvl_auto,
+	output			[9:0]										thr_lvl_auto,
 	output			[14:0]										N_sop_detect,
 	output			[23:0]										N_err,
 	output			[7:0]										m_axis_tdata,
@@ -66,7 +66,7 @@ RX_phy_sub(
 		.m_in				(m_in),
 	    .fr_sync_ctrl		(frsync_ctrl),
 		.bw_in				(bw_in),
-		.thr_lvl			(thr_lvl),
+		.t_sync_ctrl		(t_sync_ctrl),
 		.addr_shft			(addr_shft),
 		.n_sps				(N_sop_detect),
 		.m_ax_obit_soft		(phy_fifo_dat),

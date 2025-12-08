@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7k325t_0" gui_info="dashboard1=dashboard_1[xc7k325t_0/XADC=XADC_PLOT_1;],dashboard2=hw_ila_1[xc7k325t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k325t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k325t_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7k325t_0/hw_ila_1/Status=ILA_STATUS_1;xc7k325t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
+  <device name="xc7k325t_0" gui_info="dashboard1=dashboard_1[xc7k325t_0/XADC=XADC_PLOT_1;]"/>
   <ObjectList object_type="hw_cfgmem" gui_info="">
     <Object name="" gui_info="">
       <Properties Property="PROGRAM.ADDRESS_RANGE" value="use_file"/>
@@ -70,6 +70,7 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.CAPTURE_MODE" value="ALWAYS"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="2047"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="10"/>
@@ -106,6 +107,8 @@
     <Object name="design_1_i/clk_axi_reset_n" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/isop" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[23:0]" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[17:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_i[11:0]" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/modem_axi_lite_0_rst_rx_out[31:0]" gui_info="hw_vios/hw_vio_1=16"/>
     <Object name="design_1_i/modem_axi_lite_0_trh_lvl_out[31:0]" gui_info="hw_vios/hw_vio_1=17"/>
@@ -8093,7 +8096,7 @@
         <net name="design_1_i/dout_ovf_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -8129,7 +8132,7 @@
         <net name="design_1_i/fir_compiler_0_m_axis_data_tdata[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -8165,7 +8168,7 @@
         <net name="design_1_i/fir_compiler_1_m_axis_data_tdata[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -8201,7 +8204,7 @@
         <net name="design_1_i/fir_compiler_2_m_axis_data_tdata[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -8642,6 +8645,126 @@
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_sub/count_delay[0]"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;u50"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[23:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;u50"/>
+        <Option Id="WAVEFORM_STYLE" value="Analog"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[23]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[22]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[21]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[20]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[19]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[18]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[17]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[16]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[15]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[14]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[13]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[12]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[11]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[10]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[9]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[8]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[7]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[6]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[5]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[4]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[3]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[2]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[1]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq18&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq18&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[17:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq18&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Analog"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[17]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[16]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[15]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[14]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[13]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[12]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[11]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[10]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[9]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[8]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[7]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[6]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[5]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[4]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[3]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[2]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[1]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq18&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq18&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[17:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq18&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Analog"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[17]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[16]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[15]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[14]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[13]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[12]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[11]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[10]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[9]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[8]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[7]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[6]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[5]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[4]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[3]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[2]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[1]"/>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_abs_mx[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
@@ -8704,6 +8827,27 @@
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_q[2]"/>
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_q[1]"/>
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/odata_q[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/thr_mode"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -9736,7 +9880,7 @@
         <net name="design_1_i/spi_ad9364_SPI_CS"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -9772,7 +9916,7 @@
         <net name="design_1_i/tvalid_fir_gen_0_odata_i[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -10837,6 +10981,27 @@
       </probeOptions>
       <nets>
         <net name="u_ila_0_sync_ireset"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_thr_mode"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

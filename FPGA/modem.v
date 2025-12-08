@@ -75,12 +75,12 @@ module modem(
 wire [3:0]  ctrl_ss;
 wire [2:0]  ctrl_mod;
 wire [2:0]  ctrl_bw;
-wire [23:0] ctrl_trh_lvl;
+wire [31:0] ctrl_trh_lvl;
 wire [1:0]  ctrl_frsync;
 wire [13:0] ctrl_corr_addrshift;
 wire [23:0] delta_ph;
 wire [17:0] kb_ps;
-wire [23:0] thr_lvl_auto;
+wire [9:0] thr_lvl_auto;
 wire [23:0] N_err;
 wire [31:0] corr_sig_i;
 wire [31:0] corr_sig_q;
@@ -129,6 +129,11 @@ only_tx modem_tx(
     .tx_q_axis_tready ()
 );
 
+wire        ctrl_trh_mode;
+wire        ctrl_trh_auto;
+wire [31:0] t_sync_ctrl;
+
+assign t_sync_ctrl = {{20{0}},ctrl_trh_mode,ctrl_trh_auto,ctrl_trh_lvl[9:0]};
 
 only_rx modem_rx (
     // System clocks and reset
@@ -141,7 +146,7 @@ only_rx modem_rx (
     .ss_in            (ctrl_ss),
     .m_in             (ctrl_mod),
     .bw_in            (ctrl_bw),
-    .thr_lvl          (ctrl_trh_lvl),
+    .t_sync_ctrl      (t_sync_ctrl),
     .frsync_ctrl      (ctrl_frsync),
     .addr_shft        (ctrl_corr_addrshift),
 
@@ -230,11 +235,15 @@ modem_axi_lite_1 #(
     .corr_addrshift_out_valid (),
     .rezerv_w_out             (),
     .rezerv_w_out_valid       (),
+	.w_reg1_out               (ctrl_trh_auto), // 1 -- thr_auto,   0-- thr_manual
+	.w_reg2_out               (ctrl_trh_mode), // 0 -- thr_manual, 1-- thr_mean
+	
+	
     
     // User ports (status inputs)
     .speedtest_in   (kb_ps),
     .nsop_detect_in (N_sop_detect),
-    .thr_lvlauto_in (thr_lvl_auto),
+    .thr_lvlauto_in ({{22{0}},thr_lvl_auto}),
     .delta_phi_in   ({{8{delta_ph[23]}},delta_ph[23:0]}),
     .n_err_in       (N_err),
     .rezerv_r_in    ({{30{0}},ctrl_switch_tx_ad,ctrl_validate_on}),

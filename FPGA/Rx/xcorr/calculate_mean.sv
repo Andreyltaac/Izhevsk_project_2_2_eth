@@ -6,9 +6,9 @@ module calculate_mean #(
 (
 	input 								clk,
 	input								rst,
-	input			[width_Dat-1:0]		data_in,
+    input			[width_Dat-1:0]	    data_in,
 	input			[6:0]				koef,
-	output	logic 	[width_Dat-1:0]		Calc_mean,
+    output	logic 	[width_Dat-1:0]	    Calc_mean,
 	output	logic 	[width_Dat-1:0]		data_out
 );
 

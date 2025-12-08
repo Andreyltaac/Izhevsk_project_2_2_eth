@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><LayoutPersistence>
-    <DockingManager activeFrame="ILA_WAVE_1" frameState="6" version="7">
+    <DockingManager activeFrame="ILA_WAVE_1" frameState="0" version="7">
         <Bounds height="1056" width="1936" x="0" y="10"/>
         <DockContext autohideHeight="200" autohideWidth="200" available="1" canMode="15" currentDockSide="4" currentMode="4" dockId="33420" dockedHeight="166" dockedWidth="798" initAutohideHeight="200" initAutohideWidth="200" initIndex="0" initMode="4" initPosition="0" initSide="4" key="VIO_PROBES_9">
             <UndockedBounds height="707" width="13" x="464" y="185"/>

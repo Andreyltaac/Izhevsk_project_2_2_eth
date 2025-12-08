@@ -1,40 +1,35 @@
-module xcorr_main_lite #(
-parameter premb_addr = "D:\\FPGA\\xcorr\\sig_pr.txt"
-)(
-	input 						clk_l,
-	input						clk,
-	input 						rst,
-	input signed	[11:0]		data_i,
-	input signed	[11:0]		data_q,
-	input 			[2:0]		index_bw,
-	input						ival,
-	input			[23:0]		thr_lvl,
-	input			[13:0]		addr_shft,
+module xcorr_main_lite(
+	input 						   clk_l,
+	input						   clk,
+	input 						   rst,
+	input signed	    [11:0]	   data_i,
+	input signed	    [11:0]	   data_q,
+	input 			    [2:0]	   index_bw,
+	input			    		   ival,
+	input			    [23:0]	   thr_lvl,
+	input                          thr_mode,
+	input			    [13:0]	   addr_shft,
 
-	(* mark_debug = "true" *)output logic signed [11:0]		odata_i,
-	(* mark_debug = "true" *)output logic signed [11:0]		odata_q,
-
-	output logic		[17:0]		peak_i,
-	output logic		[17:0]		peak_q,
-
-	output logic					osop,
-	output logic					oval,
-	output logic					corr_dtct
+	output logic signed [11:0]	   odata_i,
+	output logic signed [11:0]	   odata_q,
+								      
+	output logic		[17:0]	   peak_i,
+	output logic		[17:0]	   peak_q,
+								      
+	output logic				   osop,
+	output logic				   oval,
+	output logic				   corr_dtct
 );
 
-localparam wind_mean_sz = 256;
+localparam wind_mean_sz = 64;
 
-// `include "../../input_data/preamb_corr.svh";
-
-// reg [23:0]	sig_pr [2047:0];
 reg [10:0]	count_pr_0, count_pr_1;
 reg	[10:0]	count_val;
 reg			val_0, val_1;
-wire				val_sig1, val_sig2, eop_sig1, eop_sig2;
+wire		val_sig1, val_sig2, eop_sig1, eop_sig2;
 reg			index_upsamp,  val_sig, index_ifft;
 
 initial begin
-	// $readmemb(premb_addr,sig_pr);
 	index_upsamp	<= 0;
 	index_ifft		<= 0;
 end
@@ -77,7 +72,10 @@ wire				val_ifft_0_ds, val_ifft_1_ds;
 reg					ival_ifft_0, ival_ifft_1, val_fft_01,val_fft_02,val_fft_03, val_fft_11;
 
 
+logic [23:0] thr_lvl_mean;
+logic [23:0] thr_lvl_res;
 
+assign thr_lvl_res = (thr_mode == 1) ? thr_lvl_mean : thr_lvl;
 
 
 always @(posedge clk_l)begin
@@ -202,18 +200,6 @@ end
 
 wire [23:0]		preamb_ram;
 
-/* ram_preamb#(
-	.DEPTH_LOG2	(11),
-	.WORD_W    	(24),
-	.NUM_BANDS 	(5)
-)
-ram_preamb_sub
-(
-	.clk		(clk),
-	.addr		(count_pr_0),
-	.band		(band_in),
-	.odat		(preamb_ram)
-); */
 
 
 prb_tsync_ram#(
@@ -360,7 +346,7 @@ always @(posedge clk_l) begin
 end
 
 
-wire [23:0]		thr_lvl_mean;
+
 
 int i;
 
@@ -381,6 +367,8 @@ always @(posedge clk_l) begin
     end
 end
 
+
+
 calculate_mean #(
 	.width_Dat	(24),
 	.Wind_size	(wind_mean_sz)
@@ -391,10 +379,12 @@ calculate_mean_sub
 	.clk		(clk_l),
 	.rst		(rst),	
 	.data_in	(data_abs_mx),
-	.koef		(thr_lvl),
+	.koef		(thr_lvl >>> 3),
 	.data_out	(data_abs_mx_thr),
 	.Calc_mean	(thr_lvl_mean)
 );
+
+
 
 find_max#(128, 24)
 find_max_sub(
@@ -403,7 +393,7 @@ find_max_sub(
 	.corr_in	(data_abs_mx_thr),
 	.data_i		(data_ifft_i_reg_1_rsl[wind_mean_sz/2-1]),
 	.data_q		(data_ifft_q_reg_1_rsl[wind_mean_sz/2-1]),
-	.thr_lvl	(thr_lvl_mean),
+	.thr_lvl	(thr_lvl_res),
 	.odata_i	(peak_i),
 	.odata_q	(peak_q),
 	.osop		(osop)

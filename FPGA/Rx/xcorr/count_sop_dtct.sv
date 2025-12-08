@@ -1,11 +1,14 @@
-module count_sop_dtct(
-	input					clk,
-	input					rst,
-	input					sop,
-
-input			[23:0]	thr_lvl,
-output logic	[14:0]	n_sps,
-output logic	[23:0]	thr_lvl_auto
+module count_sop_dtct
+#(
+parameter plvl_W = 10
+)(
+ input					        clk,
+ input					        rst,
+ input					        sop,
+ 
+ input			[plvl_W-1:0]	thr_lvl,
+ output logic	[14:0]	        n_sps,
+ output logic	[plvl_W-1:0]	thr_lvl_auto
 );
 
 
@@ -14,16 +17,16 @@ reg [14:0] 		 n_sp_loc;
 reg [14:0] 		 n_sps_true_loc;
 
 reg	[15:0]	count_samp;
-reg [23:0]	local_thr_lvl, local_thr_lvl_1;
+reg [plvl_W-1:0]	local_thr_lvl, local_thr_lvl_1;
 
 
 localparam  num_samp = 52800;
 localparam  n_sop_opor = 20;
 localparam  smplrt = num_samp*n_sop_opor;
 
-localparam	step_1	= 15;
+localparam	step_1	= 10;
 localparam  step_2	= 5;
-localparam	step_3	= 2;
+localparam	step_3	= 1;
 
 localparam	border_1 = 10;
 localparam	border_2 = 5;

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Dec  2 10:41:14 2025
+//Date        : Sat Dec  6 17:36:06 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4602,8 +4602,8 @@ module design_1
   wire [7:0]eth_pump_0_m_axis_tdata_modem;
   wire eth_pump_0_m_axis_tvalid_modem;
   wire eth_pump_0_m_status_overflow;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_0_m_axis_data_tdata;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_1_m_axis_data_tdata;
+  wire [15:0]fir_compiler_0_m_axis_data_tdata;
+  wire [15:0]fir_compiler_1_m_axis_data_tdata;
   wire fir_compiler_1_m_axis_data_tvalid;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_2_m_axis_data_tdata;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]fir_compiler_3_m_axis_data_tdata;
@@ -4630,10 +4630,10 @@ module design_1
   wire spi_miso_0_1;
   wire spi_miso_1_1;
   wire sys_200m_clk;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]tvalid_fir_gen_0_odata_i;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]tvalid_fir_gen_0_odata_q;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire tvalid_fir_gen_0_tvalid;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire tvalid_fir_gen_1_tvalid;
+  wire [15:0]tvalid_fir_gen_0_odata_i;
+  wire [15:0]tvalid_fir_gen_0_odata_q;
+  wire tvalid_fir_gen_0_tvalid;
+  wire tvalid_fir_gen_1_tvalid;
   wire [0:0]up_txnrx_1;
   wire util_clkdiv_0_clk_out;
   wire [7:0]xlconcat_0_dout;

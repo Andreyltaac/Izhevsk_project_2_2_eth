@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Dec  2 10:41:42 2025
-# Process ID: 11396
+# Start of session at: Sat Dec  6 17:36:34 2025
+# Process ID: 4804
 # Current directory: F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/design_1_wrapper.vds
@@ -104,26 +104,24 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/ip_repo/IP_sync_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library'.
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/xilinx/util_clkdiv
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 395.586 ; gain = 6.977
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 396.082 ; gain = 7.785
 Command: synth_design -top design_1_wrapper -part xc7k325tffg676-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Device 21-403] Loading part xc7k325tffg676-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10096 
+INFO: Helper process launched with PID 13196 
 WARNING: [Synth 8-6901] identifier 'par2ser_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/DeFEC.sv:261]
 WARNING: [Synth 8-992] pack_sop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:334]
 WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:71]
 WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:290]
 WARNING: [Synth 8-6901] identifier 'GAP_trig' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:331]
-WARNING: [Synth 8-992] fft_subc_osop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:285]
+WARNING: [Synth 8-992] fft_subc_osop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:273]
 WARNING: [Synth 8-992] now_read is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/data_upsampler.sv:99]
 WARNING: [Synth 8-992] buff_count_r is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/data_upsampler.sv:100]
 WARNING: [Synth 8-6901] identifier 'index_M_latency' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:187]
 WARNING: [Synth 8-6901] identifier 'index_SS_latency' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:188]
-WARNING: [Synth 8-6901] identifier 'count_fr' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/filter_sop.sv:28]
-WARNING: [Synth 8-6901] identifier 'reg_sop_val' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/filter_sop.sv:30]
 WARNING: [Synth 8-992] Phi_wire is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:57]
 WARNING: [Synth 8-6901] identifier 'm_dout_phase' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:27]
 WARNING: [Synth 8-6901] identifier 'local_sop' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:28]
@@ -132,6 +130,7 @@ WARNING: [Synth 8-6901] identifier 'odata_rot' is used before its declaration [F
 WARNING: [Synth 8-6901] identifier 'odata_fifo_i' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:30]
 WARNING: [Synth 8-6901] identifier 'odata_rot' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:31]
 WARNING: [Synth 8-6901] identifier 'odata_fifo_q' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:31]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:136]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_async_fifo with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_async_fifo.v:152]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_async_fifo with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_async_fifo.v:153]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_async_fifo with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_async_fifo.v:155]
@@ -141,7 +140,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo with fo
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_gmii_tx with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:93]
 WARNING: [Synth 8-2507] parameter declaration becomes local in lfsr with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/lfsr.v:355]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 922.375 ; gain = 199.594
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 921.598 ; gain = 200.969
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4091]
@@ -6204,19 +6203,16 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 	Parameter pBMAX bound to: 12 - type: integer 
 	Parameter pDAT_W bound to: 12 - type: integer 
 	Parameter pLLR_W bound to: 5 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:41]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:242]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:244]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:283]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:285]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:308]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:309]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:310]
-WARNING: [Synth 8-7023] instance 'control_sub' of module 'control' has 16 connections declared, but only 14 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:52]
-	Parameter premb_addr bound to: F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/preamb_corr_25mhz.txt - type: string 
-	Parameter wind_mean_sz bound to: 256 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:14]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:15]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:42]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:230]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:232]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:271]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:273]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:296]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:297]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:298]
+WARNING: [Synth 8-7023] instance 'control_sub' of module 'control' has 16 connections declared, but only 14 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:53]
+	Parameter wind_mean_sz bound to: 64 - type: integer 
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter BUFFER_DEPTH bound to: 2048 - type: integer 
 	Parameter SZ_Count bound to: 11 - type: integer 
@@ -6856,38 +6852,43 @@ INFO: [Synth 8-226] default block is never used [F:/Vivado/2019.1/data/ip/xpm/xp
 	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
 	Parameter RESET_VALUE bound to: 2 - type: integer 
 INFO: [Synth 8-4471] merging register 'gen_fwft.empty_fwft_fb_reg' into 'gen_fwft.empty_fwft_i_reg' [F:/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1292]
-WARNING: [Synth 8-689] width (164) of port connection 's_axis_tdata' does not match port width (40) of module 'axis_fifo_downsamp' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:310]
+WARNING: [Synth 8-689] width (164) of port connection 's_axis_tdata' does not match port width (40) of module 'axis_fifo_downsamp' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:296]
 	Parameter width_Dat bound to: 24 - type: integer 
-	Parameter Wind_size bound to: 256 - type: integer 
-	Parameter Sdvig bound to: 8 - type: integer 
-WARNING: [Synth 8-689] width (24) of port connection 'koef' does not match port width (7) of module 'calculate_mean' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:394]
+	Parameter Wind_size bound to: 64 - type: integer 
+	Parameter Sdvig bound to: 6 - type: integer 
+WARNING: [Synth 8-689] width (24) of port connection 'koef' does not match port width (7) of module 'calculate_mean' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:382]
 	Parameter wnd_size bound to: 128 - type: integer 
 	Parameter wdth_crr bound to: 24 - type: integer 
 	Parameter cnt_wdt bound to: 7 - type: integer 
 	Parameter rm_dep bound to: 14 - type: integer 
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ram_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:417]
-WARNING: [Synth 8-3848] Net oval in module/entity xcorr_main_lite does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:21]
+WARNING: [Synth 8-3848] Net oval in module/entity xcorr_main_lite does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv:20]
+WARNING: [Synth 8-689] width (458) of port connection 'thr_lvl' does not match port width (24) of module 'xcorr_main_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:139]
+	Parameter plvl_W bound to: 10 - type: integer 
 	Parameter num_samp bound to: 52800 - type: integer 
 	Parameter n_sop_opor bound to: 20 - type: integer 
 	Parameter smplrt bound to: 1056000 - type: integer 
-	Parameter step_1 bound to: 50 - type: integer 
-	Parameter step_2 bound to: 25 - type: integer 
-	Parameter step_3 bound to: 5 - type: integer 
+	Parameter step_1 bound to: 10 - type: integer 
+	Parameter step_2 bound to: 5 - type: integer 
+	Parameter step_3 bound to: 1 - type: integer 
 	Parameter border_1 bound to: 10 - type: integer 
 	Parameter border_2 bound to: 5 - type: integer 
 	Parameter border_3 bound to: 2 - type: integer 
-	Parameter N_symb bound to: 50 - type: integer 
-	Parameter fftsize bound to: 1024 - type: integer 
-	Parameter cpsize bound to: 32 - type: integer 
-	Parameter N_spfr bound to: 1056 - type: integer 
-	Parameter L_frame bound to: 52800 - type: integer 
-	Parameter window_sop bound to: 20 - type: integer 
-	Parameter left_board bound to: 52779 - type: integer 
-	Parameter check_dat bound to: 20 - type: integer 
-	Parameter tshd_check_up bound to: 15 - type: integer 
-	Parameter tshd_check_dw bound to: 7 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/filter_sop.sv:38]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/filter_sop.sv:41]
+	Parameter W_COUNT bound to: 32 - type: integer 
+	Parameter SZ_FRAME bound to: 52800 - type: integer 
+	Parameter PHASE_WINDOW_TICKS bound to: 3 - type: integer 
+	Parameter N_SOP bound to: 20 - type: integer 
+	Parameter SOP_COUNT_HALF_WINDOW bound to: 2 - type: integer 
+	Parameter N_LOCK bound to: 10 - type: integer 
+	Parameter N_UNLOCK bound to: 5 - type: integer 
+	Parameter GUARD_TICKS bound to: 26400 - type: integer 
+	Parameter LOWER_GUARD bound to: 52797 - type: integer 
+	Parameter UPPER_GUARD bound to: 52803 - type: integer 
+	Parameter DATA_SHIFT bound to: 1024 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv:22]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv:23]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv:24]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv:35]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv:48]
 	Parameter pDAT_W bound to: 12 - type: integer 
 	Parameter pDAT_Num bound to: 1024 - type: integer 
 	Parameter pCP_Len bound to: 32 - type: integer 
@@ -6991,8 +6992,8 @@ INFO: [Synth 8-638] synthesizing module 'cordic_0' [f:/work/Izhevsk_project_2_2_
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'cordic_0' (468#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:72]
-WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:226]
-WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:227]
+WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:214]
+WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:215]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter fftsize bound to: 1024 - type: integer 
 	Parameter cpsize bound to: 32 - type: integer 
@@ -7002,7 +7003,7 @@ WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not mat
 	Parameter fft_depth bound to: 12 - type: integer 
 WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'xfft_time_freq' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:68]
 WARNING: [Synth 8-7023] instance 'xilinx_ifft_sub' of module 'xfft_time_freq' has 19 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:55]
-WARNING: [Synth 8-7023] instance 'fft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:288]
+WARNING: [Synth 8-7023] instance 'fft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:276]
 	Parameter maxWordOut bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter pream_size bound to: 390 - type: integer 
@@ -7012,7 +7013,7 @@ WARNING: [Synth 8-7023] instance 'fft_sub' of module 'ifft' has 13 connections d
 	Parameter cpsize bound to: 32 - type: integer 
 	Parameter size_sumb bound to: 1056 - type: integer 
 	Parameter sz_count bound to: 11 - type: integer 
-WARNING: [Synth 8-7023] instance 'descramb_subcarier_sub' of module 'scramb_subcarier' has 18 connections declared, but only 16 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:355]
+WARNING: [Synth 8-7023] instance 'descramb_subcarier_sub' of module 'scramb_subcarier' has 18 connections declared, but only 16 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:343]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter level_pilot bound to: 2000 - type: integer 
 	Parameter eq_precision bound to: 10 - type: integer 
@@ -7098,13 +7099,14 @@ INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhev
 	Parameter count_depth bound to: 3 - type: integer 
 	Parameter e_count bound to: 4'b0000 
 	Parameter s_count bound to: 5 - type: integer 
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:52]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'demapper'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:318]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fr_sync_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:217]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'interlayer_rmcp_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:251]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_index_symb_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:267]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fft_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:288]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'descramb_subcarier_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:355]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:53]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'demapper'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:306]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fr_sync_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:205]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xcorr_main_lite_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:130]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'interlayer_rmcp_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:239]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'control_index_symb_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:255]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fft_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:276]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'descramb_subcarier_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:343]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
@@ -8026,19 +8028,21 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhev
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 6 - type: integer 
 	Parameter NUM_REG bound to: 38 - type: integer 
-WARNING: [Synth 8-689] width (1) of port connection 'rst_rx_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:209]
-WARNING: [Synth 8-689] width (1) of port connection 'switchtx_ad_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:211]
-WARNING: [Synth 8-689] width (1) of port connection 'tx_rst_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:213]
-WARNING: [Synth 8-689] width (1) of port connection 'validate_on_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:215]
-WARNING: [Synth 8-689] width (1) of port connection 'data_off_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:217]
-WARNING: [Synth 8-689] width (24) of port connection 'trh_lvl_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:219]
-WARNING: [Synth 8-689] width (3) of port connection 'set_bw_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:221]
-WARNING: [Synth 8-689] width (3) of port connection 'modulation_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:223]
-WARNING: [Synth 8-689] width (4) of port connection 'spread_spectrum_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:225]
-WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:227]
-WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:229]
-WARNING: [Synth 8-689] width (962) of port connection 'rezerv_r_in' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:240]
-WARNING: [Synth 8-7023] instance 'axi_lite_1_inst' of module 'modem_axi_lite_1' has 81 connections declared, but only 53 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:207]
+WARNING: [Synth 8-689] width (1) of port connection 'rst_rx_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:214]
+WARNING: [Synth 8-689] width (1) of port connection 'switchtx_ad_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:216]
+WARNING: [Synth 8-689] width (1) of port connection 'tx_rst_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:218]
+WARNING: [Synth 8-689] width (1) of port connection 'validate_on_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:220]
+WARNING: [Synth 8-689] width (1) of port connection 'data_off_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:222]
+WARNING: [Synth 8-689] width (3) of port connection 'set_bw_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:226]
+WARNING: [Synth 8-689] width (3) of port connection 'modulation_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:228]
+WARNING: [Synth 8-689] width (4) of port connection 'spread_spectrum_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:230]
+WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:232]
+WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:234]
+WARNING: [Synth 8-689] width (1) of port connection 'w_reg1_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:238]
+WARNING: [Synth 8-689] width (1) of port connection 'w_reg2_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:239]
+WARNING: [Synth 8-689] width (714) of port connection 'thr_lvlauto_in' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:246]
+WARNING: [Synth 8-689] width (962) of port connection 'rezerv_r_in' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:249]
+WARNING: [Synth 8-7023] instance 'axi_lite_1_inst' of module 'modem_axi_lite_1' has 81 connections declared, but only 55 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:212]
 WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
 	Parameter EXPAND bound to: 64 - type: integer 
 	Parameter CLK_RATE bound to: 276480000 - type: integer 
@@ -8094,12 +8098,9 @@ WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42
 	Parameter CONST_WIDTH bound to: 16 - type: integer 
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5330]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_2'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5342]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_1'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5336]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_3'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5347]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'modem_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tvalid_fir_gen_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5398]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_3'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5347]
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
@@ -8218,7 +8219,7 @@ WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][5][0
 WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][6][0][pre_sign]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:06:21 ; elapsed = 00:06:28 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished RTL Elaboration : Time (s): cpu = 00:06:44 ; elapsed = 00:06:56 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8231,10 +8232,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:28 ; elapsed = 00:06:35 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:52 ; elapsed = 00:07:05 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:28 ; elapsed = 00:06:35 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:52 ; elapsed = 00:07:05 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 26127 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
@@ -8813,7 +8814,7 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.115 . Memory (MB): peak = 3278.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 3289.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1497 instances were transformed.
   BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instances
@@ -8831,9 +8832,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB18 => RAMB18E1: 6 instances
   SRL16 => SRL16E: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3278.027 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3289.414 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:08:05 ; elapsed = 00:08:11 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Constraint Validation : Time (s): cpu = 00:08:38 ; elapsed = 00:08:51 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -8841,7 +8842,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:08:05 ; elapsed = 00:08:11 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Loading Part and Timing Information : Time (s): cpu = 00:08:38 ; elapsed = 00:08:51 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -9974,7 +9975,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0/XEMA
 Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/\xpm_mem_gen.xpm_memory_inst_2 . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/\xpm_mem_gen.xpm_memory_inst_2 . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:08:08 ; elapsed = 00:08:14 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:08:42 ; elapsed = 00:08:55 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'up_dac_dds_scale_tc_2_reg[15:0]' into 'up_dac_dds_scale_tc_1_reg[15:0]' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/common/up_dac_channel.v:367]
@@ -10120,6 +10121,8 @@ INFO: [Synth 8-7031] Trying to map ROM "quarter_sin_table" into Block RAM due to
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__10'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__10'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized10'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv:163]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'filter_sop_new'
 WARNING: [Synth 8-3936] Found unconnected internal register 'fifo_i_reg[12]' and it is trimmed from '13' to '12' bits. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/submodule equalizer/sub_eq_1.sv:50]
 WARNING: [Synth 8-3936] Found unconnected internal register 'fifo_i_reg[11]' and it is trimmed from '13' to '12' bits. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/submodule equalizer/sub_eq_1.sv:50]
 WARNING: [Synth 8-3936] Found unconnected internal register 'fifo_i_reg[10]' and it is trimmed from '13' to '12' bits. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/submodule equalizer/sub_eq_1.sv:50]
@@ -10824,6 +10827,17 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state
             stage2_valid |                               11 |                               01
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized10'
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'filter_sop_new', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              STATE_WAIT |                              000 |                              000
+               STATE_ARM |                              001 |                              001
+          STATE_VALIDATE |                              010 |                              010
+            STATE_LOCKED |                              011 |                              011
+           STATE_UNCLOCK |                              100 |                              100
+---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -10877,8 +10891,12 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized12'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:07 ; elapsed = 00:09:16 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:45 ; elapsed = 00:10:06 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'design_1_i/fir_compiler_0/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[0].i_delay' (fir_compiler_v7_2_12_delay__parameterized4) to 'design_1_i/fir_compiler_0/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[1].i_delay'
+INFO: [Synth 8-223] decloning instance 'design_1_i/fir_compiler_0/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay' (fir_compiler_v7_2_12_delay__parameterized5) to 'design_1_i/fir_compiler_0/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay'
+INFO: [Synth 8-223] decloning instance 'design_1_i/fir_compiler_1/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[0].i_delay' (fir_compiler_v7_2_12_delay__parameterized4) to 'design_1_i/fir_compiler_1/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[1].i_delay'
+INFO: [Synth 8-223] decloning instance 'design_1_i/fir_compiler_1/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay' (fir_compiler_v7_2_12_delay__parameterized5) to 'design_1_i/fir_compiler_1/U0/i_synth/g_halfband_interpolation.i_halfband_interpolation/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay'
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -10922,22 +10940,21 @@ Report RTL Partitions:
 |30    |ifft__GC0                               |           1|       450|
 |31    |TX_phy__GC0                             |           1|      2769|
 |32    |only_tx__GC0                            |           1|      6523|
-|33    |xcorr_main_lite__GB0                    |           1|     26299|
-|34    |xcorr_main_lite__GB1                    |           1|      8567|
-|35    |cordic_2                                |           2|     13318|
-|36    |fr_sync__GC0                            |           1|     22551|
-|37    |ifft__parameterized0__GC0               |           1|       450|
-|38    |div_gen_0                               |           2|      7722|
-|39    |equalizer__GC0                          |           1|      3583|
-|40    |RX_phy__GC0                             |           1|      8648|
-|41    |DeFEC__GB0                              |           1|     32533|
-|42    |DeFEC__GB1                              |           1|      1386|
-|43    |DeFEC__GB2                              |           1|      7310|
-|44    |only_rx__GC0                            |           1|      3124|
-|45    |modem__GC0                              |           1|      2353|
-|46    |design_1__GCB0                          |           1|     29805|
-|47    |design_1__GCB1                          |           1|      9655|
-|48    |design_1__GCB2                          |           1|      2319|
+|33    |cordic_2                                |           2|     13318|
+|34    |fr_sync__GC0                            |           1|     22551|
+|35    |ifft__parameterized0__GC0               |           1|       450|
+|36    |div_gen_0                               |           2|      7722|
+|37    |equalizer__GC0                          |           1|      3583|
+|38    |RX_phy__GCB0                            |           1|     27762|
+|39    |RX_phy__GCB1                            |           1|     10667|
+|40    |DeFEC__GB0                              |           1|     32533|
+|41    |DeFEC__GB1                              |           1|      1386|
+|42    |DeFEC__GB2                              |           1|      7310|
+|43    |only_rx__GC0                            |           1|      3124|
+|44    |modem__GC0                              |           1|      2353|
+|45    |design_1__GCB0                          |           1|     29805|
+|46    |design_1__GCB1                          |           1|      9655|
+|47    |design_1__GCB2                          |           1|      2315|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -10963,18 +10980,6 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
-INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
-WARNING: [Synth 8-6040] Register sin_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register cos_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
-INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
-WARNING: [Synth 8-6040] Register sin_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register cos_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
-INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
-WARNING: [Synth 8-6040] Register sin_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register cos_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
@@ -10984,8 +10989,6 @@ INFO: [Synth 8-5544] ROM "deskew_enable_gen.next_state" won't be mapped to Block
 INFO: [Synth 8-5546] ROM "axi_lite_slave_gen.axi_chip2chip_lite_slave_inst/axi_chip2chip_lite_decoder_inst/next_ch0_data_out" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register symb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register symb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
 INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
@@ -11037,49 +11040,6 @@ INFO: [Synth 8-3886] merging instance 'design_1_i/i_2049_1/eth_pump_0/inst/axis_
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_2049_1/eth_pump_0/inst/axis_data_fifo_0_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/i_2049_2/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]' (FDRE) to 'design_1_i/i_2049_1/eth_pump_0/inst/axis_data_fifo_0_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/i_2049_2/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][13]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_2049_1/eth_pump_0/inst/axis_data_fifo_0_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/i_2049_2/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][12]' (FDRE) to 'design_1_i/i_2049_1/eth_pump_0/inst/axis_data_fifo_0_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/i_2049_2/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][13]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_data_fifo_0_1 /\inst/gen_fifo.xpm_fifo_axis_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /i_2049_2/\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][13] )
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.runt_srl_loop.i_fdre) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_0r/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_0i/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_1r/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_1i/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_2r/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_2i/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_3r/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/rounder_inst.with_mults.rounder_3i/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
 INFO: [Synth 8-3886] merging instance 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/bsr_dec_reg[1]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/AD9361_CTRLi_2049_6/ad9361_clk/DATA_rst/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset__1.
@@ -11191,53 +11151,21 @@ INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/modem_txi_2049_0/prbs_
 INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/modem_txi_2049_0/prbs_gen23_sub/state_reg[3]' (FDE) to 'design_1_i/modem_0/modem_txi_2049_0/prbs_gen23_sub/odat_reg[5]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/modem_txi_2049_0/prbs_gen23_sub/state_reg[8]' (FDE) to 'design_1_i/modem_0/modem_txi_2049_0/prbs_gen23_sub/odat_reg[0]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/modem_0/modem_txi_2049_0/\prbs_gen23_sub/oval_reg )
-INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_last_rankd/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]' (FD) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/bypass_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/p2_last_rk_vec_reg[0]' (FD) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/bypass_d_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/p2_last_rk_vec_delay_reg[0]' (FD) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/bypass_reg_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/nor_gate[0].pre_tw2_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/COSINE_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/SINE_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/COSINE_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/SINE_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/COSINE_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/SINE_reg[12] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][12]' (FD) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][1]' (FDCE) to 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][2]' (FDCE) to 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][3]' (FDCE) to 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][4]' (FDCE) to 'design_1_i/modem_0/DeFEC_subi_2049_5/sub0_pack_finder/sum_reg[0][5]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n1.n_128_d_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n2.n_512_d_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/max_rank_flops[0].max_rank_ff )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/max_rank_flops[1].max_rank_ff )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\axi_wrapper/new_config_with_nfft_change_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/pre_tw2_d_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n1.n_128_reg_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n2.n_512_reg_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\axi_wrapper/current_state_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/TW2_ADDR_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n1.n_128_reg2_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n2.n_512_reg2_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/pos_addr_reg_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/cos_addr_2s_comp/use_output_reg.D_OUT_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/\inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub /i_2049_1/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/sin_addr_2s_comp/use_output_reg.D_OUT_reg[0] )
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/max_rank_flops[1].max_rank_ff) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/max_rank_flops[0].max_rank_ff) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/qam_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/bit1_lsb_llr_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/qam_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/qam_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/qam_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/qam_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/even_qam_llr_re/oqam_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/RX_phy_subi_2049_1/\llr_even_qam_demapper_sub/oqam_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_5/i_2049_16/\speed_test_sub/accumulator_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_6/\axi_lite_1_inst/axi_awaddr_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_6/\axi_lite_1_inst/axi_araddr_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_6/\axi_lite_1_inst/wr_addr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/modem_rxi_2049_6/i_2049_16/\speed_test_sub/accumulator_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_7/\axi_lite_1_inst/axi_awaddr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_7/\axi_lite_1_inst/axi_araddr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_7/\axi_lite_1_inst/wr_addr_reg[8] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_async_fifo_1/mark_frame_reg_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_2049_1/eth_pump_0/\inst/axis_gmii_tx_0/gmii_txd_reg_reg[5] )
@@ -11326,7 +11254,50 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synt
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.use_bfp.blk_exp_d_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\axi_wrapper/new_config_with_nfft_change_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw2.twgen2 /\SINE_reg[1] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\axi_wrapper/current_state_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/optionally_negate_inputs/apply_negation.registered_twos_comp_hblknm.gen_full_slices[0].gen_fdre[0].ff_br )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/optionally_negate_inputs/apply_negation.registered_twos_comp_hblknm.gen_full_slices[0].gen_fdre[0].ff_bi )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/fabric_adder_2.registered_preadder.mult2_preadd_sum_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_dsp.i_dsp48/fabric_adder_2.registered_preadder.mult2_preadd_sum_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_synth/gen_cordic.input_stage/gen_input_regs.phase_int_reg[28] )
+DSP Report: Generating DSP mult_re1, operation Mode is: A*B.
+DSP Report: operator mult_re1 is absorbed into DSP mult_re1.
+DSP Report: Generating DSP mult_re_reg, operation Mode is: (PCIN+A*B)'.
+DSP Report: register mult_re_reg is absorbed into DSP mult_re_reg.
+DSP Report: operator mult_re0 is absorbed into DSP mult_re_reg.
+DSP Report: operator mult_re1 is absorbed into DSP mult_re_reg.
+DSP Report: Generating DSP mult_im1, operation Mode is: A*B.
+DSP Report: operator mult_im1 is absorbed into DSP mult_im1.
+DSP Report: Generating DSP mult_im_reg, operation Mode is: (PCIN-A*B)'.
+DSP Report: register mult_im_reg is absorbed into DSP mult_im_reg.
+DSP Report: operator mult_im0 is absorbed into DSP mult_im_reg.
+DSP Report: operator mult_im1 is absorbed into DSP mult_im_reg.
+INFO: [Synth 8-3936] Found unconnected internal register 'sin_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
+INFO: [Synth 8-3936] Found unconnected internal register 'cos_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
+INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+WARNING: [Synth 8-6040] Register sin_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register cos_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-3936] Found unconnected internal register 'sin_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
+INFO: [Synth 8-3936] Found unconnected internal register 'cos_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
+INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+WARNING: [Synth 8-6040] Register sin_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register cos_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-3936] Found unconnected internal register 'sin_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
+INFO: [Synth 8-3936] Found unconnected internal register 'cos_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
+INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+WARNING: [Synth 8-6040] Register sin_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register cos_addr_2s_comp/use_output_reg.D_OUT_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 INFO: [Synth 8-3936] Found unconnected internal register 'sin_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
 INFO: [Synth 8-3936] Found unconnected internal register 'cos_addr_2s_comp/use_output_reg.D_OUT_reg' and it is trimmed from '10' to '9' bits. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:36773]
 INFO: [Synth 8-7031] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
@@ -11404,35 +11375,42 @@ INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM d
 INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM data_upsampler_sub2/bram_iq/buff_reg to conserve power
 INFO: [Synth 8-5784] Optimized 18 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 54 bits, new ram width 36 bits.
 INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.runt_srl_loop.i_fdre) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
-INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized3.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/axis_fifo_downsamp_sub0/\inst/gen_fifo.xpm_fifo_axis_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /i_2049_2/\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][53] )
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre0) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre1) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.runt_srl_loop.i_fdre) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[19].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[20].latency1.reg) is unused and will be removed from module xfft_v9_1_2_viv__parameterized1.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-DSP Report: Generating DSP mult_re1, operation Mode is: A*B.
-DSP Report: operator mult_re1 is absorbed into DSP mult_re1.
-DSP Report: Generating DSP mult_re_reg, operation Mode is: (PCIN+A*B)'.
-DSP Report: register mult_re_reg is absorbed into DSP mult_re_reg.
-DSP Report: operator mult_re0 is absorbed into DSP mult_re_reg.
-DSP Report: operator mult_re1 is absorbed into DSP mult_re_reg.
-DSP Report: Generating DSP mult_im1, operation Mode is: A*B.
-DSP Report: operator mult_im1 is absorbed into DSP mult_im1.
-DSP Report: Generating DSP mult_im_reg, operation Mode is: (PCIN-A*B)'.
-DSP Report: register mult_im_reg is absorbed into DSP mult_im_reg.
-DSP Report: operator mult_im0 is absorbed into DSP mult_im_reg.
-DSP Report: operator mult_im1 is absorbed into DSP mult_im_reg.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/nor_gate[0].pre_tw2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/COSINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/SINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/COSINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/SINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/COSINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/SINE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n1.n_128_d_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n2.n_512_d_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/max_rank_flops[0].max_rank_ff )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/max_rank_flops[1].max_rank_ff )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\axi_wrapper/new_config_with_nfft_change_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P2.p2/pre_tw2_d_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n1.n_128_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xcorr_main_lite_sub/\xcorr_fft_sub_s0/fft_corr_1_1 /U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/processing_address_generator/n2.n_512_reg_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6040] Register symb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register symb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
@@ -11446,9 +11424,54 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_S2AX_2) is unused and will be removed from module axi_quad_spi.
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPIXFER_DONE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPIXFER_DONE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_FULL_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_FULL_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_5_TXFIFO_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_5_TXFIFO_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_6_RXFIFO_RST_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_6_RXFIFO_RST_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/MST_TRANS_INHIBIT_D1_I) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (BUS_RST_RX_SYNC_CORE_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (BUS_RST_RX_SYNC_CORE_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (BUS_RST_TX_SYNC_CORE_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (BUS_RST_TX_SYNC_CORE_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_EN_O/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_EN_O/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_EN_O/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_EN_O/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (CDC_PHY_TX_DATA_OUT/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (XEMAC_I/EMAC_I/RX/INST_RX_STATE/state21a) is unused and will be removed from module axi_ethernetlite.
+INFO: [Synth 8-3332] Sequential element (XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/CDC_FIFO_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_ethernetlite.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:12:52 ; elapsed = 00:13:04 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:15:22 ; elapsed = 00:16:00 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -11467,61 +11490,61 @@ INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/modem_txi_20
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/modem_txi_2049_0/FEC_sub/i_2049_174/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/modem_txi_2049_0/FEC_sub/i_2049_174/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/modem_txi_2049_0/FEC_sub/i_2049_174/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/data_upsampler_sub1/bram_iq/i_/data_upsampler_sub1/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/data_upsampler_sub1/bram_iq/i_/data_upsampler_sub1/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/data_upsampler_sub2/bram_iq/i_/data_upsampler_sub2/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/data_upsampler_sub2/bram_iq/i_/data_upsampler_sub2/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_0/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_1/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_2/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_3/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_4/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_5/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_0/buff_i_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_0/buff_i_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_0/buff_i_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_0/buff_i_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_0/buff_i_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_0/buff_i_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_1/buff_q_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_1/buff_q_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_1/buff_q_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_1/buff_q_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_1/buff_q_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/ram_sub/i_2049_1/buff_q_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_0/i_2049_12/prb_tsync_ram_sub_0/prb_data_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_0/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_1/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_2/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_3/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_4/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/i_2049_1/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_5/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/i_2049_0/i_2049_16/prb_fsync_ram_sub_0/prb_data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/i_2049_0/i_2049_16/prb_fsync_ram_sub_0/prb_data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/i_2049_0/i_2049_16/prb_fsync_ram_sub_0/prb_data_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/i_2049_0/i_2049_16/prb_fsync_ram_sub_0/prb_data_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/i_2049_0/i_2049_16/prb_fsync_ram_sub_0/prb_data_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/i_2049_0/i_2049_16/prb_fsync_ram_sub_0/prb_data_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/demapper/i_2049_0/map_i_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/demapper/i_2049_1/map_p_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_0/sub0_deInterleaver/sub0_ram/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_0/sub0_deInterleaver/sub0_ram/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_0/sub0_deInterleaver/sub0_ram/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_3/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/data_upsampler_sub1/bram_iq/i_/data_upsampler_sub1/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/data_upsampler_sub1/bram_iq/i_/data_upsampler_sub1/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/data_upsampler_sub2/bram_iq/i_/data_upsampler_sub2/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/data_upsampler_sub2/bram_iq/i_/data_upsampler_sub2/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_0/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_1/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_2/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_3/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_4/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/i_2049_5/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_0/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_1/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator1/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_2/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_3/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator2/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_4/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/sin_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/i_2049_5/xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_generator3/tw1.twgen1/cos_pre_read_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_79/ram_sub/buff_i_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_79/ram_sub/buff_i_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_79/ram_sub/buff_i_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_79/ram_sub/buff_i_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_79/ram_sub/buff_i_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_79/ram_sub/buff_i_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_80/ram_sub/buff_q_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_80/ram_sub/buff_q_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_80/ram_sub/buff_q_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_80/ram_sub/buff_q_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_80/ram_sub/buff_q_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/ram_subi_2049_80/ram_sub/buff_q_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_1/xcorr_main_lite_sub/i_2049_196/prb_tsync_ram_sub_0/prb_data_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_2/demapper/i_2049_0/map_i_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/RX_phy_subi_2049_2/demapper/i_2049_1/map_p_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_0/sub0_deInterleaver/sub0_ram/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_0/sub0_deInterleaver/sub0_ram/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_0/sub0_deInterleaver/sub0_ram/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/DeFEC_subi_2049_4/i_2049_45/sub0_deInterleaver/sub0_interl_addr_rom/adress_for_interliv_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/i_2049_0/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/xpm_mem_gen.xpm_memory_inst_1/xpm_memory_base_inst/i_2049_0/gen_wr_b.gen_word_wide.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/i_2049_0/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/xpm_mem_gen.xpm_memory_inst_1/xpm_memory_base_inst/i_2049_0/gen_wr_b.gen_word_wide.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/i_2049_0/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/xpm_mem_gen.xpm_memory_inst_2/xpm_memory_base_inst/i_2049_0/gen_wr_b.gen_word_wide.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -11567,22 +11590,21 @@ Report RTL Partitions:
 |30    |ifft__GC0                               |           1|       243|
 |31    |TX_phy__GC0                             |           1|      1917|
 |32    |only_tx__GC0                            |           1|      4768|
-|33    |xcorr_main_lite__GB0                    |           1|     21256|
-|34    |xcorr_main_lite__GB1                    |           1|      7257|
-|35    |cordic_2                                |           2|      9688|
-|36    |fr_sync__GC0                            |           1|     17124|
-|37    |ifft__parameterized0__GC0               |           1|       245|
-|38    |div_gen_0                               |           2|      7130|
-|39    |equalizer__GC0                          |           1|      1994|
-|40    |RX_phy__GC0                             |           1|      2828|
-|41    |DeFEC__GB0                              |           1|     25462|
-|42    |DeFEC__GB1                              |           1|       673|
-|43    |DeFEC__GB2                              |           1|      3612|
-|44    |only_rx__GC0                            |           1|      1110|
-|45    |modem__GC0                              |           1|      2187|
-|46    |design_1__GCB0                          |           1|     13245|
-|47    |design_1__GCB1                          |           1|      4980|
-|48    |design_1__GCB2                          |           1|      2095|
+|33    |cordic_2                                |           2|      9688|
+|34    |fr_sync__GC0                            |           1|     17124|
+|35    |ifft__parameterized0__GC0               |           1|       245|
+|36    |div_gen_0                               |           2|      7130|
+|37    |equalizer__GC0                          |           1|      1994|
+|38    |RX_phy__GCB0                            |           1|     21937|
+|39    |RX_phy__GCB1                            |           1|      4334|
+|40    |DeFEC__GB0                              |           1|     25462|
+|41    |DeFEC__GB1                              |           1|       673|
+|42    |DeFEC__GB2                              |           1|      3612|
+|43    |only_rx__GC0                            |           1|      1110|
+|44    |modem__GC0                              |           1|      2186|
+|45    |design_1__GCB0                          |           1|     13245|
+|46    |design_1__GCB1                          |           1|      4980|
+|47    |design_1__GCB2                          |           1|      2095|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -11590,7 +11612,7 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:69]
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:74]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:13:26 ; elapsed = 00:13:38 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:16:00 ; elapsed = 00:16:41 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -11604,7 +11626,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:13:45 ; elapsed = 00:13:57 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Timing Optimization : Time (s): cpu = 00:16:21 ; elapsed = 00:17:02 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11643,22 +11665,21 @@ Report RTL Partitions:
 |30    |ifft__GC0                               |           1|       243|
 |31    |TX_phy__GC0                             |           1|      1917|
 |32    |only_tx__GC0                            |           1|      4768|
-|33    |xcorr_main_lite__GB0                    |           1|     21256|
-|34    |xcorr_main_lite__GB1                    |           1|      7257|
-|35    |cordic_2                                |           2|      9688|
-|36    |fr_sync__GC0                            |           1|     17124|
-|37    |ifft__parameterized0__GC0               |           1|       245|
-|38    |div_gen_0                               |           2|      7130|
-|39    |equalizer__GC0                          |           1|      1994|
-|40    |RX_phy__GC0                             |           1|      2828|
-|41    |DeFEC__GB0                              |           1|     25462|
-|42    |DeFEC__GB1                              |           1|       673|
-|43    |DeFEC__GB2                              |           1|      3612|
-|44    |only_rx__GC0                            |           1|      1110|
-|45    |modem__GC0                              |           1|      2187|
-|46    |design_1__GCB0                          |           1|     13245|
-|47    |design_1__GCB1                          |           1|      4980|
-|48    |design_1__GCB2                          |           1|      2095|
+|33    |cordic_2                                |           2|      9688|
+|34    |fr_sync__GC0                            |           1|     17124|
+|35    |ifft__parameterized0__GC0               |           1|       245|
+|36    |div_gen_0                               |           2|      7130|
+|37    |equalizer__GC0                          |           1|      1994|
+|38    |RX_phy__GCB0                            |           1|     21937|
+|39    |RX_phy__GCB1                            |           1|      4334|
+|40    |DeFEC__GB0                              |           1|     25462|
+|41    |DeFEC__GB1                              |           1|       673|
+|42    |DeFEC__GB2                              |           1|      3612|
+|43    |only_rx__GC0                            |           1|      1110|
+|44    |modem__GC0                              |           1|      2186|
+|45    |design_1__GCB0                          |           1|     13245|
+|46    |design_1__GCB1                          |           1|      4980|
+|47    |design_1__GCB2                          |           1|      2095|
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -11676,21 +11697,21 @@ INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_t
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/prb_fsync_ram_sub_0/prb_data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/prb_fsync_ram_sub_0/prb_data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/prb_fsync_ram_sub_0/prb_data_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/prb_fsync_ram_sub_0/prb_data_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/prb_fsync_ram_sub_0/prb_data_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fr_sync_sub/prb_fsync_ram_sub_0/prb_data_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub1/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub1/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub2/bram_iq/buff_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/data_upsampler_sub2/bram_iq/buff_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_i_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_i_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_i_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_i_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_i_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_i_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:14:46 ; elapsed = 00:15:02 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Technology Mapping : Time (s): cpu = 00:17:31 ; elapsed = 00:18:18 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11718,14 +11739,14 @@ WARNING: [Synth 8-3295] tying undriven pin master_fpga_gen.axi_chip2chip_master_
 WARNING: [Synth 8-3295] tying undriven pin master_fpga_gen.axi_chip2chip_master_phy_inst/axi_chip2chip_phy_init_inst/aurora_rst_out_r1_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin master_fpga_gen.axi_chip2chip_master_phy_inst/axi_chip2chip_phy_init_inst/aurora_rst_out_r2_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin ifft_sub/xilinx_ifft_sub:s_axis_data_tlast to constant 0
-WARNING: [Synth 8-3295] tying undriven pin xcorr_ifft_sub_s0/ifft_corr_1_1:s_axis_data_tlast to constant 0
-WARNING: [Synth 8-3295] tying undriven pin xcorr_fft_sub_s0/fft_corr_1_1:s_axis_data_tlast to constant 0
 WARNING: [Synth 8-3295] tying undriven pin xilinx_ifft_sub:s_axis_data_tlast to constant 0
+WARNING: [Synth 8-3295] tying undriven pin xcorr_fft_sub_s0/fft_corr_1_1:s_axis_data_tlast to constant 0
+WARNING: [Synth 8-3295] tying undriven pin xcorr_ifft_sub_s0/ifft_corr_1_1:s_axis_data_tlast to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/descramb_subcarier_sub:ieop to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:sof_tx to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:index_data_off to constant 0
-WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/descramb_subcarier_sub:ieop to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:14:53 ; elapsed = 00:15:09 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished IO Insertion : Time (s): cpu = 00:17:39 ; elapsed = 00:18:26 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -11738,7 +11759,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:14:54 ; elapsed = 00:15:10 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Renaming Generated Instances : Time (s): cpu = 00:17:40 ; elapsed = 00:18:28 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11750,25 +11771,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:16 ; elapsed = 00:15:32 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:18:05 ; elapsed = 00:18:53 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:15:16 ; elapsed = 00:15:32 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Renaming Generated Ports : Time (s): cpu = 00:18:06 ; elapsed = 00:18:54 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:15:19 ; elapsed = 00:15:35 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Handling Custom Attributes : Time (s): cpu = 00:18:09 ; elapsed = 00:18:57 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:15:20 ; elapsed = 00:15:36 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Renaming Generated Nets : Time (s): cpu = 00:18:10 ; elapsed = 00:18:58 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -11849,33 +11870,33 @@ Report Cell Usage:
 |62    |BUFGMUX_CTRL |     1|
 |63    |BUFR         |     1|
 |64    |BUFR_1       |     1|
-|65    |CARRY4       |  2376|
+|65    |CARRY4       |  2472|
 |66    |DSP48E1      |    28|
 |67    |DSP48E1_1    |    10|
-|68    |DSP48E1_10   |     2|
+|68    |DSP48E1_10   |     4|
 |69    |DSP48E1_11   |     4|
 |70    |DSP48E1_12   |     4|
 |71    |DSP48E1_2    |     4|
-|72    |DSP48E1_3    |     5|
-|73    |DSP48E1_5    |     4|
-|74    |DSP48E1_6    |     3|
-|75    |DSP48E1_7    |     3|
-|76    |DSP48E1_9    |     2|
+|72    |DSP48E1_3    |     3|
+|73    |DSP48E1_4    |     3|
+|74    |DSP48E1_6    |     2|
+|75    |DSP48E1_7    |     2|
+|76    |DSP48E1_8    |     5|
 |77    |IDDR         |    28|
 |78    |IDDR_1       |    17|
 |79    |IDELAYCTRL   |     5|
 |80    |IDELAYE2     |    28|
 |81    |IDELAYE2_1   |    17|
-|82    |LUT1         |  1815|
-|83    |LUT2         | 12431|
-|84    |LUT3         | 14459|
-|85    |LUT4         |  4196|
-|86    |LUT5         |  4859|
-|87    |LUT6         |  9722|
+|82    |LUT1         |  1869|
+|83    |LUT2         | 12394|
+|84    |LUT3         | 14487|
+|85    |LUT4         |  4470|
+|86    |LUT5         |  4862|
+|87    |LUT6         |  9885|
 |88    |MMCME2_ADV   |     3|
 |89    |MULT_AND     |    17|
 |90    |MUXCY        | 11564|
-|91    |MUXF7        |   688|
+|91    |MUXF7        |   689|
 |92    |MUXF8        |   156|
 |93    |ODDR         |    18|
 |94    |ODDR_1       |    40|
@@ -11908,45 +11929,45 @@ Report Cell Usage:
 |121   |RAMB36E1_1   |     1|
 |122   |RAMB36E1_10  |     1|
 |123   |RAMB36E1_11  |     1|
-|124   |RAMB36E1_12  |     1|
-|125   |RAMB36E1_13  |     1|
-|126   |RAMB36E1_14  |     1|
-|127   |RAMB36E1_15  |     1|
-|128   |RAMB36E1_16  |     1|
-|129   |RAMB36E1_17  |     1|
-|130   |RAMB36E1_18  |     1|
-|131   |RAMB36E1_19  |     1|
-|132   |RAMB36E1_20  |     1|
-|133   |RAMB36E1_21  |     1|
-|134   |RAMB36E1_22  |     1|
-|135   |RAMB36E1_23  |     1|
-|136   |RAMB36E1_24  |     1|
-|137   |RAMB36E1_25  |     1|
-|138   |RAMB36E1_26  |     1|
-|139   |RAMB36E1_28  |    20|
-|140   |RAMB36E1_3   |     2|
-|141   |RAMB36E1_31  |     3|
-|142   |RAMB36E1_32  |     3|
-|143   |RAMB36E1_33  |     3|
-|144   |RAMB36E1_34  |     2|
-|145   |RAMB36E1_35  |     1|
-|146   |RAMB36E1_36  |     2|
-|147   |RAMB36E1_37  |    20|
-|148   |RAMB36E1_4   |     2|
-|149   |RAMB36E1_5   |     2|
-|150   |RAMB36E1_6   |     2|
-|151   |RAMB36E1_8   |    14|
+|124   |RAMB36E1_12  |     2|
+|125   |RAMB36E1_14  |    14|
+|126   |RAMB36E1_15  |     1|
+|127   |RAMB36E1_16  |     1|
+|128   |RAMB36E1_17  |     1|
+|129   |RAMB36E1_18  |     1|
+|130   |RAMB36E1_19  |     1|
+|131   |RAMB36E1_20  |     1|
+|132   |RAMB36E1_21  |     1|
+|133   |RAMB36E1_22  |     1|
+|134   |RAMB36E1_23  |     1|
+|135   |RAMB36E1_24  |     1|
+|136   |RAMB36E1_25  |     1|
+|137   |RAMB36E1_26  |     1|
+|138   |RAMB36E1_28  |    20|
+|139   |RAMB36E1_3   |     2|
+|140   |RAMB36E1_31  |     3|
+|141   |RAMB36E1_32  |     3|
+|142   |RAMB36E1_33  |     3|
+|143   |RAMB36E1_34  |     2|
+|144   |RAMB36E1_35  |     1|
+|145   |RAMB36E1_36  |     2|
+|146   |RAMB36E1_37  |    20|
+|147   |RAMB36E1_4   |     2|
+|148   |RAMB36E1_5   |     2|
+|149   |RAMB36E1_6   |     1|
+|150   |RAMB36E1_7   |     1|
+|151   |RAMB36E1_8   |     1|
 |152   |RAMB36E1_9   |     1|
 |153   |SRL16        |     3|
 |154   |SRL16E       |  3199|
-|155   |SRLC32E      |   700|
+|155   |SRLC32E      |   484|
 |156   |XORCY        | 11250|
 |157   |FD           |    18|
 |158   |FDCE         |  5403|
 |159   |FDE          |   952|
 |160   |FDPE         |   141|
 |161   |FDR          |   232|
-|162   |FDRE         | 58623|
+|162   |FDRE         | 58764|
 |163   |FDS          |     2|
 |164   |FDSE         |  2586|
 |165   |IBUF         |    31|
@@ -11957,13 +11978,13 @@ Report Cell Usage:
 |170   |OBUFDS       |    32|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:15:20 ; elapsed = 00:15:36 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Finished Writing Synthesis Report : Time (s): cpu = 00:18:10 ; elapsed = 00:18:58 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4740 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:07:22 ; elapsed = 00:14:08 . Memory (MB): peak = 3278.027 ; gain = 2555.246
-Synthesis Optimization Complete : Time (s): cpu = 00:15:20 ; elapsed = 00:15:37 . Memory (MB): peak = 3278.027 ; gain = 2555.246
+Synthesis finished with 0 errors, 0 critical warnings and 4722 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:40 ; elapsed = 00:17:21 . Memory (MB): peak = 3289.414 ; gain = 2568.785
+Synthesis Optimization Complete : Time (s): cpu = 00:18:11 ; elapsed = 00:18:59 . Memory (MB): peak = 3289.414 ; gain = 2568.785
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 28249 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 28346 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -11976,7 +11997,7 @@ WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_Q
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 3278.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 3289.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5138 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3348 instances
@@ -12001,14 +12022,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1766 Infos, 682 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1777 Infos, 684 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:16:25 ; elapsed = 00:16:43 . Memory (MB): peak = 3278.027 ; gain = 2882.441
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 3278.027 ; gain = 0.000
+synth_design: Time (s): cpu = 00:19:21 ; elapsed = 00:20:12 . Memory (MB): peak = 3289.414 ; gain = 2893.332
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 3289.414 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 3278.027 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:48 ; elapsed = 00:00:33 . Memory (MB): peak = 3289.414 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3278.027 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  2 10:59:33 2025...
+report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3289.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  6 17:58:01 2025...
