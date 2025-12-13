@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sat Dec  6 17:36:07 2025
+//Date        : Sat Dec 13 11:57:40 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4087,7 +4087,7 @@ module ad9361_clk_imp_1I4OLDI
         .sample_rate_30_72(clk_DSP_data_rate));
 endmodule
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=107,numReposBlks=80,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=21,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=103,numReposBlks=76,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=21,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (AXI_RX_CLK_OUT,
     AXI_RX_DATA_OUT,
@@ -4317,6 +4317,8 @@ module design_1
   output spi_sclk_1;
 
   wire [0:0]AD9361_CTRL_clk_out1;
+  (* DEBUG = "true" *) wire [15:0]AD9361_CTRL_dout_data_4;
+  (* DEBUG = "true" *) wire [15:0]AD9361_CTRL_dout_data_5;
   wire [0:0]AD9361_ctrl_data_rate;
   wire AD9364_ad9361_FB_CLK_P;
   wire AD9364_ad9364_EN;
@@ -4558,7 +4560,6 @@ module design_1
   wire [0:0]Decoder_SPI_0_num_cs_2;
   wire [0:0]Decoder_SPI_0_num_cs_3;
   wire FPGA_REF_40MHZ_1;
-  wire [0:0]Net;
   wire SPI_MOD_ip2intc_irpt;
   wire [5:0]ad9361_1_P1_N_1;
   wire [5:0]ad9361_1_P1_P_1;
@@ -4598,7 +4599,7 @@ module design_1
   wire clk_wiz_0_clk_out2;
   wire eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
   wire eth_pump_0_eth_rx_en;
-  wire [7:0]eth_pump_0_eth_rxd;
+  wire [3:0]eth_pump_0_eth_rxd;
   wire [7:0]eth_pump_0_m_axis_tdata_modem;
   wire eth_pump_0_m_axis_tvalid_modem;
   wire eth_pump_0_m_status_overflow;
@@ -4636,13 +4637,10 @@ module design_1
   wire tvalid_fir_gen_1_tvalid;
   wire [0:0]up_txnrx_1;
   wire util_clkdiv_0_clk_out;
-  wire [7:0]xlconcat_0_dout;
   wire [15:0]xlconstant_0_dout;
   wire [15:0]xlconstant_1_dout;
-  wire [3:0]xlconstant_3_dout;
   wire [0:0]xlconstant_4_dout;
   wire [0:0]xlconstant_5_dout;
-  wire [0:0]xlconstant_6_dout;
   wire [0:0]xlconstant_7_dout;
 
   assign AXI_RX_CLK_OUT = AXI_Peripheral_AXI_RX_CLK_OUT;
@@ -4811,13 +4809,15 @@ module design_1
         .din_data_11({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_2({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_3({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .din_data_4({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .din_data_5({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .din_data_4(modem_0_tx_i_axis_tdata),
+        .din_data_5(modem_0_tx_q_axis_tdata),
         .din_data_6({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_7({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_8({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_9({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .dout(up_txnrx_1),
+        .dout_data_4(AD9361_CTRL_dout_data_4),
+        .dout_data_5(AD9361_CTRL_dout_data_5),
         .ext_reset_in(clk_axi_reset_n),
         .peripheral_reset(reset_1),
         .s_axi1_araddr(AXI_Peripheral_M02_AXI_ARADDR),
@@ -5269,7 +5269,7 @@ module design_1
         .phy_crs(xlconstant_4_dout),
         .phy_dv(eth_pump_0_eth_rx_en),
         .phy_rx_clk(util_clkdiv_0_clk_out),
-        .phy_rx_data(eth_pump_0_eth_rxd[3:0]),
+        .phy_rx_data(eth_pump_0_eth_rxd),
         .phy_rx_er(xlconstant_4_dout),
         .phy_tx_clk(util_clkdiv_0_clk_out),
         .phy_tx_data(axi_ethernetlite_0_phy_tx_data),
@@ -5306,15 +5306,13 @@ module design_1
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(AD9361_CTRL_clk_out1),
         .clk_out1(clk_wiz_0_clk_out1),
-        .clk_out2(clk_wiz_0_clk_out2),
-        .resetn(Net));
+        .clk_out2(clk_wiz_0_clk_out2));
   design_1_eth_pump_0_0 eth_pump_0
        (.axis_cobs_decode_0_m_axis_TUSER(eth_pump_0_axis_cobs_decode_0_m_axis_TUSER),
         .eth_rx_en(eth_pump_0_eth_rx_en),
         .eth_rxd(eth_pump_0_eth_rxd),
         .eth_tx_en(axi_ethernetlite_0_phy_tx_en),
-        .eth_tx_er(xlconstant_6_dout),
-        .eth_txd(xlconcat_0_dout),
+        .eth_txd(axi_ethernetlite_0_phy_tx_data),
         .iclk_eth(util_clkdiv_0_clk_out),
         .iclk_h(clk_wiz_0_clk_out1),
         .iclk_hh(clk_wiz_0_clk_out2),
@@ -5324,8 +5322,6 @@ module design_1
         .m_axis_tvalid_modem(eth_pump_0_m_axis_tvalid_modem),
         .m_status_overflow(eth_pump_0_m_status_overflow),
         .s_axis_tdata_modem(modem_0_m_axis_tdata),
-        .s_axis_tlast_modem(xlconstant_6_dout),
-        .s_axis_tuser_modem(xlconstant_6_dout),
         .s_axis_tvalid_modem(modem_0_m_axis_tvalid));
   design_1_fir_compiler_0_0 fir_compiler_0
        (.aclk(clk_wiz_0_clk_out2),
@@ -5380,9 +5376,11 @@ module design_1
         .m_axis_tdata(modem_0_m_axis_tdata),
         .m_axis_tready(xlconstant_5_dout),
         .m_axis_tvalid(modem_0_m_axis_tvalid),
-        .rx_i_axis_tdata(fir_compiler_2_m_axis_data_tdata),
+        .rx1_i_axis_tdata(fir_compiler_2_m_axis_data_tdata),
+        .rx1_q_axis_tdata(fir_compiler_3_m_axis_data_tdata),
+        .rx2_i_axis_tdata(AD9361_CTRL_dout_data_4),
+        .rx2_q_axis_tdata(AD9361_CTRL_dout_data_5),
         .rx_ocorr_dtct(modem_0_rx_ocorr_dtct),
-        .rx_q_axis_tdata(fir_compiler_3_m_axis_data_tdata),
         .rx_tx_en(modem_0_rx_tx_en),
         .s_axis_aclk(clk_wiz_0_clk_out1),
         .s_axis_tdata(eth_pump_0_m_axis_tdata_modem),
@@ -5407,24 +5405,14 @@ module design_1
        (.clk(CLK_AXI_axi_periph_clk),
         .clk_out(util_clkdiv_0_clk_out),
         .clk_sel(xlconstant_4_dout));
-  design_1_xlconcat_0_0 xlconcat_0
-       (.In0(axi_ethernetlite_0_phy_tx_data),
-        .In1(xlconstant_3_dout),
-        .dout(xlconcat_0_dout));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   design_1_xlconstant_0_1 xlconstant_1
        (.dout(xlconstant_1_dout));
-  design_1_xlconstant_2_0 xlconstant_2
-       (.dout(Net));
-  design_1_xlconstant_3_2 xlconstant_3
-       (.dout(xlconstant_3_dout));
   design_1_xlconstant_3_1 xlconstant_4
        (.dout(xlconstant_4_dout));
   design_1_xlconstant_4_0 xlconstant_5
        (.dout(xlconstant_5_dout));
-  design_1_xlconstant_3_3 xlconstant_6
-       (.dout(xlconstant_6_dout));
   design_1_xlconstant_5_0 xlconstant_7
        (.dout(xlconstant_7_dout));
 endmodule

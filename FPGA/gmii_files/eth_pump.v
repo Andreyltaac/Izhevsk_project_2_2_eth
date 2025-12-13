@@ -11,23 +11,23 @@ input        iclk_h,
 input        iclk_hh,
 // из eth в модем		 
 input        eth_tx_en,
-input        eth_tx_er,
-input  [7:0] eth_txd,
+//input        eth_tx_er,
+input  [3:0] eth_txd,
 // в eth из модема
 output       eth_rx_en,
 output       eth_rx_er,
-output [7:0] eth_rxd,
+output [3:0] eth_rxd,
 // в tx модема
 output wire [7:0] m_axis_tdata_modem,
-output       m_axis_tlast_modem,
+//output       m_axis_tlast_modem,
 input        m_axis_tready_modem,
-output       m_axis_tuser_modem,
+//output       m_axis_tuser_modem,
 output       m_axis_tvalid_modem,
 // с rx модема
 input  wire [7:0] s_axis_tdata_modem,
-input        s_axis_tlast_modem,
+//input        s_axis_tlast_modem,
 output       s_axis_tready_modem,
-input        s_axis_tuser_modem,
+//input        s_axis_tuser_modem,
 input        s_axis_tvalid_modem,
 //
 output wire  axis_cobs_decode_0_m_axis_TUSER,
@@ -113,29 +113,29 @@ assign sys_cpu_resetn = irst_eth;
 assign util_vector_logic_0_Res = ~irst_eth; 
 
 assign sys_ps7_ENET1_GMII_TX_EN = eth_tx_en; 
-assign sys_ps7_ENET1_GMII_TX_ER = eth_tx_er;
-assign sys_ps7_ENET1_GMII_TXD   = eth_txd;
+assign sys_ps7_ENET1_GMII_TX_ER = 1'b0;
+assign sys_ps7_ENET1_GMII_TXD   = {4'b0,eth_txd};
 
 assign clk_wiz_1_clk_out2 = iclk_h;
 assign clk_wiz_1_clk_out3 = iclk_hh;
 
 
 assign m_axis_tdata_modem             = axis_data_fifo_0_M_AXIS_TDATA;
-assign m_axis_tlast_modem             = 0;//axis_data_fifo_0_M_AXIS_TLAST;
+//assign m_axis_tlast_modem             = 0;//axis_data_fifo_0_M_AXIS_TLAST;
 assign axis_data_fifo_0_M_AXIS_TREADY = m_axis_tready_modem;
-assign m_axis_tuser_modem             = 0;//axis_data_fifo_0_M_AXIS_TUSER;
+//assign m_axis_tuser_modem             = 0;//axis_data_fifo_0_M_AXIS_TUSER;
 assign m_axis_tvalid_modem            = axis_data_fifo_0_M_AXIS_TVALID;
 
 
 assign only_rx_0_m_axis_TDATA  = s_axis_tdata_modem;
-assign only_rx_0_m_axis_TLAST  = s_axis_tlast_modem;
+assign only_rx_0_m_axis_TLAST  = 1'b0;
 assign s_axis_tready_modem     = only_rx_0_m_axis_TREADY;
-assign only_rx_0_m_axis_TUSER  = s_axis_tuser_modem;
+assign only_rx_0_m_axis_TUSER  = 1'b0;
 assign only_rx_0_m_axis_TVALID = s_axis_tvalid_modem;
 
 assign eth_rx_en = axis_gmii_tx_0_gmii_tx_en;
 assign eth_rx_er = axis_gmii_tx_0_gmii_tx_er;
-assign eth_rxd   = axis_gmii_tx_0_gmii_txd;
+assign eth_rxd   = axis_gmii_tx_0_gmii_txd[3:0];
 
 ///////////////////////////////////////////////////////////////////////////// TX PATH
 

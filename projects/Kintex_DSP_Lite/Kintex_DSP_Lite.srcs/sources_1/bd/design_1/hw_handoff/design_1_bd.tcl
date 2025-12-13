@@ -2023,6 +2023,7 @@ proc create_root_design { parentCell } {
    CONFIG.PRIM_SOURCE {Global_buffer} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
+   CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 
   # Create instance: eth_pump_0, and set properties
@@ -2194,13 +2195,6 @@ proc create_root_design { parentCell } {
   # Create instance: util_clkdiv_0, and set properties
   set util_clkdiv_0 [ create_bd_cell -type ip -vlnv analog.com:user:util_clkdiv:1.0 util_clkdiv_0 ]
 
-  # Create instance: xlconcat_0, and set properties
-  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
-  set_property -dict [ list \
-   CONFIG.IN0_WIDTH {4} \
-   CONFIG.IN1_WIDTH {4} \
- ] $xlconcat_0
-
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
   set_property -dict [ list \
@@ -2212,16 +2206,6 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.CONST_WIDTH {16} \
  ] $xlconstant_1
-
-  # Create instance: xlconstant_2, and set properties
-  set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
-
-  # Create instance: xlconstant_3, and set properties
-  set xlconstant_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_3 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {4} \
- ] $xlconstant_3
 
   # Create instance: xlconstant_4, and set properties
   set xlconstant_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_4 ]
@@ -2236,13 +2220,6 @@ proc create_root_design { parentCell } {
    CONFIG.CONST_VAL {1} \
    CONFIG.CONST_WIDTH {1} \
  ] $xlconstant_5
-
-  # Create instance: xlconstant_6, and set properties
-  set xlconstant_6 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_6 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {1} \
- ] $xlconstant_6
 
   # Create instance: xlconstant_7, and set properties
   set xlconstant_7 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_7 ]
@@ -2264,6 +2241,8 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net AD9361_CTRL_clk_out1 [get_bd_pins AD9361_CTRL/clk_out1] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins modem_0/clk_l]
+  connect_bd_net -net AD9361_CTRL_dout_data_4 [get_bd_pins AD9361_CTRL/dout_data_4] [get_bd_pins modem_0/rx2_i_axis_tdata]
+  connect_bd_net -net AD9361_CTRL_dout_data_5 [get_bd_pins AD9361_CTRL/dout_data_5] [get_bd_pins modem_0/rx2_q_axis_tdata]
   connect_bd_net -net AD9361_ctrl_data_rate [get_bd_pins AD9361_CTRL/data_rate] [get_bd_pins AD9364/dout_clk] [get_bd_pins AXI_Peripheral/fifo_wr_clk]
   connect_bd_net -net AD9364_ad9361_FB_CLK_P [get_bd_ports ad9364_FB_CLK_P] [get_bd_pins AD9364/ad9361_FB_CLK_P]
   connect_bd_net -net AD9364_ad9364_EN [get_bd_ports ad9364_EN] [get_bd_pins AD9364/ad9364_EN]
@@ -2328,7 +2307,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Decoder_SPI_0_num_cs_2 [get_bd_ports ad9361_SPI_CS_3] [get_bd_pins SPI_MOD/ad9361_SPI_CS_3]
   connect_bd_net -net Decoder_SPI_0_num_cs_3 [get_bd_ports ad9364_SPI_CS] [get_bd_pins SPI_MOD/ad9364_SPI_CS]
   connect_bd_net -net FPGA_REF_40MHZ_1 [get_bd_ports FPGA_REF_40MHZ] [get_bd_pins CLK_AXI/FPGA_REF_40MHZ]
-  connect_bd_net -net Net [get_bd_pins clk_wiz_0/resetn] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net SPI_MOD_ip2intc_irpt [get_bd_pins AXI_Peripheral/In0] [get_bd_pins SPI_MOD/ip2intc_irpt]
   connect_bd_net -net ad9361_1_P1_N_1 [get_bd_ports ad9361_1_P1_N] [get_bd_pins AD9361_CTRL/ad9361_1_P1_N]
   connect_bd_net -net ad9361_1_P1_P_1 [get_bd_ports ad9361_1_P1_P] [get_bd_pins AD9361_CTRL/ad9361_1_P1_P]
@@ -2361,7 +2339,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ad9364_TX_FRAME_N_1 [get_bd_ports ad9364_RX_FRAME_N] [get_bd_pins AD9364/ad9364_TX_FRAME_N]
   connect_bd_net -net ad9364_TX_FRAME_P_1 [get_bd_ports ad9364_RX_FRAME_P] [get_bd_pins AD9364/ad9364_TX_FRAME_P]
   connect_bd_net -net axi_ethernetlite_0_ip2intc_irpt [get_bd_pins axi_ethernetlite_0/ip2intc_irpt] [get_bd_pins pulse_expander_0/in_sig]
-  connect_bd_net -net axi_ethernetlite_0_phy_tx_data [get_bd_pins axi_ethernetlite_0/phy_tx_data] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net axi_ethernetlite_0_phy_tx_data [get_bd_pins axi_ethernetlite_0/phy_tx_data] [get_bd_pins eth_pump_0/eth_txd]
   connect_bd_net -net axi_ethernetlite_0_phy_tx_en [get_bd_pins axi_ethernetlite_0/phy_tx_en] [get_bd_pins eth_pump_0/eth_tx_en]
   connect_bd_net -net clk_axi_reset_n [get_bd_pins AD9361_CTRL/ext_reset_in] [get_bd_pins AD9364/ext_reset_in] [get_bd_pins CLK_AXI/reset_n]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins eth_pump_0/iclk_h] [get_bd_pins modem_0/clk_h] [get_bd_pins modem_0/s_axis_aclk]
@@ -2375,9 +2353,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net fir_compiler_0_m_axis_data_tdata [get_bd_pins fir_compiler_0/m_axis_data_tdata] [get_bd_pins fir_compiler_2/s_axis_data_tdata]
   connect_bd_net -net fir_compiler_1_m_axis_data_tdata [get_bd_pins fir_compiler_1/m_axis_data_tdata] [get_bd_pins fir_compiler_3/s_axis_data_tdata]
   connect_bd_net -net fir_compiler_1_m_axis_data_tvalid [get_bd_pins fir_compiler_1/m_axis_data_tvalid] [get_bd_pins fir_compiler_3/s_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_2_m_axis_data_tdata [get_bd_pins fir_compiler_2/m_axis_data_tdata] [get_bd_pins modem_0/rx_i_axis_tdata]
+  connect_bd_net -net fir_compiler_2_m_axis_data_tdata [get_bd_pins fir_compiler_2/m_axis_data_tdata] [get_bd_pins modem_0/rx1_i_axis_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets fir_compiler_2_m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_3_m_axis_data_tdata [get_bd_pins fir_compiler_3/m_axis_data_tdata] [get_bd_pins modem_0/rx_q_axis_tdata]
+  connect_bd_net -net fir_compiler_3_m_axis_data_tdata [get_bd_pins fir_compiler_3/m_axis_data_tdata] [get_bd_pins modem_0/rx1_q_axis_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets fir_compiler_3_m_axis_data_tdata]
   connect_bd_net -net ibuf_0_out_ref [get_bd_pins AD9361_CTRL/FPGA_REF_40MHZ] [get_bd_pins CLK_AXI/out_ref]
   connect_bd_net -net modem_0_DeFec_err_dtct [get_bd_ports LED2] [get_bd_pins modem_0/DeFec_err_dtct]
@@ -2387,8 +2365,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net modem_0_rx_ocorr_dtct [get_bd_ports PIN_2] [get_bd_pins modem_0/rx_ocorr_dtct]
   connect_bd_net -net modem_0_rx_tx_en [get_bd_ports LED1] [get_bd_pins modem_0/rx_tx_en]
   connect_bd_net -net modem_0_s_axis_tready [get_bd_pins eth_pump_0/m_axis_tready_modem] [get_bd_pins modem_0/s_axis_tready]
-  connect_bd_net -net modem_0_tx_i_axis_tdata [get_bd_pins modem_0/tx_i_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_i]
-  connect_bd_net -net modem_0_tx_q_axis_tdata [get_bd_pins modem_0/tx_q_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_q]
+  connect_bd_net -net modem_0_tx_i_axis_tdata [get_bd_pins AD9361_CTRL/din_data_4] [get_bd_pins modem_0/tx_i_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_i]
+  connect_bd_net -net modem_0_tx_q_axis_tdata [get_bd_pins AD9361_CTRL/din_data_5] [get_bd_pins modem_0/tx_q_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_q]
   connect_bd_net -net pulse_expander_0_out_sig [get_bd_pins AXI_Peripheral/In2] [get_bd_pins pulse_expander_0/out_sig]
   connect_bd_net -net reset_1 [get_bd_pins AD9361_CTRL/peripheral_reset] [get_bd_pins AXI_Peripheral/reset]
   connect_bd_net -net rst_sys_ps7_100M_peripheral_aresetn [get_bd_pins AD9361_CTRL/s_axi_aresetn] [get_bd_pins AD9364/s_axi_aresetn] [get_bd_pins AXI_Peripheral/S00_ARESETN] [get_bd_pins CLK_AXI/peripheral_aresetn] [get_bd_pins Control_from_SOM_0/s00_axi_aresetn] [get_bd_pins Current_turning_off_0/s00_axi_aresetn] [get_bd_pins SPI_MOD/s_axi4_aresetn] [get_bd_pins axi_ethernetlite_0/s_axi_aresetn] [get_bd_pins eth_pump_0/irst_eth] [get_bd_pins modem_0/S_AXI_ARESETN] [get_bd_pins pulse_expander_0/reset]
@@ -2408,13 +2386,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net tvalid_fir_gen_1_tvalid [get_bd_pins fir_compiler_0/m_axis_data_tvalid] [get_bd_pins fir_compiler_2/s_axis_data_tvalid]
   connect_bd_net -net up_txnrx_1 [get_bd_pins AD9361_CTRL/dout] [get_bd_pins AD9364/up_enable] [get_bd_pins AD9364/up_txnrx]
   connect_bd_net -net util_clkdiv_0_clk_out [get_bd_pins axi_ethernetlite_0/phy_rx_clk] [get_bd_pins axi_ethernetlite_0/phy_tx_clk] [get_bd_pins eth_pump_0/iclk_eth] [get_bd_pins util_clkdiv_0/clk_out]
-  connect_bd_net -net xlconcat_0_dout [get_bd_pins eth_pump_0/eth_txd] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_0] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_1] [get_bd_pins xlconstant_1/dout]
-  connect_bd_net -net xlconstant_3_dout [get_bd_pins xlconcat_0/In1] [get_bd_pins xlconstant_3/dout]
   connect_bd_net -net xlconstant_4_dout [get_bd_pins axi_ethernetlite_0/phy_col] [get_bd_pins axi_ethernetlite_0/phy_crs] [get_bd_pins axi_ethernetlite_0/phy_rx_er] [get_bd_pins util_clkdiv_0/clk_sel] [get_bd_pins xlconstant_4/dout]
   connect_bd_net -net xlconstant_5_dout [get_bd_pins modem_0/m_axis_tready] [get_bd_pins xlconstant_5/dout]
-  connect_bd_net -net xlconstant_6_dout [get_bd_pins eth_pump_0/eth_tx_er] [get_bd_pins eth_pump_0/s_axis_tlast_modem] [get_bd_pins eth_pump_0/s_axis_tuser_modem] [get_bd_pins xlconstant_6/dout]
   connect_bd_net -net xlconstant_7_dout [get_bd_pins tvalid_fir_gen_0/irstn] [get_bd_pins xlconstant_7/dout]
 
   # Create address segments

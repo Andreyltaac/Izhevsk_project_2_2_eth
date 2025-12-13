@@ -60,20 +60,15 @@ module design_1_eth_pump_0_0 (
   iclk_h,
   iclk_hh,
   eth_tx_en,
-  eth_tx_er,
   eth_txd,
   eth_rx_en,
   eth_rx_er,
   eth_rxd,
   m_axis_tdata_modem,
-  m_axis_tlast_modem,
   m_axis_tready_modem,
-  m_axis_tuser_modem,
   m_axis_tvalid_modem,
   s_axis_tdata_modem,
-  s_axis_tlast_modem,
   s_axis_tready_modem,
-  s_axis_tuser_modem,
   s_axis_tvalid_modem,
   axis_cobs_decode_0_m_axis_TUSER,
   prog_full,
@@ -86,32 +81,23 @@ input wire iclk_h;
 input wire iclk_hh;
 (* X_INTERFACE_INFO = "analog.com:interface:fifo_rd:1.0 eth_tx EN" *)
 input wire eth_tx_en;
-input wire eth_tx_er;
-input wire [7 : 0] eth_txd;
+input wire [3 : 0] eth_txd;
 (* X_INTERFACE_INFO = "analog.com:interface:fifo_rd:1.0 eth_rx EN" *)
 output wire eth_rx_en;
 output wire eth_rx_er;
-output wire [7 : 0] eth_rxd;
+output wire [3 : 0] eth_rxd;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_modem TDATA" *)
 output wire [7 : 0] m_axis_tdata_modem;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_modem TLAST" *)
-output wire m_axis_tlast_modem;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_modem TREADY" *)
 input wire m_axis_tready_modem;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_modem TUSER" *)
-output wire m_axis_tuser_modem;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_modem, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_modem, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_modem TVALID" *)
 output wire m_axis_tvalid_modem;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_modem TDATA" *)
 input wire [7 : 0] s_axis_tdata_modem;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_modem TLAST" *)
-input wire s_axis_tlast_modem;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_modem TREADY" *)
 output wire s_axis_tready_modem;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_modem TUSER" *)
-input wire s_axis_tuser_modem;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_modem, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_modem, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_modem TVALID" *)
 input wire s_axis_tvalid_modem;
 output wire axis_cobs_decode_0_m_axis_TUSER;
@@ -127,20 +113,15 @@ output wire m_status_overflow;
     .iclk_h(iclk_h),
     .iclk_hh(iclk_hh),
     .eth_tx_en(eth_tx_en),
-    .eth_tx_er(eth_tx_er),
     .eth_txd(eth_txd),
     .eth_rx_en(eth_rx_en),
     .eth_rx_er(eth_rx_er),
     .eth_rxd(eth_rxd),
     .m_axis_tdata_modem(m_axis_tdata_modem),
-    .m_axis_tlast_modem(m_axis_tlast_modem),
     .m_axis_tready_modem(m_axis_tready_modem),
-    .m_axis_tuser_modem(m_axis_tuser_modem),
     .m_axis_tvalid_modem(m_axis_tvalid_modem),
     .s_axis_tdata_modem(s_axis_tdata_modem),
-    .s_axis_tlast_modem(s_axis_tlast_modem),
     .s_axis_tready_modem(s_axis_tready_modem),
-    .s_axis_tuser_modem(s_axis_tuser_modem),
     .s_axis_tvalid_modem(s_axis_tvalid_modem),
     .axis_cobs_decode_0_m_axis_TUSER(axis_cobs_decode_0_m_axis_TUSER),
     .prog_full(prog_full),

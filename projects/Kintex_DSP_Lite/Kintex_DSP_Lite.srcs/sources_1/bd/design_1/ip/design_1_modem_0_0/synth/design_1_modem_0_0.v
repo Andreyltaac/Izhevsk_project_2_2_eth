@@ -65,8 +65,10 @@ module design_1_modem_0_0 (
   s_axis_tready,
   tx_i_axis_tdata,
   tx_q_axis_tdata,
-  rx_i_axis_tdata,
-  rx_q_axis_tdata,
+  rx2_i_axis_tdata,
+  rx2_q_axis_tdata,
+  rx1_i_axis_tdata,
+  rx1_q_axis_tdata,
   m_axis_tdata,
   m_axis_tvalid,
   m_axis_tready,
@@ -75,8 +77,6 @@ module design_1_modem_0_0 (
   DeFec_err_dtct,
   rx_tx_en,
   rx_ocorr_dtct,
-  finder_osop,
-  decrc_verr,
   S_AXI_ACLK,
   S_AXI_ARESETN,
   S_AXI_AWADDR,
@@ -115,8 +115,10 @@ input wire s_axis_aclk;
 output wire s_axis_tready;
 output wire [15 : 0] tx_i_axis_tdata;
 output wire [15 : 0] tx_q_axis_tdata;
-input wire [15 : 0] rx_i_axis_tdata;
-input wire [15 : 0] rx_q_axis_tdata;
+input wire [15 : 0] rx2_i_axis_tdata;
+input wire [15 : 0] rx2_q_axis_tdata;
+input wire [15 : 0] rx1_i_axis_tdata;
+input wire [15 : 0] rx1_q_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
 output wire [7 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *)
@@ -132,8 +134,6 @@ output wire DeFec_err_dtct;
 (* X_INTERFACE_INFO = "analog.com:interface:fifo_rd:1.0 rx_tx EN" *)
 output wire rx_tx_en;
 output wire rx_ocorr_dtct;
-output wire finder_osop;
-output wire decrc_verr;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_CLK_COMMON_0_axi_periph_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *)
 input wire S_AXI_ACLK;
@@ -191,8 +191,10 @@ input wire S_AXI_RREADY;
     .s_axis_tready(s_axis_tready),
     .tx_i_axis_tdata(tx_i_axis_tdata),
     .tx_q_axis_tdata(tx_q_axis_tdata),
-    .rx_i_axis_tdata(rx_i_axis_tdata),
-    .rx_q_axis_tdata(rx_q_axis_tdata),
+    .rx2_i_axis_tdata(rx2_i_axis_tdata),
+    .rx2_q_axis_tdata(rx2_q_axis_tdata),
+    .rx1_i_axis_tdata(rx1_i_axis_tdata),
+    .rx1_q_axis_tdata(rx1_q_axis_tdata),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tready(m_axis_tready),
@@ -201,8 +203,6 @@ input wire S_AXI_RREADY;
     .DeFec_err_dtct(DeFec_err_dtct),
     .rx_tx_en(rx_tx_en),
     .rx_ocorr_dtct(rx_ocorr_dtct),
-    .finder_osop(finder_osop),
-    .decrc_verr(decrc_verr),
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),
     .S_AXI_AWADDR(S_AXI_AWADDR),

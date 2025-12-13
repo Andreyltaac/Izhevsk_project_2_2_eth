@@ -237,9 +237,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlcons
 # IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconstant_2_0_1/design_1_xlconstant_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_2_0 || ORIG_REF_NAME==design_1_xlconstant_2_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_xlconstant_3_1/design_1_xlconstant_3_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_3_1 || ORIG_REF_NAME==design_1_xlconstant_3_1} -quiet] -quiet
 
@@ -302,15 +299,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_eth_pu
 
 # IP: ip/axis_data_fifo_0_1/axis_data_fifo_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_0 || ORIG_REF_NAME==axis_data_fifo_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0_0 || ORIG_REF_NAME==design_1_xlconcat_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xlconstant_3_2/design_1_xlconstant_3_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_3_2 || ORIG_REF_NAME==design_1_xlconstant_3_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xlconstant_3_3/design_1_xlconstant_3_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_3_3 || ORIG_REF_NAME==design_1_xlconstant_3_3} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_tvalid_fir_gen_0_0/design_1_tvalid_fir_gen_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_tvalid_fir_gen_0_0 || ORIG_REF_NAME==design_1_tvalid_fir_gen_0_0} -quiet] -quiet
