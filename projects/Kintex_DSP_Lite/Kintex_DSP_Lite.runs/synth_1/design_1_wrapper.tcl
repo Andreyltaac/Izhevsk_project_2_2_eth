@@ -17,6 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7k325tffg676-2
 
@@ -154,6 +157,7 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_fft_sub.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_ifft_sub.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/new/tvalid_generator.sv
 }
 read_verilog -library xil_defaultlib {

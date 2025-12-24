@@ -73,7 +73,8 @@ module design_1_eth_pump_0_0 (
   s_axis_tvalid_modem,
   axis_cobs_decode_0_m_axis_TUSER,
   prog_full,
-  m_status_overflow
+  m_status_overflow,
+  async_fifo_1_olast
 );
 
 input wire iclk_eth;
@@ -105,6 +106,7 @@ output wire axis_cobs_decode_0_m_axis_TUSER;
 output wire prog_full;
 (* X_INTERFACE_INFO = "analog.com:interface:fifo_wr:1.0 m_status OVERFLOW" *)
 output wire m_status_overflow;
+output wire async_fifo_1_olast;
 
   eth_pump #(
     .MII_EN(1)
@@ -126,6 +128,7 @@ output wire m_status_overflow;
     .s_axis_tvalid_modem(s_axis_tvalid_modem),
     .axis_cobs_decode_0_m_axis_TUSER(axis_cobs_decode_0_m_axis_TUSER),
     .prog_full(prog_full),
-    .m_status_overflow(m_status_overflow)
+    .m_status_overflow(m_status_overflow),
+    .async_fifo_1_olast(async_fifo_1_olast)
   );
 endmodule

@@ -75,7 +75,7 @@ assign s_axis_tready   = s_axis_tready_l;
 assign s_axis_tvalid_r = validate_en ? s_axis_tvalid_l : s_axis_tvalid;
 
 
-transport_block_shaper #(476, 1024)
+transport_block_shaper #(476, 512)
 transport_block_shaper_sub(
 	.clk		(clk_h),
 	.rst		(~rst),

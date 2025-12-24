@@ -32,8 +32,10 @@ input        s_axis_tvalid_modem,
 //
 output wire  axis_cobs_decode_0_m_axis_TUSER,
 output wire  prog_full,
-output wire  m_status_overflow
+output wire  m_status_overflow,
+output wire async_fifo_1_olast
 );
+
 
 
 // Сигналы для модулей TX пути
@@ -136,6 +138,8 @@ assign only_rx_0_m_axis_TVALID = s_axis_tvalid_modem;
 assign eth_rx_en = axis_gmii_tx_0_gmii_tx_en;
 assign eth_rx_er = axis_gmii_tx_0_gmii_tx_er;
 assign eth_rxd   = axis_gmii_tx_0_gmii_txd[3:0];
+
+assign async_fifo_1_olast = axis_async_fifo_1_m_axis_TLAST;
 
 ///////////////////////////////////////////////////////////////////////////// TX PATH
 
@@ -343,5 +347,80 @@ axis_gmii_tx axis_gmii_tx_0 (
     // Неиспользуемые сигналы (PTP timestamp)
     .ptp_ts(96'd0)
 );
+
+
+localparam PLC_pack_cnt_len = 16;
+
+wire	                        PLC_ilast_0;
+wire	                        PLC_ilast_1;
+wire	                        PLC_ilast_2;
+wire	                        PLC_ilast_3;
+wire	                        PLC_ilast_4;
+wire	                        PLC_ilast_5;
+wire	                        PLC_ilast_6;
+wire	                        PLC_ilast_7;
+wire	                        PLC_ilast_8;
+wire	                        PLC_ilast_9;
+
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_0;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_1;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_2;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_3;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_4;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_5;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_6;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_7;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_8;
+wire	[PLC_pack_cnt_len-1:0]	PLC_cnt_pack_9;
+
+pack_last_counter 
+#(
+.wait_time		(1),
+.input_freq		(25_000_000),
+.plen_cnt		(PLC_pack_cnt_len)
+)
+u_plc
+(
+.clk			(iclk_eth),
+.rstn			(irst_eth),
+
+.ilast_0		(PLC_ilast_0),
+.ilast_1		(PLC_ilast_1),
+.ilast_2		(PLC_ilast_2),
+.ilast_3		(PLC_ilast_3),
+.ilast_4		(PLC_ilast_4),
+.ilast_5		(PLC_ilast_5),
+.ilast_6		(PLC_ilast_6),
+.ilast_7		(PLC_ilast_7),
+.ilast_8		(PLC_ilast_8),
+.ilast_9		(PLC_ilast_9),
+
+
+.cnt_pack_0		(PLC_cnt_pack_0),
+.cnt_pack_1		(PLC_cnt_pack_1),
+.cnt_pack_2		(PLC_cnt_pack_2),
+.cnt_pack_3		(PLC_cnt_pack_3),
+.cnt_pack_4		(PLC_cnt_pack_4),
+.cnt_pack_5		(PLC_cnt_pack_5),
+.cnt_pack_6		(PLC_cnt_pack_6),
+.cnt_pack_7		(PLC_cnt_pack_7),
+.cnt_pack_8		(PLC_cnt_pack_8),
+.cnt_pack_9		(PLC_cnt_pack_9)
+);
+
+
+
+
+assign PLC_ilast_0  = axis_gmii_rx_0_m_axis_TLAST;
+assign PLC_ilast_1  = axis_async_fifo_0_m_axis_TLAST;
+assign PLC_ilast_2  = axis_cobs_encode_0_m_axis_TLAST;
+assign PLC_ilast_3  = axis_cobs_decode_0_m_axis_TLAST;
+assign PLC_ilast_4  = axis_async_fifo_1_m_axis_TLAST;
+assign PLC_ilast_5	= 0;
+assign PLC_ilast_6	= 0;
+assign PLC_ilast_7	= 0;
+assign PLC_ilast_8	= 0;
+assign PLC_ilast_9	= 0;
+
 
 endmodule

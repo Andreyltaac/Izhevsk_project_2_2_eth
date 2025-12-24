@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sat Dec 13 11:57:39 2025
+//Date        : Sat Dec 20 15:57:42 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4597,12 +4597,13 @@ module design_1
   wire clk_axi_reset_n;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
-  wire eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
+  wire eth_pump_0_async_fifo_1_olast;
   wire eth_pump_0_eth_rx_en;
   wire [3:0]eth_pump_0_eth_rxd;
   wire [7:0]eth_pump_0_m_axis_tdata_modem;
   wire eth_pump_0_m_axis_tvalid_modem;
   wire eth_pump_0_m_status_overflow;
+  wire eth_pump_0_prog_full;
   wire [15:0]fir_compiler_0_m_axis_data_tdata;
   wire [15:0]fir_compiler_1_m_axis_data_tdata;
   wire fir_compiler_1_m_axis_data_tvalid;
@@ -4613,7 +4614,6 @@ module design_1
   wire modem_0_corr_pr_detect;
   wire [7:0]modem_0_m_axis_tdata;
   wire modem_0_m_axis_tvalid;
-  wire modem_0_rx_ocorr_dtct;
   wire modem_0_rx_tx_en;
   wire modem_0_s_axis_tready;
   (* DEBUG = "true" *) wire [15:0]modem_0_tx_i_axis_tdata;
@@ -4651,9 +4651,9 @@ module design_1
   assign LED1[0] = modem_0_rx_tx_en;
   assign LED2[0] = modem_0_DeFec_err_dtct;
   assign LED3[0] = modem_0_corr_pr_detect;
-  assign PIN_0 = eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
+  assign PIN_0 = eth_pump_0_async_fifo_1_olast;
   assign PIN_1 = eth_pump_0_m_status_overflow;
-  assign PIN_2 = modem_0_rx_ocorr_dtct;
+  assign PIN_2 = eth_pump_0_prog_full;
   assign ad9361_1_P0_N[5:0] = DSP_ad9361_1_P0_N;
   assign ad9361_1_P0_P[5:0] = DSP_ad9361_1_P0_P;
   assign ad9361_1_P1_N_1 = ad9361_1_P1_N[5:0];
@@ -5308,7 +5308,7 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .clk_out2(clk_wiz_0_clk_out2));
   design_1_eth_pump_0_0 eth_pump_0
-       (.axis_cobs_decode_0_m_axis_TUSER(eth_pump_0_axis_cobs_decode_0_m_axis_TUSER),
+       (.async_fifo_1_olast(eth_pump_0_async_fifo_1_olast),
         .eth_rx_en(eth_pump_0_eth_rx_en),
         .eth_rxd(eth_pump_0_eth_rxd),
         .eth_tx_en(axi_ethernetlite_0_phy_tx_en),
@@ -5321,6 +5321,7 @@ module design_1
         .m_axis_tready_modem(modem_0_s_axis_tready),
         .m_axis_tvalid_modem(eth_pump_0_m_axis_tvalid_modem),
         .m_status_overflow(eth_pump_0_m_status_overflow),
+        .prog_full(eth_pump_0_prog_full),
         .s_axis_tdata_modem(modem_0_m_axis_tdata),
         .s_axis_tvalid_modem(modem_0_m_axis_tvalid));
   design_1_fir_compiler_0_0 fir_compiler_0
@@ -5380,7 +5381,6 @@ module design_1
         .rx1_q_axis_tdata(fir_compiler_3_m_axis_data_tdata),
         .rx2_i_axis_tdata(AD9361_CTRL_dout_data_4),
         .rx2_q_axis_tdata(AD9361_CTRL_dout_data_5),
-        .rx_ocorr_dtct(modem_0_rx_ocorr_dtct),
         .rx_tx_en(modem_0_rx_tx_en),
         .s_axis_aclk(clk_wiz_0_clk_out1),
         .s_axis_tdata(eth_pump_0_m_axis_tdata_modem),

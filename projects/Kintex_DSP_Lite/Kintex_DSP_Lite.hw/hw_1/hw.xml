@@ -72,7 +72,7 @@
     <Object name="u_ila_0" gui_info="">
       <Properties Property="CONTROL.CAPTURE_MODE" value="ALWAYS"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
-      <Properties Property="CONTROL.TRIGGER_POSITION" value="2047"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="560"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="10"/>
     </Object>
     <Object name="u_ila_1" gui_info="">
@@ -105,6 +105,8 @@
     <Object name="design_1_i/ad9361_spi_ss1_1" gui_info="Trigger Setup=2"/>
     <Object name="design_1_i/ad9361_spi_ss2_1" gui_info="Trigger Setup=3"/>
     <Object name="design_1_i/clk_axi_reset_n" gui_info=""/>
+    <Object name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[15:0]" gui_info=""/>
+    <Object name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[15:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/isop" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[23:0]" gui_info="Trigger Setup=0"/>
@@ -8096,6 +8098,186 @@
         <net name="design_1_i/dout_ovf_1"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="gmii_rx_0"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[15]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[14]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[13]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[12]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[11]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[10]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[9]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[8]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[7]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[6]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[5]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[4]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[3]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[2]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[1]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="async_fifo_0"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[15]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[14]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[13]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[12]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[11]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[10]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[9]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[8]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[7]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[6]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[5]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[4]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[3]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[2]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[1]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[15]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[14]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[13]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[12]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[11]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[10]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[9]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[8]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[7]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[6]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[5]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[4]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[3]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[2]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[1]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="cobs_decode"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[15]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[14]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[13]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[12]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[11]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[10]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[9]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[8]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[7]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[6]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[5]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[4]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[3]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[2]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[1]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="async_fifo_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[15]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[14]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[13]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[12]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[11]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[10]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[9]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[8]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[7]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[6]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[5]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[4]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[3]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[2]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[1]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
@@ -8645,7 +8827,7 @@
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_sub/count_delay[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="gt24&apos;u4000"/>
@@ -8689,7 +8871,7 @@
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/local_mean[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq18&apos;hX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq18&apos;hX_XXXX"/>
@@ -8727,7 +8909,7 @@
         <net name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/calculate_mean_sub/rslos_reg[0][23]_0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq18&apos;hX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq18&apos;hX_XXXX"/>

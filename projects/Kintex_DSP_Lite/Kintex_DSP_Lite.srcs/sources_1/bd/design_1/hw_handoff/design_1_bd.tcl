@@ -2194,6 +2194,10 @@ proc create_root_design { parentCell } {
 
   # Create instance: util_clkdiv_0, and set properties
   set util_clkdiv_0 [ create_bd_cell -type ip -vlnv analog.com:user:util_clkdiv:1.0 util_clkdiv_0 ]
+  set_property -dict [ list \
+   CONFIG.SEL_0_DIV {4} \
+   CONFIG.SEL_1_DIV {2} \
+ ] $util_clkdiv_0
 
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
@@ -2344,12 +2348,13 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_axi_reset_n [get_bd_pins AD9361_CTRL/ext_reset_in] [get_bd_pins AD9364/ext_reset_in] [get_bd_pins CLK_AXI/reset_n]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins eth_pump_0/iclk_h] [get_bd_pins modem_0/clk_h] [get_bd_pins modem_0/s_axis_aclk]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins eth_pump_0/iclk_hh] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk] [get_bd_pins tvalid_fir_gen_0/iclk]
-  connect_bd_net -net eth_pump_0_axis_cobs_decode_0_m_axis_TUSER [get_bd_ports PIN_0] [get_bd_pins eth_pump_0/axis_cobs_decode_0_m_axis_TUSER]
+  connect_bd_net -net eth_pump_0_async_fifo_1_olast [get_bd_ports PIN_0] [get_bd_pins eth_pump_0/async_fifo_1_olast]
   connect_bd_net -net eth_pump_0_eth_rx_en [get_bd_pins axi_ethernetlite_0/phy_dv] [get_bd_pins eth_pump_0/eth_rx_en]
   connect_bd_net -net eth_pump_0_eth_rxd [get_bd_pins axi_ethernetlite_0/phy_rx_data] [get_bd_pins eth_pump_0/eth_rxd]
   connect_bd_net -net eth_pump_0_m_axis_tdata_modem [get_bd_pins eth_pump_0/m_axis_tdata_modem] [get_bd_pins modem_0/s_axis_tdata]
   connect_bd_net -net eth_pump_0_m_axis_tvalid_modem [get_bd_pins eth_pump_0/m_axis_tvalid_modem] [get_bd_pins modem_0/s_axis_tvalid]
   connect_bd_net -net eth_pump_0_m_status_overflow [get_bd_ports PIN_1] [get_bd_pins eth_pump_0/m_status_overflow]
+  connect_bd_net -net eth_pump_0_prog_full [get_bd_ports PIN_2] [get_bd_pins eth_pump_0/prog_full]
   connect_bd_net -net fir_compiler_0_m_axis_data_tdata [get_bd_pins fir_compiler_0/m_axis_data_tdata] [get_bd_pins fir_compiler_2/s_axis_data_tdata]
   connect_bd_net -net fir_compiler_1_m_axis_data_tdata [get_bd_pins fir_compiler_1/m_axis_data_tdata] [get_bd_pins fir_compiler_3/s_axis_data_tdata]
   connect_bd_net -net fir_compiler_1_m_axis_data_tvalid [get_bd_pins fir_compiler_1/m_axis_data_tvalid] [get_bd_pins fir_compiler_3/s_axis_data_tvalid]
@@ -2362,7 +2367,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net modem_0_corr_pr_detect [get_bd_ports LED3] [get_bd_pins modem_0/corr_pr_detect]
   connect_bd_net -net modem_0_m_axis_tdata [get_bd_pins eth_pump_0/s_axis_tdata_modem] [get_bd_pins modem_0/m_axis_tdata]
   connect_bd_net -net modem_0_m_axis_tvalid [get_bd_pins eth_pump_0/s_axis_tvalid_modem] [get_bd_pins modem_0/m_axis_tvalid]
-  connect_bd_net -net modem_0_rx_ocorr_dtct [get_bd_ports PIN_2] [get_bd_pins modem_0/rx_ocorr_dtct]
   connect_bd_net -net modem_0_rx_tx_en [get_bd_ports LED1] [get_bd_pins modem_0/rx_tx_en]
   connect_bd_net -net modem_0_s_axis_tready [get_bd_pins eth_pump_0/m_axis_tready_modem] [get_bd_pins modem_0/s_axis_tready]
   connect_bd_net -net modem_0_tx_i_axis_tdata [get_bd_pins AD9361_CTRL/din_data_4] [get_bd_pins modem_0/tx_i_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_i]
