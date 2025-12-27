@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7k325t_0" gui_info="dashboard1=dashboard_1[xc7k325t_0/XADC=XADC_PLOT_1;]"/>
+  <device name="xc7k325t_0" gui_info="dashboard1=hw_ila_1[xc7k325t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k325t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k325t_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7k325t_0/hw_ila_1/Status=ILA_STATUS_1;xc7k325t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_cfgmem" gui_info="">
     <Object name="" gui_info="">
       <Properties Property="PROGRAM.ADDRESS_RANGE" value="use_file"/>
@@ -31,6 +31,12 @@
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
       <Properties Property="PROGRAM.HW_CFGMEM_PART" value="mt25ql256-spi-x1_x2_x4"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+    <Object name="xc7k325t_0_1" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
     <Object name="xc7k410t_0" gui_info="">
@@ -106,6 +112,8 @@
     <Object name="design_1_i/ad9361_spi_ss2_1" gui_info="Trigger Setup=3"/>
     <Object name="design_1_i/clk_axi_reset_n" gui_info=""/>
     <Object name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_0[15:0]" gui_info=""/>
+    <Object name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_1[15:0]" gui_info=""/>
+    <Object name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_2[15:0]" gui_info=""/>
     <Object name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_3[15:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/fft_frame_count[6:0]" gui_info=""/>
     <Object name="design_1_i/modem_0/inst/modem_rx/RX_phy_sub/filter_sop_new_sub/isop" gui_info="Trigger Setup=0"/>
@@ -8144,7 +8152,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[15:0]"/>
+        <Option Id="MAP" value="probe3[15:0]"/>
         <Option Id="NAME.CUSTOM" value="async_fifo_0"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -8176,13 +8184,13 @@
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
-        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[15:0]"/>
-        <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="MAP" value="probe5[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="cobs_encode"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
@@ -8216,7 +8224,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="MAP" value="probe2[15:0]"/>
         <Option Id="NAME.CUSTOM" value="cobs_decode"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -8252,7 +8260,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe4[15:0]"/>
+        <Option Id="MAP" value="probe0[15:0]"/>
         <Option Id="NAME.CUSTOM" value="async_fifo_1"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -8276,6 +8284,42 @@
         <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[2]"/>
         <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[1]"/>
         <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_4[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="axi_ethernetlite_0"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[15]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[14]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[13]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[12]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[11]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[10]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[9]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[8]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[7]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[6]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[5]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[4]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[3]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[2]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[1]"/>
+        <net name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

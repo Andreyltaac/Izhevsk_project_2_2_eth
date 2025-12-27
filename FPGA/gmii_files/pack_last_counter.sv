@@ -96,7 +96,7 @@ module pack_last_counter
 	(* mark_debug = "true" *) output	reg		[plen_cnt-1:0]	cnt_pack_2,
 	(* mark_debug = "true" *) output	reg		[plen_cnt-1:0]	cnt_pack_3,
 	(* mark_debug = "true" *) output	reg		[plen_cnt-1:0]	cnt_pack_4,
-	output	reg		[plen_cnt-1:0]	cnt_pack_5,
+	(* mark_debug = "true" *) output	reg		[plen_cnt-1:0]	cnt_pack_5,
 	output	reg		[plen_cnt-1:0]	cnt_pack_6,
 	output	reg		[plen_cnt-1:0]	cnt_pack_7,
 	output	reg		[plen_cnt-1:0]	cnt_pack_8,

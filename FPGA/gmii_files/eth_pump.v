@@ -36,7 +36,17 @@ output wire  m_status_overflow,
 output wire async_fifo_1_olast
 );
 
-
+reg eth_tx_en_reg;
+wire eth_sop;
+always @(posedge iclk_eth) begin
+	if (~irst_eth) begin
+		eth_tx_en_reg <= 0;
+	end
+	else begin
+		eth_tx_en_reg <= sys_ps7_ENET1_GMII_TX_EN;
+	end
+end
+assign eth_sop = sys_ps7_ENET1_GMII_TX_EN && ~eth_tx_en_reg;
 
 // Сигналы для модулей TX пути
 wire [7:0] axis_gmii_rx_0_m_axis_TDATA;
@@ -194,7 +204,7 @@ axis_async_fifo axis_async_fifo_0 (
     .m_pause_req(1'b0),
     .s_pause_req(1'b0),
     
-    .m_status_overflow()
+    .m_status_overflow(m_status_overflow)
 );
 
 // COBS энкодер (упаковка данных)
@@ -240,7 +250,7 @@ axis_data_fifo_0 axis_data_fifo_0_0 (
     .m_axis_tuser(axis_data_fifo_0_M_AXIS_TUSER),
     .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
     .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-    .prog_full ()
+    .prog_full (prog_full)
 );
 
 ///////////////////////////////////////////////////////////////////////////// RX PATH
@@ -267,7 +277,7 @@ axis_data_fifo_0 axis_data_fifo_0_1 (
     .m_axis_tuser(axis_data_fifo_1_M_AXIS_TUSER),
     .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
     .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
-    .prog_full (prog_full)
+    .prog_full ()
 );
 
 // COBS декодер (распаковка данных)
@@ -319,7 +329,7 @@ axis_async_fifo axis_async_fifo_1 (
     .m_pause_req(1'b0),
     .s_pause_req(1'b0),
     
-    .m_status_overflow(m_status_overflow)
+    .m_status_overflow()
 );
 
 // AXI-Stream -> GMII TX преобразователь
@@ -416,7 +426,7 @@ assign PLC_ilast_1  = axis_async_fifo_0_m_axis_TLAST;
 assign PLC_ilast_2  = axis_cobs_encode_0_m_axis_TLAST;
 assign PLC_ilast_3  = axis_cobs_decode_0_m_axis_TLAST;
 assign PLC_ilast_4  = axis_async_fifo_1_m_axis_TLAST;
-assign PLC_ilast_5	= 0;
+assign PLC_ilast_5	= eth_sop;
 assign PLC_ilast_6	= 0;
 assign PLC_ilast_7	= 0;
 assign PLC_ilast_8	= 0;

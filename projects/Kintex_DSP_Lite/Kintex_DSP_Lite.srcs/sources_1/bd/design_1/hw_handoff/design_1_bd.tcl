@@ -1351,6 +1351,9 @@ proc create_hier_cell_AXI_Peripheral { parentCell nameHier } {
 
   # Create instance: VCC, and set properties
   set VCC [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 VCC ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+ ] $VCC
 
   # Create instance: xlconcat_1, and set properties
   set xlconcat_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1 ]
