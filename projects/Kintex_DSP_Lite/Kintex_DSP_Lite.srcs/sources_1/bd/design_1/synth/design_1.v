@@ -1,7 +1,11 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< Updated upstream
 //Date        : Thu Nov 27 10:49:21 2025
+=======
+//Date        : Mon Dec 29 12:08:13 2025
+>>>>>>> Stashed changes
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -385,7 +389,8 @@ module AD9361_1_imp_OOB3I
 endmodule
 
 module AD9361_2_imp_GMWOOB
-   (ad9361_2_P0_N,
+   (FPGA_REF_40MHZ,
+    ad9361_2_P0_N,
     ad9361_2_P0_P,
     ad9361_2_P1_N,
     ad9361_2_P1_P,
@@ -434,6 +439,7 @@ module AD9361_2_imp_GMWOOB
     s_axi_wvalid,
     up_enable,
     up_txnrx);
+  input FPGA_REF_40MHZ;
   output [5:0]ad9361_2_P0_N;
   output [5:0]ad9361_2_P0_P;
   input [5:0]ad9361_2_P1_N;
@@ -503,6 +509,7 @@ module AD9361_2_imp_GMWOOB
   wire Conn1_WREADY;
   wire [3:0]Conn1_WSTRB;
   wire Conn1_WVALID;
+  wire FPGA_REF_40MHZ_1;
   wire [15:0]RAshift16_4_up_0_output_bus;
   wire [15:0]RAshift16_4_up_1_output_bus;
   (* DEBUG = "true" *) wire [15:0]RAshift16_4_up_2_output_bus;
@@ -547,12 +554,12 @@ module AD9361_2_imp_GMWOOB
   wire axi_ad9361_2_tx_frame_out_n;
   wire axi_ad9361_2_tx_frame_out_p;
   wire axi_ad9361_2_txnrx;
+  wire clk_DSP_sample_rate_30_72;
   wire [15:0]dac_fifo_ad9361_1_dout_data_0;
   wire [15:0]dac_fifo_ad9361_1_dout_data_1;
   wire [15:0]dac_fifo_ad9361_1_dout_data_2;
   wire [15:0]dac_fifo_ad9361_1_dout_data_3;
   wire delay_clk_1;
-  wire din_clk_1;
   wire [15:0]din_data_0_1;
   wire [15:0]din_data_1_1;
   (* DEBUG = "true" *) wire [15:0]din_data_4_1;
@@ -577,6 +584,7 @@ module AD9361_2_imp_GMWOOB
   assign Conn1_WDATA = s_axi_wdata[31:0];
   assign Conn1_WSTRB = s_axi_wstrb[3:0];
   assign Conn1_WVALID = s_axi_wvalid;
+  assign FPGA_REF_40MHZ_1 = FPGA_REF_40MHZ;
   assign ad9361_2_P0_N[5:0] = axi_ad9361_2_tx_data_out_n;
   assign ad9361_2_P0_P[5:0] = axi_ad9361_2_tx_data_out_p;
   assign ad9361_2_P1_N_1 = ad9361_2_P1_N[5:0];
@@ -593,7 +601,6 @@ module AD9361_2_imp_GMWOOB
   assign ad9361_TX_FRAME2_P = axi_ad9361_2_tx_frame_out_p;
   assign adc_valid_i0 = axi_ad9361_2_adc_valid_i0;
   assign delay_clk_1 = delay_clk;
-  assign din_clk_1 = din_clk;
   assign din_data_0_1 = din_data_0[15:0];
   assign din_data_1_1 = din_data_1[15:0];
   assign din_data_4_1 = din_data_4[15:0];
@@ -646,7 +653,7 @@ module AD9361_2_imp_GMWOOB
         .din_valid_1(axi_ad9361_2_adc_valid_q0),
         .din_valid_2(axi_ad9361_2_adc_valid_i1),
         .din_valid_3(axi_ad9361_2_adc_valid_q1),
-        .dout_clk(din_clk_1),
+        .dout_clk(clk_DSP_sample_rate_30_72),
         .dout_data_0(adc_fifo_ad9361_2_dout_data_0),
         .dout_data_1(adc_fifo_ad9361_2_dout_data_1),
         .dout_data_2(adc_fifo_ad9361_2_dout_data_2),
@@ -727,8 +734,11 @@ module AD9361_2_imp_GMWOOB
         .up_dac_gpio_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .up_enable(up_enable_1),
         .up_txnrx(up_txnrx_1));
+  design_1_clk_DSP_1 clk_DSP
+       (.clk_in1(FPGA_REF_40MHZ_1),
+        .sample_rate_61_44(clk_DSP_sample_rate_30_72));
   design_1_dac_fifo_ad9361_2_0 dac_fifo_ad9361_2
-       (.din_clk(din_clk_1),
+       (.din_clk(clk_DSP_sample_rate_30_72),
         .din_data_0(din_data_4_1),
         .din_data_1(din_data_5_1),
         .din_data_2(din_data_0_1),
@@ -1720,7 +1730,8 @@ module AD9361_CTRL_imp_9MHREM
         .up_enable(up_txnrx_1),
         .up_txnrx(up_txnrx_1));
   AD9361_2_imp_GMWOOB AD9361_2
-       (.ad9361_2_P0_N(AD9361_2_ad9361_2_P0_N),
+       (.FPGA_REF_40MHZ(FPGA_REF_40MHZ_1),
+        .ad9361_2_P0_N(AD9361_2_ad9361_2_P0_N),
         .ad9361_2_P0_P(AD9361_2_ad9361_2_P0_P),
         .ad9361_2_P1_N(ad9361_2_P1_N_1),
         .ad9361_2_P1_P(ad9361_2_P1_P_1),
@@ -4087,7 +4098,11 @@ module ad9361_clk_imp_1I4OLDI
         .sample_rate_30_72(clk_DSP_data_rate));
 endmodule
 
+<<<<<<< Updated upstream
 (* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=108,numReposBlks=81,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=22,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+=======
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=105,numReposBlks=78,numNonXlnxBlks=14,numHierBlks=27,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=22,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=92,da_board_cnt=5,da_clkrst_cnt=25,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+>>>>>>> Stashed changes
 module design_1
    (AXI_RX_CLK_OUT,
     AXI_RX_DATA_OUT,
@@ -4596,7 +4611,13 @@ module design_1
   wire clk_axi_reset_n;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
+<<<<<<< Updated upstream
   wire eth_pump_0_axis_cobs_decode_0_m_axis_TUSER;
+=======
+  (* DEBUG = "true" *) wire [15:0]din_data_4_1;
+  (* DEBUG = "true" *) wire [15:0]din_data_5_1;
+  wire eth_pump_0_async_fifo_1_olast;
+>>>>>>> Stashed changes
   wire eth_pump_0_eth_rx_en;
   wire [7:0]eth_pump_0_eth_rxd;
   wire [7:0]eth_pump_0_m_axis_tdata_modem;
@@ -4610,6 +4631,7 @@ module design_1
   wire ibuf_0_out_ref;
   wire modem_0_DeFec_err_dtct;
   wire modem_0_corr_pr_detect;
+  wire modem_0_ctrl_switch_tx_fir;
   wire [7:0]modem_0_m_axis_tdata;
   wire modem_0_m_axis_tvalid;
   wire modem_0_rx_ocorr_dtct;
@@ -4811,8 +4833,13 @@ module design_1
         .din_data_11({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_2({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_3({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+<<<<<<< Updated upstream
         .din_data_4({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_5({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+=======
+        .din_data_4(din_data_4_1),
+        .din_data_5(din_data_5_1),
+>>>>>>> Stashed changes
         .din_data_6({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_7({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .din_data_8({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -5342,12 +5369,12 @@ module design_1
   design_1_fir_compiler_0_2 fir_compiler_2
        (.aclk(clk_wiz_0_clk_out2),
         .m_axis_data_tdata(fir_compiler_2_m_axis_data_tdata),
-        .s_axis_data_tdata(fir_compiler_0_m_axis_data_tdata),
+        .s_axis_data_tdata(AD9361_CTRL_dout_data_4),
         .s_axis_data_tvalid(tvalid_fir_gen_1_tvalid));
   design_1_fir_compiler_2_0 fir_compiler_3
        (.aclk(clk_wiz_0_clk_out2),
         .m_axis_data_tdata(fir_compiler_3_m_axis_data_tdata),
-        .s_axis_data_tdata(fir_compiler_1_m_axis_data_tdata),
+        .s_axis_data_tdata(AD9361_CTRL_dout_data_5),
         .s_axis_data_tvalid(fir_compiler_1_m_axis_data_tvalid));
   design_1_modem_0_0 modem_0
        (.DeFec_err_dtct(modem_0_DeFec_err_dtct),
@@ -5376,6 +5403,7 @@ module design_1
         .clk_hh(clk_wiz_0_clk_out2),
         .clk_l(AD9361_CTRL_clk_out1),
         .corr_pr_detect(modem_0_corr_pr_detect),
+        .ctrl_switch_tx_fir(modem_0_ctrl_switch_tx_fir),
         .m_axis_aclk(clk_wiz_0_clk_out2),
         .m_axis_tdata(modem_0_m_axis_tdata),
         .m_axis_tready(xlconstant_5_dout),
@@ -5395,6 +5423,14 @@ module design_1
         .in_sig(axi_ethernetlite_0_ip2intc_irpt),
         .out_sig(pulse_expander_0_out_sig),
         .reset(rst_sys_ps7_100M_peripheral_aresetn));
+  design_1_switch_0_0 switch_0
+       (.iimdata_ad(fir_compiler_1_m_axis_data_tdata),
+        .iimdata_tx(modem_0_tx_q_axis_tdata),
+        .iredata_ad(fir_compiler_0_m_axis_data_tdata),
+        .iredata_tx(modem_0_tx_i_axis_tdata),
+        .oimdata_rx(din_data_5_1),
+        .oredata_rx(din_data_4_1),
+        .switch_on(modem_0_ctrl_switch_tx_fir));
   design_1_tvalid_fir_gen_0_0 tvalid_fir_gen_0
        (.iclk(clk_wiz_0_clk_out2),
         .idata_i(modem_0_tx_i_axis_tdata),

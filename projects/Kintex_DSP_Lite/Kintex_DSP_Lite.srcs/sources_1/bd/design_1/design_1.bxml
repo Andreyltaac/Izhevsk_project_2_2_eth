@@ -2,10 +2,17 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
+<<<<<<< Updated upstream
     <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1764215364"/>
     <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1764215364"/>
     <Generation Name="SIMULATION" State="GENERATED" Timestamp="1764215364"/>
     <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1764215364"/>
+=======
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1766984895"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1766984895"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1766984895"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1766984895"/>
+>>>>>>> Stashed changes
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_1_Concat_0\design_1_Concat_0.xci" Type="IP">
         <Instance HierarchyPath="AXI_Peripheral/Concat"/>
@@ -647,16 +654,26 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+<<<<<<< Updated upstream
       <File Name="ip\design_1_tvalid_fir_gen_0_1\design_1_tvalid_fir_gen_0_1.xci" Type="IP">
         <Instance HierarchyPath="tvalid_fir_gen_1"/>
+=======
+      <File Name="ip\design_1_clk_DSP_1\design_1_clk_DSP_1.xci" Type="IP">
+        <Instance HierarchyPath="AD9361_CTRL/AD9361_2/clk_DSP"/>
+>>>>>>> Stashed changes
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+<<<<<<< Updated upstream
       <File Name="ip\design_1_auto_pc_0\design_1_auto_pc_0.xci" Type="IP">
         <Instance HierarchyPath="AXI_Peripheral/AXI_C2C_axi_periph/m13_couplers/auto_pc"/>
+=======
+      <File Name="ip\design_1_switch_0_0\design_1_switch_0_0.xci" Type="IP">
+        <Instance HierarchyPath="switch_0"/>
+>>>>>>> Stashed changes
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

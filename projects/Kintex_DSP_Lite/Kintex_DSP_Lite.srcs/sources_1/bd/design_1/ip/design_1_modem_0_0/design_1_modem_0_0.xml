@@ -1016,7 +1016,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>9:c7b8144e</spirit:value>
+=======
+            <spirit:value>9:263db82c</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1030,11 +1034,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>Mon Nov 17 05:00:40 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:c7b8144e</spirit:value>
+=======
+            <spirit:value>Mon Dec 29 05:06:05 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:263db82c</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1050,11 +1062,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>Mon Nov 17 05:00:40 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:c7b8144e</spirit:value>
+=======
+            <spirit:value>Mon Dec 29 05:06:05 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:263db82c</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1066,7 +1086,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>9:b5031647</spirit:value>
+=======
+            <spirit:value>9:feed04ca</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1082,11 +1106,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>Mon Nov 17 05:00:40 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:b5031647</spirit:value>
+=======
+            <spirit:value>Mon Dec 29 05:06:05 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:feed04ca</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1370,6 +1402,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+<<<<<<< Updated upstream
         <spirit:name>finder_osop</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -1384,6 +1417,9 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>decrc_verr</spirit:name>
+=======
+        <spirit:name>ctrl_switch_tx_fir</spirit:name>
+>>>>>>> Stashed changes
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>

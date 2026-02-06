@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <GenRun Id="synth_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1764215388">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1767071821">
+>>>>>>> Stashed changes
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>

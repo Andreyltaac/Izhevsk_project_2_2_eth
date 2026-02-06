@@ -10,6 +10,7 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
+<<<<<<< Updated upstream
       <ZoomEndTime time="32768001fs"></ZoomEndTime>
       <Cursor1Time time="922000fs"></Cursor1Time>
    </zoom_setting>
@@ -25,6 +26,21 @@
       <obj_property name="ElementShortName">design_1_i/fir_compiler_0_m_axis_data_tdata[15:0]</obj_property>
       <obj_property name="ObjectShortName">fir_compiler_0_m_axis_data_tdata[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+=======
+      <ZoomEndTime time="1036272fs"></ZoomEndTime>
+      <Cursor1Time time="837000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="246"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/eth_pump_0/inst/u_plc/cnt_pack_5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_pack_5[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+>>>>>>> Stashed changes
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>

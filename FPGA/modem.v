@@ -25,8 +25,14 @@ module modem(
 	output                      DeFec_err_dtct,	//LED 2
 	output                      rx_tx_en,        //LED 1
 	output                      rx_ocorr_dtct,   //PIN_2
+<<<<<<< Updated upstream
 	output                      finder_osop,     //PIN_1
 	output                      decrc_verr,      //PIN_0
+=======
+	//output                      finder_osop,     //PIN_1
+	//output                      decrc_verr,      //PIN_0
+	output                      ctrl_switch_tx_fir,
+>>>>>>> Stashed changes
 // AXI	
 // Global Clock Signal
 	input wire                  S_AXI_ACLK, //clk_wiz_0_axi_periph_clk
@@ -90,6 +96,10 @@ wire ctrl_rst_rx;
 wire ctrl_data_off;
 wire ctrl_validate_on;
 wire ctrl_switch_tx_ad;
+<<<<<<< Updated upstream
+=======
+//wire ctrl_switch_tx_fir;
+>>>>>>> Stashed changes
 wire [14:0] N_sop_detect;
 
 assign rx_tx_en = (ctrl_tx_rst && ctrl_rst_rx);

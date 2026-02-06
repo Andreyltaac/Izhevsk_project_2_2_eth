@@ -1,7 +1,11 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< Updated upstream
 | Date             : Thu Nov 27 11:26:35 2025
+=======
+| Date             : Tue Dec 30 12:53:00 2025
+>>>>>>> Stashed changes
 | Host             : TOR00094 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,6 +34,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
+<<<<<<< Updated upstream
 | Total On-Chip Power (W)  | 3.256        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
@@ -38,6 +43,16 @@ Table of Contents
 | Effective TJA (C/W)      | 1.9          |
 | Max Ambient (C)          | 78.9         |
 | Junction Temperature (C) | 31.1         |
+=======
+| Total On-Chip Power (W)  | 3.272        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 3.076        |
+| Device Static (W)        | 0.195        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 78.8         |
+| Junction Temperature (C) | 31.2         |
+>>>>>>> Stashed changes
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,6 +67,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
+<<<<<<< Updated upstream
 | Clocks                   |     0.376 |       21 |       --- |             --- |
 | Slice Logic              |     0.170 |   131408 |       --- |             --- |
 |   LUT as Logic           |     0.122 |    39553 |    203800 |           19.41 |
@@ -69,6 +85,25 @@ Table of Contents
 | I/O                      |     1.433 |      225 |       400 |           56.25 |
 | Static Power             |     0.201 |          |           |                 |
 | Total                    |     3.256 |          |           |                 |
+=======
+| Clocks                   |     0.339 |       23 |       --- |             --- |
+| Slice Logic              |     0.169 |   131637 |       --- |             --- |
+|   LUT as Logic           |     0.122 |    39780 |    203800 |           19.52 |
+|   Register               |     0.018 |    64591 |    407600 |           15.85 |
+|   LUT as Shift Register  |     0.014 |     2369 |     64000 |            3.70 |
+|   CARRY4                 |     0.013 |     5712 |     50950 |           11.21 |
+|   LUT as Distributed RAM |     0.002 |     1318 |     64000 |            2.06 |
+|   F7/F8 Muxes            |    <0.001 |     1103 |    203800 |            0.54 |
+|   Others                 |     0.000 |     8561 |       --- |             --- |
+| Signals                  |     0.193 |    84441 |       --- |             --- |
+| Block RAM                |     0.290 |    134.5 |       445 |           30.22 |
+| MMCM                     |     0.460 |        4 |        10 |           40.00 |
+| PLL                      |     0.113 |        1 |        10 |           10.00 |
+| DSPs                     |     0.081 |       69 |       840 |            8.21 |
+| I/O                      |     1.433 |      225 |       400 |           56.25 |
+| Static Power             |     0.195 |          |           |                 |
+| Total                    |     3.272 |          |           |                 |
+>>>>>>> Stashed changes
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,8 +113,13 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
+<<<<<<< Updated upstream
 | Vccint    |       1.000 |     1.285 |       1.190 |      0.095 |
 | Vccaux    |       1.800 |     0.401 |       0.372 |      0.029 |
+=======
+| Vccint    |       1.000 |     1.187 |       1.094 |      0.093 |
+| Vccaux    |       1.800 |     0.467 |       0.438 |      0.029 |
+>>>>>>> Stashed changes
 | Vcco33    |       3.300 |     0.071 |       0.070 |      0.001 |
 | Vcco25    |       2.500 |     0.257 |       0.256 |      0.001 |
 | Vcco18    |       1.800 |     0.168 |       0.167 |      0.001 |
@@ -145,6 +185,7 @@ Table of Contents
 | clkfbout                                                                                   | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/clkfbout |            10.0 |
 | clkfbout_design_1_CLK_COMMON_0                                                             | design_1_i/CLK_AXI/CLK_COMMON/inst/clkfbout_design_1_CLK_COMMON_0                                                                                                    |            25.0 |
 | clkfbout_design_1_clk_DSP_0                                                                | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkfbout_design_1_clk_DSP_0                                                                                           |            25.0 |
+| clkfbout_design_1_clk_DSP_1                                                                | design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst/clkfbout_design_1_clk_DSP_1                                                                                             |            25.0 |
 | clkfbout_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0                                                                                                              |            32.6 |
 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs                                                                                                 |            33.0 |
 | delay_clk_design_1_CLK_COMMON_0                                                            | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk_design_1_CLK_COMMON_0                                                                                                   |             5.0 |
@@ -154,6 +195,7 @@ Table of Contents
 | prm_clk_ad3                                                                                | ad9361_DCLK_3_P                                                                                                                                                      |             4.0 |
 | prm_clk_ad4                                                                                | ad9364_DCLK_P                                                                                                                                                        |             4.0 |
 | sample_rate_30_72_design_1_clk_DSP_0                                                       | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72_design_1_clk_DSP_0                                                                                  |            32.6 |
+| sample_rate_61_44_design_1_clk_DSP_1                                                       | design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst/sample_rate_61_44_design_1_clk_DSP_1                                                                                    |            16.3 |
 +--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
@@ -166,6 +208,7 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
+<<<<<<< Updated upstream
 | design_1_wrapper          |     3.055 |
 |   dbg_hub                 |     0.006 |
 |     inst                  |     0.006 |
@@ -174,13 +217,22 @@ Table of Contents
 |     AD9361_CTRL           |     0.982 |
 |       AD9361_1            |     0.396 |
 |       AD9361_2            |     0.234 |
+=======
+| design_1_wrapper          |     3.076 |
+|   dbg_hub                 |     0.002 |
+|     inst                  |     0.002 |
+|       BSCANID.u_xsdbm_id  |     0.002 |
+|   design_1_i              |     3.060 |
+|     AD9361_CTRL           |     1.104 |
+|       AD9361_1            |     0.395 |
+|       AD9361_2            |     0.357 |
+>>>>>>> Stashed changes
 |       AD9361_3            |     0.233 |
 |       ad9361_clk          |     0.119 |
 |     AD9364                |     0.377 |
 |       axi_ad9364          |     0.376 |
 |     AXI_Peripheral        |     0.447 |
 |       AXI_C2C             |     0.441 |
-|       AXI_C2C_axi_periph  |     0.001 |
 |       AXI_DMA             |     0.005 |
 |     CLK_AXI               |     0.108 |
 |       CLK_COMMON          |     0.107 |
@@ -198,6 +250,7 @@ Table of Contents
 |       U0                  |     0.009 |
 |     fir_compiler_1        |     0.009 |
 |       U0                  |     0.009 |
+<<<<<<< Updated upstream
 |     fir_compiler_2        |     0.010 |
 |       U0                  |     0.010 |
 |     fir_compiler_3        |     0.010 |
@@ -207,6 +260,17 @@ Table of Contents
 |   u_ila_0                 |     0.078 |
 |     inst                  |     0.078 |
 |       ila_core_inst       |     0.077 |
+=======
+|     fir_compiler_2        |     0.009 |
+|       U0                  |     0.009 |
+|     fir_compiler_3        |     0.009 |
+|       U0                  |     0.009 |
+|     modem_0               |     0.824 |
+|       inst                |     0.824 |
+|   u_ila_0                 |     0.002 |
+|     inst                  |     0.002 |
+|       ila_core_inst       |     0.002 |
+>>>>>>> Stashed changes
 +---------------------------+-----------+
 
 

@@ -10,8 +10,8 @@
       <spirit:componentRef spirit:vendor="analog.com" spirit:library="user" spirit:name="util_rfifo" spirit:version="1.0"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.ASSOCIATED_BUSIF"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.CLK_DOMAIN">design_1_clk_DSP_0_sample_rate_30_72</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.FREQ_HZ">30720000</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.CLK_DOMAIN">design_1_clk_DSP_1_sample_rate_61_44</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.FREQ_HZ">61440000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_CLK.PHASE">0.0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DIN_RSTN.INSERT_VIP">0</spirit:configurableElementValue>

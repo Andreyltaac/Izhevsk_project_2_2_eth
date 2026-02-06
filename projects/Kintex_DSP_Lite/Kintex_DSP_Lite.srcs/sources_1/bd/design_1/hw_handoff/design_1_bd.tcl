@@ -40,7 +40,11 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
+<<<<<<< Updated upstream
 # eth_pump, modem, pulse_expander, tvalid_fir_gen, tvalid_fir_gen, FPGA_reset, ibuf, Decoder_SPI, on_off_wire, on_off_wire, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up
+=======
+# eth_pump, modem, pulse_expander, switch, tvalid_fir_gen, FPGA_reset, ibuf, Decoder_SPI, on_off_wire, on_off_wire, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up, RAshift16_4_up
+>>>>>>> Stashed changes
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -506,6 +510,7 @@ proc create_hier_cell_AD9361_2 { parentCell nameHier } {
 
 
   # Create pins
+  create_bd_pin -dir I -type clk FPGA_REF_40MHZ
   create_bd_pin -dir O -from 5 -to 0 ad9361_2_P0_N
   create_bd_pin -dir O -from 5 -to 0 ad9361_2_P0_P
   create_bd_pin -dir I -from 5 -to 0 ad9361_2_P1_N
@@ -622,6 +627,46 @@ proc create_hier_cell_AD9361_2 { parentCell nameHier } {
    CONFIG.TDD_DISABLE {1} \
  ] $axi_ad9361_2
 
+  # Create instance: clk_DSP, and set properties
+  set clk_DSP [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_DSP ]
+  set_property -dict [ list \
+   CONFIG.CLKIN1_JITTER_PS {250.0} \
+   CONFIG.CLKOUT1_JITTER {215.826} \
+   CONFIG.CLKOUT1_PHASE_ERROR {196.976} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {61.44} \
+   CONFIG.CLKOUT2_JITTER {158.000} \
+   CONFIG.CLKOUT2_PHASE_ERROR {196.976} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT2_USED {false} \
+   CONFIG.CLKOUT3_JITTER {158.000} \
+   CONFIG.CLKOUT3_PHASE_ERROR {196.976} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT3_USED {false} \
+   CONFIG.CLKOUT4_JITTER {247.096} \
+   CONFIG.CLKOUT4_PHASE_ERROR {196.976} \
+   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT4_USED {false} \
+   CONFIG.CLK_OUT1_PORT {sample_rate_61_44} \
+   CONFIG.CLK_OUT2_PORT {clk_out2} \
+   CONFIG.CLK_OUT3_PORT {clk_out3} \
+   CONFIG.CLK_OUT4_PORT {clk_out4} \
+   CONFIG.JITTER_SEL {No_Jitter} \
+   CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} \
+   CONFIG.MMCM_CLKIN1_PERIOD {25.000} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {15.625} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+   CONFIG.MMCM_CLKOUT3_DIVIDE {1} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+   CONFIG.NUM_OUT_CLKS {1} \
+   CONFIG.PRIM_IN_FREQ {40} \
+   CONFIG.PRIM_SOURCE {No_buffer} \
+   CONFIG.USE_LOCKED {true} \
+   CONFIG.USE_RESET {false} \
+ ] $clk_DSP
+
   # Create instance: dac_fifo_ad9361_2, and set properties
   set dac_fifo_ad9361_2 [ create_bd_cell -type ip -vlnv analog.com:user:util_rfifo:1.0 dac_fifo_ad9361_2 ]
   set_property -dict [ list \
@@ -634,6 +679,7 @@ proc create_hier_cell_AD9361_2 { parentCell nameHier } {
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins s_axi] [get_bd_intf_pins axi_ad9361_2/s_axi]
 
   # Create port connections
+  connect_bd_net -net FPGA_REF_40MHZ_1 [get_bd_pins FPGA_REF_40MHZ] [get_bd_pins clk_DSP/clk_in1]
   connect_bd_net -net RAshift16_4_up_0_output_bus [get_bd_pins dout_data_6] [get_bd_pins RAshift16_4_up_0/output_bus]
   connect_bd_net -net RAshift16_4_up_1_output_bus [get_bd_pins dout_data_7] [get_bd_pins RAshift16_4_up_1/output_bus]
   connect_bd_net -net RAshift16_4_up_2_output_bus [get_bd_pins dout_data_4] [get_bd_pins RAshift16_4_up_2/output_bus]
@@ -678,12 +724,12 @@ proc create_hier_cell_AD9361_2 { parentCell nameHier } {
   connect_bd_net -net axi_ad9361_2_tx_frame_out_n [get_bd_pins ad9361_TX_FRAME2_N] [get_bd_pins axi_ad9361_2/tx_frame_out_n]
   connect_bd_net -net axi_ad9361_2_tx_frame_out_p [get_bd_pins ad9361_TX_FRAME2_P] [get_bd_pins axi_ad9361_2/tx_frame_out_p]
   connect_bd_net -net axi_ad9361_2_txnrx [get_bd_pins ad9361_TXNRX_2] [get_bd_pins axi_ad9361_2/txnrx]
+  connect_bd_net -net clk_DSP_sample_rate_30_72 [get_bd_pins adc_fifo_ad9361_2/dout_clk] [get_bd_pins clk_DSP/sample_rate_61_44] [get_bd_pins dac_fifo_ad9361_2/din_clk]
   connect_bd_net -net dac_fifo_ad9361_1_dout_data_0 [get_bd_pins axi_ad9361_2/dac_data_i0] [get_bd_pins dac_fifo_ad9361_2/dout_data_0]
   connect_bd_net -net dac_fifo_ad9361_1_dout_data_1 [get_bd_pins axi_ad9361_2/dac_data_q0] [get_bd_pins dac_fifo_ad9361_2/dout_data_1]
   connect_bd_net -net dac_fifo_ad9361_1_dout_data_2 [get_bd_pins axi_ad9361_2/dac_data_i1] [get_bd_pins dac_fifo_ad9361_2/dout_data_2]
   connect_bd_net -net dac_fifo_ad9361_1_dout_data_3 [get_bd_pins axi_ad9361_2/dac_data_q1] [get_bd_pins dac_fifo_ad9361_2/dout_data_3]
   connect_bd_net -net delay_clk_1 [get_bd_pins delay_clk] [get_bd_pins axi_ad9361_2/delay_clk]
-  connect_bd_net -net din_clk_1 [get_bd_pins din_clk] [get_bd_pins adc_fifo_ad9361_2/dout_clk] [get_bd_pins dac_fifo_ad9361_2/din_clk]
   connect_bd_net -net din_data_0_1 [get_bd_pins din_data_0] [get_bd_pins dac_fifo_ad9361_2/din_data_2]
   connect_bd_net -net din_data_1_1 [get_bd_pins din_data_1] [get_bd_pins dac_fifo_ad9361_2/din_data_3]
   connect_bd_net -net din_data_4_1 [get_bd_pins din_data_4] [get_bd_pins dac_fifo_ad9361_2/din_data_0]
@@ -1763,7 +1809,7 @@ proc create_hier_cell_AD9361_CTRL { parentCell nameHier } {
   connect_bd_net -net AD9361_3_dout_data_9 [get_bd_pins dout_data_9] [get_bd_pins AD9361_3/dout_data_9]
   connect_bd_net -net AD9361_3_dout_data_10 [get_bd_pins dout_data_10] [get_bd_pins AD9361_3/dout_data_10]
   connect_bd_net -net AD9361_3_dout_data_11 [get_bd_pins dout_data_11] [get_bd_pins AD9361_3/dout_data_11]
-  connect_bd_net -net FPGA_REF_40MHZ_1 [get_bd_pins FPGA_REF_40MHZ] [get_bd_pins ad9361_clk/FPGA_REF_40MHZ]
+  connect_bd_net -net FPGA_REF_40MHZ_1 [get_bd_pins FPGA_REF_40MHZ] [get_bd_pins AD9361_2/FPGA_REF_40MHZ] [get_bd_pins ad9361_clk/FPGA_REF_40MHZ]
   connect_bd_net -net ad9361_1_P1_N_1 [get_bd_pins ad9361_1_P1_N] [get_bd_pins AD9361_1/ad9361_1_P1_N]
   connect_bd_net -net ad9361_1_P1_P_1 [get_bd_pins ad9361_1_P1_P] [get_bd_pins AD9361_1/ad9361_1_P1_P]
   connect_bd_net -net ad9361_2_P1_N_1 [get_bd_pins ad9361_2_P1_N] [get_bd_pins AD9361_2/ad9361_2_P1_N]
@@ -2177,6 +2223,17 @@ proc create_root_design { parentCell } {
    CONFIG.EXPAND {64} \
  ] $pulse_expander_0
 
+  # Create instance: switch_0, and set properties
+  set block_name switch
+  set block_cell_name switch_0
+  if { [catch {set switch_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $switch_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: tvalid_fir_gen_0, and set properties
   set block_name tvalid_fir_gen
   set block_cell_name tvalid_fir_gen_0
@@ -2279,6 +2336,11 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net AD9361_CTRL_clk_out1 [get_bd_pins AD9361_CTRL/clk_out1] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins modem_0/clk_l]
+<<<<<<< Updated upstream
+=======
+  connect_bd_net -net AD9361_CTRL_dout_data_4 [get_bd_pins AD9361_CTRL/dout_data_4] [get_bd_pins fir_compiler_2/s_axis_data_tdata] [get_bd_pins modem_0/rx2_i_axis_tdata]
+  connect_bd_net -net AD9361_CTRL_dout_data_5 [get_bd_pins AD9361_CTRL/dout_data_5] [get_bd_pins fir_compiler_3/s_axis_data_tdata] [get_bd_pins modem_0/rx2_q_axis_tdata]
+>>>>>>> Stashed changes
   connect_bd_net -net AD9361_ctrl_data_rate [get_bd_pins AD9361_CTRL/data_rate] [get_bd_pins AD9364/dout_clk] [get_bd_pins AXI_Peripheral/fifo_wr_clk]
   connect_bd_net -net AD9364_ad9361_FB_CLK_P [get_bd_ports ad9364_FB_CLK_P] [get_bd_pins AD9364/ad9361_FB_CLK_P]
   connect_bd_net -net AD9364_ad9364_EN [get_bd_ports ad9364_EN] [get_bd_pins AD9364/ad9364_EN]
@@ -2380,17 +2442,30 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_ethernetlite_0_phy_tx_en [get_bd_pins axi_ethernetlite_0/phy_tx_en] [get_bd_pins eth_pump_0/eth_tx_en]
   connect_bd_net -net clk_axi_reset_n [get_bd_pins AD9361_CTRL/ext_reset_in] [get_bd_pins AD9364/ext_reset_in] [get_bd_pins CLK_AXI/reset_n]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins eth_pump_0/iclk_h] [get_bd_pins modem_0/clk_h] [get_bd_pins modem_0/s_axis_aclk]
+<<<<<<< Updated upstream
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins eth_pump_0/iclk_hh] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk] [get_bd_pins tvalid_fir_gen_0/iclk] [get_bd_pins tvalid_fir_gen_1/iclk]
   connect_bd_net -net eth_pump_0_axis_cobs_decode_0_m_axis_TUSER [get_bd_ports PIN_0] [get_bd_pins eth_pump_0/axis_cobs_decode_0_m_axis_TUSER]
+=======
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins eth_pump_0/iclk_hh] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins modem_0/clk_hh] [get_bd_pins modem_0/m_axis_aclk] [get_bd_pins tvalid_fir_gen_0/iclk]
+  connect_bd_net -net din_data_4_1 [get_bd_pins AD9361_CTRL/din_data_4] [get_bd_pins switch_0/oredata_rx]
+  connect_bd_net -net din_data_5_1 [get_bd_pins AD9361_CTRL/din_data_5] [get_bd_pins switch_0/oimdata_rx]
+  connect_bd_net -net eth_pump_0_async_fifo_1_olast [get_bd_ports PIN_0] [get_bd_pins eth_pump_0/async_fifo_1_olast]
+>>>>>>> Stashed changes
   connect_bd_net -net eth_pump_0_eth_rx_en [get_bd_pins axi_ethernetlite_0/phy_dv] [get_bd_pins eth_pump_0/eth_rx_en]
   connect_bd_net -net eth_pump_0_eth_rxd [get_bd_pins axi_ethernetlite_0/phy_rx_data] [get_bd_pins eth_pump_0/eth_rxd]
   connect_bd_net -net eth_pump_0_m_axis_tdata_modem [get_bd_pins eth_pump_0/m_axis_tdata_modem] [get_bd_pins modem_0/s_axis_tdata]
   connect_bd_net -net eth_pump_0_m_axis_tvalid_modem [get_bd_pins eth_pump_0/m_axis_tvalid_modem] [get_bd_pins modem_0/s_axis_tvalid]
   connect_bd_net -net eth_pump_0_m_status_overflow [get_bd_ports PIN_1] [get_bd_pins eth_pump_0/m_status_overflow]
+<<<<<<< Updated upstream
   connect_bd_net -net fir_compiler_0_m_axis_data_tdata [get_bd_pins fir_compiler_0/m_axis_data_tdata] [get_bd_pins fir_compiler_2/s_axis_data_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets fir_compiler_0_m_axis_data_tdata]
   connect_bd_net -net fir_compiler_1_m_axis_data_tdata [get_bd_pins fir_compiler_1/m_axis_data_tdata] [get_bd_pins fir_compiler_3/s_axis_data_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets fir_compiler_1_m_axis_data_tdata]
+=======
+  connect_bd_net -net eth_pump_0_prog_full [get_bd_ports PIN_2] [get_bd_pins eth_pump_0/prog_full]
+  connect_bd_net -net fir_compiler_0_m_axis_data_tdata [get_bd_pins fir_compiler_0/m_axis_data_tdata] [get_bd_pins switch_0/iredata_ad]
+  connect_bd_net -net fir_compiler_1_m_axis_data_tdata [get_bd_pins fir_compiler_1/m_axis_data_tdata] [get_bd_pins switch_0/iimdata_ad]
+>>>>>>> Stashed changes
   connect_bd_net -net fir_compiler_1_m_axis_data_tvalid [get_bd_pins fir_compiler_1/m_axis_data_tvalid] [get_bd_pins fir_compiler_3/s_axis_data_tvalid]
   connect_bd_net -net fir_compiler_2_m_axis_data_tdata [get_bd_pins fir_compiler_2/m_axis_data_tdata] [get_bd_pins modem_0/rx_i_axis_tdata]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets fir_compiler_2_m_axis_data_tdata]
@@ -2399,13 +2474,19 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ibuf_0_out_ref [get_bd_pins AD9361_CTRL/FPGA_REF_40MHZ] [get_bd_pins CLK_AXI/out_ref]
   connect_bd_net -net modem_0_DeFec_err_dtct [get_bd_ports LED2] [get_bd_pins modem_0/DeFec_err_dtct]
   connect_bd_net -net modem_0_corr_pr_detect [get_bd_ports LED3] [get_bd_pins modem_0/corr_pr_detect]
+  connect_bd_net -net modem_0_ctrl_switch_tx_fir [get_bd_pins modem_0/ctrl_switch_tx_fir] [get_bd_pins switch_0/switch_on]
   connect_bd_net -net modem_0_m_axis_tdata [get_bd_pins eth_pump_0/s_axis_tdata_modem] [get_bd_pins modem_0/m_axis_tdata]
   connect_bd_net -net modem_0_m_axis_tvalid [get_bd_pins eth_pump_0/s_axis_tvalid_modem] [get_bd_pins modem_0/m_axis_tvalid]
   connect_bd_net -net modem_0_rx_ocorr_dtct [get_bd_ports PIN_2] [get_bd_pins modem_0/rx_ocorr_dtct]
   connect_bd_net -net modem_0_rx_tx_en [get_bd_ports LED1] [get_bd_pins modem_0/rx_tx_en]
   connect_bd_net -net modem_0_s_axis_tready [get_bd_pins eth_pump_0/m_axis_tready_modem] [get_bd_pins modem_0/s_axis_tready]
+<<<<<<< Updated upstream
   connect_bd_net -net modem_0_tx_i_axis_tdata [get_bd_pins modem_0/tx_i_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_i]
   connect_bd_net -net modem_0_tx_q_axis_tdata [get_bd_pins modem_0/tx_q_axis_tdata] [get_bd_pins tvalid_fir_gen_0/idata_q]
+=======
+  connect_bd_net -net modem_0_tx_i_axis_tdata [get_bd_pins modem_0/tx_i_axis_tdata] [get_bd_pins switch_0/iredata_tx] [get_bd_pins tvalid_fir_gen_0/idata_i]
+  connect_bd_net -net modem_0_tx_q_axis_tdata [get_bd_pins modem_0/tx_q_axis_tdata] [get_bd_pins switch_0/iimdata_tx] [get_bd_pins tvalid_fir_gen_0/idata_q]
+>>>>>>> Stashed changes
   connect_bd_net -net pulse_expander_0_out_sig [get_bd_pins AXI_Peripheral/In2] [get_bd_pins pulse_expander_0/out_sig]
   connect_bd_net -net reset_1 [get_bd_pins AD9361_CTRL/peripheral_reset] [get_bd_pins AXI_Peripheral/reset]
   connect_bd_net -net rst_sys_ps7_100M_peripheral_aresetn [get_bd_pins AD9361_CTRL/s_axi_aresetn] [get_bd_pins AD9364/s_axi_aresetn] [get_bd_pins AXI_Peripheral/S00_ARESETN] [get_bd_pins CLK_AXI/peripheral_aresetn] [get_bd_pins Control_from_SOM_0/s00_axi_aresetn] [get_bd_pins Current_turning_off_0/s00_axi_aresetn] [get_bd_pins SPI_MOD/s_axi4_aresetn] [get_bd_pins axi_ethernetlite_0/s_axi_aresetn] [get_bd_pins eth_pump_0/irst_eth] [get_bd_pins modem_0/S_AXI_ARESETN] [get_bd_pins pulse_expander_0/reset]

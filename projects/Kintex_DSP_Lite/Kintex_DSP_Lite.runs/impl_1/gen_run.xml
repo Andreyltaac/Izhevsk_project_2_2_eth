@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <GenRun Id="impl_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1764215389">
+=======
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1767071821">
+>>>>>>> Stashed changes
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>

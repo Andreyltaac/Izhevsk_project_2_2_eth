@@ -161,7 +161,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>9409e189</spirit:value>
+=======
+            <spirit:value>011b680d</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -174,7 +178,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>9409e189</spirit:value>
+=======
+            <spirit:value>011b680d</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -566,7 +574,11 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
+<<<<<<< Updated upstream
       <xilinx:coreCreationDateTime>2025-11-27T03:50:31Z</xilinx:coreCreationDateTime>
+=======
+      <xilinx:coreCreationDateTime>2025-12-30T05:17:38Z</xilinx:coreCreationDateTime>
+>>>>>>> Stashed changes
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>

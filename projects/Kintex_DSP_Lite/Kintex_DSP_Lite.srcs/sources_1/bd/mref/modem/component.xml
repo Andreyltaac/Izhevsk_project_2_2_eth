@@ -363,7 +363,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>3b752188</spirit:value>
+=======
+            <spirit:value>50be0463</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -376,7 +380,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< Updated upstream
             <spirit:value>3b752188</spirit:value>
+=======
+            <spirit:value>50be0463</spirit:value>
+>>>>>>> Stashed changes
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -668,6 +676,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+<<<<<<< Updated upstream
         <spirit:name>finder_osop</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -682,6 +691,9 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>decrc_verr</spirit:name>
+=======
+        <spirit:name>ctrl_switch_tx_fir</spirit:name>
+>>>>>>> Stashed changes
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1078,7 +1090,11 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
+<<<<<<< Updated upstream
       <xilinx:coreCreationDateTime>2025-11-17T04:58:43Z</xilinx:coreCreationDateTime>
+=======
+      <xilinx:coreCreationDateTime>2025-12-29T04:55:28Z</xilinx:coreCreationDateTime>
+>>>>>>> Stashed changes
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>

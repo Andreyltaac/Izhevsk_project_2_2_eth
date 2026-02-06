@@ -1,7 +1,11 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< Updated upstream
 | Date         : Thu Nov 27 11:08:35 2025
+=======
+| Date         : Tue Dec 30 12:34:46 2025
+>>>>>>> Stashed changes
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -30,9 +34,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
+<<<<<<< Updated upstream
 | Slice LUTs*                | 44969 |     0 |    203800 | 22.07 |
 |   LUT as Logic             | 40603 |     0 |    203800 | 19.92 |
 |   LUT as Memory            |  4366 |     0 |     64000 |  6.82 |
+=======
+| Slice LUTs*                | 45319 |     0 |    203800 | 22.24 |
+|   LUT as Logic             | 41169 |     0 |    203800 | 20.20 |
+|   LUT as Memory            |  4150 |     0 |     64000 |  6.48 |
+>>>>>>> Stashed changes
 |     LUT as Distributed RAM |  1478 |     0 |           |       |
 |     LUT as Shift Register  |  2888 |     0 |           |       |
 | Slice Registers            | 67670 |    12 |    407600 | 16.60 |
@@ -125,9 +135,9 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |   17 |     0 |        32 | 53.13 |
+| BUFGCTRL   |   19 |     0 |        32 | 59.38 |
 | BUFIO      |    0 |     0 |        40 |  0.00 |
-| MMCME2_ADV |    3 |     0 |        10 | 30.00 |
+| MMCME2_ADV |    4 |     0 |        10 | 40.00 |
 | PLLE2_ADV  |    1 |     0 |        10 | 10.00 |
 | BUFMRCE    |    0 |     0 |        20 |  0.00 |
 | BUFHCE     |    0 |     0 |       168 |  0.00 |
@@ -159,6 +169,7 @@ Table of Contents
 +------------+-------+---------------------+
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
+<<<<<<< Updated upstream
 | FDRE       | 59503 |        Flop & Latch |
 | LUT3       | 14459 |                 LUT |
 | LUT2       | 12450 |                 LUT |
@@ -167,6 +178,16 @@ Table of Contents
 | FDCE       |  5438 |        Flop & Latch |
 | LUT5       |  4845 |                 LUT |
 | LUT4       |  4126 |                 LUT |
+=======
+| FDRE       | 60255 |        Flop & Latch |
+| LUT3       | 14533 |                 LUT |
+| LUT2       | 12449 |                 LUT |
+| LUT6       |  9851 |                 LUT |
+| CARRY4     |  5866 |          CarryLogic |
+| FDCE       |  5403 |        Flop & Latch |
+| LUT5       |  4895 |                 LUT |
+| LUT4       |  4473 |                 LUT |
+>>>>>>> Stashed changes
 | SRL16E     |  3202 |  Distributed Memory |
 | FDSE       |  2588 |        Flop & Latch |
 | LUT1       |  1817 |                 LUT |
@@ -189,9 +210,9 @@ Table of Contents
 | INV        |    32 |                 LUT |
 | IBUFDS     |    32 |                  IO |
 | IBUF       |    32 |                  IO |
-| BUFG       |    16 |               Clock |
+| BUFG       |    18 |               Clock |
 | IDELAYCTRL |     5 |                  IO |
-| MMCME2_ADV |     3 |               Clock |
+| MMCME2_ADV |     4 |               Clock |
 | BUFR       |     2 |               Clock |
 | PLLE2_ADV  |     1 |               Clock |
 | BUFGCTRL   |     1 |               Clock |

@@ -103,14 +103,26 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/ip_repo/IP_sync_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library'.
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/xilinx/util_clkdiv
+<<<<<<< Updated upstream
 add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 395.926 ; gain = 7.535
+=======
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/ip_repo/IP_sync_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/library/xilinx/util_clkdiv
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 395.660 ; gain = 7.176
+>>>>>>> Stashed changes
 Command: synth_design -top design_1_wrapper -part xc7k325tffg676-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Device 21-403] Loading part xc7k325tffg676-2
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< Updated upstream
 INFO: Helper process launched with PID 1228 
+=======
+INFO: Helper process launched with PID 10808 
+>>>>>>> Stashed changes
 WARNING: [Synth 8-6901] identifier 'par2ser_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/DeFEC.sv:261]
 WARNING: [Synth 8-992] pack_sop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:334]
 WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/FEC.sv:71]
@@ -142,11 +154,15 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo with fo
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_gmii_tx with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:93]
 WARNING: [Synth 8-2507] parameter declaration becomes local in lfsr with formal parameter declaration list [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/lfsr.v:355]
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 923.348 ; gain = 201.254
+=======
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 922.648 ; gain = 200.680
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4091]
-INFO: [Synth 8-6157] synthesizing module 'AD9361_CTRL_imp_9MHREM' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1126]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4098]
+INFO: [Synth 8-6157] synthesizing module 'AD9361_CTRL_imp_9MHREM' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1132]
 INFO: [Synth 8-6157] synthesizing module 'AD9361_1_imp_OOB3I' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1_LOGIC_1_1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_LOGIC_1_1/synth/design_1_LOGIC_1_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -928,7 +944,7 @@ INFO: [Synth 8-6157] synthesizing module 'design_1_TDD_SYNC2_0' [f:/work/Izhevsk
 INFO: [Synth 8-6155] done synthesizing module 'design_1_TDD_SYNC2_0' (59#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_TDD_SYNC2_0/synth/design_1_TDD_SYNC2_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'design_1_adc_fifo_ad9361_2_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_adc_fifo_ad9361_2_0/synth/design_1_adc_fifo_ad9361_2_0.v:57]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_fifo_ad9361_2_0' (60#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_adc_fifo_ad9361_2_0/synth/design_1_adc_fifo_ad9361_2_0.v:57]
-WARNING: [Synth 8-7023] instance 'adc_fifo_ad9361_2' of module 'design_1_adc_fifo_ad9361_2_0' has 30 connections declared, but only 21 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:634]
+WARNING: [Synth 8-7023] instance 'adc_fifo_ad9361_2' of module 'design_1_adc_fifo_ad9361_2_0' has 30 connections declared, but only 21 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:637]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_ad9361_2_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ad9361_2_0/synth/design_1_axi_ad9361_2_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'axi_ad9361__parameterized0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/e737/axi_ad9361.v:38]
 	Parameter ID bound to: 0 - type: integer 
@@ -1042,21 +1058,70 @@ INFO: [Synth 8-6155] done synthesizing module 'ad_data_out__parameterized2' (60#
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361_lvds_if__parameterized0' (60#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/e737/xilinx/axi_ad9361_lvds_if.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361__parameterized0' (60#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/e737/axi_ad9361.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_ad9361_2_0' (61#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ad9361_2_0/synth/design_1_axi_ad9361_2_0.v:57]
-WARNING: [Synth 8-7023] instance 'axi_ad9361_2' of module 'design_1_axi_ad9361_2_0' has 79 connections declared, but only 73 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:656]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dac_fifo_ad9361_2_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_dac_fifo_ad9361_2_0/synth/design_1_dac_fifo_ad9361_2_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dac_fifo_ad9361_2_0' (62#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_dac_fifo_ad9361_2_0/synth/design_1_dac_fifo_ad9361_2_0.v:57]
-WARNING: [Synth 8-7023] instance 'dac_fifo_ad9361_2' of module 'design_1_dac_fifo_ad9361_2_0' has 38 connections declared, but only 25 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:730]
-INFO: [Synth 8-6155] done synthesizing module 'AD9361_2_imp_GMWOOB' (63#1) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:387]
-INFO: [Synth 8-6157] synthesizing module 'AD9361_3_imp_CD210O' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:758]
-INFO: [Synth 8-6157] synthesizing module 'design_1_LOGIC_1_3' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_LOGIC_1_3/synth/design_1_LOGIC_1_3.v:57]
+WARNING: [Synth 8-7023] instance 'axi_ad9361_2' of module 'design_1_axi_ad9361_2_0' has 79 connections declared, but only 73 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:659]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_DSP_1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_DSP_1_clk_wiz' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
 INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'design_1_LOGIC_1_3' (64#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_LOGIC_1_3/synth/design_1_LOGIC_1_3.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_RAshift16_4_up_0_2' (65#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_0_2/synth/design_1_RAshift16_4_up_0_2.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_RAshift16_4_up_1_2' (66#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_1_2/synth/design_1_RAshift16_4_up_1_2.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_RAshift16_4_up_2_2' (67#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_2_2/synth/design_1_RAshift16_4_up_2_2.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_RAshift16_4_up_3_2' (68#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_3_2/synth/design_1_RAshift16_4_up_3_2.v:58]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 24.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 25.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 15.625000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (62#1) [F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_DSP_1_clk_wiz' (63#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_DSP_1' (64#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1.v:70]
+WARNING: [Synth 8-7023] instance 'clk_DSP' of module 'design_1_clk_DSP_1' has 3 connections declared, but only 2 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:733]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dac_fifo_ad9361_2_0' (65#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_dac_fifo_ad9361_2_0/synth/design_1_dac_fifo_ad9361_2_0.v:57]
+WARNING: [Synth 8-7023] instance 'dac_fifo_ad9361_2' of module 'design_1_dac_fifo_ad9361_2_0' has 38 connections declared, but only 25 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:736]
+INFO: [Synth 8-6155] done synthesizing module 'AD9361_2_imp_GMWOOB' (66#1) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:387]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_LOGIC_1_3' (67#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_LOGIC_1_3/synth/design_1_LOGIC_1_3.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_RAshift16_4_up_0_2' (68#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_0_2/synth/design_1_RAshift16_4_up_0_2.v:58]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7023] instance 'adc_fifo_ad9361_3' of module 'design_1_adc_fifo_ad9361_3_0' has 30 connections declared, but only 21 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1002]
+WARNING: [Synth 8-7023] instance 'adc_fifo_ad9361_3' of module 'design_1_adc_fifo_ad9361_3_0' has 30 connections declared, but only 21 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1008]
 	Parameter ID bound to: 0 - type: integer 
 	Parameter MODE_1R1T bound to: 0 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
@@ -1156,8 +1221,8 @@ WARNING: [Synth 8-7023] instance 'adc_fifo_ad9361_3' of module 'design_1_adc_fif
 	Parameter IODELAY_CTRL_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter IODELAY_FPGA_TECHNOLOGY bound to: -1 - type: integer 
 	Parameter IODELAY_SIM_DEVICE bound to: 7SERIES - type: string 
-WARNING: [Synth 8-7023] instance 'axi_ad9361_3' of module 'design_1_axi_ad9361_3_0' has 79 connections declared, but only 73 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1024]
-WARNING: [Synth 8-7023] instance 'dac_fifo_ad9361_3' of module 'design_1_dac_fifo_ad9361_3_0' has 38 connections declared, but only 25 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1098]
+WARNING: [Synth 8-7023] instance 'axi_ad9361_3' of module 'design_1_axi_ad9361_3_0' has 79 connections declared, but only 73 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1030]
+WARNING: [Synth 8-7023] instance 'dac_fifo_ad9361_3' of module 'design_1_dac_fifo_ad9361_3_0' has 38 connections declared, but only 25 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1104]
 INFO: [Synth 8-638] synthesizing module 'design_1_DATA_rst_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_DATA_rst_0/synth/design_1_DATA_rst_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 16 - type: integer 
@@ -1230,16 +1295,16 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (75#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (76#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (78#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (79#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (77#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (78#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (79#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'design_1_DATA_rst_0' (80#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_DATA_rst_0/synth/design_1_DATA_rst_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'DATA_rst' of module 'design_1_DATA_rst_0' has 10 connections declared, but only 7 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4076]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (80#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (81#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (82#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_1_DATA_rst_0' (83#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_DATA_rst_0/synth/design_1_DATA_rst_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'DATA_rst' of module 'design_1_DATA_rst_0' has 10 connections declared, but only 7 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4083]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 24.000000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -1288,8 +1353,13 @@ WARNING: [Synth 8-7023] instance 'DATA_rst' of module 'design_1_DATA_rst_0' has 
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+<<<<<<< Updated upstream
 WARNING: [Synth 8-7023] instance 'AD9361_CTRL' of module 'AD9361_CTRL_imp_9MHREM' has 135 connections declared, but only 120 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4761]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2022]
+=======
+WARNING: [Synth 8-7023] instance 'AD9361_CTRL' of module 'AD9361_CTRL_imp_9MHREM' has 135 connections declared, but only 122 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4769]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2029]
+>>>>>>> Stashed changes
 	Parameter NUM_OF_CHANNELS bound to: 2 - type: integer 
 	Parameter DIN_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter DOUT_DATA_WIDTH bound to: 16 - type: integer 
@@ -1301,7 +1371,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter T_DOUT_DATA_WIDTH bound to: 128 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 4 - type: integer 
-WARNING: [Synth 8-7023] instance 'adc_fifo_ad9364_0' of module 'design_1_adc_fifo_ad9364_0_0' has 18 connections declared, but only 11 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2022]
+WARNING: [Synth 8-7023] instance 'adc_fifo_ad9364_0' of module 'design_1_adc_fifo_ad9364_0_0' has 18 connections declared, but only 11 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2029]
 	Parameter ID bound to: 0 - type: integer 
 	Parameter MODE_1R1T bound to: 1 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
@@ -1507,7 +1577,7 @@ INFO: [Synth 8-4471] merging register 'dac_valid_q0_int_reg' into 'dac_valid_i0_
 WARNING: [Synth 8-6014] Unused sequential element dac_valid_q0_int_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/e737/axi_ad9361_tx.v:188]
 INFO: [Synth 8-4471] merging register 'dac_valid_q1_int_reg' into 'dac_valid_i1_int_reg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/e737/axi_ad9361_tx.v:190]
 WARNING: [Synth 8-6014] Unused sequential element dac_valid_q1_int_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/e737/axi_ad9361_tx.v:190]
-WARNING: [Synth 8-7023] instance 'axi_ad9364' of module 'design_1_axi_ad9364_0' has 79 connections declared, but only 63 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2034]
+WARNING: [Synth 8-7023] instance 'axi_ad9364' of module 'design_1_axi_ad9364_0' has 79 connections declared, but only 63 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2041]
 	Parameter NUM_OF_CHANNELS bound to: 2 - type: integer 
 	Parameter DIN_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter DOUT_DATA_WIDTH bound to: 16 - type: integer 
@@ -1519,7 +1589,7 @@ WARNING: [Synth 8-7023] instance 'axi_ad9364' of module 'design_1_axi_ad9364_0' 
 	Parameter T_DOUT_DATA_WIDTH bound to: 128 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 5 - type: integer 
-WARNING: [Synth 8-7023] instance 'dac_fifo_ad9364_0' of module 'design_1_dac_fifo_ad9364_0_0' has 22 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2098]
+WARNING: [Synth 8-7023] instance 'dac_fifo_ad9364_0' of module 'design_1_dac_fifo_ad9364_0_0' has 22 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2105]
 INFO: [Synth 8-638] synthesizing module 'design_1_divclk_64_rst1_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_divclk_64_rst1_0/synth/design_1_divclk_64_rst1_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -1572,14 +1642,14 @@ INFO: [Synth 8-638] synthesizing module 'lpf__parameterized0' [f:/work/Izhevsk_p
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
 INFO: [Synth 8-3491] module 'SRL16' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
-INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (91#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized1' (91#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'design_1_divclk_64_rst1_0' (92#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_divclk_64_rst1_0/synth/design_1_divclk_64_rst1_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'divclk_64_rst1' of module 'design_1_divclk_64_rst1_0' has 10 connections declared, but only 6 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2114]
+INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (93#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized1' (93#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_1_divclk_64_rst1_0' (94#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_divclk_64_rst1_0/synth/design_1_divclk_64_rst1_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'divclk_64_rst1' of module 'design_1_divclk_64_rst1_0' has 10 connections declared, but only 6 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2121]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 16 - type: integer 
-WARNING: [Synth 8-3848] Net dout in module/entity AD9364_imp_16ETD7A does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1891]
-WARNING: [Synth 8-7023] instance 'AD9364' of module 'AD9364_imp_16ETD7A' has 41 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4882]
+WARNING: [Synth 8-3848] Net dout in module/entity AD9364_imp_16ETD7A does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:1898]
+WARNING: [Synth 8-7023] instance 'AD9364' of module 'AD9364_imp_16ETD7A' has 41 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4892]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter FIFO_MEMORY_TYPE bound to: 2 - type: integer 
@@ -2377,7 +2447,7 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM ge
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-7023] instance 'AXI_C2C' of module 'design_1_AXI_C2C_0' has 62 connections declared, but only 51 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3329]
+WARNING: [Synth 8-7023] instance 'AXI_C2C' of module 'design_1_AXI_C2C_0' has 62 connections declared, but only 51 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3336]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_M_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: 2 - type: integer 
@@ -2403,7 +2473,11 @@ WARNING: [Synth 8-7023] instance 'AXI_C2C' of module 'design_1_AXI_C2C_0' has 62
 	Parameter P_SLVERR bound to: 2'b10 
 	Parameter P_PROTECTION bound to: 1 - type: integer 
 	Parameter P_CONVERSION bound to: 2 - type: integer 
+<<<<<<< Updated upstream
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 56 connections declared, but only 48 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:10016]
+=======
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 56 connections declared, but only 48 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:10018]
+>>>>>>> Stashed changes
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 16 - type: integer 
@@ -2624,7 +2698,7 @@ WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_t
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_ar_trans_seq_i_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v:2067]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_beat_cnt_i_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v:2078]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v:2091]
-WARNING: [Synth 8-7023] instance 'AXI_C2C_axi_periph' of module 'design_1_AXI_C2C_axi_periph_0' has 365 connections declared, but only 354 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3381]
+WARNING: [Synth 8-7023] instance 'AXI_C2C_axi_periph' of module 'design_1_AXI_C2C_axi_periph_0' has 365 connections declared, but only 354 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3388]
 	Parameter ID bound to: 0 - type: integer 
 	Parameter DMA_DATA_WIDTH_SRC bound to: 32 - type: integer 
 	Parameter DMA_DATA_WIDTH_DEST bound to: 32 - type: integer 
@@ -2897,7 +2971,7 @@ WARNING: [Synth 8-7023] instance 'i_data_mover' of module 'dmac_data_mover' has 
 	Parameter ASYNC_CLK bound to: 1'b0 
 	Parameter ADDRESS_WIDTH bound to: 0 - type: integer 
 	Parameter S_AXIS_REGISTERED bound to: 1 - type: integer 
-WARNING: [Synth 8-7023] instance 'AXI_DMA' of module 'design_1_AXI_DMA_0' has 46 connections declared, but only 43 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3736]
+WARNING: [Synth 8-7023] instance 'AXI_DMA' of module 'design_1_AXI_DMA_0' has 46 connections declared, but only 43 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3743]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
 	Parameter IN2_WIDTH bound to: 1 - type: integer 
@@ -2973,8 +3047,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM ge
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-3848] Net packed_fifo_wr_sync in module/entity AXI_Peripheral_imp_1PLQHVD does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2698]
-WARNING: [Synth 8-7023] instance 'AXI_Peripheral' of module 'AXI_Peripheral_imp_1PLQHVD' has 287 connections declared, but only 230 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4923]
+WARNING: [Synth 8-3848] Net packed_fifo_wr_sync in module/entity AXI_Peripheral_imp_1PLQHVD does not have driver. [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:2705]
+WARNING: [Synth 8-7023] instance 'AXI_Peripheral' of module 'AXI_Peripheral_imp_1PLQHVD' has 287 connections declared, but only 230 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:4933]
 INFO: [Synth 8-638] synthesizing module 'design_1_AXI_reset_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_reset_0/synth/design_1_AXI_reset_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 16 - type: integer 
@@ -2986,8 +3060,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_AXI_reset_0' [f:/work/Izhevsk_
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_reset_0/synth/design_1_AXI_reset_0.vhd:129]
-INFO: [Synth 8-256] done synthesizing module 'design_1_AXI_reset_0' (190#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_reset_0/synth/design_1_AXI_reset_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'AXI_reset' of module 'design_1_AXI_reset_0' has 10 connections declared, but only 6 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3824]
+INFO: [Synth 8-256] done synthesizing module 'design_1_AXI_reset_0' (192#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_reset_0/synth/design_1_AXI_reset_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'AXI_reset' of module 'design_1_AXI_reset_0' has 10 connections declared, but only 6 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3831]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 25.000000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -3052,7 +3126,7 @@ INFO: [Synth 8-226] default block is never used [f:/work/Izhevsk_project_2_2_eth
 INFO: [Synth 8-226] default block is never used [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/07fa/hdl/Control_from_SOM_v1_0_S00_AXI.v:402]
 WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/07fa/hdl/Control_from_SOM_v1_0_S00_AXI.v:254]
 	Parameter C_PERIOD_MS bound to: 500 - type: integer 
-WARNING: [Synth 8-7023] instance 'Control_from_SOM_0' of module 'design_1_Control_from_SOM_0_0' has 42 connections declared, but only 29 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5161]
+WARNING: [Synth 8-7023] instance 'Control_from_SOM_0' of module 'design_1_Control_from_SOM_0_0' has 42 connections declared, but only 29 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5171]
 	Parameter CLKS_PER_HALF_BIT bound to: 32 - type: integer 
 	Parameter C_DELAY_MS bound to: 2 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -3228,167 +3302,167 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [f:/wor
 	Parameter C_AW bound to: 7 - type: integer 
 	Parameter C_BAR bound to: 7'b0000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 7 - type: integer 
 	Parameter C_BAR bound to: 7'b1000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 7 - type: integer 
 	Parameter C_BAR bound to: 7'b1100000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (214#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (215#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (217#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 INFO: [Synth 8-226] default block is never used [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (216#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (217#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (218#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (219#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19201]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_SUB_FAMILY bound to: kintex7 - type: string 
@@ -3421,7 +3495,7 @@ INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [f:/work/Izhevsk_pro
 INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2455]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2463]
-INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (218#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (220#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
 INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:14937]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter Async_Clk bound to: 0 - type: integer 
@@ -3576,7 +3650,7 @@ INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_1_CDC' to cell 
 INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_2' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:15895]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_3' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:15903]
-INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (219#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:14937]
+INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (221#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:14937]
 	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
@@ -3801,11 +3875,11 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (219#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (221#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'counter_f' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
 	Parameter C_NUM_BITS bound to: 8 - type: integer 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'counter_f' (220#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (222#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
 INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:255]
 	Parameter C_ALLOW_2N_DEPTH bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -3941,13 +4015,13 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-4471] merging register 'gen_fwft.empty_fwft_fb_reg' into 'gen_fwft.empty_fwft_i_reg' [F:/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1292]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (221#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (223#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:255]
 INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:13461]
 	Parameter C_NUM_TRANSFER_BITS bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (222#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:13461]
+INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (224#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:13461]
 INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
 	Parameter C_OCCUPANCY_NUM_BITS bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (223#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (225#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
 INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
 	Parameter C_SCK_RATIO bound to: 160 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 5 - type: integer 
@@ -3970,7 +4044,7 @@ INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [f:/work/Izhevsk_pr
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 INFO: [Synth 8-4471] merging register 'MODF_strobe_int_reg' into 'MODF_strobe_reg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:10975]
-INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (224#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (226#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
 INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:13816]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_SPI_NUM_BITS_REG bound to: 8 - type: integer 
@@ -3984,13 +4058,13 @@ INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [f:/work/Izhevsk_projec
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (225#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:13816]
+INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (227#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:13816]
 INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
 	Parameter C_SPI_NUM_BITS_REG bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 5 - type: integer 
 	Parameter C_SPISR_REG_WIDTH bound to: 11 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (226#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (228#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
 INFO: [Synth 8-638] synthesizing module 'soft_reset' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
 	Parameter C_SIPIF_DWIDTH bound to: 32 - type: integer 
 	Parameter C_RESET_WIDTH bound to: 16 - type: integer 
@@ -4096,7 +4170,7 @@ INFO: [Synth 8-638] synthesizing module 'soft_reset' [f:/work/Izhevsk_project_2_
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'soft_reset' (227#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (229#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
 INFO: [Synth 8-638] synthesizing module 'interrupt_control' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
 	Parameter C_NUM_CE bound to: 16 - type: integer 
 	Parameter C_NUM_IPIF_IRPT_SRC bound to: 1 - type: integer 
@@ -4104,7 +4178,7 @@ INFO: [Synth 8-638] synthesizing module 'interrupt_control' [f:/work/Izhevsk_pro
 	Parameter C_INCLUDE_DEV_PENCODER bound to: 0 - type: bool 
 	Parameter C_INCLUDE_DEV_ISC bound to: 0 - type: bool 
 	Parameter C_IPIF_DWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (228#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (230#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 WARNING: [Synth 8-3848] Net cfgclk in module/entity qspi_core_interface does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19178]
@@ -4112,7 +4186,7 @@ WARNING: [Synth 8-3848] Net cfgmclk in module/entity qspi_core_interface does no
 WARNING: [Synth 8-3848] Net eos in module/entity qspi_core_interface does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19180]
 WARNING: [Synth 8-3848] Net preq in module/entity qspi_core_interface does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19181]
 WARNING: [Synth 8-3848] Net di in module/entity qspi_core_interface does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19182]
-INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (229#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19201]
+INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (231#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:19201]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 WARNING: [Synth 8-3848] Net s_axi4_awready in module/entity axi_quad_spi_top does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:34848]
@@ -4126,7 +4200,7 @@ WARNING: [Synth 8-3848] Net s_axi4_rdata in module/entity axi_quad_spi_top does 
 WARNING: [Synth 8-3848] Net s_axi4_rresp in module/entity axi_quad_spi_top does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:34882]
 WARNING: [Synth 8-3848] Net s_axi4_rlast in module/entity axi_quad_spi_top does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:34883]
 WARNING: [Synth 8-3848] Net s_axi4_rvalid in module/entity axi_quad_spi_top does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:34884]
-INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (230#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:34957]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (232#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:34957]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 WARNING: [Synth 8-3848] Net io0_1_o in module/entity axi_quad_spi does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:36639]
@@ -4139,11 +4213,11 @@ WARNING: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi does not have 
 WARNING: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:36654]
 WARNING: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:36669]
 WARNING: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:36670]
-INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (231#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:36696]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (233#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/488f/hdl/axi_quad_spi_v3_2_rfs.vhd:36696]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_spi_0' (232#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_spi_0/synth/design_1_axi_spi_0.vhd:97]
-WARNING: [Synth 8-7023] instance 'axi_spi' of module 'design_1_axi_spi_0' has 33 connections declared, but only 28 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3989]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_spi_0' (234#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_spi_0/synth/design_1_axi_spi_0.vhd:97]
+WARNING: [Synth 8-7023] instance 'axi_spi' of module 'design_1_axi_spi_0' has 33 connections declared, but only 28 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:3996]
 	Parameter DIN_WIDTH bound to: 5 - type: integer 
 	Parameter DIN_FROM bound to: 0 - type: integer 
 	Parameter DIN_TO bound to: 0 - type: integer 
@@ -4161,7 +4235,7 @@ WARNING: [Synth 8-7023] instance 'axi_spi' of module 'design_1_axi_spi_0' has 33
 	Parameter DIN_TO bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-7023] instance 'SPI_MOD' of module 'SPI_MOD_imp_NH4T3P' has 33 connections declared, but only 30 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5235]
+WARNING: [Synth 8-7023] instance 'SPI_MOD' of module 'SPI_MOD_imp_NH4T3P' has 33 connections declared, but only 30 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5245]
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_ethernetlite_0_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/synth/design_1_axi_ethernetlite_0_0.vhd:104]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -4206,7 +4280,7 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [f:/work/Izhe
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (242#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (244#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -4238,7 +4312,7 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [f:/work/Izhe
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (242#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (244#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-3491] module 'FDRE' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13664' bound to instance 'RX_FF_I' of component 'FDRE' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:14018]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
@@ -4289,7 +4363,7 @@ INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'state21a' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:4824]
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'state22a' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:4850]
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'preamble' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:5099]
-INFO: [Synth 8-256] done synthesizing module 'rx_statemachine' (246#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:4291]
+INFO: [Synth 8-256] done synthesizing module 'rx_statemachine' (248#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:4291]
 INFO: [Synth 8-638] synthesizing module 'rx_intrfce' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:5306]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 INFO: [Synth 8-638] synthesizing module 'async_fifo_fg__parameterized0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:255]
@@ -4506,20 +4580,20 @@ INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg__parameterized0' (246#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg__parameterized0' (248#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:255]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'rx_intrfce' (247#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:5306]
+INFO: [Synth 8-256] done synthesizing module 'rx_intrfce' (249#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:5306]
 INFO: [Synth 8-638] synthesizing module 'crcgenrx' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6895]
-INFO: [Synth 8-256] done synthesizing module 'crcgenrx' (248#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6895]
+INFO: [Synth 8-256] done synthesizing module 'crcgenrx' (250#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6895]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'receive' (249#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:8566]
+INFO: [Synth 8-256] done synthesizing module 'receive' (251#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:8566]
 INFO: [Synth 8-638] synthesizing module 'transmit' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:7693]
 	Parameter C_DUPLEX bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 INFO: [Synth 8-638] synthesizing module 'crcgentx' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6549]
 INFO: [Synth 8-638] synthesizing module 'crcnibshiftreg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1918]
-INFO: [Synth 8-256] done synthesizing module 'crcnibshiftreg' (250#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1918]
-INFO: [Synth 8-256] done synthesizing module 'crcgentx' (251#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6549]
+INFO: [Synth 8-256] done synthesizing module 'crcnibshiftreg' (252#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1918]
+INFO: [Synth 8-256] done synthesizing module 'crcgentx' (253#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6549]
 INFO: [Synth 8-638] synthesizing module 'tx_intrfce' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:3931]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'pipeIt' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:4042]
@@ -4536,9 +4610,9 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized3' [f:/work/Izhe
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (251#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (253#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'tx_intrfce' (252#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:3931]
+INFO: [Synth 8-256] done synthesizing module 'tx_intrfce' (254#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:3931]
 INFO: [Synth 8-638] synthesizing module 'mux_onehot_f' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:503]
 	Parameter C_DW bound to: 4 - type: integer 
 	Parameter C_NB bound to: 6 - type: integer 
@@ -4551,7 +4625,7 @@ INFO: [Synth 8-3491] module 'MUXCY' declared at 'F:/Vivado/2019.1/scripts/rt/dat
 INFO: [Synth 8-3491] module 'MUXCY' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:42746' bound to instance 'MUXCY_I' of component 'MUXCY' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:599]
 INFO: [Synth 8-3491] module 'MUXCY' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:42746' bound to instance 'MUXCY_I' of component 'MUXCY' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:599]
 INFO: [Synth 8-3491] module 'MUXCY' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:42746' bound to instance 'MUXCY_I' of component 'MUXCY' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:599]
-INFO: [Synth 8-256] done synthesizing module 'mux_onehot_f' (254#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:503]
+INFO: [Synth 8-256] done synthesizing module 'mux_onehot_f' (256#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:503]
 INFO: [Synth 8-638] synthesizing module 'ld_arith_reg' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
 	Parameter C_ADD_SUB_NOT bound to: 0 - type: bool 
 	Parameter C_REG_WIDTH bound to: 12 - type: integer 
@@ -4608,11 +4682,11 @@ INFO: [Synth 8-3491] module 'MULT_AND' declared at 'F:/Vivado/2019.1/scripts/rt/
 INFO: [Synth 8-3491] module 'MUXCY' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:42746' bound to instance 'MUXCY_i1' of component 'MUXCY' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:291]
 INFO: [Synth 8-3491] module 'XORCY' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:82038' bound to instance 'XORCY_i1' of component 'XORCY' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:302]
 INFO: [Synth 8-3491] module 'FDRE' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13664' bound to instance 'FDRE_i1' of component 'FDRE' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:318]
-INFO: [Synth 8-256] done synthesizing module 'ld_arith_reg' (257#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'ld_arith_reg' (259#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
 INFO: [Synth 8-638] synthesizing module 'tx_statemachine' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2440]
 	Parameter C_DUPLEX bound to: 1 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'cntr5bit' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2119]
-INFO: [Synth 8-256] done synthesizing module 'cntr5bit' (258#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2119]
+INFO: [Synth 8-256] done synthesizing module 'cntr5bit' (260#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2119]
 INFO: [Synth 8-3491] module 'FDS' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13787' bound to instance 'STATE0A' of component 'FDS' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2769]
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'STATE5A' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2801]
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'STATE6A' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2816]
@@ -4623,12 +4697,12 @@ INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'STATE11A' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2909]
 INFO: [Synth 8-3491] module 'FDR' declared at 'F:/Vivado/2019.1/scripts/rt/data/unisim_comp.v:13651' bound to instance 'STATE12A' of component 'FDR' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2925]
 INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'tx_statemachine' (259#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2440]
+INFO: [Synth 8-256] done synthesizing module 'tx_statemachine' (261#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:2440]
 INFO: [Synth 8-638] synthesizing module 'deferral' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6251]
 INFO: [Synth 8-638] synthesizing module 'defer_state' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1651]
 INFO: [Synth 8-226] default block is never used [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1698]
-INFO: [Synth 8-256] done synthesizing module 'defer_state' (260#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1651]
-INFO: [Synth 8-256] done synthesizing module 'deferral' (261#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6251]
+INFO: [Synth 8-256] done synthesizing module 'defer_state' (262#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:1651]
+INFO: [Synth 8-256] done synthesizing module 'deferral' (263#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:6251]
 INFO: [Synth 8-638] synthesizing module 'ld_arith_reg__parameterized0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
 	Parameter C_ADD_SUB_NOT bound to: 1 - type: bool 
 	Parameter C_REG_WIDTH bound to: 12 - type: integer 
@@ -4637,7 +4711,7 @@ INFO: [Synth 8-638] synthesizing module 'ld_arith_reg__parameterized0' [f:/work/
 	Parameter C_LD_OFFSET bound to: 0 - type: integer 
 	Parameter C_AD_WIDTH bound to: 12 - type: integer 
 	Parameter C_AD_OFFSET bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ld_arith_reg__parameterized0' (261#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'ld_arith_reg__parameterized0' (263#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
 INFO: [Synth 8-638] synthesizing module 'ld_arith_reg__parameterized1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
 	Parameter C_ADD_SUB_NOT bound to: 0 - type: bool 
 	Parameter C_REG_WIDTH bound to: 4 - type: integer 
@@ -4650,9 +4724,9 @@ INFO: [Synth 8-638] synthesizing module 'ld_arith_reg__parameterized1' [f:/work/
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'ld_arith_reg__parameterized1' (262#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'ld_arith_reg__parameterized1' (264#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:161]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'transmit' (263#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:7693]
+INFO: [Synth 8-256] done synthesizing module 'transmit' (265#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:7693]
 INFO: [Synth 8-638] synthesizing module 'MacAddrRAM' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:8884]
 	Parameter MACAddr bound to: 48'b000000000000000001011110000000001111101011001110 
 	Parameter Filler bound to: 16'b0000000000000000 
@@ -4663,11 +4737,11 @@ INFO: [Synth 8-638] synthesizing module 'ram16x4' [f:/work/Izhevsk_project_2_2_e
 	Parameter INIT_03 bound to: 16'b0000000000000000 
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter IS_WCLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'ram16x4' (265#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:5614]
-INFO: [Synth 8-256] done synthesizing module 'MacAddrRAM' (266#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:8884]
+INFO: [Synth 8-256] done synthesizing module 'ram16x4' (267#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:5614]
+INFO: [Synth 8-256] done synthesizing module 'MacAddrRAM' (268#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:8884]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'axi_ethernetlite_v3_0_17_emac' (267#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:10463]
+INFO: [Synth 8-256] done synthesizing module 'axi_ethernetlite_v3_0_17_emac' (269#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:10463]
 INFO: [Synth 8-638] synthesizing module 'emac_dpram' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:9674]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -4835,7 +4909,7 @@ INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_b
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'emac_dpram' (269#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:9674]
+INFO: [Synth 8-256] done synthesizing module 'emac_dpram' (271#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:9674]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
@@ -4852,14 +4926,14 @@ INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 WARNING: [Synth 8-3848] Net PHY_MDC in module/entity xemac does not have driver. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:10996]
-INFO: [Synth 8-256] done synthesizing module 'xemac' (270#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:11002]
+INFO: [Synth 8-256] done synthesizing module 'xemac' (272#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:11002]
 INFO: [Synth 8-638] synthesizing module 'axi_interface' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:12492]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
 	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_interface' (271#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:12492]
+INFO: [Synth 8-256] done synthesizing module 'axi_interface' (273#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:12492]
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
@@ -4868,7 +4942,7 @@ INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'axi_ethernetlite' (272#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:13520]
+INFO: [Synth 8-256] done synthesizing module 'axi_ethernetlite' (274#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/0e64/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:13520]
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
@@ -4877,8 +4951,8 @@ INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_ethernetlite_0_0' (273#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/synth/design_1_axi_ethernetlite_0_0.vhd:104]
-WARNING: [Synth 8-7023] instance 'axi_ethernetlite_0' of module 'design_1_axi_ethernetlite_0_0' has 40 connections declared, but only 39 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5266]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_ethernetlite_0_0' (275#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/synth/design_1_axi_ethernetlite_0_0.vhd:104]
+WARNING: [Synth 8-7023] instance 'axi_ethernetlite_0' of module 'design_1_axi_ethernetlite_0_0' has 40 connections declared, but only 39 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5276]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT bound to: 36 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -4910,7 +4984,11 @@ WARNING: [Synth 8-7023] instance 'axi_ethernetlite_0' of module 'design_1_axi_et
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+<<<<<<< Updated upstream
 WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 5 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5306]
+=======
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 4 connections declared, but only 3 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5316]
+>>>>>>> Stashed changes
 	Parameter MII_EN bound to: 1 - type: integer 
 	Parameter xlconstant_0_dout bound to: 1 - type: integer 
 	Parameter xlconstant_1_dout bound to: 96 - type: integer 
@@ -5423,8 +5501,24 @@ WARNING: [Synth 8-7023] instance 'axis_async_fifo_1' of module 'axis_async_fifo'
 	Parameter STATE_IFG bound to: 3'b110 
 INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:367]
 INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_gmii_tx.v:241]
+<<<<<<< Updated upstream
 WARNING: [Synth 8-7023] instance 'axis_gmii_tx_0' of module 'axis_gmii_tx' has 20 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/eth_pump.v:322]
 WARNING: [Synth 8-7023] instance 'eth_pump_0' of module 'design_1_eth_pump_0_0' has 23 connections declared, but only 18 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5311]
+=======
+WARNING: [Synth 8-7023] instance 'axis_gmii_tx_0' of module 'axis_gmii_tx' has 20 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/eth_pump.v:336]
+	Parameter wait_time bound to: 1 - type: integer 
+	Parameter input_freq bound to: 25000000 - type: integer 
+	Parameter plen_cnt bound to: 16 - type: integer 
+	Parameter cnt_div bound to: 25000000 - type: integer 
+	Parameter cnt_len bound to: 25 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv:94]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv:95]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv:96]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv:97]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv:98]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv:99]
+WARNING: [Synth 8-7023] instance 'eth_pump_0' of module 'design_1_eth_pump_0_0' has 19 connections declared, but only 16 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5320]
+>>>>>>> Stashed changes
 INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -5497,8 +5591,13 @@ INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_0' [f:/work/Izh
 	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
 WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_0' (305#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:70]
 WARNING: [Synth 8-7023] instance 'fir_compiler_0' of module 'design_1_fir_compiler_0_0' has 6 connections declared, but only 5 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5330]
+=======
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_0' (308#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_0' of module 'design_1_fir_compiler_0_0' has 6 connections declared, but only 5 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5337]
+>>>>>>> Stashed changes
 INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_1' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/synth/design_1_fir_compiler_0_1.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -5571,8 +5670,13 @@ INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_1' [f:/work/Izh
 	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
 WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_1' (306#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/synth/design_1_fir_compiler_0_1.vhd:70]
 WARNING: [Synth 8-7023] instance 'fir_compiler_1' of module 'design_1_fir_compiler_0_1' has 6 connections declared, but only 5 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5336]
+=======
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_1' (309#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/synth/design_1_fir_compiler_0_1.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_1' of module 'design_1_fir_compiler_0_1' has 6 connections declared, but only 5 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5343]
+>>>>>>> Stashed changes
 INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_2' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/synth/design_1_fir_compiler_0_2.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -5645,8 +5749,13 @@ INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_2' [f:/work/Izh
 	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
 WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_2' (308#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/synth/design_1_fir_compiler_0_2.vhd:70]
 WARNING: [Synth 8-7023] instance 'fir_compiler_2' of module 'design_1_fir_compiler_0_2' has 6 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5342]
+=======
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_2' (311#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/synth/design_1_fir_compiler_0_2.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_2' of module 'design_1_fir_compiler_0_2' has 6 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5349]
+>>>>>>> Stashed changes
 INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_2_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/synth/design_1_fir_compiler_2_0.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -5719,8 +5828,13 @@ INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_2_0' [f:/work/Izh
 	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
 WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_2_0' (309#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/synth/design_1_fir_compiler_2_0.vhd:70]
 WARNING: [Synth 8-7023] instance 'fir_compiler_3' of module 'design_1_fir_compiler_2_0' has 6 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5347]
+=======
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_2_0' (312#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/synth/design_1_fir_compiler_2_0.vhd:70]
+WARNING: [Synth 8-7023] instance 'fir_compiler_3' of module 'design_1_fir_compiler_2_0' has 6 connections declared, but only 4 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5354]
+>>>>>>> Stashed changes
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_tx.v:38]
 	Parameter pDAT_W bound to: 32'sb00000000000000000000000000001000 
 	Parameter pMSB_FIRST bound to: 1'b0 
@@ -6188,7 +6302,11 @@ INFO: [Synth 8-638] synthesizing module 'xfft_time_freq' [f:/work/Izhevsk_projec
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'xfft_time_freq' (389#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
+=======
+INFO: [Synth 8-256] done synthesizing module 'xfft_time_freq' (392#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
+>>>>>>> Stashed changes
 WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'xfft_time_freq' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:68]
 WARNING: [Synth 8-7023] instance 'xilinx_ifft_sub' of module 'xfft_time_freq' has 19 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv:55]
 WARNING: [Synth 8-7023] instance 'ifft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/TX_phy.sv:187]
@@ -6260,7 +6378,11 @@ INFO: [Synth 8-638] synthesizing module 'fft_corr_1' [f:/work/Izhevsk_project_2_
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'fft_corr_1' (426#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/synth/fft_corr_1.vhd:83]
+=======
+INFO: [Synth 8-256] done synthesizing module 'fft_corr_1' (429#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/synth/fft_corr_1.vhd:83]
+>>>>>>> Stashed changes
 WARNING: [Synth 8-7023] instance 'fft_corr_1_1' of module 'fft_corr_1' has 19 connections declared, but only 13 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_fft_sub.sv:27]
 	Parameter depht_ram bound to: 14 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/prb_tsync_ram.sv:15]
@@ -6523,7 +6645,11 @@ INFO: [Synth 8-638] synthesizing module 'ifft_corr_1' [f:/work/Izhevsk_project_2
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'ifft_corr_1' (430#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/synth/ifft_corr_1.vhd:83]
+=======
+INFO: [Synth 8-256] done synthesizing module 'ifft_corr_1' (433#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/synth/ifft_corr_1.vhd:83]
+>>>>>>> Stashed changes
 WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'ifft_corr_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_ifft_sub.sv:51]
 WARNING: [Synth 8-7023] instance 'ifft_corr_1_1' of module 'ifft_corr_1' has 19 connections declared, but only 13 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_ifft_sub.sv:40]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -6930,7 +7056,11 @@ INFO: [Synth 8-638] synthesizing module 'cordic_2' [f:/work/Izhevsk_project_2_2_
 	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 24 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'cordic_2' (455#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:70]
+=======
+INFO: [Synth 8-256] done synthesizing module 'cordic_2' (458#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:70]
+>>>>>>> Stashed changes
 INFO: [Synth 8-638] synthesizing module 'div_gen_fr_corr' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/synth/div_gen_fr_corr.vhd:73]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_HAS_ARESETN bound to: 1 - type: integer 
@@ -6956,7 +7086,11 @@ INFO: [Synth 8-638] synthesizing module 'div_gen_fr_corr' [f:/work/Izhevsk_proje
 	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'div_gen_fr_corr' (466#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/synth/div_gen_fr_corr.vhd:73]
+=======
+INFO: [Synth 8-256] done synthesizing module 'div_gen_fr_corr' (469#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/synth/div_gen_fr_corr.vhd:73]
+>>>>>>> Stashed changes
 WARNING: [Synth 8-7023] instance 'div_gen_1152' of module 'div_gen_fr_corr' has 9 connections declared, but only 8 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv:182]
 	Parameter DATA_W bound to: 12 - type: integer 
 	Parameter ADDR_W bound to: 6 - type: integer 
@@ -6991,9 +7125,15 @@ INFO: [Synth 8-638] synthesizing module 'cordic_0' [f:/work/Izhevsk_project_2_2_
 	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'cordic_0' (468#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:72]
 WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:223]
 WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:224]
+=======
+INFO: [Synth 8-256] done synthesizing module 'cordic_0' (471#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:72]
+WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_i' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:214]
+WARNING: [Synth 8-689] width (18) of port connection 'idata_corr_q' does not match port width (16) of module 'fr_sync' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/RX_phy.sv:215]
+>>>>>>> Stashed changes
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter fftsize bound to: 1024 - type: integer 
 	Parameter cpsize bound to: 32 - type: integer 
@@ -7051,7 +7191,11 @@ INFO: [Synth 8-638] synthesizing module 'div_gen_0' [f:/work/Izhevsk_project_2_2
 	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (474#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:71]
+=======
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (477#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:71]
+>>>>>>> Stashed changes
 WARNING: [Synth 8-689] width (81) of port connection 'm_axis_dout_tdata' does not match port width (64) of module 'div_gen_0' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:90]
 WARNING: [Synth 8-689] width (81) of port connection 'm_axis_dout_tdata' does not match port width (64) of module 'div_gen_0' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv:100]
 INFO: [Synth 8-638] synthesizing module 'mult_gen_0' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:68]
@@ -7078,7 +7222,11 @@ WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [f:/wor
 	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
 	Parameter C_ROUND_PT bound to: 0 - type: integer 
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+<<<<<<< Updated upstream
 INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (477#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:68]
+=======
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (480#1) [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/synth/mult_gen_0.vhd:68]
+>>>>>>> Stashed changes
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter pBMAX bound to: 12 - type: integer 
 	Parameter pDAT_W bound to: 12 - type: integer 
@@ -8025,6 +8173,7 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhev
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
+<<<<<<< Updated upstream
 	Parameter OPT_MEM_ADDR_BITS bound to: 5 - type: integer 
 	Parameter NUM_REG bound to: 18 - type: integer 
 WARNING: [Synth 8-689] width (1) of port connection 'rst_rx_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:208]
@@ -8040,6 +8189,25 @@ WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does no
 WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:228]
 WARNING: [Synth 8-689] width (1) of port connection 'rezerv_out' does not match port width (32) of module 'modem_axi_lite' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:230]
 WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 42 connections declared, but only 40 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
+=======
+	Parameter OPT_MEM_ADDR_BITS bound to: 6 - type: integer 
+	Parameter NUM_REG bound to: 38 - type: integer 
+WARNING: [Synth 8-689] width (1) of port connection 'rst_rx_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:236]
+WARNING: [Synth 8-689] width (1) of port connection 'switchtx_ad_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:238]
+WARNING: [Synth 8-689] width (1) of port connection 'tx_rst_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:240]
+WARNING: [Synth 8-689] width (1) of port connection 'validate_on_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:242]
+WARNING: [Synth 8-689] width (1) of port connection 'data_off_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:244]
+WARNING: [Synth 8-689] width (3) of port connection 'set_bw_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:248]
+WARNING: [Synth 8-689] width (3) of port connection 'modulation_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:250]
+WARNING: [Synth 8-689] width (4) of port connection 'spread_spectrum_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:252]
+WARNING: [Synth 8-689] width (2) of port connection 'frsync_control_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:254]
+WARNING: [Synth 8-689] width (14) of port connection 'corr_addrshift_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:256]
+WARNING: [Synth 8-689] width (1) of port connection 'w_reg3_out' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:262]
+WARNING: [Synth 8-689] width (714) of port connection 'thr_lvlauto_in' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:268]
+WARNING: [Synth 8-689] width (962) of port connection 'rezerv_r_in' does not match port width (32) of module 'modem_axi_lite_1' [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:271]
+WARNING: [Synth 8-7023] instance 'axi_lite_1_inst' of module 'modem_axi_lite_1' has 81 connections declared, but only 56 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v:234]
+WARNING: [Synth 8-7023] instance 'modem_0' of module 'design_1_modem_0_0' has 43 connections declared, but only 42 given [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5359]
+>>>>>>> Stashed changes
 	Parameter EXPAND bound to: 64 - type: integer 
 	Parameter CLK_RATE bound to: 276480000 - type: integer 
 	Parameter SAMPLE_RATE bound to: 30720000 - type: integer 
@@ -8102,6 +8270,7 @@ WARNING: [Synth 8-7023] instance 'tvalid_fir_gen_1' of module 'design_1_tvalid_f
 	Parameter NUM_PORTS bound to: 2 - type: integer 
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 16 - type: integer 
+<<<<<<< Updated upstream
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 4 - type: integer 
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5330]
@@ -8110,6 +8279,11 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_3'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5347]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'modem_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5352]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tvalid_fir_gen_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5398]
+=======
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_2'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5349]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'modem_0'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5359]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_compiler_3'. This will prevent further optimization [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/synth/design_1.v:5354]
+>>>>>>> Stashed changes
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5771] Detected attribute (* cascade_height =  0 *) on RAM gen_wr_b.gen_word_wide.mem_reg 
@@ -8228,7 +8402,11 @@ WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][5][0
 WARNING: [Synth 8-3331] design ldpc_dec_mem has unconnected port orstate[1][6][0][pre_sign]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished RTL Elaboration : Time (s): cpu = 00:06:23 ; elapsed = 00:06:34 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished RTL Elaboration : Time (s): cpu = 00:06:16 ; elapsed = 00:06:22 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8241,12 +8419,19 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:06:30 ; elapsed = 00:06:41 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:30 ; elapsed = 00:06:41 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:23 ; elapsed = 00:06:29 . Memory (MB): peak = 3300.391 ; gain = 2578.422
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 26127 Unisim elements for replacement
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:23 ; elapsed = 00:06:29 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 26128 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -8358,6 +8543,10 @@ Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projec
 Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_0_2/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_2/U0'
 Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_3/U0'
 Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_3/U0'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1_board.xdc] for cell 'design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1_board.xdc] for cell 'design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1.xdc] for cell 'design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1.xdc] for cell 'design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst'
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc]
 WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which potentially conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG [F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc:350]
@@ -8399,6 +8588,8 @@ Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projec
 Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_clocks.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
 Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_util_clkdiv_0_0/util_clkdiv_constr.xdc] for cell 'design_1_i/util_clkdiv_0/inst'
 Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_util_clkdiv_0_0/util_clkdiv_constr.xdc] for cell 'design_1_i/util_clkdiv_0/inst'
+Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1_late.xdc] for cell 'design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_clk_DSP_1/design_1_clk_DSP_1_late.xdc] for cell 'design_1_i/AD9361_CTRL/AD9361_2/clk_DSP/inst'
 Sourcing Tcl File [F:/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_inst/axi_chip2chip_ar_fifo_inst/axi_chip2chip_async_fifo_inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
 INFO: [Vivado 12-3272] Current instance is the top level cell 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_inst/axi_chip2chip_ar_fifo_inst/axi_chip2chip_async_fifo_inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [F:/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
@@ -8823,7 +9014,11 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
+<<<<<<< Updated upstream
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 3278.898 ; gain = 0.000
+=======
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 3300.391 ; gain = 0.000
+>>>>>>> Stashed changes
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1497 instances were transformed.
   BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instances
@@ -8841,15 +9036,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB18 => RAMB18E1: 6 instances
   SRL16 => SRL16E: 3 instances
 
+<<<<<<< Updated upstream
 Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3278.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:08:08 ; elapsed = 00:08:17 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3300.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:08:00 ; elapsed = 00:08:01 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg676-2
+---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'up_dac_dds_scale_tc_2_reg[15:0]' into 'up_dac_dds_scale_tc_1_reg[15:0]' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/common/up_dac_channel.v:367]
 INFO: [Synth 8-4471] merging register 'up_dac_iqcor_coeff_tc_1_reg[15:0]' into 'up_dac_dds_scale_tc_1_reg[15:0]' [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ipshared/common/up_dac_channel.v:368]
@@ -9741,7 +9943,11 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized12'
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:10 ; elapsed = 00:09:23 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:01 ; elapsed = 00:09:06 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_fft_sub_s0/fft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
 INFO: [Synth 8-223] decloning instance 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line4_for_rfd' (shift_ram__parameterized9) to 'design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/xcorr_ifft_sub_s0/ifft_corr_1_1/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/has_bfp.delay_rfd_for_scale_select'
@@ -9763,7 +9969,7 @@ Report RTL Partitions:
 |7     |ad_data_in__parameterized1__GC0         |           1|         2|
 |8     |axi_ad9361_lvds_if__parameterized0__GC0 |           1|       578|
 |9     |axi_ad9361__parameterized0__GC0         |           1|     22593|
-|10    |AD9361_2_imp_GMWOOB__GC0                |           1|       602|
+|10    |AD9361_2_imp_GMWOOB__GC0                |           1|       605|
 |11    |ad_data_in__parameterized4__GC0         |           1|         3|
 |12    |ad_data_in__parameterized3__GC0         |           1|         2|
 |13    |axi_ad9361_lvds_if__parameterized1__GC0 |           1|       578|
@@ -9785,6 +9991,7 @@ Report RTL Partitions:
 |29    |xfft_time_freq                          |           2|     18631|
 |30    |ifft__GC0                               |           1|       450|
 |31    |TX_phy__GC0                             |           1|      2769|
+<<<<<<< Updated upstream
 |32    |only_tx__GC0                            |           1|      6523|
 |33    |xcorr_main_lite__GB0                    |           1|     26299|
 |34    |xcorr_main_lite__GB1                    |           1|      8567|
@@ -9802,6 +10009,24 @@ Report RTL Partitions:
 |46    |design_1__GCB0                          |           1|     29805|
 |47    |design_1__GCB1                          |           1|      9732|
 |48    |design_1__GCB2                          |           1|      2319|
+=======
+|32    |only_tx__GC0                            |           1|      6619|
+|33    |cordic_2                                |           2|     13318|
+|34    |fr_sync__GC0                            |           1|     22551|
+|35    |ifft__parameterized0__GC0               |           1|       450|
+|36    |div_gen_0                               |           2|      7722|
+|37    |equalizer__GC0                          |           1|      3583|
+|38    |RX_phy__GCB0                            |           1|     27762|
+|39    |RX_phy__GCB1                            |           1|     10667|
+|40    |DeFEC__GB0                              |           1|     32533|
+|41    |DeFEC__GB1                              |           1|      1386|
+|42    |DeFEC__GB2                              |           1|      7310|
+|43    |only_rx__GC0                            |           1|      3124|
+|44    |modem__GC0                              |           1|      2385|
+|45    |design_1__GCB0                          |           1|     29805|
+|46    |design_1__GCB1                          |           1|     11461|
+|47    |design_1__GCB2                          |           1|      2347|
+>>>>>>> Stashed changes
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -10312,7 +10537,11 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_2) is unused and will be removed from module axi_quad_spi.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:13:31 ; elapsed = 00:13:46 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:12:44 ; elapsed = 00:12:52 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -10408,7 +10637,7 @@ Report RTL Partitions:
 |7     |ad_data_in__parameterized1__GC0         |           6|         2|
 |8     |axi_ad9361_lvds_if__parameterized0__GC0 |           1|       336|
 |9     |axi_ad9361__parameterized0__GC0         |           1|     12110|
-|10    |AD9361_2_imp_GMWOOB__GC0                |           1|       539|
+|10    |AD9361_2_imp_GMWOOB__GC0                |           1|       542|
 |11    |ad_data_in__parameterized4__GC0         |           1|         3|
 |12    |ad_data_in__parameterized3__GC0         |           6|         2|
 |13    |axi_ad9361_lvds_if__parameterized1__GC0 |           1|       336|
@@ -10430,6 +10659,7 @@ Report RTL Partitions:
 |29    |xfft_time_freq                          |           2|     15328|
 |30    |ifft__GC0                               |           1|       243|
 |31    |TX_phy__GC0                             |           1|      1917|
+<<<<<<< Updated upstream
 |32    |only_tx__GC0                            |           1|      4768|
 |33    |xcorr_main_lite__GB0                    |           1|     21256|
 |34    |xcorr_main_lite__GB1                    |           1|      7257|
@@ -10447,6 +10677,24 @@ Report RTL Partitions:
 |46    |design_1__GCB0                          |           1|     13245|
 |47    |design_1__GCB1                          |           1|      5023|
 |48    |design_1__GCB2                          |           1|      2095|
+=======
+|32    |only_tx__GC0                            |           1|      4810|
+|33    |cordic_2                                |           2|      9688|
+|34    |fr_sync__GC0                            |           1|     17124|
+|35    |ifft__parameterized0__GC0               |           1|       245|
+|36    |div_gen_0                               |           2|      7130|
+|37    |equalizer__GC0                          |           1|      1994|
+|38    |RX_phy__GCB0                            |           1|     21937|
+|39    |RX_phy__GCB1                            |           1|      4334|
+|40    |DeFEC__GB0                              |           1|     25462|
+|41    |DeFEC__GB1                              |           1|       673|
+|42    |DeFEC__GB2                              |           1|      3612|
+|43    |only_rx__GC0                            |           1|      1110|
+|44    |modem__GC0                              |           1|      2148|
+|45    |design_1__GCB0                          |           1|     13245|
+|46    |design_1__GCB1                          |           1|      5168|
+|47    |design_1__GCB2                          |           1|      2191|
+>>>>>>> Stashed changes
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -10454,7 +10702,11 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:69]
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc. [f:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_AXI_DMA_0/design_1_AXI_DMA_0_constr.xdc:74]
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:14:06 ; elapsed = 00:14:21 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:13:19 ; elapsed = 00:13:27 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -10468,7 +10720,11 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Timing Optimization : Time (s): cpu = 00:14:24 ; elapsed = 00:14:40 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Timing Optimization : Time (s): cpu = 00:13:38 ; elapsed = 00:13:46 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10484,7 +10740,7 @@ Report RTL Partitions:
 |7     |ad_data_in__parameterized1__GC0         |           6|         2|
 |8     |axi_ad9361_lvds_if__parameterized0__GC0 |           1|       336|
 |9     |axi_ad9361__parameterized0__GC0         |           1|     12101|
-|10    |AD9361_2_imp_GMWOOB__GC0                |           1|       539|
+|10    |AD9361_2_imp_GMWOOB__GC0                |           1|       542|
 |11    |ad_data_in__parameterized4__GC0         |           1|         3|
 |12    |ad_data_in__parameterized3__GC0         |           6|         2|
 |13    |axi_ad9361_lvds_if__parameterized1__GC0 |           1|       336|
@@ -10506,6 +10762,7 @@ Report RTL Partitions:
 |29    |xfft_time_freq                          |           2|     15328|
 |30    |ifft__GC0                               |           1|       243|
 |31    |TX_phy__GC0                             |           1|      1917|
+<<<<<<< Updated upstream
 |32    |only_tx__GC0                            |           1|      4768|
 |33    |xcorr_main_lite__GB0                    |           1|     21256|
 |34    |xcorr_main_lite__GB1                    |           1|      7257|
@@ -10523,6 +10780,24 @@ Report RTL Partitions:
 |46    |design_1__GCB0                          |           1|     13245|
 |47    |design_1__GCB1                          |           1|      5023|
 |48    |design_1__GCB2                          |           1|      2095|
+=======
+|32    |only_tx__GC0                            |           1|      4810|
+|33    |cordic_2                                |           2|      9688|
+|34    |fr_sync__GC0                            |           1|     17124|
+|35    |ifft__parameterized0__GC0               |           1|       245|
+|36    |div_gen_0                               |           2|      7130|
+|37    |equalizer__GC0                          |           1|      1994|
+|38    |RX_phy__GCB0                            |           1|     21937|
+|39    |RX_phy__GCB1                            |           1|      4334|
+|40    |DeFEC__GB0                              |           1|     25462|
+|41    |DeFEC__GB1                              |           1|       673|
+|42    |DeFEC__GB2                              |           1|      3612|
+|43    |only_rx__GC0                            |           1|      1110|
+|44    |modem__GC0                              |           1|      2148|
+|45    |design_1__GCB0                          |           1|     13245|
+|46    |design_1__GCB1                          |           1|      5168|
+|47    |design_1__GCB2                          |           1|      2191|
+>>>>>>> Stashed changes
 +------+----------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -10554,7 +10829,11 @@ INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_r
 INFO: [Synth 8-6837] The timing for the instance design_1_i/modem_0/inst/modem_rx/RX_phy_sub/xcorr_main_lite_sub/ram_sub/buff_q_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Technology Mapping : Time (s): cpu = 00:15:26 ; elapsed = 00:15:44 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Technology Mapping : Time (s): cpu = 00:14:40 ; elapsed = 00:14:50 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10589,7 +10868,11 @@ WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/control_sub:index_data_off to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst/modem_rx/RX_phy_sub/descramb_subcarier_sub:ieop to constant 0
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished IO Insertion : Time (s): cpu = 00:15:33 ; elapsed = 00:15:51 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished IO Insertion : Time (s): cpu = 00:14:47 ; elapsed = 00:14:57 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -10602,7 +10885,11 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Instances : Time (s): cpu = 00:15:34 ; elapsed = 00:15:52 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:14:48 ; elapsed = 00:14:58 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10614,25 +10901,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:56 ; elapsed = 00:16:14 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:15:10 ; elapsed = 00:15:20 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Ports : Time (s): cpu = 00:15:57 ; elapsed = 00:16:15 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:15:11 ; elapsed = 00:15:20 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:16:00 ; elapsed = 00:16:18 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:15:14 ; elapsed = 00:15:24 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Nets : Time (s): cpu = 00:16:01 ; elapsed = 00:16:19 . Memory (MB): peak = 3278.898 ; gain = 2556.805
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:15:15 ; elapsed = 00:15:24 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -10709,7 +11012,7 @@ Report Cell Usage:
 |58    |DSP48E__66   |     1|
 |59    |DSP48E__67   |     1|
 |60    |DSP48E__9    |     1|
-|61    |BUFG         |    16|
+|61    |BUFG         |    18|
 |62    |BUFGMUX_CTRL |     1|
 |63    |BUFR         |     1|
 |64    |BUFR_1       |     1|
@@ -10730,6 +11033,7 @@ Report Cell Usage:
 |79    |IDELAYCTRL   |     5|
 |80    |IDELAYE2     |    28|
 |81    |IDELAYE2_1   |    17|
+<<<<<<< Updated upstream
 |82    |LUT1         |  1817|
 |83    |LUT2         | 12433|
 |84    |LUT3         | 14459|
@@ -10737,6 +11041,15 @@ Report Cell Usage:
 |86    |LUT5         |  4845|
 |87    |LUT6         |  9707|
 |88    |MMCME2_ADV   |     3|
+=======
+|82    |LUT1         |  1878|
+|83    |LUT2         | 12432|
+|84    |LUT3         | 14533|
+|85    |LUT4         |  4473|
+|86    |LUT5         |  4895|
+|87    |LUT6         |  9851|
+|88    |MMCME2_ADV   |     4|
+>>>>>>> Stashed changes
 |89    |MULT_AND     |    17|
 |90    |MUXCY        | 11564|
 |91    |MUXF7        |   626|
@@ -10821,6 +11134,7 @@ Report Cell Usage:
 |170   |OBUFDS       |    32|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Writing Synthesis Report : Time (s): cpu = 00:16:01 ; elapsed = 00:16:19 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4740 warnings.
@@ -10828,6 +11142,15 @@ Synthesis Optimization Runtime : Time (s): cpu = 00:08:00 ; elapsed = 00:14:53 .
 Synthesis Optimization Complete : Time (s): cpu = 00:16:01 ; elapsed = 00:16:22 . Memory (MB): peak = 3278.898 ; gain = 2556.805
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 28131 Unisim elements for replacement
+=======
+Finished Writing Synthesis Report : Time (s): cpu = 00:15:15 ; elapsed = 00:15:25 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4722 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:22 ; elapsed = 00:14:00 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+Synthesis Optimization Complete : Time (s): cpu = 00:15:15 ; elapsed = 00:15:25 . Memory (MB): peak = 3300.391 ; gain = 2578.422
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 28393 Unisim elements for replacement
+>>>>>>> Stashed changes
 WARNING: [Netlist 29-432] The IBUFG primitive 'design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/single_end_clk_gen.ibufg_clk_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -10840,7 +11163,11 @@ WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_Q
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance design_1_i/SPI_MOD/axi_spi/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X1Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+<<<<<<< Updated upstream
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 3278.898 ; gain = 0.000
+=======
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 3300.391 ; gain = 0.000
+>>>>>>> Stashed changes
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5138 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3348 instances
@@ -10865,6 +11192,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
+<<<<<<< Updated upstream
 1756 Infos, 685 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:17:06 ; elapsed = 00:17:30 . Memory (MB): peak = 3278.898 ; gain = 2882.973
@@ -10876,3 +11204,16 @@ write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): p
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3278.898 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Thu Nov 27 11:08:35 2025...
+=======
+1798 Infos, 686 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:16:22 ; elapsed = 00:16:33 . Memory (MB): peak = 3300.391 ; gain = 2904.730
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 3300.391 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/synth_1/design_1_wrapper.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 3300.391 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3300.391 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 30 12:34:46 2025...
+>>>>>>> Stashed changes

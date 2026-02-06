@@ -75,8 +75,12 @@ module design_1_modem_0_0 (
   DeFec_err_dtct,
   rx_tx_en,
   rx_ocorr_dtct,
+<<<<<<< Updated upstream
   finder_osop,
   decrc_verr,
+=======
+  ctrl_switch_tx_fir,
+>>>>>>> Stashed changes
   S_AXI_ACLK,
   S_AXI_ARESETN,
   S_AXI_AWADDR,
@@ -132,8 +136,12 @@ output wire DeFec_err_dtct;
 (* X_INTERFACE_INFO = "analog.com:interface:fifo_rd:1.0 rx_tx EN" *)
 output wire rx_tx_en;
 output wire rx_ocorr_dtct;
+<<<<<<< Updated upstream
 output wire finder_osop;
 output wire decrc_verr;
+=======
+output wire ctrl_switch_tx_fir;
+>>>>>>> Stashed changes
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_CLK_COMMON_0_axi_periph_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *)
 input wire S_AXI_ACLK;
@@ -201,8 +209,12 @@ input wire S_AXI_RREADY;
     .DeFec_err_dtct(DeFec_err_dtct),
     .rx_tx_en(rx_tx_en),
     .rx_ocorr_dtct(rx_ocorr_dtct),
+<<<<<<< Updated upstream
     .finder_osop(finder_osop),
     .decrc_verr(decrc_verr),
+=======
+    .ctrl_switch_tx_fir(ctrl_switch_tx_fir),
+>>>>>>> Stashed changes
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),
     .S_AXI_AWADDR(S_AXI_AWADDR),
