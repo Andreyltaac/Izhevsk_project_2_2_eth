@@ -190,7 +190,6 @@ only_rx modem_rx (
     .time_er          (),
     .rx_ocorr_dtct    (rx_ocorr_dtct),
     .delta_ph         (delta_ph),
-    .kb_ps            (kb_ps),
     .speed_kbps		  (speed_kbps),
 	.n_crash_blocks   (n_crash_blocks),
 	.corr_sig_i       (corr_sig_i),
@@ -267,7 +266,7 @@ modem_axi_lite_1 #(
 	
     
     // User ports (status inputs)
-    .speedtest_in   (kb_ps),
+    .speedtest_in   (speed_kbps),
     .nsop_detect_in (N_sop_detect),
     .thr_lvlauto_in ({{22{0}},thr_lvl_auto}),
     .delta_phi_in   ({{8{delta_ph[23]}},delta_ph[23:0]}),
@@ -275,8 +274,8 @@ modem_axi_lite_1 #(
     .rezerv_r_in    ({{30{0}},ctrl_switch_tx_ad,ctrl_validate_on}),
     .r_reg1_in      (corr_sig_i),
     .r_reg2_in      (corr_sig_q),
-    .r_reg3_in      (speed_kbps),
-    .r_reg4_in      (n_crash_blocks),
+    .r_reg3_in      (n_crash_blocks),
+    .r_reg4_in      (),
     // AXI Lite interface
     .S_AXI_ACLK     (S_AXI_ACLK),
     .S_AXI_ARESETN  (S_AXI_ARESETN),

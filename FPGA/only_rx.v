@@ -29,7 +29,6 @@ module only_rx (
 	output                                                      time_er,
 	output                                                      rx_ocorr_dtct,
 	output			[23:0]										delta_ph,
-	output          [17:0]                                      kb_ps,
 	output			[19:0]		                                speed_kbps,
 	output          [19:0]		                                n_crash_blocks,
 	output			[31:0]			                            corr_sig_i,
@@ -168,20 +167,7 @@ assign m_axis_tlast  =	0;
 assign m_axis_tuser	 =  0;
 
 
-speed_test #(
-    .B1(1904)  // �?зменение на 5 единиц
-) speed_test_sub 
-(
-    .clk      (clk_l),
-    .clk_hh   (clk_hh),
-    .reset    (~rst),
-    .p1       (decrc_verr),
-    .p2       (decrc_oerr),
-    .d1_out   (kb_ps),
-    .valid_out(time_er),
-	.p1_rise  (p1_verr),
-	.p2_rise  (p2_oerr)
-);
+
 
 
 endmodule

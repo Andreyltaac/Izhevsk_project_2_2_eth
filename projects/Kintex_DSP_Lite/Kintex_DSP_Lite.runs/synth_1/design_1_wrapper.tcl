@@ -17,9 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7k325tffg676-2
 
@@ -171,7 +168,6 @@ read_verilog -library xil_defaultlib {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem_axi_lite_1.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_rx.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_tx.v
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/speed_test.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/switch.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_async_fifo.v
