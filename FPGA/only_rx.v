@@ -30,6 +30,8 @@ module only_rx (
 	output                                                      rx_ocorr_dtct,
 	output			[23:0]										delta_ph,
 	output          [17:0]                                      kb_ps,
+	output			[19:0]		                                speed_kbps,
+	output          [19:0]		                                n_crash_blocks,
 	output			[31:0]			                            corr_sig_i,
     output			[31:0]			                            corr_sig_q,
 
@@ -112,7 +114,18 @@ wire				m_axis_tvalid_l;
 		.finder_osop    (finder_osop));
 
 
-
+speed_trafics #(
+	.size_block (1904),
+	.freq_dat 	(276_480_000)
+)
+speed_trafics_sub(
+	.clk		(clk_hh),
+	.rst		(~rst),
+	.err		(decrc_oerr),
+	.ival		(decrc_verr),
+	.speed_kbps	(speed_kbps),
+	.n_crash_blocks (n_crash_blocks)
+);
 
 
 wire	odgood, oval_prbs;
@@ -156,7 +169,7 @@ assign m_axis_tuser	 =  0;
 
 
 speed_test #(
-    .B1(1920)  // �?зменение на 5 единиц
+    .B1(1904)  // �?зменение на 5 единиц
 ) speed_test_sub 
 (
     .clk      (clk_l),

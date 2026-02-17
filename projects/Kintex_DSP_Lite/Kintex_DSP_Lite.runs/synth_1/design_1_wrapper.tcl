@@ -17,7 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7k325tffg676-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -148,6 +151,7 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/scramb_subcarier.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/FEC/scrambler.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/series2parallel.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/speed_trafics.sv
   {F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/submodule equalizer/sub_eq_1.sv}
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/sync_fifo.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/transport_block_shaper.sv

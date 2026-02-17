@@ -1,0 +1,61 @@
+module speed_trafics #(
+	parameter  	size_block = 1904,
+	parameter 	freq_dat = 264_000_000
+)(
+	input 	clk,
+	input 	rst,
+	input	err,
+	input	ival,
+
+	output logic	[19:0]	speed_kbps,
+	output logic    [19:0]  n_crash_blocks
+);
+
+logic [28:0]	counter;
+logic [25:0]	speed_kbps_loc;	
+logic [25:0]	n_crash_blocks_loc;	
+
+always @(posedge clk) begin
+	if(rst)
+		counter <= '0;
+	else begin
+		if(counter == freq_dat - 1) 
+			counter <= '0;
+		else 
+			counter <= counter + 1'd1;
+	end
+end
+
+always @(posedge clk) begin
+	if(rst)	begin
+		speed_kbps <= '0;
+		n_crash_blocks <= '0;
+	end
+	else if(counter == freq_dat - 1) begin
+		//speed_kbps <= speed_kbps_loc;
+        speed_kbps <= speed_kbps_loc * size_block / 1024;
+		n_crash_blocks <= n_crash_blocks_loc;
+	end
+end
+
+
+
+always @(posedge clk) begin
+	if(rst)	
+		speed_kbps_loc <= '0;
+	else if(counter == freq_dat - 1)
+		speed_kbps_loc <= '0;
+	else 
+			speed_kbps_loc <= speed_kbps_loc + ival;
+end
+
+always @(posedge clk) begin
+    if(rst) 
+        n_crash_blocks_loc <= '0;
+    else if(counter == freq_dat - 1)
+		n_crash_blocks_loc <= '0;
+	else
+        n_crash_blocks_loc <= n_crash_blocks_loc + err;
+end
+
+endmodule

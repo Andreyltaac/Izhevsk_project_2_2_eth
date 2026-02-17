@@ -98,6 +98,8 @@ wire ctrl_validate_on;
 wire ctrl_switch_tx_ad;
 wire ctrl_switch_tx_fir;
 wire [14:0] N_sop_detect;
+wire [31:0] speed_kbps;
+wire [31:0] n_crash_blocks;
 
 assign rx_tx_en = (ctrl_tx_rst && ctrl_rst_rx);
 
@@ -189,6 +191,8 @@ only_rx modem_rx (
     .rx_ocorr_dtct    (rx_ocorr_dtct),
     .delta_ph         (delta_ph),
     .kb_ps            (kb_ps),
+    .speed_kbps		  (speed_kbps),
+	.n_crash_blocks   (n_crash_blocks),
 	.corr_sig_i       (corr_sig_i),
 	.corr_sig_q       (corr_sig_q),
     // Statistical outputs
@@ -196,6 +200,7 @@ only_rx modem_rx (
     .N_sop_detect     (N_sop_detect),
     .N_err            (N_err)
 );
+
 
 
 switch switch_inst_1 (
@@ -270,7 +275,8 @@ modem_axi_lite_1 #(
     .rezerv_r_in    ({{30{0}},ctrl_switch_tx_ad,ctrl_validate_on}),
     .r_reg1_in      (corr_sig_i),
     .r_reg2_in      (corr_sig_q),
-    
+    .r_reg3_in      (speed_kbps),
+    .r_reg4_in      (n_crash_blocks),
     // AXI Lite interface
     .S_AXI_ACLK     (S_AXI_ACLK),
     .S_AXI_ARESETN  (S_AXI_ARESETN),

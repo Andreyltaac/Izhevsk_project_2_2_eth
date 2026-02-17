@@ -852,6 +852,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../FPGA/speed_trafics.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../FPGA/Rx/submodule equalizer/sub_eq_1.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
