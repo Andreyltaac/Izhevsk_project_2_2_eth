@@ -100,8 +100,24 @@ wire ctrl_switch_tx_fir;
 wire [14:0] N_sop_detect;
 wire [31:0] speed_kbps;
 wire [31:0] n_crash_blocks;
-
+wire [31:0] power_sig;
 assign rx_tx_en = (ctrl_tx_rst && ctrl_rst_rx);
+
+
+signal_power_calc #(
+    .DATA_WIDTH  (12),
+    .OUT_WIDTH   (32),
+    .WINDOW_SIZE (1024)
+) u_power_calc (
+    .clk         (clk_l),
+    .rst_n       (ctrl_rst_rx),
+    .idata_in    (in_redata_rx[15:4]),
+	.qdata_in    (in_imdata_rx[15:4]),
+    .power_out   (power_sig),    
+    .valid_out   ()
+);
+
+
 
 only_tx modem_tx(
     // System clocks and reset
@@ -275,7 +291,7 @@ modem_axi_lite_1 #(
     .r_reg1_in      (corr_sig_i),
     .r_reg2_in      (corr_sig_q),
     .r_reg3_in      (n_crash_blocks),
-    .r_reg4_in      (),
+    .r_reg4_in      (power_sig),
     // AXI Lite interface
     .S_AXI_ACLK     (S_AXI_ACLK),
     .S_AXI_ARESETN  (S_AXI_ARESETN),

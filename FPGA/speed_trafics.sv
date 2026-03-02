@@ -14,6 +14,7 @@ module speed_trafics #(
 logic [28:0]	counter;
 logic [25:0]	speed_kbps_loc;	
 logic [25:0]	n_crash_blocks_loc;	
+logic [25:0]    speed_kbps_loc_2;
 
 always @(posedge clk) begin
 	if(rst)
@@ -27,13 +28,22 @@ always @(posedge clk) begin
 end
 
 always @(posedge clk) begin
+	if(rst)	
+		speed_kbps_loc_2 <= '0;
+	else if(counter == freq_dat - 1)
+		speed_kbps_loc_2 <= '0;
+	else 
+			speed_kbps_loc_2 <= speed_kbps_loc - n_crash_blocks_loc;
+end
+
+always @(posedge clk) begin
 	if(rst)	begin
 		speed_kbps <= '0;
 		n_crash_blocks <= '0;
 	end
 	else if(counter == freq_dat - 1) begin
 		//speed_kbps <= speed_kbps_loc;
-        speed_kbps <= speed_kbps_loc * size_block / 1024;
+        speed_kbps <= speed_kbps_loc_2 * size_block / 1024;
 		n_crash_blocks <= n_crash_blocks_loc;
 	end
 end

@@ -61,12 +61,15 @@ proc step_failed { step } {
 }
 
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -string {{[Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_7/\u_power_calc/power_out_reg[31] )}}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 1
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7k325tffg676-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0

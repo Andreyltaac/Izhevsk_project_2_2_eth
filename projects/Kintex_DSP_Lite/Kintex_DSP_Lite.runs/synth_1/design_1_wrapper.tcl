@@ -17,7 +17,11 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -string {{[Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_7/\u_power_calc/power_out_reg[31] )}}  -suppress 
 create_project -in_memory -part xc7k325tffg676-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -86,6 +90,7 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/FEC/S2P_conv_1x4.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/DeFEC/S2P_conv_1x8.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/TX_phy.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/abs_calc.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/add_cp.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/calculate_mean.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/DeFEC/decodeLDPC/codec_buffer_nD_slogic.sv
@@ -168,6 +173,7 @@ read_verilog -library xil_defaultlib {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem_axi_lite_1.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_rx.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/only_tx.v
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/signal_power_calc.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/switch.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/modem.v
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/axis_async_fifo.v

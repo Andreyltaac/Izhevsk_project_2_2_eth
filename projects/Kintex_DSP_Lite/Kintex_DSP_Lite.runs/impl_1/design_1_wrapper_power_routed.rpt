@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Feb 17 11:29:08 2026
+| Date             : Fri Feb 27 14:20:36 2026
 | Host             : TOR00094 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.159        |
+| Total On-Chip Power (W)  | 3.152        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.964        |
+| Dynamic (W)              | 2.957        |
 | Device Static (W)        | 0.195        |
 | Effective TJA (C/W)      | 1.9          |
-| Max Ambient (C)          | 79.0         |
-| Junction Temperature (C) | 31.0         |
+| Max Ambient (C)          | 79.1         |
+| Junction Temperature (C) | 30.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.348 |       21 |       --- |             --- |
-| Slice Logic              |     0.169 |   133192 |       --- |             --- |
-|   LUT as Logic           |     0.122 |    40169 |    203800 |           19.71 |
-|   Register               |     0.018 |    65359 |    407600 |           16.04 |
-|   LUT as Shift Register  |     0.014 |     2482 |     64000 |            3.88 |
-|   CARRY4                 |     0.013 |     5775 |     50950 |           11.33 |
+| Clocks                   |     0.336 |       21 |       --- |             --- |
+| Slice Logic              |     0.169 |   132940 |       --- |             --- |
+|   LUT as Logic           |     0.122 |    40229 |    203800 |           19.74 |
+|   Register               |     0.018 |    65157 |    407600 |           15.99 |
+|   LUT as Shift Register  |     0.014 |     2405 |     64000 |            3.76 |
+|   CARRY4                 |     0.013 |     5809 |     50950 |           11.40 |
 |   LUT as Distributed RAM |     0.002 |     1318 |     64000 |            2.06 |
 |   F7/F8 Muxes            |    <0.001 |     1102 |    203800 |            0.54 |
-|   Others                 |     0.000 |     8655 |       --- |             --- |
-| Signals                  |     0.192 |    85643 |       --- |             --- |
+|   Others                 |     0.000 |     8595 |       --- |             --- |
+| Signals                  |     0.196 |    85339 |       --- |             --- |
 | Block RAM                |     0.289 |    136.5 |       445 |           30.67 |
 | MMCM                     |     0.341 |        3 |        10 |           30.00 |
 | PLL                      |     0.113 |        1 |        10 |           10.00 |
-| DSPs                     |     0.081 |       69 |       840 |            8.21 |
+| DSPs                     |     0.081 |       70 |       840 |            8.33 |
 | I/O                      |     1.433 |      225 |       400 |           56.25 |
 | Static Power             |     0.195 |          |           |                 |
-| Total                    |     3.159 |          |           |                 |
+| Total                    |     3.152 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.193 |       1.101 |      0.092 |
+| Vccint    |       1.000 |     1.186 |       1.094 |      0.092 |
 | Vccaux    |       1.800 |     0.401 |       0.372 |      0.029 |
 | Vcco33    |       3.300 |     0.071 |       0.070 |      0.001 |
 | Vcco25    |       2.500 |     0.257 |       0.256 |      0.001 |
@@ -166,11 +166,11 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| design_1_wrapper          |     2.964 |
+| design_1_wrapper          |     2.957 |
 |   dbg_hub                 |     0.002 |
 |     inst                  |     0.002 |
 |       BSCANID.u_xsdbm_id  |     0.002 |
-|   design_1_i              |     2.947 |
+|   design_1_i              |     2.940 |
 |     AD9361_CTRL           |     0.982 |
 |       AD9361_1            |     0.395 |
 |       AD9361_2            |     0.235 |
@@ -192,21 +192,21 @@ Table of Contents
 |       U0                  |     0.005 |
 |     clk_wiz_0             |     0.114 |
 |       inst                |     0.114 |
-|     eth_pump_0            |     0.016 |
-|       inst                |     0.016 |
+|     eth_pump_0            |     0.017 |
+|       inst                |     0.017 |
 |     fir_compiler_0        |     0.009 |
 |       U0                  |     0.009 |
 |     fir_compiler_1        |     0.009 |
 |       U0                  |     0.009 |
 |     fir_compiler_2        |     0.009 |
 |       U0                  |     0.009 |
-|     fir_compiler_3        |     0.010 |
-|       U0                  |     0.010 |
-|     modem_0               |     0.833 |
-|       inst                |     0.833 |
-|   u_ila_0                 |     0.004 |
-|     inst                  |     0.004 |
-|       ila_core_inst       |     0.004 |
+|     fir_compiler_3        |     0.009 |
+|       U0                  |     0.009 |
+|     modem_0               |     0.826 |
+|       inst                |     0.826 |
+|   u_ila_0                 |     0.003 |
+|     inst                  |     0.003 |
+|       ila_core_inst       |     0.003 |
 +---------------------------+-----------+
 
 

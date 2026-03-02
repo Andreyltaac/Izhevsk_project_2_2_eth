@@ -12,9 +12,12 @@ module modem(
 // Output tx	
     output		[15:0]			tx_i_axis_tdata,//din_data_4
 	output		[15:0]			tx_q_axis_tdata,//din_data_5
+// Input rx 2	
+	input	    [15:0]		    rx2_i_axis_tdata,// dout_data_4
+	input	    [15:0]		    rx2_q_axis_tdata,// dout_data_5
 // Input rx	
-	input	    [15:0]		    rx_i_axis_tdata,// dout_data_4
-	input	    [15:0]		    rx_q_axis_tdata,// dout_data_5
+	input	    [15:0]		    rx1_i_axis_tdata,// m_axis_data_tdata_fir
+	input	    [15:0]		    rx1_q_axis_tdata,// m_axis_data_tdata_fir
 // Output rx	
 	output		[7:0]	        m_axis_tdata,   //data_in packet_resampler 8bit
 	output						m_axis_tvalid,  // enable_in packet_resampler 8bit
@@ -25,8 +28,8 @@ module modem(
 	output                      DeFec_err_dtct,	//LED 2
 	output                      rx_tx_en,        //LED 1
 	output                      rx_ocorr_dtct,   //PIN_2
-	output                      finder_osop,     //PIN_1
-	output                      decrc_verr,      //PIN_0
+	//output                      finder_osop,     //PIN_1
+	//output                      decrc_verr,      //PIN_0
 // AXI	
 // Global Clock Signal
 	input wire                  S_AXI_ACLK, //clk_wiz_0_axi_periph_clk
@@ -80,20 +83,40 @@ wire [1:0]  ctrl_frsync;
 wire [13:0] ctrl_corr_addrshift;
 wire [23:0] delta_ph;
 wire [17:0] kb_ps;
-wire [23:0] thr_lvl_auto;
+wire [9:0] thr_lvl_auto;
 wire [23:0] N_err;
 wire [31:0] corr_sig_i;
 wire [31:0] corr_sig_q;
 wire [15:0]	oredata_rx;
 wire [15:0]	oimdata_rx;
+wire [15:0]	in_redata_rx;
+wire [15:0]	in_imdata_rx;
 wire ctrl_tx_rst;
 wire ctrl_rst_rx;
 wire ctrl_data_off;
 wire ctrl_validate_on;
 wire ctrl_switch_tx_ad;
+wire ctrl_switch_tx_fir;
 wire [14:0] N_sop_detect;
+wire [31:0] speed_kbps;
+wire [31:0] n_crash_blocks;
 
 assign rx_tx_en = (ctrl_tx_rst && ctrl_rst_rx);
+
+
+signal_power_calc #(
+    .DATA_WIDTH  (12),
+    .OUT_WIDTH   (32),
+    .WINDOW_SIZE (1024),
+) u_power_calc (
+    .clk       (clk_l),
+    .rst_n     (ctrl_rst_rx),
+    .data_in   ({in_imdata_rx[15:4],in_redata_rx[15:4]}), 
+    .power_out (power_sig),    
+    .valid_out (power_valid)
+);
+
+
 
 only_tx modem_tx(
     // System clocks and reset
@@ -129,11 +152,11 @@ only_tx modem_tx(
     .tx_q_axis_tready ()
 );
 
-wire        ctrl_trh_mode;
-wire        ctrl_trh_auto;
+wire [31:0] ctrl_trh_mode;
+wire [31:0] ctrl_trh_auto;
 wire [31:0] t_sync_ctrl;
 
-assign t_sync_ctrl = {{20{0}},ctrl_trh_mode,ctrl_trh_auto,ctrl_trh_lvl[9:0]};
+assign t_sync_ctrl = {20'b0,ctrl_trh_mode[0],ctrl_trh_auto[0],ctrl_trh_lvl[9:0]};
 
 only_rx modem_rx (
     // System clocks and reset
@@ -151,11 +174,11 @@ only_rx modem_rx (
     .addr_shft        (ctrl_corr_addrshift),
 
     // I/Q Input interfaces
-    .rx_i_axis_tdata  (oredata_rx),
+    .rx_i_axis_tdata  (in_redata_rx),
     .rx_i_axis_tvalid (),
     .rx_i_axis_tready (),
     
-    .rx_q_axis_tdata  (oimdata_rx),
+    .rx_q_axis_tdata  (in_imdata_rx),
     .rx_q_axis_tvalid (),
     .rx_q_axis_tready (),
 
@@ -182,7 +205,8 @@ only_rx modem_rx (
     .time_er          (),
     .rx_ocorr_dtct    (rx_ocorr_dtct),
     .delta_ph         (delta_ph),
-    .kb_ps            (kb_ps),
+    .speed_kbps		  (speed_kbps),
+	.n_crash_blocks   (n_crash_blocks),
 	.corr_sig_i       (corr_sig_i),
 	.corr_sig_q       (corr_sig_q),
     // Statistical outputs
@@ -192,17 +216,33 @@ only_rx modem_rx (
 );
 
 
-switch switch_inst (
+
+switch switch_inst_1 (
     // Input interface
-    .iredata_tx (tx_i_axis_tdata),
-    .iimdata_tx (tx_q_axis_tdata),
-    .iredata_ad (rx_i_axis_tdata),
-    .iimdata_ad (rx_q_axis_tdata),
-    .switch_on  (ctrl_switch_tx_ad),
+    .iredata_tx (rx2_i_axis_tdata),
+    .iimdata_tx (rx2_q_axis_tdata),
+    .iredata_ad (rx1_i_axis_tdata),
+    .iimdata_ad (rx1_q_axis_tdata),
+    .switch_on  (ctrl_switch_tx_fir),
 			    
     // Output i nterface
     .oredata_rx (oredata_rx),
     .oimdata_rx (oimdata_rx)
+);
+
+
+
+switch switch_inst_2 (
+    // Input interface
+    .iredata_tx (tx_i_axis_tdata),
+    .iimdata_tx (tx_q_axis_tdata),
+    .iredata_ad (oredata_rx),
+    .iimdata_ad (oimdata_rx),
+    .switch_on  (ctrl_switch_tx_ad),
+			    
+    // Output i nterface
+    .oredata_rx (in_redata_rx),
+    .oimdata_rx (in_imdata_rx)
 );
 
 
@@ -236,12 +276,12 @@ modem_axi_lite_1 #(
     .rezerv_w_out             (),
     .rezerv_w_out_valid       (),
 	.w_reg1_out               (ctrl_trh_auto), // 1 -- thr_auto,   0-- thr_manual
-	.w_reg2_out               (ctrl_trh_mode), // 0 -- thr_manual, 1-- thr_mean
-	
+	.w_reg2_out               (ctrl_trh_mode), // 0 -- thr_manual, 1-- thr_mean ctrl_switch_tx_fir
+	.w_reg3_out               (ctrl_switch_tx_fir), // 0 -- switch_ad, 1-- switch_fir
 	
     
     // User ports (status inputs)
-    .speedtest_in   (kb_ps),
+    .speedtest_in   (speed_kbps),
     .nsop_detect_in (N_sop_detect),
     .thr_lvlauto_in ({{22{0}},thr_lvl_auto}),
     .delta_phi_in   ({{8{delta_ph[23]}},delta_ph[23:0]}),
@@ -249,7 +289,8 @@ modem_axi_lite_1 #(
     .rezerv_r_in    ({{30{0}},ctrl_switch_tx_ad,ctrl_validate_on}),
     .r_reg1_in      (corr_sig_i),
     .r_reg2_in      (corr_sig_q),
-    
+    .r_reg3_in      (n_crash_blocks),
+    .r_reg4_in      (),
     // AXI Lite interface
     .S_AXI_ACLK     (S_AXI_ACLK),
     .S_AXI_ARESETN  (S_AXI_ARESETN),

@@ -1,7 +1,24 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                            design_1_i/modem_0/inst/modem_tx/TX_phy_sub/series2parallel_sub/count_reg[0]/D|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[3]/CE|
-| sample_rate_30_72_design_1_clk_DSP_0 |clk_out1_design_1_clk_wiz_0_0 |                               design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/read_cnt_reg[5]/CE|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][8]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][9]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][2]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][7]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][5]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][1]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][6]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][4]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                        design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][10]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                        design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][11]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_re_reg[0][3]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][8]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][4]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][9]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][5]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                        design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][10]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                        design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][11]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][7]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][3]/D|
+| clk_out2_design_1_clk_wiz_0_0 |sample_rate_30_72_design_1_clk_DSP_0 |                                         design_1_i/modem_0/inst/u_power_calc/abs_calc_1/in_im_reg[0][6]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

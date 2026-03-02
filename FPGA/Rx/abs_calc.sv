@@ -1,0 +1,86 @@
+module abs_calc
+#(
+  parameter int pDAT_W = 24
+ ) 
+(
+input  wire        iclk,
+input  wire        irst,
+//
+input  wire        s_abs_0_tvalid,
+//input  wire        s_abs_0_tlast,
+input  wire [23:0] s_abs_0_data,
+//output wire        s_abs_0_tready,
+////
+//input  wire        m_abs_0_tready,
+//output wire        m_abs_0_tvalid,
+//output wire        m_abs_0_tlast,
+output wire [pDAT_W-1:0] m_abs_0_data
+
+);
+reg         [pDAT_W-1:0] in_re [1:0];
+reg         [pDAT_W-1:0] in_im [1:0];
+reg 		[pDAT_W:0] y1;
+reg 		[pDAT_W:0] y2;
+reg         [pDAT_W:0] comp_a;
+reg         [pDAT_W:0] comp_b;
+reg         [pDAT_W-1:0] result;
+wire        [11:0]       s_abs_0_data_i;
+wire        [11:0]       s_abs_0_data_q;
+
+assign m_abs_0_data = result;
+assign s_abs_0_data_i = (s_abs_0_data[11] == 0) ? s_abs_0_data[11:0]:~s_abs_0_data[11:0]+12'd1;
+assign s_abs_0_data_q = (s_abs_0_data[23] == 0) ? s_abs_0_data[23:12]:~s_abs_0_data[23:12]+12'd1;
+//assign s_abs_0_tready = m_abs_0_tready; 
+
+
+
+ // Input demux
+  always @(posedge iclk) begin
+    if (~irst)  
+	begin
+	in_re[0] <= 24'b0;
+	in_re[1] <= 24'b0;
+	in_im[0] <= 24'b0;
+	in_im[1] <= 24'b0;
+	end
+	    else if (s_abs_0_tvalid) 
+		begin 
+	    in_re[0] <= {{12{s_abs_0_data_i[11]}},s_abs_0_data_i};
+		in_re[1] <= in_re[0];
+	    in_im[0] <= {{12{s_abs_0_data_q[11]}},s_abs_0_data_q};
+		in_im[1] <= in_im[0];
+		end  
+  end
+  
+  always @(posedge iclk) begin
+    if (~irst)  
+	begin
+	y1 <= 24'b0;
+	y2 <= 24'b0;
+	end
+	    else if (s_abs_0_tvalid) 
+		begin 
+	    y1 <= ((((in_re[0] << 1) + (in_re[0] << 2) + in_re[0]) >> 3) + (in_im[0] >> 1));
+	    y2 <= ((((in_im[0] << 1) + (in_im[0] << 2) + in_im[0]) >> 3) + (in_re[0] >> 1));
+		end  
+  end
+
+always @(posedge iclk) begin
+    if (~irst)  
+	begin
+	comp_a <= 24'b0;
+	comp_b <= 24'b0;
+	result <= 24'b0;
+	end
+	    else if (s_abs_0_tvalid) 
+		begin 
+	    comp_a <= (in_re[1] > y1) ? in_re[1]:y1;
+	    comp_b <= (in_im[1] > y2) ? in_im[1]:y2;
+		result <= (comp_a > comp_b) ? comp_a:comp_b;
+		end  
+  end
+
+
+  
+
+endmodule
