@@ -46,8 +46,9 @@
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
     <Object name="xc7z020_1" gui_info="">
-      <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/Vivado_Projects/projects/SOM_RADIUS_19.1/SOM_RADIUS.runs/XC7Z020/design_1_wrapper.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
     <Object name="xc7z045_1" gui_info="">
@@ -9107,7 +9108,7 @@
         <net name="design_1_i/modem_0/inst/u_power_calc/idata_in[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
@@ -9139,7 +9140,7 @@
         <net name="design_1_i/modem_0/inst/u_power_calc/idata_in[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
@@ -9206,7 +9207,7 @@
         <net name="design_1_i/modem_0/inst/u_power_calc/m_abs_data[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
@@ -11183,7 +11184,7 @@
         <net name="u_ila_0_isync_cpack"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>

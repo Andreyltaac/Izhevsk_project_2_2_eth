@@ -3,7 +3,7 @@
    "PinnedBlocks":"/AXI_Peripheral|/CLK_AXI|/AD9364|/AD9361_CTRL|/SPI_MOD|/Control_from_SOM_0|/Current_turning_off_0|",
    "PinnedPorts":"AXI_RX_CLK_OUT|AXI_RX_DATA_OUT|AXI_TX_CLK_IN|AXI_TX_DATA_IN|FPGA_REF_40MHZ|ad9361_EN_1|ad9361_EN_2|ad9361_EN_3|ad9361_TXNRX_1|ad9361_TXNRX_2|ad9361_TXNRX_3|ad9364_EN|ad9364_TXNRX|ad9361_RESET_1|ad9361_RESET_2|ad9361_RESET_3|ad9364_RESET|ad9361_SPI_CS_3|ad9361_SPI_CLK_3|ad9361_SPI_DI_3|ad9361_SPI_CLK_1|ad9361_SPI_CS_1|ad9361_SPI_DI_1|ad9361_SPI_CLK_2|ad9361_SPI_CS_2|ad9361_SPI_DI_2|ad9364_SPI_CLK|ad9364_SPI_CS|ad9364_SPI_DI|ad9361_DCLK_1_P|ad9361_DCLK_1_N|ad9361_DCLK_2_N|ad9361_DCLK_2_P|ad9361_DCLK_3_N|ad9364_DCLK_P|ad9364_DCLK_N|ad9361_RX_FRAME1_P|ad9361_RX_FRAME1_N|ad9361_RX_FRAME2_P|ad9361_RX_FRAME2_N|ad9361_RX_FRAME3_P|ad9364_RX_FRAME_P|ad9361_RX_FRAME3_N|ad9364_RX_FRAME_N|ad9361_1_P1_P|ad9361_1_P1_N|ad9361_2_P1_N|ad9361_2_P1_P|ad9361_3_P1_N|ad9361_3_P1_P|ad9364_P1_N|ad9364_P1_P|ad9361_DCLK_3_P|ad9364_SPI_DO|ad9361_SPI_DO_3|ad9361_SPI_DO_1|ad9361_SPI_DO_2|ad9361_FB_CLK_1_P|ad9361_FB_CLK_1_N|ad9361_TX_FRAME1_N|ad9361_TX_FRAME1_P|ad9361_FB_CLK_2_N|ad9361_FB_CLK_2_P|ad9361_FB_CLK_3_N|ad9361_FB_CLK_3_P|ad9364_FB_CLK_N|ad9364_FB_CLK_P|ad9361_TX_FRAME2_N|ad9361_TX_FRAME2_P|ad9361_TX_FRAME3_N|ad9364_TX_FRAME_N|ad9361_TX_FRAME3_P|ad9364_TX_FRAME_P|ad9361_1_P0_N|ad9361_1_P0_P|ad9361_2_P0_N|ad9361_2_P0_P|ad9361_3_P0_N|ad9361_3_P0_P|ad9364_P0_N|ad9364_P0_P|ad9361_EN_AGC_2|ad9361_EN_AGC_3|ad9361_EN_AGC_1|ad9364_EN_AGC|PIN_1|PIN_2|LED3|LED2|LED1|fpga_28v_en_link1|fpga_28v_en_link2|fpga_28v_en_service1|fpga_28v_en_service2|fpga_28v_en_service3|fpga_28v_en_service4|fpga_5v_en_link|spi_cs_n_0|spi_sclk_0|spi_mosi_0|spi_cs_n_1|spi_sclk_1|spi_mosi_1|som_28v_en_link1|som_28v_en_link2|som_28v_en_service1|som_28v_en_service2|som_28v_en_service3|som_28v_en_service4|som_5v_en_link|spi_miso_0|spi_miso_1|PIN_0|",
    "commentid":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port AXI_RX_CLK_OUT -pg 1 -lvl 17 -x 13280 -y 800 -defaultsOSRD
 preplace port AXI_TX_CLK_IN -pg 1 -lvl 0 -x -350 -y 1280 -defaultsOSRD
@@ -290,15 +290,15 @@ preplace netloc AD9361_CTRL_dout_data_4 1 7 10 3830 1622 NJ 1622 NJ 1622 NJ 1622
 preplace netloc AD9361_CTRL_dout_data_5 1 7 10 3800 1612 NJ 1612 NJ 1612 NJ 1612 NJ 1612 NJ 1612 NJ 1612 NJ 1612 NJ 1612 12840
 preplace netloc eth_pump_0_async_fifo_1_olast 1 5 12 2370 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 10530J 2600 11490J 2830 NJ 2830 13040J
 preplace netloc modem_0_rx_ocorr_dtct 1 8 9 NJ 2190 NJ 2190 NJ 2190 9500J 2030 NJ 2030 NJ 2030 11570J 2140 NJ 2140 13060
-preplace netloc AXI_Peripheral_M02_AXI 1 7 9 NJ 242 NJ 242 NJ 242 N 242 N 242 N 242 N 242 NJ 242 12030
-preplace netloc AXI_Peripheral_M14_AXI 1 7 7 NJ 322 NJ 322 N 322 N 322 N 322 N 322 10650
-preplace netloc AXI_Peripheral_M06_AXI 1 7 9 NJ 302 NJ 302 NJ 302 N 302 N 302 N 302 N 302 NJ 302 12010
-preplace netloc AXI_Peripheral_M13_AXI 1 2 6 770 1780 NJ 1780 NJ 1780 NJ 1780 2660 1622 3710
-preplace netloc AXI_Peripheral_M05_AXI 1 7 1 3780J 342n
 preplace netloc AXI_Peripheral_M00_AXI 1 7 9 NJ 202 NJ 202 NJ 202 N 202 N 202 N 202 N 202 NJ 202 12050
+preplace netloc AXI_Peripheral_M02_AXI 1 7 9 NJ 242 NJ 242 NJ 242 N 242 N 242 N 242 N 242 NJ 242 12030
 preplace netloc AXI_Peripheral_M04_AXI 1 7 9 NJ 282 NJ 282 NJ 282 N 282 N 282 N 282 N 282 NJ 282 12040
+preplace netloc AXI_Peripheral_M06_AXI 1 7 9 NJ 302 NJ 302 NJ 302 N 302 N 302 N 302 N 302 NJ 302 12010
 preplace netloc AXI_Peripheral_M03_AXI 1 7 7 NJ 262 NJ 262 N 262 N 262 N 262 N 262 10610
 preplace netloc AXI_Peripheral_M01_AXI 1 7 9 NJ 222 NJ 222 NJ 222 N 222 N 222 N 222 N 222 NJ 222 12070
+preplace netloc AXI_Peripheral_M05_AXI 1 7 1 3780J 342n
+preplace netloc AXI_Peripheral_M13_AXI 1 2 6 770 1780 NJ 1780 NJ 1780 NJ 1780 2660 1622 3710
+preplace netloc AXI_Peripheral_M14_AXI 1 7 7 NJ 322 NJ 322 N 322 N 322 N 322 N 322 10650
 levelinfo -pg 1 -350 -210 540 964 1390 2100 2530 3520 8302 8697 8918 9290 9760 10220 11209 11750 12659 13280
 pagesize -pg 1 -db -bbox -sgen -560 -4680 13500 10560
 "

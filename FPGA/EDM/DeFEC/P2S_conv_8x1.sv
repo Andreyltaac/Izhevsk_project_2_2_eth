@@ -38,7 +38,7 @@ module P2S_conv_8x1(
     logic [7:0] shift_data_reg;
     logic [2:0] bit_cnt;
 
-    always @(posedge iclk or negedge irst) begin
+    always @(posedge iclk) begin
         if (~ irst)
             bit_cnt <= '0;
         else if (ireq||oval) begin
@@ -50,7 +50,7 @@ module P2S_conv_8x1(
 
     assign oreq = ((bit_cnt == '1)&&ireq) ? 1:0;
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~ irst) begin
             shift_data_reg <= '0;
             oval           <= '0;

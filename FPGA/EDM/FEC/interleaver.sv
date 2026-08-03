@@ -51,7 +51,8 @@ logic			  [DATA_WIDTH-1:0] 	perm_addr;
 logic						 		delay_val;
 logic						 		delay_dat;
 logic						 		delay_wendstb;
-
+logic						 		delay_wendstb_t;
+logic						 		delay_rd_end_strob;
 
 interl_addr_rom
 #( 
@@ -79,9 +80,11 @@ end
 always_ff @( posedge iclk ) begin 
 	delay_val		<= delay_val<<1;
 	delay_dat		<= delay_dat<<1;
-	delay_wendstb	<= wrt_end_strob; 	
+	delay_wendstb	<= wrt_end_strob;
+	delay_wendstb_t	<= delay_wendstb;  	
 	delay_val		<= ival;
 	delay_dat		<= idat;
+	delay_rd_end_strob <= rd_end_strob;
 end
 
 
@@ -92,6 +95,20 @@ logic							intram_read_en	;
 logic			[DATA_WIDTH:0]	intram_read_cnt	;
 logic							intram_odat		;
 
+logic							intram_write_en_temp	;
+logic			[DATA_WIDTH:0]	intram_write_cnt_temp	;	
+logic							intram_idat_temp		;
+logic							intram_read_en_temp		;	
+logic			[DATA_WIDTH:0]	intram_read_cnt_temp	;
+logic							intram_odat_temp		;
+logic							oval_temp				;
+logic							osop_temp				;
+logic							oval_temp2				;
+logic							osop_temp2				;
+logic							ireq_temp				;
+
+
+
 interl_ram
 #( 
 	.ADDR_WIDTH		(ADDR_WIDTH+1)
@@ -100,12 +117,13 @@ sub0_ram
 (
 	.clk            (iclk),
 	//.en_wr          (intram_write_en	),
-	.wr_ram_counter (intram_write_cnt	),
-	.in_bit_data    (intram_idat		),
+	.wr_ram_counter (intram_write_cnt_temp	),
+	.in_bit_data    (intram_idat_temp		),
 	//.en_r           (intram_read_en		),
-	.r_ram_counter  (intram_read_cnt	),
-	.read_data_out	(intram_odat		)	
+	.r_ram_counter  (intram_read_cnt_temp	),
+	.read_data_out	(intram_odat		    )	
 );
+
 
 assign	intram_write_en		= delay_val	;
 assign	intram_write_cnt	= { mem_list, perm_addr}+PRMB_LEN-1;
@@ -114,12 +132,41 @@ assign	intram_read_en		= ireq;
 assign	intram_read_cnt		= {~mem_list, read_cnt};
 
 
+always@(posedge iclk or negedge irst) begin
+	if (~irst) begin
+		intram_write_en_temp 	<= '0;
+		intram_write_cnt_temp	<= '0;
+		intram_idat_temp		<= '0;		
+		intram_read_en_temp		<= '0;
+		intram_read_cnt_temp	<= '0;
+		intram_odat_temp		<= '0;
+		oval_temp				<= '0;
+		osop_temp				<= '0;
+		oval_temp2				<= '0;
+		osop_temp2				<= '0;	
+	end
+	else begin
+		intram_write_en_temp 	<= intram_write_en;
+		intram_write_cnt_temp	<= intram_write_cnt;
+		intram_idat_temp		<= intram_idat;
+		intram_read_en_temp		<= intram_read_en;
+		
+		intram_odat_temp		<= intram_odat;
+		oval_temp				<= ~emty;
+		osop_temp				<= (read_cnt==0)&&~emty&&ireq;
+		if (ireq) begin
+			intram_read_cnt_temp	<= intram_read_cnt;	
+		end
+	end
+end
+
+
 assign wrt_end_strob 	= (pack_cnt==PACK_LEN-1)&ival&oreq;
 assign rd_end_strob  	= (read_cnt==PACK_LEN+PRMB_LEN-1)&oval&ireq;
 assign oreq				= mem_state!=2'd2; 
 assign emty				= mem_state==2'd0;
-assign oval				= ~emty;
-assign osop				= (read_cnt==0)&&oval&&ireq;
+assign oval				= oval_temp;
+assign osop				= osop_temp;
 
 always@(posedge iclk or negedge irst) begin
 	if (~irst) begin
@@ -151,6 +198,6 @@ always@(posedge iclk or negedge irst) begin
 	end
 end
 
-assign odat = intram_odat; 
+assign odat = intram_odat;
 
 endmodule

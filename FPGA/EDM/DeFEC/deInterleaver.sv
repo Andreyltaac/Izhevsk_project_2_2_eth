@@ -64,7 +64,7 @@ module deInterleaver(
 
 
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~irst) begin
             pack_cnt <= '0;
             pack_trg <= '0;
@@ -128,7 +128,7 @@ module deInterleaver(
     end
 
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~irst) begin
             mem_list <= '0;
             pack_rdy <= '0;
@@ -145,7 +145,7 @@ module deInterleaver(
             end 
     end
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~irst)
             read_cnt <= '0;
         else
@@ -157,7 +157,7 @@ module deInterleaver(
             end 
     end
 
-    always @ (posedge iclk or posedge irst) begin
+    always @ (posedge iclk) begin
         if (~irst) begin
             gap_cnt <= '0;
         end
@@ -167,7 +167,7 @@ module deInterleaver(
             else
                 gap_cnt <= '0;
     end
-    always @ (posedge iclk or posedge irst) begin
+    always @ (posedge iclk) begin
         if (~irst) begin
             gap_trig <= '0;
         end
@@ -180,7 +180,7 @@ module deInterleaver(
             end
     end
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
     if (~irst) begin
         val  <= '0;
         oval_tmp <= '0;
@@ -191,7 +191,7 @@ module deInterleaver(
     end
     end
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~irst) begin
             oerr  <= '0;
         end

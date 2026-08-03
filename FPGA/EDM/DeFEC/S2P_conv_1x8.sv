@@ -36,7 +36,7 @@ module S2P_conv_1x8(
     logic [7:0] shift_data_reg;
     logic [2:0] bit_cnt;
 
-    always_ff @(posedge iclk or negedge irst) begin
+    always_ff @(posedge iclk) begin
         if (~ irst) begin
             bit_cnt <= '0;
         end
@@ -47,7 +47,7 @@ module S2P_conv_1x8(
         end
     end
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~ irst) begin
             shift_data_reg <= '0;
         end else if (ival) begin
@@ -56,7 +56,7 @@ module S2P_conv_1x8(
         end
     end 
     
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~ irst) begin
             oval <= '0;
         end else begin

@@ -15,15 +15,12 @@ module xcorr_ifft_sub(
 
 wire [31:0]	s_axis_data_tdata,s_axis_fifo_data_tdata, m_axis_data_tdata;
 wire signed [15:0]	s_axis_data_i, s_axis_data_q;
-wire last_fft;
 
 wire ifft_fifo_tready,ifft_fifo_tvalid;
 
 assign s_axis_data_tdata = {s_axis_data_q,s_axis_data_i};
 assign s_axis_data_i = data_i;
 assign s_axis_data_q = data_q;
-assign oeop = last_fft & oval;
-
 
 axis_data_fifo_ifft_corr ifft_fifo_sub (
   		.s_axis_aresetn			(~rst),  // input wire s_axis_aresetn
@@ -54,7 +51,7 @@ ifft_corr_1 ifft_corr_1_1 (
   .m_axis_data_tuser					(oexp),					// output wire [7 : 0] m_axis_data_tuser
   .m_axis_data_tvalid					(oval),					// output wire m_axis_data_tvalid
   //.m_axis_data_tready					(1'd1),					// input wire m_axis_data_tready
-  .m_axis_data_tlast					(last_fft)					// output wire m_axis_data_tlast
+  .m_axis_data_tlast					(oeop)					// output wire m_axis_data_tlast
  // .m_axis_status_tdata					(),						// output wire [7 : 0] m_axis_status_tdata
   //.m_axis_status_tvalid					(),						// output wire m_axis_status_tvalid
   //.m_axis_status_tready					(),						// input wire m_axis_status_tready

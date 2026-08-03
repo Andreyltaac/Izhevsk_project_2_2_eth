@@ -4,8 +4,8 @@ module find_max#(
 )(
 	input					clk,
 	input					rst,
-	(* mark_debug = "true" *) input [wdth_crr-1:0] 	corr_in,
-	(* mark_debug = "true" *) input [wdth_crr-1:0]	thr_lvl,
+	input [wdth_crr-1:0] 	corr_in,
+	input [wdth_crr-1:0]	thr_lvl,
 
 	input	[17:0]			data_i,
 	input	[17:0]			data_q,

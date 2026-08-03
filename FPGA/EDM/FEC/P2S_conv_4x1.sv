@@ -38,9 +38,12 @@ module P2S_conv_4x1(
     logic [3:0] shift_data_reg;
     logic [1:0] bit_cnt;
 
-    always_ff @(posedge iclk or negedge irst) begin
+    always_ff @(posedge iclk) begin
         if (~ irst)
             bit_cnt <= '0;
+        else if(ival) begin
+            bit_cnt <= '0;  
+        end
         else if (ireq) begin
             bit_cnt <= bit_cnt + 1'b1;                    
         end else begin
@@ -50,11 +53,11 @@ module P2S_conv_4x1(
 
     assign oreq = ((bit_cnt == '1)) ? 1:0;
 
-    always @ (posedge iclk or negedge irst) begin
+    always @ (posedge iclk) begin
         if (~ irst) begin
             shift_data_reg <= '0;
             oval           <= '0;
-        end else if (oreq&ival) begin
+        end else if (ival) begin
             shift_data_reg <= idat;
             oval           <= '1;
         end else begin
