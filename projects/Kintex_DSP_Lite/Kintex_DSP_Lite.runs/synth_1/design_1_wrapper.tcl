@@ -17,9 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -string {{[Synth 8-3333] propagating constant 0 across sequential element (design_1_i/modem_0/insti_2049_7/\u_power_calc/power_out_reg[31] )}}  -suppress 
 create_project -in_memory -part xc7k325tffg676-2
@@ -110,7 +108,7 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/equalizer.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/fftshift.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/filter_sop_new.sv
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/find_max.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/find_max.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/fr_sync.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/ifft.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/FEC/interl_addr_rom.sv
@@ -143,13 +141,13 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/DeFEC/parallel2series.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/DeFEC/parallel2series_FIFO.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/prb_fsync_ram.sv
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/prb_tsync_ram.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/prb_tsync_ram.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/prbs/prbs23_check.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/prbs/prbs23_gen.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/modulators/qam16_mod.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/modulators/qam64_mod.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/modulators/qpsk_mod.sv
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/ram.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/ram.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/scramb_subcarier.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/EDM/FEC/scrambler.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/series2parallel.sv
@@ -157,8 +155,8 @@ read_verilog -library xil_defaultlib -sv {
   {F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/submodule equalizer/sub_eq_1.sv}
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/freq_correct/sync_fifo.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Tx/transport_block_shaper.sv
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_fft_sub.sv
-  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/xcorr/xcorr_ifft_sub.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_fft_sub.sv
+  F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_ifft_sub.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/Rx/xcorr/xcorr_main_lite.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/FPGA/gmii_files/pack_last_counter.sv
   F:/work/Izhevsk_project_2_2_eth/Izhevsk_project_2_2_eth/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/new/tvalid_generator.sv

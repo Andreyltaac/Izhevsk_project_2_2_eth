@@ -41,6 +41,7 @@ reg signed [11:0]	sig_c_i, sig_c_q;
 wire signed [11:0] 	data_fft_i_0, 	 	data_fft_q_0;
 logic signed [11:0]	data_fft_i_0_n, 	data_fft_q_0_n;
 logic signed [23:0]	data_fft_mx_ii, 	data_fft_mx_qq, data_fft_mx_iq, data_fft_mx_qi;
+logic signed [23:0]	data_fft_mx_ii_norm, 	data_fft_mx_qq_norm, data_fft_mx_iq_norm, data_fft_mx_qi_norm;
 reg signed [11:0]	data_fft_i_0_n_1, 	data_fft_q_0_n_1;
 reg signed [15:0] 	data_mx_i_0, 	data_mx_q_0;
 
@@ -69,7 +70,7 @@ wire				val_fft_0, val_fft_1, eop_fft_0, eop_fft_1;
 wire				val_ifft_0, eop_ifft_0;
 reg					val_downsamp;
 wire				val_ifft_0_ds, val_ifft_1_ds;
-reg					ival_ifft_0, ival_ifft_1, val_fft_01,val_fft_02,val_fft_03, val_fft_11;
+reg					ival_ifft_0, ival_ifft_1, val_fft_01,val_fft_02,val_fft_03,val_fft_04, val_fft_11;
 
 
 logic [23:0] thr_lvl_mean;
@@ -229,13 +230,20 @@ always @(posedge clk) begin
 	data_fft_mx_iq <= (data_fft_i_0_n * pream_q_0);
 	data_fft_mx_qi <= (data_fft_q_0_n * pream_i_0);
 
-	data_mx_i_0 <= data_fft_mx_ii / 64 - data_fft_mx_qq / 64;
-	data_mx_q_0 <= data_fft_mx_iq / 64 + data_fft_mx_qi / 64;
+	
+	data_fft_mx_ii_norm <= data_fft_mx_ii >>> 6;
+	data_fft_mx_qq_norm <= data_fft_mx_qq >>> 6;
+	data_fft_mx_iq_norm <= data_fft_mx_iq >>> 6;
+	data_fft_mx_qi_norm <= data_fft_mx_qi >>> 6;
+	
+	data_mx_i_0 <= data_fft_mx_ii_norm - data_fft_mx_qq_norm;
+	data_mx_q_0 <= data_fft_mx_iq_norm + data_fft_mx_qi_norm;
 
 	val_fft_01	<= val_fft_0;
 	val_fft_02  <= val_fft_01;
 	val_fft_03	<= val_fft_02;
-	ival_ifft_0 <= val_fft_03;
+	val_fft_04	<= val_fft_03;
+	ival_ifft_0 <= val_fft_04;
 
 end
 

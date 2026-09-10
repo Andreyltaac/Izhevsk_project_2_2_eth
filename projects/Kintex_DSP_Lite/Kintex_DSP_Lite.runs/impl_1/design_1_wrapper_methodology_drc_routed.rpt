@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Feb 27 14:19:59 2026
+| Date         : Thu Sep 10 12:24:13 2026
 | Host         : TOR00094 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -147,7 +147,7 @@ Related violations: <none>
 
 LUTAR-1#20 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/modem_0/inst/axi_lite_1_inst/spread_spectrum_out[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/modem_0/inst/modem_rx/DeFEC_sub/err_dtct_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/bit_cnt_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/oval_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[3]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[4]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[5]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[6]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_S2P_conv_1x8/shift_data_reg_reg[7]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub_decoder_CRC/crc_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub_decoder_CRC/crc_reg[10]/CLR (the first 15 of 1363 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell design_1_i/modem_0/inst/axi_lite_1_inst/spread_spectrum_out[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/modem_0/inst/modem_rx/DeFEC_sub/err_dtct_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/dat_delay_reg_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/dat_delay_reg_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/dat_delay_reg_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/dat_delay_reg_reg[3]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/dat_delay_reg_reg[4]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/odat_reg[0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/odat_reg[1]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/odat_reg[2]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/odat_reg[3]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/odat_reg[4]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/osop_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/oval_reg/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/sum_reg[0][0]/CLR, design_1_i/modem_0/inst/modem_rx/DeFEC_sub/sub0_pack_finder/sum_reg[0][8]/CLR (the first 15 of 1291 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#21 Warning
@@ -157,7 +157,7 @@ Related violations: <none>
 
 LUTAR-1#22 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_coder_CRC/bit_cnt[0]_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/modem_0/inst/modem_tx/FEC_sub/GAP_trig_reg/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[0]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[1]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[2]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[3]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[4]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[5]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[6]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[7]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[8]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[0]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[10]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[1]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[2]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[3]/CLR (the first 15 of 174 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell design_1_i/modem_0/inst/modem_tx/FEC_sub/sub0_interliver/oval_temp_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/modem_0/inst/modem_tx/FEC_sub/GAP_trig_reg/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[0]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[1]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[2]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[3]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[4]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[5]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[6]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[7]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/ldpc_block_cnt_reg[8]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[0]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[10]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[1]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[2]/CLR, design_1_i/modem_0/inst/modem_tx/FEC_sub/pack_counter_reg[3]/CLR (the first 15 of 216 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#23 Warning
@@ -172,57 +172,57 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X121Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X70Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X119Y64 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X72Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X121Y64 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X71Y33 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X120Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X71Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X124Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X64Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X122Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X65Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X123Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X65Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X125Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X60Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X126Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X58Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X127Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X59Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_control_src/cdc_sync_stage2_reg[0] in site SLICE_X14Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_status_src/cdc_sync_stage1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_control_src/cdc_sync_stage2_reg[0] in site SLICE_X17Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/AXI_Peripheral/AXI_DMA/inst/i_transfer/i_reset_manager/i_sync_status_src/cdc_sync_stage1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
